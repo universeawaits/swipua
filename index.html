@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>swipua</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header id="topbar">
+  <div id="logo">swipua</div>
+  <div id="progress">0 / 0</div>
+</header>
+
+<main id="deck">
+  <div id="card">
+    <div id="word"></div>
+    <div id="translations"></div>
+    <div id="examples"></div>
+  </div>
+</main>
+
+<footer id="controls">
+  <button id="btnUnknown">✗ Don't know <kbd>Space</kbd></button>
+  <button id="btnKnown">✓ Know <kbd>Enter</kbd></button>
+</footer>
+
+<section id="stats" class="hidden">
+  <h1>Done!</h1>
+  <div id="statNumbers"></div>
+  <div id="unknownList"></div>
+  <button id="btnReload">Reload page to start over</button>
+</section>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

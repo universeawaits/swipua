@@ -1,11 +1,24 @@
 (function () {
   var source = (typeof WORDS !== "undefined") ? WORDS : [];
 
+  // ---- level (CEFR) ------------------------------------------------------
+  // Each word carries a level A1/A2/B1. The switch is cumulative: picking a
+  // level shows that level AND everything below it (B1 = all words).
+  var LEVEL_ORDER = { A1: 1, A2: 2, B1: 3 };
+  var currentLevel = loadLevel();
+  function loadLevel() {
+    try { var v = window.localStorage.getItem("swipua_level"); if (LEVEL_ORDER[v]) return v; } catch (e) {}
+    return "B1";
+  }
+  function wordLevel(w) { return LEVEL_ORDER[w.level] ? w.level : "B1"; }
+  function inCurrentLevel(w) { return LEVEL_ORDER[wordLevel(w)] <= LEVEL_ORDER[currentLevel]; }
+  function buildDeck() { return shuffle(source.filter(inCurrentLevel)); }
+
   // ---- deck state --------------------------------------------------------
   // `deck` is a working queue. A card leaves the deck only when it is marked
   // as known; a "don't know" card is re-inserted at a random later position,
   // so it keeps coming back until it's remembered.
-  var deck = shuffle(source.slice());
+  var deck = buildDeck();
   var totalWords = deck.length;
   var knownCount = 0; // unique words marked as known
   var missCount = 0;  // total "don't know" taps (repeats included)
@@ -33,6 +46,8 @@
   //  showLangs  — which languages appear as translations / example lines after reveal.
   var titleLangs = loadLangSet("swipua_titleLangs");
   var showLangs = loadLangSet("swipua_showLangs");
+  // German is the language being learned, so it is always shown as the answer.
+  showLangs.de = true;
 
   // ---- elements ----------------------------------------------------------
   var elDeck = document.getElementById("deck");
@@ -52,6 +67,7 @@
   var elSynonyms = document.getElementById("synonyms");
   var elNavCards = document.getElementById("navCards");
   var elNavGrammar = document.getElementById("navGrammar");
+  var elLevelNav = document.getElementById("levelNav");
   var elGrammar = document.getElementById("grammar");
   var elGrammarBody = document.getElementById("grammarBody");
   var elGrammarIndex = document.getElementById("grammarIndex");
@@ -97,7 +113,35 @@
     words:        { de: "Wörter", en: "words", ru: "слов", vi: "từ", fa: "واژه" },
     slips:        { de: "Fehler", en: "slips", ru: "ошибок", vi: "lỗi", fa: "خطا" },
     allremembered:{ de: "Alle Wörter behalten — super.", en: "All words remembered — nice.", ru: "Все слова запомнены — отлично.", vi: "Đã nhớ hết các từ — tuyệt.", fa: "همه واژه‌ها را به یاد آوردید — عالی." },
-    reload:       { de: "Neu laden zum Neustart", en: "Reload page to start over", ru: "Перезагрузить и начать заново", vi: "Tải lại để bắt đầu lại", fa: "برای شروع دوباره صفحه را بارگذاری کنید" }
+    reload:       { de: "Neu laden zum Neustart", en: "Reload page to start over", ru: "Перезагрузить и начать заново", vi: "Tải lại để bắt đầu lại", fa: "برای شروع دوباره صفحه را بارگذاری کنید" },
+    askTip: {
+      de: "In welchen Sprachen die Frage erscheinen darf — das Aufforderungswort, das du vor dem Aufdecken siehst.",
+      en: "Which languages the question can appear in — the prompt word you see before revealing.",
+      ru: "На каких языках может появляться вопрос — слово-подсказка, которое вы видите до раскрытия.",
+      vi: "Những ngôn ngữ nào có thể xuất hiện làm câu hỏi — từ gợi ý bạn thấy trước khi lật thẻ.",
+      fa: "پرسش با کدام زبان‌ها می‌تواند نمایش داده شود — واژهٔ راهنما که پیش از آشکارسازی می‌بینید."
+    },
+    showTip: {
+      de: "In welchen Sprachen die Antwort nach dem Aufdecken erscheint. Deutsch wird immer gezeigt — das lernst du.",
+      en: "Which languages the answer appears in after you reveal. German is always shown — it's what you're learning.",
+      ru: "На каких языках показывается ответ после раскрытия. Немецкий показывается всегда — его вы учите.",
+      vi: "Những ngôn ngữ nào xuất hiện làm đáp án sau khi lật thẻ. Tiếng Đức luôn hiển thị — đó là thứ bạn đang học.",
+      fa: "پاسخ پس از آشکارسازی با کدام زبان‌ها نمایش داده می‌شود. آلمانی همیشه نشان داده می‌شود — همان چیزی که می‌آموزید."
+    },
+    deLocked: {
+      de: "Deutsch wird immer angezeigt — das ist die Sprache, die du lernst.",
+      en: "German is always shown — it's the language you're learning.",
+      ru: "Немецкий показывается всегда — это язык, который вы учите.",
+      vi: "Tiếng Đức luôn được hiển thị — đó là ngôn ngữ bạn đang học.",
+      fa: "آلمانی همیشه نمایش داده می‌شود — زبانی که در حال یادگیری آن هستید."
+    },
+    levelTip: {
+      de: "Lernstufe: zeigt Wörter bis A1, A2 oder B1 (kumulativ).",
+      en: "Study level: shows words up to A1, A2 or B1 (cumulative).",
+      ru: "Уровень: показывает слова до A1, A2 или B1 (накопительно).",
+      vi: "Cấp độ học: hiện từ đến A1, A2 hoặc B1 (tích lũy).",
+      fa: "سطح یادگیری: واژه‌ها را تا A1، A2 یا B1 نشان می‌دهد (تجمعی)."
+    }
   };
 
   // ---- utilities ---------------------------------------------------------
@@ -347,16 +391,24 @@
     return map.en || map.de || "";
   }
 
-  // The interface language: the first enabled "show" language (LANGS order).
-  function uiLangKey() { return shownLangs()[0].key; }
+  // The interface language: the first enabled "show" language that is NOT
+  // German (German is always shown but you're learning it, so it never drives
+  // the UI). Falls back to English if only German is selected.
+  function uiLangKey() {
+    var langs = shownLangs().filter(function (l) { return l.key !== "de"; });
+    return langs.length ? langs[0].key : "en";
+  }
 
   // Paint all static interface labels in the current UI language.
   function applyUiLang() {
     var k = uiLangKey();
     elNavCards.textContent = tr(UISTR.cards, k);
     elNavGrammar.textContent = tr(UISTR.grammar, k);
-    if (elLblAsk) elLblAsk.textContent = tr(UISTR.ask, k);
-    if (elLblShow) elLblShow.textContent = tr(UISTR.show, k);
+    if (elLblAsk) { elLblAsk.textContent = tr(UISTR.ask, k); elLblAsk.setAttribute("title", tr(UISTR.askTip, k)); }
+    if (elLblShow) { elLblShow.textContent = tr(UISTR.show, k); elLblShow.setAttribute("title", tr(UISTR.showTip, k)); }
+    var deShow = document.querySelector('.flag[data-set="show"][data-lang="de"]');
+    if (deShow) deShow.setAttribute("title", tr(UISTR.deLocked, k));
+    if (elLevelNav) elLevelNav.setAttribute("title", tr(UISTR.levelTip, k));
     if (elRevealHint) {
       elRevealHint.innerHTML = escapeHtml(tr(UISTR.revealA, k)) + " <kbd>Enter</kbd> " + escapeHtml(tr(UISTR.revealB, k));
       elRevealHint.setAttribute("dir", "auto");
@@ -558,6 +610,7 @@
     var grammar = view === "grammar";
     elGrammar.classList.toggle("hidden", !grammar);
     elGrammarIndex.classList.toggle("hidden", !grammar);
+    elLevelNav.classList.toggle("hidden", grammar); // levels only apply to cards
     elDeck.classList.toggle("hidden", grammar || sessionDone);
     elControls.classList.toggle("hidden", grammar || sessionDone);
     elStats.classList.toggle("hidden", grammar || !sessionDone);
@@ -569,6 +622,49 @@
     if (grammar) renderGrammar();
   }
 
+  // ---- level switch ------------------------------------------------------
+  function updateLevelNav() {
+    Array.prototype.forEach.call(elLevelNav.querySelectorAll(".levelBtn"), function (b) {
+      var on = b.getAttribute("data-level") === currentLevel;
+      b.classList.toggle("active", on);
+      b.setAttribute("aria-pressed", on ? "true" : "false");
+    });
+  }
+
+  // Switching level starts a fresh session over the words at (and below) it.
+  function setLevel(lvl) {
+    if (!LEVEL_ORDER[lvl] || lvl === currentLevel) { updateLevelNav(); return; }
+    currentLevel = lvl;
+    try { window.localStorage.setItem("swipua_level", lvl); } catch (e) {}
+    deck = buildDeck();
+    totalWords = deck.length;
+    knownCount = 0;
+    missCount = 0;
+    seen = [];
+    peekPos = null;
+    sessionDone = false;
+    updateLevelNav();
+    elStats.classList.add("hidden");
+    elGrammar.classList.add("hidden");
+    elGrammarIndex.classList.add("hidden");
+    currentView = "cards";
+    elNavCards.classList.add("active");
+    elNavGrammar.classList.remove("active");
+    elDeck.classList.remove("hidden");
+    elControls.classList.remove("hidden");
+    if (deck.length === 0) {
+      elWord.textContent = "—";
+      elCard.classList.remove("answer-hidden");
+      elTranslations.innerHTML = "";
+      elSynonyms.innerHTML = "";
+      elExamples.innerHTML = "";
+      updateControls();
+      updateProgress();
+    } else {
+      renderCard();
+    }
+  }
+
   // ---- flag toggles ------------------------------------------------------
   function initFlags() {
     var buttons = document.querySelectorAll(".flag");
@@ -576,8 +672,16 @@
       var name = btn.getAttribute("data-set"); // "title" | "show"
       var key = btn.getAttribute("data-lang");
       syncFlag(btn);
+      if (name === "show" && key === "de") btn.classList.add("locked");
       btn.addEventListener("click", function () {
         var set = setForName(name);
+        // German is always shown as the answer — it can't be turned off.
+        if (name === "show" && key === "de") {
+          btn.classList.remove("shake");
+          void btn.offsetWidth;
+          btn.classList.add("shake");
+          return;
+        }
         var enabledCount = LANGS.filter(function (l) { return set[l.key]; }).length;
         // Keep at least one language enabled in each row.
         if (set[key] && enabledCount === 1) {
@@ -628,6 +732,9 @@
   }
   elNavCards.addEventListener("click", function () { showView("cards"); setHash(""); });
   elNavGrammar.addEventListener("click", function () { showView("grammar"); setHash("grammar"); });
+  Array.prototype.forEach.call(elLevelNav.querySelectorAll(".levelBtn"), function (b) {
+    b.addEventListener("click", function () { setLevel(b.getAttribute("data-level")); });
+  });
   elBtnReload.addEventListener("click", function () { location.reload(); });
 
   // ---- theme (light = VS Code "Quiet Light", dark = default) -------------
@@ -734,6 +841,7 @@
   initFlags();
   initTheme();
   applyUiLang();
+  updateLevelNav();
   if (deck.length === 0) {
     elWord.textContent = "No words loaded";
     elCard.classList.remove("answer-hidden");

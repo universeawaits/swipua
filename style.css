@@ -57,16 +57,34 @@ body {
   letter-spacing: 0.02em;
 }
 
-#flags {
+#flagRows {
   display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.flagRow {
+  display: flex;
+  align-items: center;
   gap: 6px;
 }
 
+.flagLabel {
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  width: 30px;
+  text-align: right;
+  cursor: help;
+  user-select: none;
+}
+
 .flag {
-  padding: 4px 9px;
-  font-size: 1.15rem;
+  padding: 2px 6px;
+  font-size: 1rem;
   line-height: 1;
-  border-radius: 10px;
+  border-radius: 8px;
   border: 1px solid var(--border);
   background: var(--card-bg);
   cursor: pointer;

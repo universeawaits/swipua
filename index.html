@@ -11,12 +11,23 @@
 <header id="topbar">
   <div id="topleft">
     <div id="logo">swipua</div>
-    <div id="flags" role="group" aria-label="Which language shows as the prompt">
-      <button type="button" class="flag" data-lang="de" title="German as prompt">🇩🇪</button>
-      <button type="button" class="flag" data-lang="en" title="English as prompt">🇬🇧</button>
-      <button type="button" class="flag" data-lang="ru" title="Russian as prompt">🇷🇺</button>
-      <button type="button" class="flag" data-lang="vi" title="Vietnamese as prompt">🇻🇳</button>
-      <button type="button" class="flag" data-lang="fa" title="Persian as prompt">🇮🇷</button>
+    <div id="flagRows">
+      <div class="flagRow" role="group" aria-label="Languages that can appear as the prompt word">
+        <span class="flagLabel" title="Which languages can appear as the prompt word (before you reveal)">ask</span>
+        <button type="button" class="flag" data-set="title" data-lang="de" title="German as prompt">🇩🇪</button>
+        <button type="button" class="flag" data-set="title" data-lang="en" title="English as prompt">🇬🇧</button>
+        <button type="button" class="flag" data-set="title" data-lang="ru" title="Russian as prompt">🇷🇺</button>
+        <button type="button" class="flag" data-set="title" data-lang="vi" title="Vietnamese as prompt">🇻🇳</button>
+        <button type="button" class="flag" data-set="title" data-lang="fa" title="Persian as prompt">🇮🇷</button>
+      </div>
+      <div class="flagRow" role="group" aria-label="Which translations appear after you reveal">
+        <span class="flagLabel" title="Which translations appear after you reveal the card">show</span>
+        <button type="button" class="flag" data-set="show" data-lang="de" title="Show German translation">🇩🇪</button>
+        <button type="button" class="flag" data-set="show" data-lang="en" title="Show English translation">🇬🇧</button>
+        <button type="button" class="flag" data-set="show" data-lang="ru" title="Show Russian translation">🇷🇺</button>
+        <button type="button" class="flag" data-set="show" data-lang="vi" title="Show Vietnamese translation">🇻🇳</button>
+        <button type="button" class="flag" data-set="show" data-lang="fa" title="Show Persian translation">🇮🇷</button>
+      </div>
     </div>
   </div>
   <div id="progress">0 / 0</div>

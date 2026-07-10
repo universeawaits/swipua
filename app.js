@@ -28,8 +28,11 @@
     { key: "vi", label: "VI", get: function (w) { return w.vi; } },
     { key: "fa", label: "FA", get: function (w) { return w.fa; } }
   ];
-  // Which languages are allowed to appear as the big prompt (title) word.
-  var titleLangs = loadTitleLangs();
+  // Two independent language sets:
+  //  titleLangs — which languages may appear as the big prompt (title) word.
+  //  showLangs  — which languages appear as translations / example lines after reveal.
+  var titleLangs = loadLangSet("swipua_titleLangs");
+  var showLangs = loadLangSet("swipua_showLangs");
 
   // ---- elements ----------------------------------------------------------
   var elDeck = document.getElementById("deck");
@@ -74,11 +77,11 @@
     return a.length ? a : LANGS.slice();
   }
 
-  function loadTitleLangs() {
+  function loadLangSet(storageKey) {
     var def = {};
     LANGS.forEach(function (l) { def[l.key] = true; });
     try {
-      var raw = window.localStorage.getItem("swipua_titleLangs");
+      var raw = window.localStorage.getItem(storageKey);
       if (raw) {
         var parsed = JSON.parse(raw);
         var out = {}, any = false;
@@ -94,8 +97,11 @@
     return def;
   }
 
-  function saveTitleLangs() {
-    try { window.localStorage.setItem("swipua_titleLangs", JSON.stringify(titleLangs)); } catch (e) {}
+  function setForName(name) { return name === "show" ? showLangs : titleLangs; }
+  function storageKeyFor(name) { return name === "show" ? "swipua_showLangs" : "swipua_titleLangs"; }
+
+  function saveLangSet(name) {
+    try { window.localStorage.setItem(storageKeyFor(name), JSON.stringify(setForName(name))); } catch (e) {}
   }
 
   // ---- rendering ---------------------------------------------------------
@@ -108,7 +114,8 @@
 
     elTranslations.innerHTML = "";
     LANGS.forEach(function (l) {
-      if (l.key === frontKey) return;
+      // show a translation only if it's not the title and its "show" flag is on
+      if (l.key === frontKey || !showLangs[l.key]) return;
       var span = document.createElement("span");
       // <bdi> isolates the value's direction so mixing LTR labels with
       // RTL (Persian) values stays readable
@@ -120,7 +127,7 @@
     (w.examples || []).forEach(function (ex) {
       var div = document.createElement("div");
       div.className = "example";
-      div.innerHTML = LANGS.map(function (l) {
+      div.innerHTML = LANGS.filter(function (l) { return showLangs[l.key]; }).map(function (l) {
         var v = l.key === "de" ? ex.de : ex[l.key];
         return '<div class="' + l.key + '" dir="auto">' + escapeHtml(v) + "</div>";
       }).join("");
@@ -252,36 +259,41 @@
   function initFlags() {
     var buttons = document.querySelectorAll(".flag");
     Array.prototype.forEach.call(buttons, function (btn) {
+      var name = btn.getAttribute("data-set"); // "title" | "show"
       var key = btn.getAttribute("data-lang");
-      syncFlag(btn, key);
+      syncFlag(btn);
       btn.addEventListener("click", function () {
-        var enabledCount = LANGS.filter(function (l) { return titleLangs[l.key]; }).length;
-        // Keep at least one language eligible as the title.
-        if (titleLangs[key] && enabledCount === 1) {
+        var set = setForName(name);
+        var enabledCount = LANGS.filter(function (l) { return set[l.key]; }).length;
+        // Keep at least one language enabled in each row.
+        if (set[key] && enabledCount === 1) {
           btn.classList.remove("shake");
           // force reflow so the animation can retrigger
           void btn.offsetWidth;
           btn.classList.add("shake");
           return;
         }
-        titleLangs[key] = !titleLangs[key];
-        syncFlag(btn, key);
-        saveTitleLangs();
-        applyFlagChange();
+        set[key] = !set[key];
+        syncFlag(btn);
+        saveLangSet(name);
+        applyFlagChange(name);
       });
     });
   }
 
-  function syncFlag(btn, key) {
-    btn.classList.toggle("off", !titleLangs[key]);
-    btn.setAttribute("aria-pressed", titleLangs[key] ? "true" : "false");
+  function syncFlag(btn) {
+    var set = setForName(btn.getAttribute("data-set"));
+    var key = btn.getAttribute("data-lang");
+    btn.classList.toggle("off", !set[key]);
+    btn.setAttribute("aria-pressed", set[key] ? "true" : "false");
   }
 
-  // Re-pick the live card's title only if its current language was switched
-  // off; otherwise leave the card as-is so the change isn't jarring.
-  function applyFlagChange() {
+  // Repaint the live card after a flag change. For the "ask" (title) row, also
+  // re-pick the title if the current one was just switched off; the "show" row
+  // just needs a repaint so translations/example lines update.
+  function applyFlagChange(name) {
     if (peekPos !== null || deck.length === 0) return;
-    if (!titleLangs[currentFrontKey]) {
+    if (name === "title" && !titleLangs[currentFrontKey]) {
       var allowed = allowedTitleLangs();
       currentFrontKey = allowed[Math.floor(Math.random() * allowed.length)].key;
     }

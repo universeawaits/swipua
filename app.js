@@ -34,13 +34,64 @@
   var peekPos = null;
 
   // ---- language config ---------------------------------------------------
+  // Master list of every language the app knows how to display. `key` is the
+  // field name in each word/example object (German lives under `word`/`de`).
+  // `flag`/`endo` (endonym) drive the dropdowns; `names` gives the language's
+  // name in each possible interface language; `label` is the short chip tag.
+  // A language only becomes selectable once its data actually exists in the
+  // corpus (see AVAIL below), so new languages can be wired up here before
+  // their translations land without showing blank cards.
   var LANGS = [
-    { key: "de", label: "DE", get: function (w) { return w.word; } },
-    { key: "en", label: "EN", get: function (w) { return w.en; } },
-    { key: "ru", label: "RU", get: function (w) { return w.ru; } },
-    { key: "vi", label: "VI", get: function (w) { return w.vi; } },
-    { key: "fa", label: "FA", get: function (w) { return w.fa; } }
+    { key: "de",    flag: "🇩🇪", label: "DE",    endo: "Deutsch",       names: { de: "Deutsch", en: "German", ru: "Немецкий", vi: "Tiếng Đức", fa: "آلمانی" } },
+    { key: "en",    flag: "🇬🇧", label: "EN",    endo: "English",       names: { de: "Englisch", en: "English", ru: "Английский", vi: "Tiếng Anh", fa: "انگلیسی" } },
+    { key: "ru",    flag: "🇷🇺", label: "RU",    endo: "Русский",       names: { de: "Russisch", en: "Russian", ru: "Русский", vi: "Tiếng Nga", fa: "روسی" } },
+    { key: "vi",    flag: "🇻🇳", label: "VI",    endo: "Tiếng Việt",    names: { de: "Vietnamesisch", en: "Vietnamese", ru: "Вьетнамский", vi: "Tiếng Việt", fa: "ویتنامی" } },
+    { key: "fa",    flag: "🇮🇷", label: "FA",    endo: "فارسی",         names: { de: "Persisch", en: "Persian", ru: "Персидский", vi: "Tiếng Ba Tư", fa: "فارسی" } },
+    { key: "uk",    flag: "🇺🇦", label: "UK",    endo: "Українська",    names: { de: "Ukrainisch", en: "Ukrainian", ru: "Украинский", vi: "Tiếng Ukraina", fa: "اوکراینی" } },
+    { key: "th",    flag: "🇹🇭", label: "TH",    endo: "ไทย",           names: { de: "Thailändisch", en: "Thai", ru: "Тайский", vi: "Tiếng Thái", fa: "تایلندی" } },
+    { key: "zh",    flag: "🇨🇳", label: "ZH",    endo: "中文",           names: { de: "Chinesisch", en: "Chinese", ru: "Китайский", vi: "Tiếng Trung", fa: "چینی" } },
+    { key: "ms",    flag: "🇲🇾", label: "MS",    endo: "Bahasa Melayu", names: { de: "Malaiisch", en: "Malay", ru: "Малайский", vi: "Tiếng Mã Lai", fa: "مالایی" } },
+    { key: "tr",    flag: "🇹🇷", label: "TR",    endo: "Türkçe",        names: { de: "Türkisch", en: "Turkish", ru: "Турецкий", vi: "Tiếng Thổ Nhĩ Kỳ", fa: "ترکی" } },
+    { key: "pl",    flag: "🇵🇱", label: "PL",    endo: "Polski",        names: { de: "Polnisch", en: "Polish", ru: "Польский", vi: "Tiếng Ba Lan", fa: "لهستانی" } },
+    { key: "sw",    flag: "🇹🇿", label: "SW",    endo: "Kiswahili",     names: { de: "Suaheli", en: "Swahili", ru: "Суахили", vi: "Tiếng Swahili", fa: "سواحیلی" } },
+    { key: "am",    flag: "🇪🇹", label: "AM",    endo: "አማርኛ",          names: { de: "Amharisch", en: "Amharic", ru: "Амхарский", vi: "Tiếng Amhara", fa: "امهری" } },
+    { key: "hi",    flag: "🇮🇳", label: "HI",    endo: "हिन्दी",          names: { de: "Hindi", en: "Hindi", ru: "Хинди", vi: "Tiếng Hindi", fa: "هندی" } },
+    { key: "ur",    flag: "🇵🇰", label: "UR",    endo: "اردو",          names: { de: "Urdu", en: "Urdu", ru: "Урду", vi: "Tiếng Urdu", fa: "اردو" } },
+    { key: "ar_eg", flag: "🇪🇬", label: "AR-EG", endo: "مصري",          names: { de: "Ägyptisch-Arabisch", en: "Egyptian Arabic", ru: "Египетский арабский", vi: "Tiếng Ả Rập Ai Cập", fa: "عربی مصری" } },
+    { key: "ar_lb", flag: "🇱🇧", label: "AR-LB", endo: "لبناني",        names: { de: "Libanesisch-Arabisch", en: "Lebanese Arabic", ru: "Ливанский арабский", vi: "Tiếng Ả Rập Liban", fa: "عربی لبنانی" } },
+    { key: "ar_sy", flag: "🇸🇾", label: "AR-SY", endo: "سوري",          names: { de: "Syrisch-Arabisch", en: "Syrian Arabic", ru: "Сирийский арабский", vi: "Tiếng Ả Rập Syria", fa: "عربی سوری" } }
   ];
+
+  var LANG_BY_KEY = {};
+  LANGS.forEach(function (l) { LANG_BY_KEY[l.key] = l; });
+
+  // Read a language's value off a word / example object. German is stored under
+  // `word` on the card and `de` on examples; every other language uses its key.
+  function wordVal(w, key) { return key === "de" ? w.word : w[key]; }
+  function exVal(ex, key) { return key === "de" ? ex.de : ex[key]; }
+
+  // Which languages have real data in the corpus. German is always available;
+  // any other language needs at least one non-empty translation to show up.
+  var LANG_PRESENT = { de: true };
+  source.forEach(function (w) {
+    LANGS.forEach(function (l) {
+      if (LANG_PRESENT[l.key]) return;
+      var v = w[l.key];
+      if (v != null && v !== "") LANG_PRESENT[l.key] = true;
+    });
+  });
+  // AVAIL is the display list — the master config filtered to languages with
+  // data. Everything the UI enumerates (dropdowns, translations, examples,
+  // grammar) walks AVAIL, so unfinished languages simply don't appear yet.
+  var AVAIL = LANGS.filter(function (l) { return LANG_PRESENT[l.key]; });
+
+  // Name of a language rendered in the current interface language, with an
+  // English then endonym fallback.
+  function localName(l, uiKey) {
+    var n = l.names && (l.names[uiKey] || l.names.en);
+    return n || l.endo;
+  }
+
   // Two independent language sets:
   //  titleLangs — which languages may appear as the big prompt (title) word.
   //  showLangs  — which languages appear as translations / example lines after reveal.
@@ -77,6 +128,13 @@
   var elStatsTitle = document.getElementById("statsTitle");
   var elBtnReload = document.getElementById("btnReload");
   var elThemeToggle = document.getElementById("themeToggle");
+  var elResetBtn = document.getElementById("resetBtn");
+  var elAskPanel = document.getElementById("askPanel");
+  var elShowPanel = document.getElementById("showPanel");
+  var elAskBtn = document.getElementById("askDropBtn");
+  var elShowBtn = document.getElementById("showDropBtn");
+  var elAskFlags = document.getElementById("askFlags");
+  var elShowFlags = document.getElementById("showFlags");
 
   var GRAMMAR_DATA = (typeof GRAMMAR !== "undefined" && GRAMMAR) ? GRAMMAR : [];
 
@@ -100,8 +158,7 @@
     grammar:      { de: "Grammatik", en: "Grammar", ru: "Грамматика", vi: "Ngữ pháp", fa: "گرامر" },
     ask:          { de: "Frage", en: "Ask", ru: "Вопрос", vi: "Hỏi", fa: "پرسش" },
     show:         { de: "Antwort", en: "Show", ru: "Ответ", vi: "Đáp", fa: "پاسخ" },
-    revealA:      { de: "Tippe die Karte oder drücke", en: "Tap the card or press", ru: "Нажмите на карточку или клавишу", vi: "Chạm vào thẻ hoặc nhấn", fa: "روی کارت بزنید یا کلید" },
-    revealB:      { de: "zum Aufdecken", en: "to reveal", ru: "чтобы показать", vi: "để hiện", fa: "را برای نمایش بزنید" },
+    reveal:       { de: "Tippe die Karte oder drücke eine beliebige Taste zum Aufdecken", en: "Tap the card or press any key to reveal", ru: "Нажмите на карточку или любую клавишу, чтобы показать", vi: "Chạm vào thẻ hoặc nhấn phím bất kỳ để hiện", fa: "روی کارت بزنید یا هر کلیدی را برای نمایش فشار دهید" },
     back:         { de: "Zurück", en: "Back", ru: "Назад", vi: "Quay lại", fa: "بازگشت" },
     dontknow:     { de: "Weiß ich nicht", en: "Don't know", ru: "Не знаю", vi: "Chưa biết", fa: "نمی‌دانم" },
     know:         { de: "Weiß ich", en: "Know", ru: "Знаю", vi: "Đã biết", fa: "می‌دانم" },
@@ -114,6 +171,8 @@
     slips:        { de: "Fehler", en: "slips", ru: "ошибок", vi: "lỗi", fa: "خطا" },
     allremembered:{ de: "Alle Wörter behalten — super.", en: "All words remembered — nice.", ru: "Все слова запомнены — отлично.", vi: "Đã nhớ hết các từ — tuyệt.", fa: "همه واژه‌ها را به یاد آوردید — عالی." },
     reload:       { de: "Neu laden zum Neustart", en: "Reload page to start over", ru: "Перезагрузить и начать заново", vi: "Tải lại để bắt đầu lại", fa: "برای شروع دوباره صفحه را بارگذاری کنید" },
+    resetTip:     { de: "Fortschritt zurücksetzen und neu mischen", en: "Reset progress and reshuffle", ru: "Сбросить прогресс и перемешать", vi: "Đặt lại tiến độ và xáo lại", fa: "بازنشانی پیشرفت و بر زدن دوباره" },
+    resetConfirm: { de: "Deinen Lernfortschritt zurücksetzen? Alle in dieser Sitzung gelernten Karten gehen verloren.", en: "Reset your progress? All cards learned in this session will be cleared.", ru: "Сбросить прогресс? Все выученные в этой сессии карточки будут удалены.", vi: "Đặt lại tiến độ? Tất cả thẻ đã học trong phiên này sẽ bị xóa.", fa: "پیشرفت خود را بازنشانی می‌کنید؟ همهٔ کارت‌های آموخته‌شدهٔ این جلسه پاک می‌شوند." },
     askTip: {
       de: "In welchen Sprachen die Frage erscheinen darf — das Aufforderungswort, das du vor dem Aufdecken siehst.",
       en: "Which languages the question can appear in — the prompt word you see before revealing.",
@@ -161,25 +220,22 @@
     return d.innerHTML;
   }
 
-  function langByKey(key) {
-    for (var i = 0; i < LANGS.length; i++) if (LANGS[i].key === key) return LANGS[i];
-    return LANGS[0];
-  }
+  function langByKey(key) { return LANG_BY_KEY[key] || LANGS[0]; }
 
   function allowedTitleLangs() {
-    var a = LANGS.filter(function (l) { return titleLangs[l.key]; });
-    return a.length ? a : LANGS.slice();
+    var a = AVAIL.filter(function (l) { return titleLangs[l.key]; });
+    return a.length ? a : AVAIL.slice();
   }
 
   function loadLangSet(storageKey) {
     var def = {};
-    LANGS.forEach(function (l) { def[l.key] = true; });
+    AVAIL.forEach(function (l) { def[l.key] = true; });
     try {
       var raw = window.localStorage.getItem(storageKey);
       if (raw) {
         var parsed = JSON.parse(raw);
         var out = {}, any = false;
-        LANGS.forEach(function (l) {
+        AVAIL.forEach(function (l) {
           // languages not present in a saved preference (e.g. newly added
           // ones) default to on rather than off
           out[l.key] = parsed.hasOwnProperty(l.key) ? !!parsed[l.key] : true;
@@ -198,22 +254,111 @@
     try { window.localStorage.setItem(storageKeyFor(name), JSON.stringify(setForName(name))); } catch (e) {}
   }
 
+  // ---- session persistence ----------------------------------------------
+  // The whole session (which cards are learned / still queued, the history,
+  // and the live card + its reveal state) is mirrored to localStorage so a
+  // learner who closes the tab picks up exactly where they left off. Cards are
+  // stored by their German word, which is unique across the corpus, so the
+  // save survives data updates that shuffle array positions.
+  var PROG_KEY = "swipua_progress";
+  var byWord = {};
+  source.forEach(function (w) { byWord[w.word] = w; });
+
+  function saveProgress() {
+    try {
+      var data = {
+        v: 1,
+        level: currentLevel,
+        done: sessionDone,
+        known: knownCount,
+        miss: missCount,
+        deck: deck.map(function (w) { return w.word; }),
+        seen: seen.map(function (s) { return [s.word.word, s.frontKey]; }),
+        cur: { front: currentFrontKey, revealed: revealed, peek: peekPos }
+      };
+      window.localStorage.setItem(PROG_KEY, JSON.stringify(data));
+    } catch (e) {}
+  }
+
+  function clearProgress() {
+    try { window.localStorage.removeItem(PROG_KEY); } catch (e) {}
+  }
+
+  function loadProgress() {
+    try {
+      var raw = window.localStorage.getItem(PROG_KEY);
+      if (!raw) return null;
+      var d = JSON.parse(raw);
+      if (!d || d.v !== 1 || !LEVEL_ORDER[d.level]) return null;
+      return d;
+    } catch (e) { return null; }
+  }
+
+  // Rebuild live state from a saved snapshot. Returns false if there was
+  // nothing usable to restore (so the caller starts a fresh session).
+  function restoreSession(saved) {
+    currentLevel = saved.level;
+    knownCount = saved.known || 0;
+    missCount = saved.miss || 0;
+    deck = (saved.deck || []).map(function (id) { return byWord[id]; }).filter(Boolean);
+    seen = (saved.seen || []).map(function (a) {
+      var w = byWord[a[0]];
+      return w ? { word: w, frontKey: a[1] } : null;
+    }).filter(Boolean);
+    // Nothing left to study and not marked done → treat as a fresh deck.
+    if (deck.length === 0 && !saved.done) return false;
+    totalWords = knownCount + deck.length;
+    sessionDone = !!saved.done && deck.length === 0;
+    peekPos = (saved.cur && saved.cur.peek != null) ? saved.cur.peek : null;
+    if (peekPos !== null && (peekPos < 0 || peekPos >= seen.length)) peekPos = null;
+    currentFrontKey = saved.cur && saved.cur.front;
+    if (!currentFrontKey || !titleLangs[currentFrontKey]) currentFrontKey = allowedTitleLangs()[0].key;
+    revealed = !!(saved.cur && saved.cur.revealed);
+    return true;
+  }
+
+  // Wipe the saved session and start over on the current level.
+  function resetSession() {
+    clearProgress();
+    deck = buildDeck();
+    totalWords = deck.length;
+    knownCount = 0;
+    missCount = 0;
+    seen = [];
+    peekPos = null;
+    revealed = false;
+    sessionDone = false;
+    elStats.classList.add("hidden");
+    showView("cards");
+    if (deck.length === 0) {
+      elWord.textContent = "—";
+      elCard.classList.remove("answer-hidden");
+      elTranslations.innerHTML = "";
+      elSynonyms.innerHTML = "";
+      elExamples.innerHTML = "";
+      updateControls();
+      updateProgress();
+    } else {
+      renderCard();
+    }
+    saveProgress();
+  }
+
   // ---- rendering ---------------------------------------------------------
   // Paint a word onto the card. `frontKey` = which language is the title;
   // `isRevealed` = whether translations/examples are shown.
   function paintCard(w, frontKey, isRevealed) {
-    var frontLang = langByKey(frontKey);
-    elWord.textContent = frontLang.get(w);
-    elWord.setAttribute("dir", "auto"); // render RTL (Persian) correctly
+    elWord.textContent = wordVal(w, frontKey);
+    elWord.setAttribute("dir", "auto"); // render RTL (Persian/Arabic/Urdu) correctly
 
     elTranslations.innerHTML = "";
-    LANGS.forEach(function (l) {
+    AVAIL.forEach(function (l) {
       // show a translation only if it's not the title and its "show" flag is on
       if (l.key === frontKey || !showLangs[l.key]) return;
       var span = document.createElement("span");
       // <bdi> isolates the value's direction so mixing LTR labels with
-      // RTL (Persian) values stays readable
-      span.innerHTML = l.label + ": <bdi>" + escapeHtml(l.get(w)) + "</bdi>";
+      // RTL (Persian/Arabic) values stays readable
+      span.innerHTML = l.label + ": <bdi>" + escapeHtml(wordVal(w, l.key)) + "</bdi>";
       elTranslations.appendChild(span);
     });
 
@@ -239,9 +384,8 @@
     (w.examples || []).forEach(function (ex) {
       var div = document.createElement("div");
       div.className = "example";
-      div.innerHTML = LANGS.filter(function (l) { return showLangs[l.key]; }).map(function (l) {
-        var v = l.key === "de" ? ex.de : ex[l.key];
-        return '<div class="' + l.key + '" dir="auto">' + escapeHtml(v) + "</div>";
+      div.innerHTML = AVAIL.filter(function (l) { return showLangs[l.key]; }).map(function (l) {
+        return '<div class="' + l.key + '" dir="auto">' + escapeHtml(exVal(ex, l.key)) + "</div>";
       }).join("");
       elExamples.appendChild(div);
     });
@@ -261,6 +405,7 @@
     paintCard(w, currentFrontKey, false);
     updateProgress();
     updateControls();
+    saveProgress();
   }
 
   // Repaint the live current card in its existing state (used when returning
@@ -269,6 +414,7 @@
     paintCard(deck[0], currentFrontKey, revealed);
     updateProgress();
     updateControls();
+    saveProgress();
   }
 
   function paintPeek() {
@@ -276,6 +422,7 @@
     paintCard(entry.word, entry.frontKey, true); // past cards are shown fully
     updateProgress();
     updateControls();
+    saveProgress();
   }
 
   function updateProgress() {
@@ -304,6 +451,7 @@
     if (revealed) return;
     revealed = true;
     elCard.classList.remove("answer-hidden");
+    saveProgress();
   }
 
   // ---- actions -----------------------------------------------------------
@@ -357,6 +505,7 @@
 
   function showStats() {
     sessionDone = true;
+    saveProgress();
     elDeck.classList.add("hidden");
     elControls.classList.add("hidden");
     elStats.classList.remove("hidden");
@@ -375,14 +524,14 @@
   // Which languages the grammar is EXPLAINED in (title/"ask" row). The first
   // enabled one (in LANGS order) is the primary used for headers & labels.
   function explainLangs() {
-    var a = LANGS.filter(function (l) { return titleLangs[l.key]; });
-    return a.length ? a : LANGS.slice();
+    var a = AVAIL.filter(function (l) { return titleLangs[l.key]; });
+    return a.length ? a : AVAIL.slice();
   }
   function primaryExplainKey() { return explainLangs()[0].key; }
   // Which languages examples & analogues appear in (the "show" row).
   function shownLangs() {
-    var a = LANGS.filter(function (l) { return showLangs[l.key]; });
-    return a.length ? a : LANGS.slice();
+    var a = AVAIL.filter(function (l) { return showLangs[l.key]; });
+    return a.length ? a : AVAIL.slice();
   }
   // Pick a localized string, falling back to English then German.
   function tr(map, key) {
@@ -406,11 +555,9 @@
     elNavGrammar.textContent = tr(UISTR.grammar, k);
     if (elLblAsk) { elLblAsk.textContent = tr(UISTR.ask, k); elLblAsk.setAttribute("title", tr(UISTR.askTip, k)); }
     if (elLblShow) { elLblShow.textContent = tr(UISTR.show, k); elLblShow.setAttribute("title", tr(UISTR.showTip, k)); }
-    var deShow = document.querySelector('.flag[data-set="show"][data-lang="de"]');
-    if (deShow) deShow.setAttribute("title", tr(UISTR.deLocked, k));
     if (elLevelNav) elLevelNav.setAttribute("title", tr(UISTR.levelTip, k));
     if (elRevealHint) {
-      elRevealHint.innerHTML = escapeHtml(tr(UISTR.revealA, k)) + " <kbd>Enter</kbd> " + escapeHtml(tr(UISTR.revealB, k));
+      elRevealHint.textContent = tr(UISTR.reveal, k);
       elRevealHint.setAttribute("dir", "auto");
     }
     elBtnBack.innerHTML = "‹ " + escapeHtml(tr(UISTR.back, k));
@@ -419,6 +566,11 @@
     elBtnForward.innerHTML = escapeHtml(tr(UISTR.backcurrent, k)) + " ›";
     if (elStatsTitle) elStatsTitle.textContent = tr(UISTR.done, k);
     if (elBtnReload) elBtnReload.textContent = tr(UISTR.reload, k);
+    if (elResetBtn) elResetBtn.setAttribute("title", tr(UISTR.resetTip, k));
+    // The dropdown option lists carry names in the interface language, so
+    // rebuild them whenever that language changes.
+    renderPanel("title");
+    renderPanel("show");
     updateProgress();
   }
 
@@ -618,7 +770,11 @@
     elNavGrammar.classList.toggle("active", grammar);
     elNavCards.setAttribute("aria-selected", (!grammar).toString());
     elNavGrammar.setAttribute("aria-selected", grammar.toString());
-    elProgress.style.visibility = grammar ? "hidden" : "";
+    // In grammar mode hide progress AND the reset button (reset only applies to
+    // a card session); that leaves the theme toggle as the sole item on the
+    // right, pinning it to the far edge.
+    elProgress.classList.toggle("hidden", grammar);
+    elResetBtn.classList.toggle("hidden", grammar);
     if (grammar) renderGrammar();
   }
 
@@ -660,50 +816,106 @@
       elExamples.innerHTML = "";
       updateControls();
       updateProgress();
+      saveProgress();
     } else {
       renderCard();
     }
   }
 
-  // ---- flag toggles ------------------------------------------------------
-  function initFlags() {
-    var buttons = document.querySelectorAll(".flag");
-    Array.prototype.forEach.call(buttons, function (btn) {
-      var name = btn.getAttribute("data-set"); // "title" | "show"
-      var key = btn.getAttribute("data-lang");
-      syncFlag(btn);
-      if (name === "show" && key === "de") btn.classList.add("locked");
-      btn.addEventListener("click", function () {
-        var set = setForName(name);
-        // German is always shown as the answer — it can't be turned off.
-        if (name === "show" && key === "de") {
-          btn.classList.remove("shake");
-          void btn.offsetWidth;
-          btn.classList.add("shake");
-          return;
-        }
-        var enabledCount = LANGS.filter(function (l) { return set[l.key]; }).length;
-        // Keep at least one language enabled in each row.
-        if (set[key] && enabledCount === 1) {
-          btn.classList.remove("shake");
-          // force reflow so the animation can retrigger
-          void btn.offsetWidth;
-          btn.classList.add("shake");
-          return;
-        }
-        set[key] = !set[key];
-        syncFlag(btn);
-        saveLangSet(name);
-        applyFlagChange(name);
+  // ---- language dropdowns ------------------------------------------------
+  // Two multi-select dropdowns replace the old flag rows. Each option shows a
+  // flag, the language's endonym, and — when different — its name in the
+  // current interface language. German in the "show" set is locked on.
+  function panelFor(name) { return name === "show" ? elShowPanel : elAskPanel; }
+  function btnFor(name) { return name === "show" ? elShowBtn : elAskBtn; }
+  function flagsFor(name) { return name === "show" ? elShowFlags : elAskFlags; }
+
+  function shake(el) {
+    el.classList.remove("shake");
+    void el.offsetWidth; // force reflow so the animation retriggers
+    el.classList.add("shake");
+  }
+
+  function anyDropOpen() {
+    return !elAskPanel.hidden || !elShowPanel.hidden;
+  }
+
+  // (Re)build a dropdown's option list in the current interface language.
+  function renderPanel(name) {
+    var panel = panelFor(name);
+    var set = setForName(name);
+    var uiK = uiLangKey();
+    panel.innerHTML = "";
+    AVAIL.forEach(function (l) {
+      var on = !!set[l.key];
+      var locked = name === "show" && l.key === "de";
+      var opt = document.createElement("button");
+      opt.type = "button";
+      opt.className = "ldOpt" + (on ? "" : " off") + (locked ? " locked" : "");
+      opt.setAttribute("role", "option");
+      opt.setAttribute("data-lang", l.key);
+      opt.setAttribute("aria-checked", on ? "true" : "false");
+      if (locked) opt.setAttribute("title", tr(UISTR.deLocked, uiK));
+      var local = localName(l, uiK);
+      var showLocal = local && local !== l.endo;
+      opt.innerHTML =
+        '<span class="ldChk" aria-hidden="true">' + (on ? "✓" : "") + "</span>" +
+        '<span class="ldFlag" aria-hidden="true">' + l.flag + "</span>" +
+        '<span class="ldNames"><span class="ldEndo" dir="auto">' + escapeHtml(l.endo) + "</span>" +
+        (showLocal ? '<span class="ldLocal" dir="auto">' + escapeHtml(local) + "</span>" : "") +
+        "</span>";
+      opt.addEventListener("click", function (e) {
+        e.stopPropagation();
+        toggleLang(name, l.key, opt);
       });
+      panel.appendChild(opt);
     });
   }
 
-  function syncFlag(btn) {
-    var set = setForName(btn.getAttribute("data-set"));
-    var key = btn.getAttribute("data-lang");
-    btn.classList.toggle("off", !set[key]);
-    btn.setAttribute("aria-pressed", set[key] ? "true" : "false");
+  function toggleLang(name, key, opt) {
+    var set = setForName(name);
+    // German is always shown as the answer — it can't be turned off.
+    if (name === "show" && key === "de") { shake(opt); return; }
+    var enabled = AVAIL.filter(function (l) { return set[l.key]; }).length;
+    // Keep at least one language enabled in each set.
+    if (set[key] && enabled === 1) { shake(opt); return; }
+    set[key] = !set[key];
+    saveLangSet(name);
+    renderPanel(name);
+    updateDropFace(name);
+    applyFlagChange(name);
+  }
+
+  // Refresh the flags shown on a dropdown's button face.
+  function updateDropFace(name) {
+    var set = setForName(name);
+    var flags = AVAIL.filter(function (l) { return set[l.key]; }).map(function (l) { return l.flag; });
+    flagsFor(name).textContent = flags.join(" ");
+  }
+
+  function openPanel(name, open) {
+    var panel = panelFor(name), btn = btnFor(name);
+    panel.hidden = !open;
+    btn.setAttribute("aria-expanded", open ? "true" : "false");
+    btn.classList.toggle("open", open);
+  }
+
+  function closeAllPanels() { openPanel("title", false); openPanel("show", false); }
+
+  function initLangDrops() {
+    ["title", "show"].forEach(function (name) {
+      renderPanel(name);
+      updateDropFace(name);
+      btnFor(name).addEventListener("click", function (e) {
+        e.stopPropagation();
+        var willOpen = panelFor(name).hidden;
+        closeAllPanels();
+        openPanel(name, willOpen);
+      });
+      panelFor(name).addEventListener("click", function (e) { e.stopPropagation(); });
+    });
+    document.addEventListener("click", closeAllPanels);
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeAllPanels(); });
   }
 
   // Repaint the live card after a flag change. For the "ask" (title) row, also
@@ -720,6 +932,7 @@
       currentFrontKey = allowed[Math.floor(Math.random() * allowed.length)].key;
     }
     paintCard(deck[0], currentFrontKey, revealed);
+    saveProgress();
   }
 
   // ---- controls wiring ---------------------------------------------------
@@ -735,7 +948,20 @@
   Array.prototype.forEach.call(elLevelNav.querySelectorAll(".levelBtn"), function (b) {
     b.addEventListener("click", function () { setLevel(b.getAttribute("data-level")); });
   });
-  elBtnReload.addEventListener("click", function () { location.reload(); });
+
+  // Reset: clear saved progress and reshuffle. Guarded by a confirm so a stray
+  // tap can't wipe a long session. The stats-screen button does the same.
+  function confirmReset() {
+    if (window.confirm(tr(UISTR.resetConfirm, uiLangKey()))) resetSession();
+  }
+  elResetBtn.addEventListener("click", confirmReset);
+  elBtnReload.addEventListener("click", confirmReset);
+
+  // Backstop saves for when a render endpoint didn't fire (tab hidden/closed).
+  window.addEventListener("pagehide", saveProgress);
+  document.addEventListener("visibilitychange", function () {
+    if (document.visibilityState === "hidden") saveProgress();
+  });
 
   // ---- theme (light = VS Code "Quiet Light", dark = default) -------------
   function systemPrefersDark() {
@@ -761,9 +987,15 @@
     paintThemeIcon();
   });
 
+  // Keys that should never count as "reveal the card": bare modifiers and
+  // focus traversal. Everything else, pressed on a hidden card, reveals it.
+  var NON_REVEAL_KEYS = { Shift: 1, Control: 1, Alt: 1, Meta: 1, CapsLock: 1, NumLock: 1, ScrollLock: 1, Tab: 1, ContextMenu: 1, Escape: 1 };
+
   document.addEventListener("keydown", function (e) {
     if (currentView === "grammar") return;   // grammar view scrolls freely
+    if (anyDropOpen()) return;                // a dropdown is handling its keys
     if (elStats.classList.contains("hidden") === false) return;
+    if (e.metaKey || e.ctrlKey || e.altKey) return; // leave browser shortcuts alone
 
     if (peekPos !== null) {
       // Read-only browsing of past cards.
@@ -772,15 +1004,28 @@
       return;
     }
 
+    if (deck.length === 0) return;
+
+    if (!revealed) {
+      // Hidden card: Left arrow still steps back in history; ANY other key
+      // (letters, digits, Enter, Space, …) simply reveals the answer.
+      if (e.key === "ArrowLeft") { e.preventDefault(); goBack(); return; }
+      if (NON_REVEAL_KEYS[e.key]) return;
+      e.preventDefault();
+      reveal();
+      return;
+    }
+
+    // Revealed card: the graded keys stay meaningful; other keys do nothing.
     if (e.key === "ArrowLeft") {
       e.preventDefault();
       goBack();
     } else if (e.code === "Space") {
       e.preventDefault();
-      advance(false); // reveals first, then marks "don't know"
+      advance(false); // marks "don't know"
     } else if (e.key === "Enter") {
       e.preventDefault();
-      advance(true);  // reveals first, then marks "know"
+      advance(true);  // marks "know"
     }
   });
 
@@ -838,11 +1083,34 @@
   })();
 
   // ---- boot --------------------------------------------------------------
-  initFlags();
+  initLangDrops();
   initTheme();
+
+  // Restore a saved session if there is one; otherwise the fresh deck built at
+  // the top stands.
+  var saved = loadProgress();
+  var restored = saved ? restoreSession(saved) : false;
+  if (restored) { try { window.localStorage.setItem("swipua_level", currentLevel); } catch (e) {} }
+
   applyUiLang();
   updateLevelNav();
-  if (deck.length === 0) {
+
+  if (restored) {
+    if (sessionDone) {
+      showStats();
+    } else if (deck.length === 0) {
+      elWord.textContent = "—";
+      elCard.classList.remove("answer-hidden");
+      updateControls();
+      updateProgress();
+    } else if (peekPos !== null) {
+      paintPeek();
+    } else {
+      paintCard(deck[0], currentFrontKey, revealed);
+      updateProgress();
+      updateControls();
+    }
+  } else if (deck.length === 0) {
     elWord.textContent = "No words loaded";
     elCard.classList.remove("answer-hidden");
     elTranslations.textContent = "Check data.js";

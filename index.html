@@ -21,27 +21,28 @@
       <button type="button" class="levelBtn" data-level="A2">A2</button>
       <button type="button" class="levelBtn" data-level="B1">B1</button>
     </nav>
-    <div id="flagRows">
-      <div class="flagRow" role="group" aria-label="Languages that can appear as the prompt word">
-        <span class="flagLabel" id="lblAsk" title="Which languages can appear as the prompt word (before you reveal)">ask</span>
-        <button type="button" class="flag" data-set="title" data-lang="de" title="German as prompt">🇩🇪</button>
-        <button type="button" class="flag" data-set="title" data-lang="en" title="English as prompt">🇬🇧</button>
-        <button type="button" class="flag" data-set="title" data-lang="ru" title="Russian as prompt">🇷🇺</button>
-        <button type="button" class="flag" data-set="title" data-lang="vi" title="Vietnamese as prompt">🇻🇳</button>
-        <button type="button" class="flag" data-set="title" data-lang="fa" title="Persian as prompt">🇮🇷</button>
+    <div id="langDrops">
+      <div class="langDrop" data-set="title">
+        <button type="button" class="langDropBtn" id="askDropBtn" aria-haspopup="listbox" aria-expanded="false">
+          <span class="ldLabel" id="lblAsk" title="Which languages can appear as the prompt word (before you reveal)">ask</span>
+          <span class="ldFlags" id="askFlags" aria-hidden="true"></span>
+          <span class="ldCaret" aria-hidden="true">▾</span>
+        </button>
+        <div class="langDropPanel" id="askPanel" role="listbox" aria-multiselectable="true" aria-label="Prompt languages" hidden></div>
       </div>
-      <div class="flagRow" role="group" aria-label="Which translations appear after you reveal">
-        <span class="flagLabel" id="lblShow" title="Which translations appear after you reveal the card">show</span>
-        <button type="button" class="flag" data-set="show" data-lang="de" title="Show German translation">🇩🇪</button>
-        <button type="button" class="flag" data-set="show" data-lang="en" title="Show English translation">🇬🇧</button>
-        <button type="button" class="flag" data-set="show" data-lang="ru" title="Show Russian translation">🇷🇺</button>
-        <button type="button" class="flag" data-set="show" data-lang="vi" title="Show Vietnamese translation">🇻🇳</button>
-        <button type="button" class="flag" data-set="show" data-lang="fa" title="Show Persian translation">🇮🇷</button>
+      <div class="langDrop" data-set="show">
+        <button type="button" class="langDropBtn" id="showDropBtn" aria-haspopup="listbox" aria-expanded="false">
+          <span class="ldLabel" id="lblShow" title="Which translations appear after you reveal the card">show</span>
+          <span class="ldFlags" id="showFlags" aria-hidden="true"></span>
+          <span class="ldCaret" aria-hidden="true">▾</span>
+        </button>
+        <div class="langDropPanel" id="showPanel" role="listbox" aria-multiselectable="true" aria-label="Answer languages" hidden></div>
       </div>
     </div>
   </div>
   <div id="topright">
     <button type="button" id="themeToggle" title="Switch light / dark theme" aria-label="Switch light or dark theme">🌙</button>
+    <button type="button" id="resetBtn" title="Reset progress" aria-label="Reset progress">↺</button>
     <div id="progress">0 / 0</div>
   </div>
   </div>
@@ -51,7 +52,7 @@
 <main id="deck">
   <div id="card" class="answer-hidden">
     <div id="word"></div>
-    <div id="revealHint">Tap the card or press <kbd>Enter</kbd> to reveal</div>
+    <div id="revealHint">Tap the card or press any key to reveal</div>
     <div id="translations"></div>
     <div id="synonyms"></div>
     <div id="examples"></div>

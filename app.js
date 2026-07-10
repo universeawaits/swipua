@@ -55,8 +55,6 @@
   var elGrammar = document.getElementById("grammar");
   var elGrammarBody = document.getElementById("grammarBody");
   var elGrammarIndex = document.getElementById("grammarIndex");
-  var elGrammarTitle = document.getElementById("grammarTitle");
-  var elGrammarHint = document.getElementById("grammarHint");
 
   var GRAMMAR_DATA = (typeof GRAMMAR !== "undefined" && GRAMMAR) ? GRAMMAR : [];
 
@@ -68,14 +66,6 @@
 
   // Small UI dictionary for the grammar view chrome, shown in the explain language.
   var GUI = {
-    cheatTitle: { de: "B1-Grammatik · Spickzettel", en: "B1 Grammar · Cheat Sheet", ru: "Грамматика B1 · Шпаргалка", vi: "Ngữ pháp B1 · Bảng tóm tắt", fa: "گرامر B1 · برگه مرور" },
-    help: {
-      de: "Erklärungen folgen der oberen Flaggenreihe · Beispiele & Sprachvergleiche der unteren.",
-      en: "Explanations follow the top flag row · examples & analogues follow the bottom row.",
-      ru: "Объяснения — по верхнему ряду флагов · примеры и аналогии — по нижнему.",
-      vi: "Giải thích theo hàng cờ trên · ví dụ & so sánh theo hàng dưới.",
-      fa: "توضیحات از ردیف پرچم بالا · مثال‌ها و قیاس‌ها از ردیف پایین پیروی می‌کنند."
-    },
     examples: { de: "Beispiele", en: "Examples", ru: "Примеры", vi: "Ví dụ", fa: "مثال‌ها" },
     analogues: { de: "Sprachvergleich", en: "In your language", ru: "В вашем языке", vi: "Trong ngôn ngữ của bạn", fa: "در زبان شما" },
     empty: { de: "Grammatikinhalt wird vorbereitet.", en: "Grammar content is being prepared.", ru: "Грамматический материал готовится.", vi: "Nội dung ngữ pháp đang được chuẩn bị.", fa: "محتوای گرامر در حال آماده‌سازی است." }
@@ -327,11 +317,6 @@
 
   function renderGrammar() {
     var pk = primaryExplainKey();
-    elGrammarTitle.textContent = tr(GUI.cheatTitle, pk);
-    elGrammarTitle.setAttribute("dir", "auto");
-    elGrammarHint.textContent = tr(GUI.help, pk);
-    elGrammarHint.setAttribute("dir", "auto");
-
     elGrammarIndex.innerHTML = "";
     GRAMMAR_DATA.forEach(function (t) {
       var b = document.createElement("button");
@@ -517,6 +502,7 @@
     currentView = view;
     var grammar = view === "grammar";
     elGrammar.classList.toggle("hidden", !grammar);
+    elGrammarIndex.classList.toggle("hidden", !grammar);
     elDeck.classList.toggle("hidden", grammar || sessionDone);
     elControls.classList.toggle("hidden", grammar || sessionDone);
     elStats.classList.toggle("hidden", grammar || !sessionDone);

@@ -431,11 +431,11 @@ const GRAMMAR = [
    },
    {
     "caption": {
-     "de": "Unbestimmter Artikel ein – „a/an“ (Plural: kein-, weil ein keinen Plural hat)",
-     "en": "Indefinite article ein – 'a/an' (plural uses kein 'no', since ein has no plural)",
-     "ru": "Неопределённый артикль ein – «a/an» (мн. ч. – формы kein «ни один», т.к. у ein нет множественного числа)",
-     "vi": "Mạo từ không xác định ein – 'a/an' (số nhiều dùng kein 'không', vì ein không có số nhiều)",
-     "fa": "حرف تعریف نامعین ein – معادل «a/an» (برای جمع از kein «هیچ» استفاده می‌شود، چون ein جمع ندارد)"
+     "de": "ein-Wörter: unbestimmter Artikel ein „a/an“ und Verneinung kein „kein/nicht ein“ – gleiche Endungen. Zelle zeigt ein / kein. ein hat keinen Plural (dort steht das bloße Nomen); nur kein hat Pluralformen.",
+     "en": "ein-words: indefinite article ein 'a/an' and its negation kein 'no/not a' — same endings. Each cell shows ein / kein. ein has no plural (use the bare noun there); only kein has plural forms.",
+     "ru": "ein-слова: неопределённый артикль ein «a/an» и отрицание kein «ни один» — одинаковые окончания. В ячейке: ein / kein. У ein нет множественного числа (там существительное без артикля); формы мн. ч. есть только у kein.",
+     "vi": "nhóm ein: mạo từ không xác định ein 'a/an' và dạng phủ định kein 'không' — cùng đuôi. Mỗi ô ghi ein / kein. ein không có số nhiều (dùng danh từ trần); chỉ kein có dạng số nhiều.",
+     "fa": "واژه‌های ein: حرف تعریف نامعین ein «a/an» و شکل منفی kein «هیچ» — پایانه‌های یکسان. هر خانه ein / kein را نشان می‌دهد. ein جمع ندارد (اسم بدون حرف تعریف می‌آید)؛ فقط kein جمع دارد."
     },
     "labelHeader": {
      "de": "Kasus (Fall)",
@@ -467,11 +467,11 @@ const GRAMMAR = [
       "fa": "خنثی (n)"
      },
      {
-      "de": "Plural (kein-)",
-      "en": "plural (kein-)",
-      "ru": "множественное (kein-)",
-      "vi": "số nhiều (kein-)",
-      "fa": "جمع (kein-)"
+      "de": "Plural (nur kein)",
+      "en": "plural (kein only)",
+      "ru": "мн. ч. (только kein)",
+      "vi": "số nhiều (chỉ kein)",
+      "fa": "جمع (فقط kein)"
      }
     ],
     "rows": [
@@ -484,10 +484,10 @@ const GRAMMAR = [
        "fa": "نهادی (چه کسی؟)"
       },
       "cells": [
-       "ein",
-       "eine",
-       "ein",
-       "keine"
+       "ein / kein",
+       "eine / keine",
+       "ein / kein",
+       "— / keine"
       ]
      },
      {
@@ -499,10 +499,10 @@ const GRAMMAR = [
        "fa": "مفعولی مستقیم (چه کسی را؟)"
       },
       "cells": [
-       "einen",
-       "eine",
-       "ein",
-       "keine"
+       "einen / keinen",
+       "eine / keine",
+       "ein / kein",
+       "— / keine"
       ]
      },
      {
@@ -514,10 +514,10 @@ const GRAMMAR = [
        "fa": "مفعولی غیرمستقیم (به چه کسی؟)"
       },
       "cells": [
-       "einem",
-       "einer",
-       "einem",
-       "keinen"
+       "einem / keinem",
+       "einer / keiner",
+       "einem / keinem",
+       "— / keinen"
       ]
      },
      {
@@ -529,10 +529,10 @@ const GRAMMAR = [
        "fa": "اضافی (مالِ چه کسی؟)"
       },
       "cells": [
-       "eines",
-       "einer",
-       "eines",
-       "keiner"
+       "eines / keines",
+       "einer / keiner",
+       "eines / keines",
+       "— / keiner"
       ]
      }
     ]

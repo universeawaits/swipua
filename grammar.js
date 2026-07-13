@@ -17,7 +17,7 @@ const GRAMMAR = [
    "tr": "İsim cinsleri ve artikeller",
    "th": "เพศของคำนามและคำนำหน้านาม (Genus & Artikel)",
    "zh": "性与冠词",
-   "ms": "Jantina Nama & Artikel",
+   "ms": "Jantina Kata Nama & Artikel",
    "sw": "Jinsia ya Nomino na Artikeli",
    "hi": "लिंग और आर्टिकल",
    "ur": "جنس اور آرٹیکل (Genus & Artikel)",
@@ -39,7 +39,7 @@ const GRAMMAR = [
    "zh": "每个德语名词都有一个性:阳性(der)、阴性(die)或中性(das)。由于名词的性往往无法预测,最好在学习每个名词时就连同其冠词一起记住。下面的词尾变化可以在你不确定时帮助你猜测。",
    "ms": "Setiap kata nama bahasa Jerman mempunyai satu jantina: maskulin (der), feminin (die) atau neutral (das). Oleh sebab jantina sesuatu kata nama selalunya tidak dapat diramal, cara terbaik ialah menghafal setiap kata nama bersama artikelnya sekali. Akhiran-akhiran di bawah membantu anda meneka jantina apabila anda tidak pasti.",
    "sw": "Kila nomino ya Kijerumani ina jinsia moja: kiume (der), kike (die), au isiyo na jinsia (das). Kwa kuwa jinsia mara nyingi haitabiriki, ni bora kujifunza kila nomino pamoja na artikeli yake tangu mwanzo. Miisho ya maneno iliyo hapa chini inasaidia kukisia jinsia unapokuwa na shaka.",
-   "hi": "जर्मन के हर संज्ञा (Nomen) का एक लिंग होता है: पुल्लिंग (der), स्त्रीलिंग (die) या नपुंसकलिंग (das)। चूँकि लिंग अक्सर अनुमान लगाना मुश्किल होता है, इसलिए हर संज्ञा को उसके आर्टिकल के साथ ही सीखना सबसे अच्छा है। नीचे दिए गए शब्दांत अनुमान लगाने में मदद करते हैं, जब आप अनिश्चित हों।",
+   "hi": "जर्मन की हर संज्ञा (Nomen) का एक लिंग होता है: पुल्लिंग (der), स्त्रीलिंग (die) या नपुंसकलिंग (das)। चूँकि लिंग का अनुमान लगाना अक्सर मुश्किल होता है, इसलिए हर संज्ञा को उसके आर्टिकल के साथ ही सीखना सबसे अच्छा है। नीचे दिए गए शब्दांत अनुमान लगाने में मदद करते हैं, जब आप अनिश्चित हों।",
    "ur": "ہر جرمن اسم کی ایک جنس (Genus) ہوتی ہے: مذکر (der)، مؤنث (die) یا غیر جانبدار (das)۔ چونکہ جنس اکثر پیشگی طور پر معلوم نہیں کی جا سکتی، اس لیے بہتر ہے کہ ہر اسم کو اس کے آرٹیکل کے ساتھ ہی یاد کیا جائے۔ نیچے دیے گئے الفاظ کے اختتامیے اندازہ لگانے میں مدد دیتے ہیں جب آپ غیر یقینی ہوں۔",
    "ar_eg": "كل اسم في الألماني له جنس: مذكر (der)، مؤنث (die)، أو محايد (das). وبما إن الجنس غالبًا مبيبقاش متوقَّع، الأحسن إنك تحفظ كل اسم مع الأداة بتاعته من الأول. النهايات اللي جاية تحت هتساعدك تخمّن لو مش متأكد.",
    "ar_lb": "كل اسم ألماني إلو نوع (جندر): مذكر (der)، مؤنث (die)، أو محايد (das). بما إنو النوع مش دايمًا منقدر نتوقعو، أحسن طريقة إنك تتعلم كل اسم مع الأداة تبعتو من الأول. النهايات (Endungen) اللي تحت بتساعدك تخمّن لما ما تكون متأكد.",
@@ -245,7 +245,7 @@ const GRAMMAR = [
      "pl": "Końcówki wskazujące na rodzaj",
      "tr": "Cinse işaret eden ekler",
      "th": "คำลงท้ายที่บ่งบอกเพศของคำนาม",
-     "zh": "提示词性的词尾",
+     "zh": "提示名词的性的词尾",
      "ms": "Akhiran sebagai petunjuk jantina",
      "sw": "Miisho ya maneno inayoashiria jinsia",
      "hi": "लिंग का संकेत देने वाले शब्दांत",
@@ -566,8 +566,8 @@ const GRAMMAR = [
    "ru": "В немецком языке четыре падежа: именительный (подлежащее – кто действует), винительный (прямое дополнение – кого/что), дательный (косвенное дополнение – кому) и родительный (принадлежность – чей). Падеж показывает роль слова в предложении, и меняется прежде всего артикль, а не само существительное.",
    "vi": "Tiếng Đức có bốn cách ngữ pháp: Nominativ (chủ ngữ – ai làm), Akkusativ (tân ngữ trực tiếp – cái gì/ai bị tác động), Dativ (tân ngữ gián tiếp – cho ai) và Genitiv (sở hữu – của ai). Cách cho biết vai trò của từ trong câu, và chính mạo từ thay đổi theo từng cách chứ không phải danh từ.",
    "fa": "زبان آلمانی چهار حالت (case) دارد: نهادی (فاعل – چه کسی انجام می‌دهد)، مفعولی مستقیم (چه چیزی/چه کسی را)، مفعولی غیرمستقیم (به چه کسی) و اضافی (مالکیت – مالِ چه کسی). حالت، نقش واژه را در جمله نشان می‌دهد و به جای خودِ اسم، بیشتر حرف تعریف تغییر می‌کند.",
-   "uk": "Німецька мова має чотири відмінки (Kasus): Nominativ, Akkusativ, Dativ і Genitiv. Відмінок показує роль слова в реченні – хто щось робить, кого чи що це стосується, кому щось дають і кому щось належить. Змінюється не сам іменник, а насамперед артикль – залежно від відмінка.",
-   "pl": "Niemiecki ma cztery przypadki (Kasus): mianownik, biernik, celownik i dopełniacz. Przypadek pokazuje rolę słowa w zdaniu – kto coś robi, kogo lub co to dotyczy, komu coś się daje i do kogo coś należy. Zmienia się nie tyle samo rzeczownik, ile przede wszystkim rodzajnik zależnie od przypadka.",
+   "uk": "Німецька мова має чотири відмінки (Kasus): Nominativ, Akkusativ, Dativ і Genitiv. Відмінок показує роль слова в реченні – хто щось робить, кого чи чого це стосується, кому щось дають і кому щось належить. Змінюється не сам іменник, а насамперед артикль – залежно від відмінка.",
+   "pl": "Niemiecki ma cztery przypadki (Kasus): mianownik, biernik, celownik i dopełniacz. Przypadek pokazuje rolę słowa w zdaniu – kto coś robi, kogo lub czego to dotyczy, komu coś się daje i do kogo coś należy. Zmienia się nie tyle samo rzeczownik, ile przede wszystkim rodzajnik zależnie od przypadka.",
    "tr": "Almancada dört hâl (kasus) vardır: Nominativ, Akkusativ, Dativ ve Genitiv. Hâl, bir kelimenin cümledeki rolünü gösterir – kim bir şey yapıyor, kimi veya neyi ilgilendiriyor, kime bir şey veriliyor ve kime ait olduğunu. Hâle göre değişen, isim değil her şeyden önce artikeldir.",
    "th": "ภาษาเยอรมันมีการก (Kasus) สี่แบบ ได้แก่ Nominativ, Akkusativ, Dativ และ Genitiv การกจะแสดงบทบาทของคำในประโยค — ใครเป็นผู้กระทำ กระทำต่อใครหรือสิ่งใด สิ่งนั้นถูกให้แก่ใคร และเป็นของใคร ไม่ใช่ตัวคำนามที่เปลี่ยนรูป แต่ส่วนใหญ่แล้วคำนำหน้านามต่างหากที่เปลี่ยนไปตามการก",
    "zh": "德语有四个格(Kasus):Nominativ、Akkusativ、Dativ 和 Genitiv。格标明一个词在句子中的作用——谁在做某事、涉及谁或什么、给予谁、以及归谁所有。随格发生变化的主要不是名词本身,而是冠词。",
@@ -1501,7 +1501,7 @@ const GRAMMAR = [
     "th": "ฉันเห็นเธอ แต่เธอไม่เห็นฉัน",
     "zh": "我看见你,但你没看见我。",
     "ms": "Saya nampak awak, tetapi awak tidak nampak saya.",
-    "sw": "Ninakuona wewe, lakini wewe huniooni mimi.",
+    "sw": "Ninakuona wewe, lakini wewe hunioni mimi.",
     "hi": "मैं तुम्हें देखता हूँ, पर तुम मुझे नहीं देखते।",
     "ur": "میں تمہیں دیکھتا ہوں، لیکن تم مجھے نہیں دیکھتے۔",
     "ar_eg": "أنا شايفك، بس إنت مش شايفني.",
@@ -2294,7 +2294,7 @@ const GRAMMAR = [
    "ms": "Kata sifat yang terletak sebelum kata nama menerima satu akhiran. Akhiran yang digunakan bergantung pada perkataan sebelumnya: selepas artikel tentu (der/die/das) – lemah, selepas ein/kein/mein – campuran, tanpa artikel – kuat. Sebagai predikat (Das Auto ist gut) ia kekal tanpa akhiran.",
    "sw": "Kivumishi kinapokuwa kabla ya nomino hupata mwisho. Mwisho gani unategemea neno lililotangulia: baada ya artikeli dhahiri (der/die/das) ni mwisho dhaifu, baada ya ein/kein/mein ni mwisho mchanganyiko, na bila artikeli yoyote ni mwisho imara. Kikiwa kiarifu (Das Auto ist gut) hakipati mwisho wowote.",
    "hi": "संज्ञा से पहले आने वाले विशेषण को एक अंत मिलता है। कौन-सा अंत, यह उससे पहले आने वाले शब्द पर निर्भर करता है: निश्चित आर्टिकल (der/die/das) के बाद कमज़ोर (schwach), ein/kein/mein के बाद मिश्रित (gemischt), बिना आर्टिकल के प्रबल (stark)। विधेय के रूप में (Das Auto ist gut) यह बिना अंत के रहता है।",
-   "ur": "اسم سے پہلے آنے والی صفت کو ایک اختتامیہ ملتا ہے۔ یہ اس بات پر منحصر ہے کہ اس سے پہلے کون سا لفظ ہے: معین آرٹیکل (der/die/das) کے بعد کمزور (schwach)، ein/kein/mein کے بعد مخلوط (gemischt)، اور بغیر آرٹیکل کے مضبوط (stark)۔ فعل کے طور پر (Das Auto ist gut) اس پر کوئی اختتامیہ نہیں لگتا۔",
+   "ur": "اسم سے پہلے آنے والی صفت کو ایک اختتامیہ ملتا ہے۔ یہ اس بات پر منحصر ہے کہ اس سے پہلے کون سا لفظ ہے: معین آرٹیکل (der/die/das) کے بعد کمزور (schwach)، ein/kein/mein کے بعد مخلوط (gemischt)، اور بغیر آرٹیکل کے مضبوط (stark)۔ بطورِ خبر (Das Auto ist gut) اس پر کوئی اختتامیہ نہیں لگتا۔",
    "ar_eg": "الصفة اللي قبل الاسم بتاخد نهاية. أنهي نهاية؟ ده بيتوقف على الكلمة اللي قبلها: بعد أداة التعريف (der/die/das) بتبقى نهاية ضعيفة، بعد ein/kein/mein بتبقى مختلطة، من غير أداة خالص بتبقى قوية. لما الصفة تيجي بعد الفعل (Das Auto ist gut) بتفضل من غير نهاية خالص.",
    "ar_lb": "الصفة يلي جايي قبل الاسم بتاخد نهاية. أي نهاية بتعتمد ع الكلمة يلي قبلها: بعد الأداة المعرّفة (der/die/das) بتكون ضعيفة (schwach)، بعد ein/kein/mein بتكون مختلطة (gemischt)، وبلا أداة بتكون قوية (stark). كخبر (Das Auto ist gut) بتضل بلا نهاية.",
    "ar_sy": "الصفة قبل الاسم بتاخد نهاية. أي نهاية؟ هاد بيعتمد عالكلمة يلي قبلها: بعد الأداة المعرّفة (der/die/das) بتكون ضعيفة، بعد ein/kein/mein بتكون مختلطة، وبلا أداة بتكون قوية. لما تجي بعد فعل الكينونة (Das Auto ist gut) بتضل بلا نهاية.",
@@ -3438,7 +3438,7 @@ const GRAMMAR = [
       "tr": "sein (olmak - to be)",
       "th": "sein (เป็น/อยู่/คือ)",
       "zh": "sein(是)",
-      "ms": "sein (menjadi/adalah)",
+      "ms": "sein (adalah/ialah)",
       "sw": "sein (kuwa)",
       "hi": "sein (होना)",
       "ur": "sein (ہونا)",
@@ -4019,7 +4019,7 @@ const GRAMMAR = [
    "zh": "现在完成时(Perfekt)",
    "ms": "Perfekt (Kala Lampau Sempurna)",
    "sw": "Perfekt (Wakati Uliopita Timilifu)",
-   "hi": "Perfekt (पूर्ण वर्तमान भूतकाल)",
+   "hi": "Perfekt (पूर्ण वर्तमान काल)",
    "ur": "ماضیِ قریب (Perfekt)",
    "ar_eg": "Perfekt",
    "ar_lb": "الـ Perfekt (الماضي المركّب)",
@@ -5743,7 +5743,7 @@ const GRAMMAR = [
     "ur": "وہ شاید پہلے ہی گھر پر ہو۔",
     "ar_eg": "هي يمكن تكون في البيت خلاص.",
     "ar_lb": "أكيد هيي هلق بالبيت.",
-    "ar_sy": "هي أكيد صارت بالبيت هلق.",
+    "ar_sy": "على الأغلب هي صارت بالبيت هلق.",
     "am": "እሷ ምናልባት አሁን በቤት ትሆናለች።"
    }
   ],
@@ -6513,7 +6513,7 @@ const GRAMMAR = [
    "ru": "У отделяемых глаголов ударная приставка уходит в конец главного предложения (Ich stehe um 7 Uhr auf), а в Partizip II вставляется -ge- (aufgestanden). Неотделяемые приставки (be-, ver- …) безударны, никогда не отрываются и образуют причастие без ge- (verstanden). Ударение подсказывает тип.",
    "vi": "Động từ tách được có tiền tố mang trọng âm; trong câu chính nó nhảy về cuối câu (Ich stehe um 7 Uhr auf) và kẹp -ge- vào giữa ở quá khứ phân từ (aufgestanden). Tiền tố không tách được (be-, ver- …) không mang trọng âm, không bao giờ rời ra và tạo phân từ không có ge- (verstanden). Trọng âm cho biết loại nào.",
    "fa": "فعل‌های جداشدنی یک پیشوند تکیه‌دار دارند که در جملهٔ اصلی به انتهای جمله می‌رود (Ich stehe um 7 Uhr auf) و در وجه وصفی گذشته یک -ge- را در خود جای می‌دهد (aufgestanden). پیشوندهای جدانشدنی (be-, ver- …) بی‌تکیه‌اند، هرگز جدا نمی‌شوند و وجه وصفی را بدون ge- می‌سازند (verstanden). تکیه، نوع فعل را لو می‌دهد.",
-   "uk": "Віддільні дієслова мають наголошений префікс, який у головному реченні переходить у кінець (Ich stehe um 7 Uhr auf), а в Partizip II вставляє -ge- усередину (aufgestanden). Невіддільні префікси (be-, ver- …) ненаголошені, завжди залишаються при дієслові й утворюють Partizip II без ge- (verstanden). Тип видає наголос.",
+   "uk": "Віддільні дієслова мають наголошений префікс, який у головному реченні переходить у кінець (Ich stehe um 7 Uhr auf), а в Partizip II вставляє -ge- усередину (aufgestanden). Невіддільні префікси (be-, ver- …) ненаголошені, завжди залишаються при дієслові й утворюють Partizip II без ge- (verstanden). Наголос видає тип.",
    "pl": "Czasowniki rozdzielnie złożone mają akcentowany przedrostek, który w zdaniu głównym przesuwa się na koniec (Ich stehe um 7 Uhr auf), a w imiesłowie Partizip II obejmuje -ge- (aufgestanden). Przedrostki nierozdzielne (be-, ver- …) są nieakcentowane, zawsze pozostają przy czasowniku i tworzą Partizip II bez ge- (verstanden). Akcent zdradza typ.",
    "tr": "Ayrılabilir fiillerin vurgulu bir ön eki vardır; bu ön ek ana cümlede cümlenin sonuna kayar (Ich stehe um 7 Uhr auf) ve Partizip II'de araya bir -ge- alır (aufgestanden). Ayrılmaz ön ekler (be-, ver- …) vurgusuzdur, her zaman fiile bağlı kalır ve Partizip II'yi ge- olmadan kurar (verstanden). Vurgu, türü ele verir.",
    "th": "กริยาที่มีอุปสรรคแยกได้ (trennbar) จะมีอุปสรรคที่เน้นเสียง ซึ่งจะย้ายไปอยู่ท้ายประโยคหลัก (เช่น Ich stehe um 7 Uhr auf) และในรูปกริยาช่อง 3 จะมี -ge- แทรกอยู่ตรงกลาง (aufgestanden) ส่วนอุปสรรคแยกไม่ได้ (untrennbar เช่น be-, ver- …) จะไม่เน้นเสียง ติดอยู่กับกริยาเสมอ และสร้างรูปกริยาช่อง 3 โดยไม่มี ge- (verstanden) การเน้นเสียงคือตัวบ่งบอกว่าเป็นประเภทใด",
@@ -6965,7 +6965,7 @@ const GRAMMAR = [
     "tr": "Her sabah saat yedide kalkarım.",
     "th": "ฉันตื่นนอนตอนเจ็ดโมงเช้าทุกวัน",
     "zh": "我每天早上七点起床。",
-    "ms": "Saya bangun jam tujuh setiap pagi.",
+    "ms": "Saya bangun pukul tujuh setiap pagi.",
     "sw": "Ninaamka kila asubuhi saa moja (7:00).",
     "hi": "मैं हर सुबह सात बजे उठता हूँ।",
     "ur": "میں ہر صبح سات بجے اٹھتا ہوں۔",
@@ -6985,7 +6985,7 @@ const GRAMMAR = [
     "tr": "Dün ancak saat dokuzda kalktım.",
     "th": "เมื่อวานฉันเพิ่งตื่นตอนเก้าโมง",
     "zh": "昨天我九点才起床。",
-    "ms": "Semalam saya baru bangun pada jam sembilan.",
+    "ms": "Semalam saya baru bangun pada pukul sembilan.",
     "sw": "Jana niliamka saa tatu (9:00) tu.",
     "hi": "कल मैं नौ बजे ही उठा।",
     "ur": "کل میں نو بجے ہی اٹھا۔",
@@ -7483,7 +7483,7 @@ const GRAMMAR = [
     "ar_eg": "أنا متحمس للويكند.",
     "ar_lb": "متحمّس لعطلة نهاية الأسبوع.",
     "ar_sy": "متحمّس للويكند.",
-    "am": "ሳምንቱ መጨረሻን በጉጉት እጠባበቃለሁ።"
+    "am": "የሳምንቱን መጨረሻ በጉጉት እጠባበቃለሁ።"
    }
   ],
   "hints": {
@@ -7547,7 +7547,7 @@ const GRAMMAR = [
    "ur": "Konjunktiv II ادب، خواہشات اور خلافِ واقعہ (فرضی) شرائط ظاہر کرتا ہے — یہ جرمن کا ”würde“ ہے۔ روزمرہ زندگی میں عموماً würde + مصدر استعمال ہوتا ہے، لیکن sein، haben اور معاون افعالِ استطاعت کی اپنی الگ صورتیں ہوتی ہیں (wäre، hätte، könnte …)۔",
    "ar_eg": "الـ Konjunktiv II بيعبّر عن الأدب والتمنيات والحالات الافتراضية (اللي مش حقيقية) – ده الـ «würde» بتاع الألماني. في الكلام العادي غالبًا würde + المصدر، لكن sein و haben والأفعال الوجهية عندهم صيغ خاصة بيهم (wäre, hätte, könnte …).",
    "ar_lb": "الـ Konjunktiv II بيعبّر عن الأدب، الأمنيات، والشروط الافتراضية (غير حقيقية) – هوي „würde“ بالألماني. باليومي بالأغلب würde + المصدر، بس sein وhaben والأفعال الشرطية إلها صيغ خاصة فيها (wäre, hätte, könnte …).",
-   "ar_sy": "الـKonjunktiv II بيعبّر عن التهذيب والأمنيات والشروط الغير واقعية (الافتراضية) – هاد هو 'لو' الألماني. بالحكي اليومي بمعظم الحالات würde + المصدر، بس sein وhaben والأفعال الشرطية إلها صيغ خاصة فيها (wäre, hätte, könnte …).",
+   "ar_sy": "الـKonjunktiv II بيعبّر عن التهذيب والأمنيات والشروط الغير واقعية (الافتراضية) – هاد هو 'لو' الألماني. بالحكي اليومي بمعظم الحالات würde + المصدر، بس sein وhaben والأفعال الشرطية (Modalverben) إلها صيغ خاصة فيها (wäre, hätte, könnte …).",
    "am": "Konjunktiv II አክብሮትን፣ ምኞቶችን እና ምናባዊ (ግምታዊ) ሁኔታዎችን ይገልጻል — የጀርመንኛው 'would' ማለት ነው። በዕለት ተዕለት ንግግር አብዛኛውን ጊዜ würde + Infinitiv ጥቅም ላይ ይውላል፤ ነገር ግን sein, haben እና ሞዳል ግሦች የራሳቸው ቅርጽ አላቸው (wäre, hätte, könnte …)።"
   },
   "tables": [
@@ -8131,7 +8131,7 @@ const GRAMMAR = [
    "ur": "روزمرہ استعمال: würde + مصدر۔ لیکن sein، haben اور معاون افعالِ استطاعت اپنی الگ صورتیں لیتے ہیں: wäre، hätte، könnte، müsste، dürfte، sollte، wollte، möchte۔ اصول: ”würde sein/haben/können“ سے گریز کریں — براہِ راست wäre/hätte/könnte کہیں۔",
    "ar_eg": "في الكلام العادي: würde + المصدر. لكن sein و haben والأفعال الوجهية بتاخد صيغ خاصة: wäre, hätte, könnte, müsste, dürfte, sollte, wollte, möchte. قاعدة سريعة: تجنب «würde sein/haben/können» – قول على طول wäre/hätte/könnte.",
    "ar_lb": "باليومي: würde + المصدر. بس sein وhaben والأفعال الشرطية إلها صيغ خاصة: wäre, hätte, könnte, müsste, dürfte, sollte, wollte, möchte. قاعدة سريعة: تجنّب „würde sein/haben/können“ – قول مباشرة wäre/hätte/könnte.",
-   "ar_sy": "بالحكي اليومي: würde + المصدر. بس sein وhaben والأفعال الشرطية إلها صيغ خاصة: wäre, hätte, könnte, müsste, dürfte, sollte, wollte, möchte. قاعدة سريعة: تجنّب „würde sein/haben/können“ – قول مباشرة wäre/hätte/könnte.",
+   "ar_sy": "بالحكي اليومي: würde + المصدر. بس sein وhaben والأفعال الشرطية (Modalverben) إلها صيغ خاصة: wäre, hätte, könnte, müsste, dürfte, sollte, wollte, möchte. قاعدة سريعة: تجنّب „würde sein/haben/können“ – قول مباشرة wäre/hätte/könnte.",
    "am": "በዕለት ተዕለት ንግግር፦ würde + Infinitiv። ነገር ግን sein, haben እና ሞዳል ግሦች የራሳቸውን ቅርጽ ይይዛሉ፦ wäre, hätte, könnte, müsste, dürfte, sollte, wollte, möchte። መሠረታዊ ደንብ፦ 'würde sein/haben/können' ማለትን አስወግድ — በቀጥታ wäre/hätte/könnte በል።"
   }
  },
@@ -8385,7 +8385,7 @@ const GRAMMAR = [
        "ur": "معاون فعلِ استطاعت کے ساتھ",
        "ar_eg": "مع فعل وجهي",
        "ar_lb": "مع فعل شرطي",
-       "ar_sy": "مع فعل شرطي",
+       "ar_sy": "مع فعل شرطي (Modalverb)",
        "am": "ከሞዳል ግስ ጋር"
       },
       "cells": [
@@ -8741,7 +8741,7 @@ const GRAMMAR = [
     "ms": "Balai bandar lama itu telah dimusnahkan oleh kebakaran.",
     "sw": "Jengo la zamani la halmashauri liliharibiwa na moto.",
     "hi": "पुराना नगरभवन आग से नष्ट हो गया था।",
-    "ur": "پرانی سٹی ہال کو آگ نے تباہ کر دیا۔",
+    "ur": "پرانے سٹی ہال کو آگ نے تباہ کر دیا۔",
     "ar_eg": "مبنى البلدية القديم اتدمر بسبب حريق.",
     "ar_lb": "البلدية القديمة انهدمت بسبب حريق.",
     "ar_sy": "البلدية القديمة انهدمت بحريق.",
@@ -8763,7 +8763,7 @@ const GRAMMAR = [
     "hi": "बिल शुक्रवार तक चुकाना होगा।",
     "ur": "بل جمعہ تک ادا کیا جانا چاہیے۔",
     "ar_eg": "الفاتورة لازم تتدفع لحد يوم الجمعة.",
-    "ar_lb": "الفاتورة لازم تنتدفع لحتى يوم الجمعة.",
+    "ar_lb": "الفاتورة لازم تندفع لحتى يوم الجمعة.",
     "ar_sy": "الفاتورة لازم تنّدفع لحد الجمعة.",
     "am": "ክፍያው እስከ ዓርብ መከፈል አለበት።"
    }
@@ -8822,7 +8822,7 @@ const GRAMMAR = [
    "pl": "Przyimki określają przypadek następującego po nich rzeczownika. Niektóre wymagają zawsze biernika, inne celownika lub dopełniacza. Dziewięć przyimków wymiennych zmienia przypadek zależnie od znaczenia: biernik przy ruchu (wohin?), celownik przy położeniu (wo?).",
    "tr": "Edatlar, kendisinden sonra gelen ismin hâlini belirler. Bazıları her zaman Akkusativ, bazıları Dativ ya da Genitiv ister. Dokuz değişken edat (Wechselpräposition) anlama göre değişir: hareket varsa Akkusativ (wohin? / nereye?), konum varsa Dativ (wo? / nerede?).",
    "th": "คำบุพบทเป็นตัวกำหนดการกของคำนามที่ตามมา บางคำต้องตามด้วย Akkusativ เสมอ บางคำต้องตามด้วย Dativ หรือ Genitiv ส่วนคำบุพบทสองทาง (Wechselpräpositionen) 9 คำจะเปลี่ยนการกตามความหมาย คือ Akkusativ เมื่อแสดงการเคลื่อนไหว (wohin? = ไปไหน) และ Dativ เมื่อแสดงตำแหน่ง (wo? = อยู่ที่ไหน)",
-   "zh": "介词决定其后名词的格。有些介词总是要求第四格,有些则要求第三格或第二格。有九个“二格介词”(Wechselpräpositionen)会根据含义变化:表示移动方向(去哪儿?)时用第四格,表示位置(在哪儿?)时用第三格。",
+   "zh": "介词决定其后名词的格。有些介词总是要求第四格,有些则要求第三格或第二格。有九个“双向介词”(Wechselpräpositionen)会根据含义变化:表示移动方向(去哪儿?)时用第四格,表示位置(在哪儿?)时用第三格。",
    "ms": "Preposisi menentukan kes kata nama yang mengikutinya. Sesetengah preposisi sentiasa memerlukan Akkusativ, yang lain pula Dativ atau Genitiv. Sembilan preposisi dwikes berubah mengikut makna: Akkusativ untuk pergerakan (wohin? – ke mana?), Dativ untuk kedudukan (wo? – di mana?).",
    "sw": "Vihusishi huamua kesi ya nomino inayofuata. Vingine daima huhitaji Akkusativ, vingine Dativ au Genitiv. Vihusishi tisa vinavyobadilika hubadilika kulingana na maana: Akkusativ kwa mwendo (wohin? – kuelekea wapi?), Dativ kwa mahali (wo? – wapi?).",
    "hi": "पूर्वसर्ग आगे आने वाली संज्ञा का कारक तय करते हैं। कुछ हमेशा Akkusativ लेते हैं, कुछ Dativ या Genitiv। नौ द्वि-कारक पूर्वसर्ग अर्थ के अनुसार बदलते हैं: गति के लिए Akkusativ (wohin?), स्थिति के लिए Dativ (wo?)।",
@@ -9406,7 +9406,7 @@ const GRAMMAR = [
      "pl": "Przyimki wymienne: biernik (wohin?) lub celownik (wo?)",
      "tr": "Değişken edatlar: Akkusativ (wohin? / nereye?) ya da Dativ (wo? / nerede?)",
      "th": "คำบุพบทสองทาง (Wechselpräpositionen): กรรมตรง (wohin? = ไปไหน) หรือกรรมรอง (wo? = อยู่ที่ไหน)",
-     "zh": "二格介词:第四格(去哪儿?)或第三格(在哪儿?)",
+     "zh": "双向介词:第四格(去哪儿?)或第三格(在哪儿?)",
      "ms": "Preposisi dwikes: Akkusativ (wohin? – ke mana?) atau Dativ (wo? – di mana?)",
      "sw": "Vihusishi vinavyobadilika: Akkusativ (wohin?) au Dativ (wo?)",
      "hi": "द्वि-कारक पूर्वसर्ग: Akkusativ (wohin?) या Dativ (wo?)",
@@ -10212,7 +10212,7 @@ const GRAMMAR = [
    "pl": "Zdanie do zapamiętania: po każdym przyimku stoi ustalony przypadek. Przy dziewięciu przyimkach wymiennych decyduje pytanie: wohin? → biernik (ruch), wo? → celownik (miejsce). Krótko: „Wohin? weź biernik – wo? zostań przy celowniku.”",
    "tr": "Hatırlatma: Her edattan sonra belirli bir hâl gelir. Dokuz değişken edatta karar soruyla verilir: wohin? (nereye?) → Akkusativ (hareket), wo? (nerede?) → Dativ (yer). Kısacası: „Wohin? ise Akkusativ al – wo? ise Dativ'de kal.“",
    "th": "หลักจำง่าย ๆ: หลังคำบุพบททุกตัวจะตามด้วยการกที่ตายตัว สำหรับคำบุพบทสองทาง 9 คำ ให้ตัดสินด้วยคำถาม: wohin? (ไปไหน) → Akkusativ (การเคลื่อนไหว), wo? (อยู่ที่ไหน) → Dativ (ตำแหน่ง) พูดสั้น ๆ ว่า „ไปไหน? ใช้ Akkusativ – อยู่ที่ไหน? ใช้ Dativ“",
-   "zh": "记忆口诀:每个介词后面都固定搭配某一个格。对于九个二格介词,由问题决定:去哪儿?→ 第四格(移动);在哪儿?→ 第三格(位置)。简而言之:“去哪儿,用第四格——在哪儿,用第三格。”",
+   "zh": "记忆口诀:每个介词后面都固定搭配某一个格。对于九个双向介词,由问题决定:去哪儿?→ 第四格(移动);在哪儿?→ 第三格(位置)。简而言之:“去哪儿,用第四格——在哪儿,用第三格。”",
    "ms": "Petua: Setiap preposisi diikuti oleh satu kes yang tetap. Bagi sembilan preposisi dwikes, soalan berikut menentukannya: wohin? (ke mana?) → Akkusativ (pergerakan), wo? (di mana?) → Dativ (kedudukan). Ringkasnya: 'Wohin? gunakan Akkusativ – wo? kekal dengan Dativ.'",
    "sw": "Kanuni ya kukumbuka: baada ya kila kihusishi kuna kesi maalum. Kwa vihusishi tisa vinavyobadilika, swali ndilo linaloamua: wohin? → Akkusativ (mwendo), wo? → Dativ (mahali). Kwa ufupi: 'Kuelekea wapi? chukua Akkusativ – wapi? baki na Dativ.'",
    "hi": "सूत्र वाक्य: हर पूर्वसर्ग के बाद एक निश्चित कारक आता है। नौ द्वि-कारक पूर्वसर्गों में प्रश्न तय करता है: wohin? → Akkusativ (गति), wo? → Dativ (स्थिति)। संक्षेप में: 'wohin? तो Akkusativ लो – wo? तो Dativ पर रहो।'",
@@ -10656,7 +10656,7 @@ const GRAMMAR = [
        "ar_eg": "abhängig sein von (يعتمد على)",
        "ar_lb": "abhängig sein von (يعتمد على)",
        "ar_sy": "abhängig sein von (بيعتمد عـ)",
-       "am": "abhängig sein von (መደገፍ)"
+       "am": "abhängig sein von (ጥገኛ መሆን)"
       },
       "cells": [
        "abhängen von",
@@ -10957,10 +10957,10 @@ const GRAMMAR = [
     "sw": "Unafikiria juu ya nini? – Ninafikiria juu ya likizo.",
     "hi": "तुम किस बारे में सोच रहे हो? – मैं छुट्टियों के बारे में सोच रहा हूँ।",
     "ur": "تم کس کے بارے میں سوچ رہے ہو؟ – میں چھٹیوں کے بارے میں سوچ رہا ہوں۔",
-    "ar_eg": "بتفكر في إيه؟ – باقكر في الأجازة.",
+    "ar_eg": "بتفكر في إيه؟ – بافكر في الأجازة.",
     "ar_lb": "عم تفكّر بشو؟ – عم إفكّر بالعطلة.",
     "ar_sy": "عمبتفكر بشو؟ – عم افكر بالعطلة.",
-    "am": "ስለ ምን እያሰብክ ነው? — ስለ በዓል እያሰብኩ ነው።"
+    "am": "ስለ ምን እያሰብክ ነው? — ስለ ዕረፍት ጊዜ እያሰብኩ ነው።"
    },
    {
     "de": "Sie nimmt an einem Deutschkurs teil.",
@@ -13214,7 +13214,7 @@ const GRAMMAR = [
     "hi": "जब मैं पहुँचूँगा, तो मैं तुम्हें फ़ोन करूँगा।",
     "ur": "جب میں پہنچوں گا تو تمہیں فون کروں گا۔",
     "ar_eg": "هكلمك لما أوصل.",
-    "ar_lb": "رح إتصل فيك لما وصل.",
+    "ar_lb": "رح إتصل فيك لما اوصل.",
     "ar_sy": "رح دقلك لما وصل.",
     "am": "ስደርስ እደውልልሃለሁ።"
    }

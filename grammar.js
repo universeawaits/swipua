@@ -27,7 +27,9 @@ const GRAMMAR = [
    "am": "ጾታ እና አርቲክል",
    "es_mx": "Género y artículo",
    "ca": "Gènere i article",
-   "hr": "Rod i član"
+   "hr": "Rod i član",
+   "sr": "Род и члан",
+   "el": "Γένος και άρθρα"
   },
   "intro": {
    "de": "Jedes deutsche Nomen hat ein Genus: maskulin (der), feminin (die) oder neutral (das). Weil das Genus oft nicht vorhersehbar ist, lernst du jedes Nomen am besten gleich mit seinem Artikel. Die Endungen weiter unten helfen beim Raten, wenn du unsicher bist.",
@@ -50,7 +52,9 @@ const GRAMMAR = [
    "am": "እያንዳንዱ የጀርመንኛ ስም ጾታ አለው፦ ተባዕታይ (der)፣ አንስታይ (die) ወይም ገለልተኛ (das)። ጾታው ብዙ ጊዜ አስቀድሞ መገመት ስለማይቻል፣ እያንዳንዱን ስም ከአርቲክሉ ጋር አብረህ ብትማረው ይሻላል። ከዚህ በታች የተዘረዘሩት ቅጥያዎች ስትጠራጠር ለመገመት ይረዱሃል።",
    "es_mx": "Cada sustantivo alemán tiene uno de tres géneros: masculino (der), femenino (die) o neutro (das), y el artículo cambia según el género. El género a menudo no es predecible, así que lo mejor es aprender cada sustantivo junto con su artículo. Las terminaciones que aparecen más abajo te ayudan a adivinar cuando no estás seguro.",
    "ca": "Cada substantiu alemany té un dels tres gèneres: masculí (der), femení (die) o neutre (das), i l'article canvia segons el gènere. Sovint el gènere no és previsible, així que el millor és aprendre cada substantiu juntament amb el seu article. Les terminacions que apareixen més avall t'ajuden a endevinar-lo quan no n'estàs segur.",
-   "hr": "Svaka njemačka imenica ima rod: muški (der), ženski (die) ili srednji (das). Budući da se rod često ne može predvidjeti, svaku imenicu najbolje je učiti odmah zajedno s njezinim članom. Nastavci navedeni niže pomažu ti pri pogađanju kad nisi siguran."
+   "hr": "Svaka njemačka imenica ima rod: muški (der), ženski (die) ili srednji (das). Budući da se rod često ne može predvidjeti, svaku imenicu najbolje je učiti odmah zajedno s njezinim članom. Nastavci navedeni niže pomažu ti pri pogađanju kad nisi siguran.",
+   "sr": "Свака немачка именица има један од три рода: мушки (der), женски (die) или средњи (das), а члан се мења заједно с њим. Род често није предвидљив, па је најбоље да сваку именицу учиш одмах заједно с њеним чланом. Наставци наведени ниже помажу да погодиш род када ниси сигуран.",
+   "el": "Κάθε γερμανικό ουσιαστικό έχει ένα γένος: αρσενικό (der), θηλυκό (die) ή ουδέτερο (das). Επειδή το γένος συχνά δεν είναι προβλέψιμο, το καλύτερο είναι να μαθαίνεις κάθε ουσιαστικό αμέσως μαζί με το άρθρο του. Οι καταλήξεις παρακάτω σε βοηθούν να μαντέψεις όταν δεν είσαι σίγουρος."
   },
   "tables": [
    {
@@ -75,7 +79,9 @@ const GRAMMAR = [
      "am": "ሦስቱ ጾታዎችና አርቲክሎቻቸው",
      "es_mx": "Los tres géneros y sus artículos",
      "ca": "Els tres gèneres i els seus articles",
-     "hr": "Tri roda i njihovi članovi"
+     "hr": "Tri roda i njihovi članovi",
+     "sr": "Три рода и њихови чланови",
+     "el": "Τα τρία γένη και τα άρθρα τους"
     },
     "labelHeader": {
      "de": "Genus",
@@ -98,7 +104,9 @@ const GRAMMAR = [
      "am": "ጾታ",
      "es_mx": "Género",
      "ca": "Gènere",
-     "hr": "Rod"
+     "hr": "Rod",
+     "sr": "Род",
+     "el": "Γένος"
     },
     "columns": [
      {
@@ -122,7 +130,9 @@ const GRAMMAR = [
       "am": "የተወሰነ አርቲክል",
       "es_mx": "Artículo determinado",
       "ca": "Article determinat",
-      "hr": "Određeni član"
+      "hr": "Određeni član",
+      "sr": "Одређени члан",
+      "el": "Οριστικό άρθρο"
      },
      {
       "de": "Unbestimmter Artikel",
@@ -145,7 +155,9 @@ const GRAMMAR = [
       "am": "ያልተወሰነ አርቲክል",
       "es_mx": "Artículo indeterminado",
       "ca": "Article indeterminat",
-      "hr": "Neodređeni član"
+      "hr": "Neodređeni član",
+      "sr": "Неодређени члан",
+      "el": "Αόριστο άρθρο"
      },
      {
       "de": "Beispielnomen",
@@ -168,7 +180,9 @@ const GRAMMAR = [
       "am": "ምሳሌ ስም",
       "es_mx": "Sustantivo de ejemplo",
       "ca": "Substantiu d'exemple",
-      "hr": "Primjer imenice"
+      "hr": "Primjer imenice",
+      "sr": "Пример именице",
+      "el": "Παράδειγμα ουσιαστικού"
      }
     ],
     "rows": [
@@ -194,7 +208,9 @@ const GRAMMAR = [
        "am": "ተባዕታይ",
        "es_mx": "Masculino",
        "ca": "Masculí",
-       "hr": "Muški rod"
+       "hr": "Muški rod",
+       "sr": "Мушки род",
+       "el": "Αρσενικό"
       },
       "cells": [
        "der",
@@ -224,7 +240,9 @@ const GRAMMAR = [
        "am": "አንስታይ",
        "es_mx": "Femenino",
        "ca": "Femení",
-       "hr": "Ženski rod"
+       "hr": "Ženski rod",
+       "sr": "Женски род",
+       "el": "Θηλυκό"
       },
       "cells": [
        "die",
@@ -254,7 +272,9 @@ const GRAMMAR = [
        "am": "ገለልተኛ",
        "es_mx": "Neutro",
        "ca": "Neutre",
-       "hr": "Srednji rod"
+       "hr": "Srednji rod",
+       "sr": "Средњи род",
+       "el": "Ουδέτερο"
       },
       "cells": [
        "das",
@@ -286,7 +306,9 @@ const GRAMMAR = [
      "am": "ጾታን የሚጠቁሙ ቅጥያዎች",
      "es_mx": "Terminaciones que indican el género",
      "ca": "Terminacions que indiquen el gènere",
-     "hr": "Nastavci koji upućuju na rod"
+     "hr": "Nastavci koji upućuju na rod",
+     "sr": "Наставци који указују на род",
+     "el": "Καταλήξεις που υποδεικνύουν το γένος"
     },
     "labelHeader": {
      "de": "",
@@ -319,7 +341,9 @@ const GRAMMAR = [
       "am": "ቅጥያ",
       "es_mx": "Terminación",
       "ca": "Terminació",
-      "hr": "Nastavak"
+      "hr": "Nastavak",
+      "sr": "Наставак",
+      "el": "Κατάληξη"
      },
      {
       "de": "Artikel",
@@ -342,7 +366,9 @@ const GRAMMAR = [
       "am": "አርቲክል",
       "es_mx": "Artículo",
       "ca": "Article",
-      "hr": "Član"
+      "hr": "Član",
+      "sr": "Члан",
+      "el": "Άρθρο"
      },
      {
       "de": "Beispiel",
@@ -365,7 +391,9 @@ const GRAMMAR = [
       "am": "ምሳሌ",
       "es_mx": "Ejemplo",
       "ca": "Exemple",
-      "hr": "Primjer"
+      "hr": "Primjer",
+      "sr": "Пример",
+      "el": "Παράδειγμα"
      }
     ],
     "rows": [
@@ -538,7 +566,9 @@ const GRAMMAR = [
     "am": "ይህ ሰው ነው። ሰውዬው ደግ ነው።",
     "es_mx": "Este es un hombre. El hombre es amable.",
     "ca": "Aquest és un home. L'home és amable.",
-    "hr": "Das ist ein Mann. Der Mann ist freundlich. (Ovo je muškarac. Muškarac je ljubazan.)"
+    "hr": "Das ist ein Mann. Der Mann ist freundlich. (Ovo je muškarac. Muškarac je ljubazan.)",
+    "sr": "Ово је мушкарац. Мушкарац је љубазан.",
+    "el": "Αυτός είναι ένας άντρας. Ο άντρας είναι φιλικός."
    },
    {
     "de": "Eine Frau und ein Kind warten dort.",
@@ -561,7 +591,9 @@ const GRAMMAR = [
     "am": "አንዲት ሴትና አንድ ልጅ እዚያ እየጠበቁ ናቸው።",
     "es_mx": "Una mujer y un niño esperan allí.",
     "ca": "Una dona i un infant esperen allà.",
-    "hr": "Eine Frau und ein Kind warten dort. (Žena i dijete čekaju ondje.)"
+    "hr": "Eine Frau und ein Kind warten dort. (Žena i dijete čekaju ondje.)",
+    "sr": "Једна жена и једно дете чекају тамо.",
+    "el": "Μια γυναίκα και ένα παιδί περιμένουν εκεί."
    },
    {
     "de": "Die Zeitung ist neu.",
@@ -584,7 +616,9 @@ const GRAMMAR = [
     "am": "ጋዜጣው አዲስ ነው።",
     "es_mx": "El periódico es nuevo.",
     "ca": "El diari és nou.",
-    "hr": "Die Zeitung ist neu. (Novine su nove.)"
+    "hr": "Die Zeitung ist neu. (Novine su nove.)",
+    "sr": "Новине су нове.",
+    "el": "Η εφημερίδα είναι καινούρια."
    }
   ],
   "hints": {
@@ -608,7 +642,9 @@ const GRAMMAR = [
    "am": "ልብ በል፦ ስሞችን ያለ አርቲክል በፍጹም አትማር — 'der/die/das' ከቃሉ ጋር ተጣብቆ የሚኖር ክፍል ነው። እንደ -ung, -heit, -keit, -schaft እና -tion ያሉ ቅጥያዎች ማለት ይቻላል ሁልጊዜ አንስታይ ናቸው፤ -chen እና -lein ሁልጊዜ ገለልተኛ ናቸው (das Mädchen 'ልጃገረድ' እንኳ!)፤ -ismus እና -ling ደግሞ ሁልጊዜ ተባዕታይ ናቸው።",
    "es_mx": "Recuerda: nunca aprendas un sustantivo sin su artículo — 'der/die/das' forma parte fija de la palabra. Terminaciones como -ung, -heit, -keit, -schaft y -tion son casi siempre femeninas; -chen y -lein siempre neutras (¡incluso das Mädchen!); -ismus y -ling siempre masculinas.",
    "ca": "Recorda: no aprenguis mai un substantiu sense el seu article — 'der/die/das' forma part fixa de la paraula. Terminacions com -ung, -heit, -keit, -schaft i -tion són gairebé sempre femenines; -chen i -lein sempre neutres (fins i tot das Mädchen!); -ismus i -ling sempre masculines.",
-   "hr": "Zapamti: imenice nikad ne uči bez člana — 'der/die/das' čvrsto pripada riječi. Nastavci poput -ung, -heit, -keit, -schaft i -tion gotovo su uvijek ženskog roda, -chen i -lein uvijek srednjeg (pa i das Mädchen, 'djevojčica'!), a -ismus i -ling uvijek muškog roda."
+   "hr": "Zapamti: imenice nikad ne uči bez člana — 'der/die/das' čvrsto pripada riječi. Nastavci poput -ung, -heit, -keit, -schaft i -tion gotovo su uvijek ženskog roda, -chen i -lein uvijek srednjeg (pa i das Mädchen, 'djevojčica'!), a -ismus i -ling uvijek muškog roda.",
+   "sr": "Запамти: именице никада не учи без члана — 'der/die/das' чврсто припада речи. Наставци као -ung, -heit, -keit, -schaft и -tion скоро су увек женског рода, -chen и -lein увек средњег (чак и das Mädchen!), а -ismus и -ling увек мушког рода.",
+   "el": "Θυμήσου: μη μαθαίνεις ποτέ ουσιαστικά χωρίς το άρθρο — το 'der/die/das' ανήκει αναπόσπαστα στη λέξη. Καταλήξεις όπως -ung, -heit, -keit, -schaft και -tion είναι σχεδόν πάντα θηλυκές, οι -chen και -lein πάντα ουδέτερες (ακόμη και το das Mädchen, 'το κορίτσι'!), ενώ οι -ismus και -ling πάντα αρσενικές."
   }
  },
  {
@@ -635,7 +671,9 @@ const GRAMMAR = [
    "am": "አራቱ ጉዳዮች (Kasus)",
    "es_mx": "Los cuatro casos",
    "ca": "Els quatre casos",
-   "hr": "Četiri padeža"
+   "hr": "Četiri padeža",
+   "sr": "Четири падежа",
+   "el": "Οι τέσσερις πτώσεις"
   },
   "intro": {
    "de": "Deutsch hat vier Fälle (Kasus): Nominativ, Akkusativ, Dativ und Genitiv. Der Fall zeigt die Rolle eines Wortes im Satz – wer etwas tut, wen oder was es betrifft, wem etwas gegeben wird und wem etwas gehört. Nicht das Substantiv, sondern vor allem der Artikel verändert sich je nach Fall.",
@@ -658,7 +696,9 @@ const GRAMMAR = [
    "am": "ጀርመንኛ አራት ጉዳዮች (Kasus) አሉት፦ Nominativ፣ Akkusativ፣ Dativ እና Genitiv። ጉዳዩ በዓረፍተ ነገር ውስጥ የቃሉን ሚና ያሳያል — ማን ድርጊቱን እንደሚፈጽም፣ ተግባሩ ማንን ወይም ምንን እንደሚነካ፣ ለማን ነገር እንደሚሰጥ እና የማን ንብረት እንደሆነ። የሚለወጠው ስሙ ሳይሆን በዋናነት አርቲክሉ ነው፣ እንደ ጉዳዩ ይለያያል።",
    "es_mx": "El alemán tiene cuatro casos (Kasus): nominativo, acusativo, dativo y genitivo. El caso muestra el papel de una palabra en la oración: quién hace algo, a quién o qué afecta, a quién se le da algo y de quién es algo. No es el sustantivo, sino sobre todo el artículo lo que cambia según el caso.",
    "ca": "L'alemany té quatre casos (Kasus): nominatiu, acusatiu, datiu i genitiu. El cas mostra el paper d'una paraula dins la frase: qui fa alguna cosa, a qui o a què afecta, a qui es dona alguna cosa i de qui és alguna cosa. No és el substantiu, sinó sobretot l'article, el que canvia segons el cas.",
-   "hr": "Njemački ima četiri padeža (Kasus): nominativ, akuzativ, dativ i genitiv. Padež pokazuje ulogu riječi u rečenici – tko nešto radi, koga ili što se tiče, kome se nešto daje i čije je nešto. Ne mijenja se toliko imenica, koliko prije svega član ovisno o padežu."
+   "hr": "Njemački ima četiri padeža (Kasus): nominativ, akuzativ, dativ i genitiv. Padež pokazuje ulogu riječi u rečenici – tko nešto radi, koga ili što se tiče, kome se nešto daje i čije je nešto. Ne mijenja se toliko imenica, koliko prije svega član ovisno o padežu.",
+   "sr": "Немачки има четири падежа (Kasus): номинатив, акузатив, датив и генитив. Падеж показује улогу речи у реченици – ко нешто ради, кога или шта се то тиче, коме се нешто даје и коме нешто припада. Не мења се именица, него пре свега члан у зависности од падежа.",
+   "el": "Τα Γερμανικά έχουν τέσσερις πτώσεις (Kasus): ονομαστική, αιτιατική, δοτική και γενική. Η πτώση δείχνει τον ρόλο μιας λέξης μέσα στην πρόταση – ποιος κάνει κάτι, ποιον ή τι αφορά, σε ποιον δίνεται κάτι και σε ποιον ανήκει κάτι. Δεν αλλάζει τόσο το ουσιαστικό όσο κυρίως το άρθρο ανάλογα με την πτώση."
   },
   "tables": [
    {
@@ -683,7 +723,9 @@ const GRAMMAR = [
      "am": "የተወሰነ አርቲክል (der/die/das) — 'the'",
      "es_mx": "Artículo determinado (der/die/das) – «the»",
      "ca": "Article determinat (der/die/das) – «the»",
-     "hr": "Određeni član (der/die/das) – „the“"
+     "hr": "Određeni član (der/die/das) – „the“",
+     "sr": "Одређени члан (der/die/das) – „the“",
+     "el": "Οριστικό άρθρο (der/die/das) – «the»"
     },
     "labelHeader": {
      "de": "Kasus (Fall)",
@@ -706,7 +748,9 @@ const GRAMMAR = [
      "am": "ጉዳይ (Kasus)",
      "es_mx": "Caso (Kasus)",
      "ca": "Cas (Kasus)",
-     "hr": "Padež (Kasus)"
+     "hr": "Padež (Kasus)",
+     "sr": "Падеж (Kasus)",
+     "el": "Πτώση (Fall)"
     },
     "columns": [
      {
@@ -730,7 +774,9 @@ const GRAMMAR = [
       "am": "ተባዕታይ (m)",
       "es_mx": "masculino (m)",
       "ca": "masculí (m)",
-      "hr": "muški rod (m)"
+      "hr": "muški rod (m)",
+      "sr": "мушки род (m)",
+      "el": "αρσενικό (m)"
      },
      {
       "de": "feminin (f)",
@@ -753,7 +799,9 @@ const GRAMMAR = [
       "am": "አንስታይ (f)",
       "es_mx": "femenino (f)",
       "ca": "femení (f)",
-      "hr": "ženski rod (f)"
+      "hr": "ženski rod (f)",
+      "sr": "женски род (f)",
+      "el": "θηλυκό (f)"
      },
      {
       "de": "neutral (n)",
@@ -776,7 +824,9 @@ const GRAMMAR = [
       "am": "ገለልተኛ (n)",
       "es_mx": "neutro (n)",
       "ca": "neutre (n)",
-      "hr": "srednji rod (n)"
+      "hr": "srednji rod (n)",
+      "sr": "средњи род (n)",
+      "el": "ουδέτερο (n)"
      },
      {
       "de": "Plural",
@@ -799,7 +849,9 @@ const GRAMMAR = [
       "am": "ብዙ ቁጥር",
       "es_mx": "plural",
       "ca": "plural",
-      "hr": "množina"
+      "hr": "množina",
+      "sr": "множина",
+      "el": "πληθυντικός"
      }
     ],
     "rows": [
@@ -825,7 +877,9 @@ const GRAMMAR = [
        "am": "Nominativ (ባለቤት — ማን?)",
        "es_mx": "Nominativo (sujeto – ¿quién?)",
        "ca": "Nominatiu (subjecte – qui?)",
-       "hr": "Nominativ (subjekt – tko?)"
+       "hr": "Nominativ (subjekt – tko?)",
+       "sr": "Номинатив (субјекат – ко?)",
+       "el": "Ονομαστική (υποκείμενο – ποιος;)"
       },
       "cells": [
        "der",
@@ -856,7 +910,9 @@ const GRAMMAR = [
        "am": "Akkusativ (ተሳቢ — ማንን/ምንን?)",
        "es_mx": "Acusativo (objeto directo – ¿a quién/qué?)",
        "ca": "Acusatiu (objecte directe – a qui/què?)",
-       "hr": "Akuzativ (objekt – koga/što?)"
+       "hr": "Akuzativ (objekt – koga/što?)",
+       "sr": "Акузатив (директни објекат – кога/шта?)",
+       "el": "Αιτιατική (αντικείμενο – ποιον/τι;)"
       },
       "cells": [
        "den",
@@ -887,7 +943,9 @@ const GRAMMAR = [
        "am": "Dativ (ኢቀጥተኛ ተሳቢ — ለማን?)",
        "es_mx": "Dativo (objeto indirecto – ¿a quién?)",
        "ca": "Datiu (objecte indirecte – a qui?)",
-       "hr": "Dativ (neizravni objekt – kome?)"
+       "hr": "Dativ (neizravni objekt – kome?)",
+       "sr": "Датив (индиректни објекат – коме?)",
+       "el": "Δοτική (έμμεσο αντικείμενο – σε ποιον;)"
       },
       "cells": [
        "dem",
@@ -918,7 +976,9 @@ const GRAMMAR = [
        "am": "Genitiv (ንብረት — የማን?)",
        "es_mx": "Genitivo (posesión – ¿de quién?)",
        "ca": "Genitiu (possessió – de qui?)",
-       "hr": "Genitiv (posvojnost – čiji?)"
+       "hr": "Genitiv (posvojnost – čiji?)",
+       "sr": "Генитив (припадање – чији?)",
+       "el": "Γενική (κτήση – ποιανού;)"
       },
       "cells": [
        "des",
@@ -951,7 +1011,9 @@ const GRAMMAR = [
      "am": "ein-ቃላት፦ ያልተወሰነ አርቲክል ein ('a/an') እና አሉታ kein ('አንድም/ምንም') — ተመሳሳይ ቅጥያዎች አሏቸው። እያንዳንዱ ሳጥን ein / kein ያሳያል። ein የብዙ ቁጥር ቅርጽ የለውም (እዚያ ራቁት ስሙ ብቻ ይቀመጣል)፤ kein ብቻ የብዙ ቁጥር ቅርጽ አለው።",
      "es_mx": "Palabras tipo ein: el artículo indeterminado ein «a/an» y su negación kein «no/ningún» tienen las mismas terminaciones. Cada celda muestra ein / kein. ein no tiene plural (ahí se usa el sustantivo solo); solo kein tiene formas de plural.",
      "ca": "Paraules tipus ein: l'article indeterminat ein «a/an» i la seva negació kein «cap/no un» tenen les mateixes terminacions. Cada cel·la mostra ein / kein. ein no té plural (aquí s'hi posa el substantiu sol); només kein té formes de plural.",
-     "hr": "ein-riječi: neodređeni član ein „a/an“ i njegova negacija kein „nijedan/ne neki“ – iste nastavke. Ćelija prikazuje ein / kein. ein nema množinu (ondje stoji sama imenica); samo kein ima oblike množine."
+     "hr": "ein-riječi: neodređeni član ein „a/an“ i njegova negacija kein „nijedan/ne neki“ – iste nastavke. Ćelija prikazuje ein / kein. ein nema množinu (ondje stoji sama imenica); samo kein ima oblike množine.",
+     "sr": "ein-речи: неодређени члан ein „a/an“ и одрична форма kein „ниједан/није“ – исти наставци. Ћелија приказује ein / kein. ein нема множину (тамо стоји гола именица); само kein има облике за множину.",
+     "el": "Λέξεις τύπου ein: το αόριστο άρθρο ein «a/an» και η άρνησή του kein «κανένας/όχι ένας» – ίδιες καταλήξεις. Κάθε κελί δείχνει ein / kein. Το ein δεν έχει πληθυντικό (εκεί μπαίνει το σκέτο ουσιαστικό)· μόνο το kein έχει τύπους πληθυντικού."
     },
     "labelHeader": {
      "de": "Kasus (Fall)",
@@ -974,7 +1036,9 @@ const GRAMMAR = [
      "am": "ጉዳይ (Kasus)",
      "es_mx": "Caso (Kasus)",
      "ca": "Cas (Kasus)",
-     "hr": "Padež (Kasus)"
+     "hr": "Padež (Kasus)",
+     "sr": "Падеж (Kasus)",
+     "el": "Πτώση (Fall)"
     },
     "columns": [
      {
@@ -998,7 +1062,9 @@ const GRAMMAR = [
       "am": "ተባዕታይ (m)",
       "es_mx": "masculino (m)",
       "ca": "masculí (m)",
-      "hr": "muški rod (m)"
+      "hr": "muški rod (m)",
+      "sr": "мушки род (m)",
+      "el": "αρσενικό (m)"
      },
      {
       "de": "feminin (f)",
@@ -1021,7 +1087,9 @@ const GRAMMAR = [
       "am": "አንስታይ (f)",
       "es_mx": "femenino (f)",
       "ca": "femení (f)",
-      "hr": "ženski rod (f)"
+      "hr": "ženski rod (f)",
+      "sr": "женски род (f)",
+      "el": "θηλυκό (f)"
      },
      {
       "de": "neutral (n)",
@@ -1044,7 +1112,9 @@ const GRAMMAR = [
       "am": "ገለልተኛ (n)",
       "es_mx": "neutro (n)",
       "ca": "neutre (n)",
-      "hr": "srednji rod (n)"
+      "hr": "srednji rod (n)",
+      "sr": "средњи род (n)",
+      "el": "ουδέτερο (n)"
      },
      {
       "de": "Plural (nur kein)",
@@ -1067,7 +1137,9 @@ const GRAMMAR = [
       "am": "ብዙ ቁጥር (kein ብቻ)",
       "es_mx": "plural (solo kein)",
       "ca": "plural (només kein)",
-      "hr": "množina (samo kein)"
+      "hr": "množina (samo kein)",
+      "sr": "множина (само kein)",
+      "el": "πληθυντικός (μόνο kein)"
      }
     ],
     "rows": [
@@ -1093,7 +1165,9 @@ const GRAMMAR = [
        "am": "Nominativ (ማን?)",
        "es_mx": "Nominativo (¿quién?)",
        "ca": "Nominatiu (qui?)",
-       "hr": "Nominativ (tko?)"
+       "hr": "Nominativ (tko?)",
+       "sr": "Номинатив (ко?)",
+       "el": "Ονομαστική (ποιος;)"
       },
       "cells": [
        "ein / kein",
@@ -1124,7 +1198,9 @@ const GRAMMAR = [
        "am": "Akkusativ (ማንን/ምንን?)",
        "es_mx": "Acusativo (¿a quién/qué?)",
        "ca": "Acusatiu (a qui/què?)",
-       "hr": "Akuzativ (koga/što?)"
+       "hr": "Akuzativ (koga/što?)",
+       "sr": "Акузатив (кога/шта?)",
+       "el": "Αιτιατική (ποιον/τι;)"
       },
       "cells": [
        "einen / keinen",
@@ -1155,7 +1231,9 @@ const GRAMMAR = [
        "am": "Dativ (ለማን?)",
        "es_mx": "Dativo (¿a quién?)",
        "ca": "Datiu (a qui?)",
-       "hr": "Dativ (kome?)"
+       "hr": "Dativ (kome?)",
+       "sr": "Датив (коме?)",
+       "el": "Δοτική (σε ποιον;)"
       },
       "cells": [
        "einem / keinem",
@@ -1186,7 +1264,9 @@ const GRAMMAR = [
        "am": "Genitiv (የማን?)",
        "es_mx": "Genitivo (¿de quién?)",
        "ca": "Genitiu (de qui?)",
-       "hr": "Genitiv (čiji?)"
+       "hr": "Genitiv (čiji?)",
+       "sr": "Генитив (чији?)",
+       "el": "Γενική (ποιανού;)"
       },
       "cells": [
        "eines / keines",
@@ -1220,7 +1300,9 @@ const GRAMMAR = [
     "am": "ሰውየው ለሴትዮዋ የልጁን ፖም ይሰጣል።",
     "es_mx": "El hombre le da a la mujer la manzana del niño. (Nom: der Mann · Dat: der Frau · Akk: den Apfel · Gen: des Kindes)",
     "ca": "L'home dona a la dona la poma del nen. (Nom: der Mann · Dat: der Frau · Akk: den Apfel · Gen: des Kindes)",
-    "hr": "Der Mann gibt der Frau den Apfel des Kindes. (Muškarac daje ženi djetetovu jabuku. – Nom: der Mann · Dat: der Frau · Akk: den Apfel · Gen: des Kindes)"
+    "hr": "Der Mann gibt der Frau den Apfel des Kindes. (Muškarac daje ženi djetetovu jabuku. – Nom: der Mann · Dat: der Frau · Akk: den Apfel · Gen: des Kindes)",
+    "sr": "Der Mann gibt der Frau den Apfel des Kindes. (Човек даје жени дететову јабуку. Ном: der Mann · Дат: der Frau · Ак: den Apfel · Ген: des Kindes)",
+    "el": "Der Mann gibt der Frau den Apfel des Kindes. (Ο άντρας δίνει στη γυναίκα το μήλο του παιδιού. Ονομ.: der Mann · Δοτ.: der Frau · Αιτ.: den Apfel · Γεν.: des Kindes)"
    },
    {
     "de": "Der Hund beißt den Mann, nicht der Mann den Hund.",
@@ -1243,7 +1325,9 @@ const GRAMMAR = [
     "am": "ውሻው ሰውየውን ነከሰ እንጂ ሰውየው ውሻውን አልነከሰም።",
     "es_mx": "El perro muerde al hombre, no el hombre al perro. (der frente a den muestra quién actúa, así que los papeles quedan claros aunque las palabras cambien de lugar.)",
     "ca": "El gos mossega l'home, no l'home el gos. (der en contrast amb den mostra qui actua, de manera que els papers queden clars encara que les paraules canviïn de lloc.)",
-    "hr": "Der Hund beißt den Mann, nicht der Mann den Hund. (Pas grize čovjeka, a ne čovjek psa. – razlika der naspram den pokazuje tko izvodi radnju, pa su uloge jasne čak i kad se poredak riječi mijenja.)"
+    "hr": "Der Hund beißt den Mann, nicht der Mann den Hund. (Pas grize čovjeka, a ne čovjek psa. – razlika der naspram den pokazuje tko izvodi radnju, pa su uloge jasne čak i kad se poredak riječi mijenja.)",
+    "sr": "Der Hund beißt den Mann, nicht der Mann den Hund. (Пас уједа човека, а не човек пса. der наспрам den показује ко врши радњу, па су улоге јасне чак и када речи промене место.)",
+    "el": "Der Hund beißt den Mann, nicht der Mann den Hund. (Ο σκύλος δαγκώνει τον άντρα, όχι ο άντρας τον σκύλο. Το der έναντι του den δείχνει ποιος κάνει την πράξη, οπότε οι ρόλοι είναι σαφείς ακόμη κι όταν οι λέξεις μετακινούνται.)"
    }
   ],
   "hints": {
@@ -1267,7 +1351,9 @@ const GRAMMAR = [
    "am": "ጉዳዮቹን እንደ ጥያቄ አድርገህ አስታውስ፦ Nominativ = ማን?፣ Akkusativ = ማንን/ምንን?፣ Dativ = ለማን?፣ Genitiv = የማን? መጀመሪያ የተወሰነውን አርቲክል ሠንጠረዥ በቃል ተማር — የተባዕታይ Akkusativ ብቻ (der → den) ነው ስርዓቱን በእውነት የሚሰብረው።",
    "es_mx": "Recuerda los casos como preguntas: nominativo = ¿quién?, acusativo = ¿a quién/qué?, dativo = ¿a quién?, genitivo = ¿de quién? Aprende primero de memoria la tabla del artículo determinado: solo el acusativo masculino (der → den) rompe de verdad el patrón.",
    "ca": "Recorda els casos com a preguntes: nominatiu = qui?, acusatiu = a qui/què?, datiu = a qui?, genitiu = de qui? Aprèn primer de memòria la taula de l'article determinat: només l'acusatiu masculí (der → den) trenca de veritat el patró.",
-   "hr": "Zapamti padeže kao pitanja: nominativ = tko?, akuzativ = koga/što?, dativ = kome?, genitiv = čiji? Prvo nauči napamet tablicu određenog člana – samo akuzativ muškog roda (der → den) stvarno razbija obrazac. Za razliku od engleskoga, i hrvatski i njemački imaju padeže, no njemački ulogu riječi pokazuje ponajviše članom: den naspram der govori tko na koga djeluje čak i kad se riječi premjeste."
+   "hr": "Zapamti padeže kao pitanja: nominativ = tko?, akuzativ = koga/što?, dativ = kome?, genitiv = čiji? Prvo nauči napamet tablicu određenog člana – samo akuzativ muškog roda (der → den) stvarno razbija obrazac. Za razliku od engleskoga, i hrvatski i njemački imaju padeže, no njemački ulogu riječi pokazuje ponajviše članom: den naspram der govori tko na koga djeluje čak i kad se riječi premjeste.",
+   "sr": "Запамти падеже као питања: номинатив = ко?, акузатив = кога/шта?, датив = коме?, генитив = чији? Прво напамет научи таблицу одређеног члана – само мушки акузатив (der → den) заиста нарушава образац.",
+   "el": "Θυμήσου τις πτώσεις ως ερωτήσεις: ονομαστική = ποιος;, αιτιατική = ποιον/τι;, δοτική = σε ποιον;, γενική = ποιανού; Μάθε πρώτα απ' έξω τον πίνακα του οριστικού άρθρου – μόνο η αρσενική αιτιατική (der → den) σπάει πραγματικά το μοτίβο."
   }
  },
  {
@@ -1294,7 +1380,9 @@ const GRAMMAR = [
    "am": "የግል ተውላጠ ስም (Personalpronomen)",
    "es_mx": "Pronombres personales",
    "ca": "Pronoms personals",
-   "hr": "Osobne zamjenice"
+   "hr": "Osobne zamjenice",
+   "sr": "Личне заменице",
+   "el": "Προσωπικές αντωνυμίες"
   },
   "intro": {
    "de": "Personalpronomen ändern ihre Form je nach Funktion im Satz: Subjekt (Nominativ), direktes Objekt (Akkusativ) oder indirektes Objekt (Dativ). Die Höflichkeitsform Sie/Ihnen entspricht der 3. Person Plural und wird immer großgeschrieben.",
@@ -1317,7 +1405,9 @@ const GRAMMAR = [
    "am": "የግል ተውላጠ ስሞች በዓረፍተ ነገር ውስጥ ባላቸው ተግባር መሠረት ቅርጻቸውን ይለውጣሉ፦ ባለቤት (Nominativ)፣ ቀጥተኛ ተሳቢ (Akkusativ) ወይም ኢቀጥተኛ ተሳቢ (Dativ)። የአክብሮት ቅርጽ Sie/Ihnen ከ3ኛ አካል ብዙ ቁጥር ጋር ተመሳሳይ ሲሆን ሁልጊዜ በካፒታል ፊደል ይጻፋል።",
    "es_mx": "Los pronombres personales alemanes cambian de forma según su función en la oración: sujeto (nominativo), objeto directo (acusativo) u objeto indirecto (dativo). La forma de cortesía Sie/Ihnen retoma las formas de la 3.ª persona del plural y siempre se escribe con mayúscula.",
    "ca": "Els pronoms personals alemanys canvien de forma segons la seva funció dins la frase: subjecte (nominatiu), objecte directe (acusatiu) o objecte indirecte (datiu). La forma de cortesia Sie/Ihnen reutilitza les formes de la 3a persona del plural i sempre s'escriu amb majúscula.",
-   "hr": "Osobne zamjenice mijenjaju oblik ovisno o svojoj funkciji u rečenici: subjekt (nominativ), izravni objekt (akuzativ) ili neizravni objekt (dativ). Uljudni oblik Sie/Ihnen preuzima oblike 3. lica množine i uvijek se piše velikim slovom."
+   "hr": "Osobne zamjenice mijenjaju oblik ovisno o svojoj funkciji u rečenici: subjekt (nominativ), izravni objekt (akuzativ) ili neizravni objekt (dativ). Uljudni oblik Sie/Ihnen preuzima oblike 3. lica množine i uvijek se piše velikim slovom.",
+   "sr": "Личне заменице мењају облик у зависности од функције у реченици: субјекат (номинатив), директни објекат (акузатив) или индиректни објекат (датив). Учтиви облик Sie/Ihnen подудара се с 3. лицем множине и увек се пише великим словом.",
+   "el": "Οι γερμανικές προσωπικές αντωνυμίες αλλάζουν μορφή ανάλογα με τον ρόλο τους στην πρόταση: υποκείμενο (ονομαστική), άμεσο αντικείμενο (αιτιατική) ή έμμεσο αντικείμενο (δοτική). Ο ευγενικός τύπος 'Sie/Ihnen' ταυτίζεται με το γ' πρόσωπο πληθυντικού και γράφεται πάντα με κεφαλαίο."
   },
   "tables": [
    {
@@ -1342,7 +1432,9 @@ const GRAMMAR = [
      "am": "የግል ተውላጠ ስሞች በጉዳይ (Nominativ / Akkusativ / Dativ)",
      "es_mx": "Pronombres personales alemanes por caso (nominativo / acusativo / dativo)",
      "ca": "Pronoms personals alemanys per cas (nominatiu / acusatiu / datiu)",
-     "hr": "Osobne zamjenice po padežima (nominativ / akuzativ / dativ)"
+     "hr": "Osobne zamjenice po padežima (nominativ / akuzativ / dativ)",
+     "sr": "Личне заменице по падежима (номинатив / акузатив / датив)",
+     "el": "Γερμανικές προσωπικές αντωνυμίες κατά πτώση (ονομαστική / αιτιατική / δοτική)"
     },
     "labelHeader": {
      "de": "Person",
@@ -1365,7 +1457,9 @@ const GRAMMAR = [
      "am": "አካል",
      "es_mx": "Persona",
      "ca": "Persona",
-     "hr": "Lice"
+     "hr": "Lice",
+     "sr": "Лице",
+     "el": "Πρόσωπο"
     },
     "columns": [
      {
@@ -1389,7 +1483,9 @@ const GRAMMAR = [
       "am": "Nominativ (ባለቤት)",
       "es_mx": "Nominativo (sujeto)",
       "ca": "Nominatiu (subjecte)",
-      "hr": "Nominativ (subjekt)"
+      "hr": "Nominativ (subjekt)",
+      "sr": "Номинатив (субјекат)",
+      "el": "Ονομαστική (υποκείμενο)"
      },
      {
       "de": "Akkusativ (dir. Objekt)",
@@ -1412,7 +1508,9 @@ const GRAMMAR = [
       "am": "Akkusativ (ቀጥተኛ ተሳቢ)",
       "es_mx": "Acusativo (obj. directo)",
       "ca": "Acusatiu (obj. directe)",
-      "hr": "Akuzativ (izravni objekt)"
+      "hr": "Akuzativ (izravni objekt)",
+      "sr": "Акузатив (дир. објекат)",
+      "el": "Αιτιατική (άμεσο αντικείμενο)"
      },
      {
       "de": "Dativ (indir. Objekt)",
@@ -1435,7 +1533,9 @@ const GRAMMAR = [
       "am": "Dativ (ኢቀጥተኛ ተሳቢ)",
       "es_mx": "Dativo (obj. indirecto)",
       "ca": "Datiu (obj. indirecte)",
-      "hr": "Dativ (neizravni objekt)"
+      "hr": "Dativ (neizravni objekt)",
+      "sr": "Датив (индир. објекат)",
+      "el": "Δοτική (έμμεσο αντικείμενο)"
      }
     ],
     "rows": [
@@ -1461,7 +1561,9 @@ const GRAMMAR = [
        "am": "1ኛ አካል ነጠላ",
        "es_mx": "yo",
        "ca": "jo",
-       "hr": "1. lice jd."
+       "hr": "1. lice jd.",
+       "sr": "1. лице једн.",
+       "el": "α' πρόσ. εν."
       },
       "cells": [
        "ich",
@@ -1491,7 +1593,9 @@ const GRAMMAR = [
        "am": "2ኛ አካል ነጠላ",
        "es_mx": "tú (sing., informal)",
        "ca": "tu (sing., informal)",
-       "hr": "2. lice jd. (neformalno)"
+       "hr": "2. lice jd. (neformalno)",
+       "sr": "2. лице једн.",
+       "el": "β' πρόσ. εν. (ενικός, οικείος)"
       },
       "cells": [
        "du",
@@ -1521,7 +1625,9 @@ const GRAMMAR = [
        "am": "3ኛ አካል ነጠላ (ተባዕታይ)",
        "es_mx": "él / ello (m.)",
        "ca": "ell / això (m.)",
-       "hr": "3. lice jd. m. r."
+       "hr": "3. lice jd. m. r.",
+       "sr": "3. лице једн. м. род",
+       "el": "γ' πρόσ. εν. αρσ."
       },
       "cells": [
        "er",
@@ -1551,7 +1657,9 @@ const GRAMMAR = [
        "am": "3ኛ አካል ነጠላ (አንስታይ)",
        "es_mx": "ella / ella (f.)",
        "ca": "ella (f.)",
-       "hr": "3. lice jd. ž. r."
+       "hr": "3. lice jd. ž. r.",
+       "sr": "3. лице једн. ж. род",
+       "el": "γ' πρόσ. εν. θηλ."
       },
       "cells": [
        "sie",
@@ -1581,7 +1689,9 @@ const GRAMMAR = [
        "am": "3ኛ አካል ነጠላ (ገለልተኛ)",
        "es_mx": "ello (n.)",
        "ca": "això (n.)",
-       "hr": "3. lice jd. sr. r."
+       "hr": "3. lice jd. sr. r.",
+       "sr": "3. лице једн. ср. род",
+       "el": "γ' πρόσ. εν. ουδ."
       },
       "cells": [
        "es",
@@ -1611,7 +1721,9 @@ const GRAMMAR = [
        "am": "1ኛ አካል ብዙ",
        "es_mx": "nosotros",
        "ca": "nosaltres",
-       "hr": "1. lice mn."
+       "hr": "1. lice mn.",
+       "sr": "1. лице мн.",
+       "el": "α' πρόσ. πληθ."
       },
       "cells": [
        "wir",
@@ -1641,7 +1753,9 @@ const GRAMMAR = [
        "am": "2ኛ አካል ብዙ",
        "es_mx": "ustedes (pl., informal)",
        "ca": "vosaltres (pl., informal)",
-       "hr": "2. lice mn. (neformalno)"
+       "hr": "2. lice mn. (neformalno)",
+       "sr": "2. лице мн.",
+       "el": "β' πρόσ. πληθ. (πληθυντικός, οικείος)"
       },
       "cells": [
        "ihr",
@@ -1671,7 +1785,9 @@ const GRAMMAR = [
        "am": "3ኛ አካል ብዙ / አክብሮት",
        "es_mx": "ellos / usted (formal)",
        "ca": "ells / vostè (formal)",
-       "hr": "3. lice mn. / uljudni oblik"
+       "hr": "3. lice mn. / uljudni oblik",
+       "sr": "3. лице мн. / учтиви облик",
+       "el": "γ' πρόσ. πληθ. / ευγενικός τύπος"
       },
       "cells": [
        "sie / Sie",
@@ -1704,7 +1820,9 @@ const GRAMMAR = [
     "am": "እኔ አንተን አያለሁ፣ አንተ ግን እኔን አታይም።",
     "es_mx": "Yo te veo, pero tú no me ves.",
     "ca": "Jo et veig, però tu no em veus.",
-    "hr": "Ich sehe dich, aber du siehst mich nicht. (Vidim tebe, ali ti ne vidiš mene.)"
+    "hr": "Ich sehe dich, aber du siehst mich nicht. (Vidim tebe, ali ti ne vidiš mene.)",
+    "sr": "Ich sehe dich, aber du siehst mich nicht. (Ја видим тебе, али ти не видиш мене.)",
+    "el": "Ich sehe dich, aber du siehst mich nicht. (Εγώ σε βλέπω, αλλά εσύ δεν με βλέπεις.)"
    },
    {
     "de": "Er hilft ihr, und sie dankt ihm.",
@@ -1727,7 +1845,9 @@ const GRAMMAR = [
     "am": "እሱ እሷን ይረዳታል፣ እሷም እሱን ታመሰግነዋለች።",
     "es_mx": "Él la ayuda a ella, y ella le da las gracias a él.",
     "ca": "Ell l'ajuda a ella, i ella li dona les gràcies a ell.",
-    "hr": "Er hilft ihr, und sie dankt ihm. (On joj pomaže, a ona mu zahvaljuje.)"
+    "hr": "Er hilft ihr, und sie dankt ihm. (On joj pomaže, a ona mu zahvaljuje.)",
+    "sr": "Er hilft ihr, und sie dankt ihm. (Он јој помаже, а она му захваљује.)",
+    "el": "Er hilft ihr, und sie dankt ihm. (Αυτός τη βοηθάει, και αυτή τον ευχαριστεί.)"
    },
    {
     "de": "Können Sie mir bitte helfen?",
@@ -1750,7 +1870,9 @@ const GRAMMAR = [
     "am": "እባክዎን ሊረዱኝ ይችላሉ?",
     "es_mx": "¿Podría ayudarme, por favor?",
     "ca": "Que em podria ajudar, si us plau?",
-    "hr": "Können Sie mir bitte helfen? (Možete li mi, molim vas, pomoći?)"
+    "hr": "Können Sie mir bitte helfen? (Možete li mi, molim vas, pomoći?)",
+    "sr": "Können Sie mir bitte helfen? (Можете ли ми, молим вас, помоћи?)",
+    "el": "Können Sie mir bitte helfen? (Μπορείτε να με βοηθήσετε, παρακαλώ;)"
    }
   ],
   "hints": {
@@ -1774,7 +1896,9 @@ const GRAMMAR = [
    "am": "ልብ በል፦ Akkusativ የቀጥተኛ ተሳቢ ቅርጽ ነው (mich, dich, ihn)፣ Dativ ደግሞ 'ተቀባይ' ቅርጽ ነው (mir, dir, ihm, ihr, uns, euch, ihnen)። የአክብሮት ቅርጽ Sie/Ihnen (= 3ኛ አካል ብዙ) ሁልጊዜ በካፒታል ፊደል ጻፍ፤ sie ('እነሱ') ግን በትንሽ ፊደል ይጻፋል።",
    "es_mx": "El inglés conserva un rastro de esto: I/me, he/him, she/her, we/us, they/them son justamente las formas de nominativo frente a las de objeto. El alemán simplemente divide la forma de objeto en acusativo (ihn) y dativo (ihm). Cuidado: el 'you' del inglés nunca cambia, pero el alemán necesita du/dich/dir y euch.",
    "ca": "L'anglès en conserva un rastre: I/me, he/him, she/her, we/us, they/them són justament les formes de nominatiu enfront de les d'objecte. L'alemany simplement divideix la forma d'objecte en acusatiu (ihn) i datiu (ihm). Compte: el 'you' de l'anglès no canvia mai, però l'alemany necessita du/dich/dir i euch.",
-   "hr": "Zapamti: akuzativ je oblik izravnog objekta (mich, dich, ihn), a dativ oblik 'primatelja' (mir, dir, ihm, ihr, uns, euch, ihnen). Uljudni oblik Sie/Ihnen (= 3. lice množine) uvijek se piše velikim slovom, dok se sie ('oni') piše malim. U hrvatskome se te razlike izražavaju padežnim nastavcima, a zamjenica se često izostavlja jer ju sadrži oblik glagola."
+   "hr": "Zapamti: akuzativ je oblik izravnog objekta (mich, dich, ihn), a dativ oblik 'primatelja' (mir, dir, ihm, ihr, uns, euch, ihnen). Uljudni oblik Sie/Ihnen (= 3. lice množine) uvijek se piše velikim slovom, dok se sie ('oni') piše malim. U hrvatskome se te razlike izražavaju padežnim nastavcima, a zamjenica se često izostavlja jer ju sadrži oblik glagola.",
+   "sr": "Запамти: акузатив је облик директног објекта (mich, dich, ihn), а датив је облик 'примаоца' (mir, dir, ihm, ihr, uns, euch, ihnen). Учтиви облик Sie/Ihnen (= 3. лице множине) увек пиши великим словом, док sie ('они/оне') пиши малим.",
+   "el": "Πρόσεξε: Η αιτιατική είναι ο τύπος του άμεσου αντικειμένου ('mich', 'dich', 'ihn'), ενώ η δοτική είναι ο τύπος του 'αποδέκτη' ('mir', 'dir', 'ihm', 'ihr', 'uns', 'euch', 'ihnen'). Ο ευγενικός τύπος 'Sie/Ihnen' (= γ' πρόσωπο πληθυντικού) γράφεται πάντα με κεφαλαίο, ενώ το 'sie' ('αυτοί/αυτές') με μικρό. Στα ελληνικά, όπως και στα γερμανικά, οι αντωνυμίες αλλάζουν μορφή κατά πτώση, όμως τα γερμανικά διακρίνουν επιπλέον την αιτιατική ('ihn') από τη δοτική ('ihm')."
   }
  },
  {
@@ -1801,7 +1925,9 @@ const GRAMMAR = [
    "am": "የባለቤትነት አርቲክል (Possessivartikel)",
    "es_mx": "Artículos posesivos",
    "ca": "Articles possessius",
-   "hr": "Posvojni članovi"
+   "hr": "Posvojni članovi",
+   "sr": "Присвојни детерминатори",
+   "el": "Κτητικά άρθρα"
   },
   "intro": {
    "de": "Possessivartikel zeigen, wem etwas gehört. Sie werden wie der unbestimmte Artikel ein- dekliniert – die Endung richtet sich nach Genus, Kasus und Numerus des Nomens.",
@@ -1824,7 +1950,9 @@ const GRAMMAR = [
    "am": "የባለቤትነት አርቲክሎች የማን ንብረት እንደሆነ ያሳያሉ። እንደ ያልተወሰነው አርቲክል ein- ተመሳሳይ ሁኔታ ይለወጣሉ — ቅጥያው በስሙ ጾታ፣ ጉዳይ እና ቁጥር (ነጠላ/ብዙ) ይወሰናል።",
    "es_mx": "Los artículos posesivos indican a quién le pertenece algo. Se declinan igual que el artículo indefinido ein-: la terminación depende del género, el caso y el número del sustantivo.",
    "ca": "Els articles possessius indiquen a qui pertany una cosa. Es declinen igual que l'article indefinit ein-: la terminació depèn del gènere, el cas i el nombre del substantiu.",
-   "hr": "Posvojni članovi pokazuju kome nešto pripada. Sklanjaju se kao neodređeni član ein- – nastavak se ravna prema rodu, padežu i broju imenice."
+   "hr": "Posvojni članovi pokazuju kome nešto pripada. Sklanjaju se kao neodređeni član ein- – nastavak se ravna prema rodu, padežu i broju imenice.",
+   "sr": "Присвојни детерминатори показују коме нешто припада. Деклинирају се као неодређени члан ein- — наставак зависи од рода, падежа и броја именице.",
+   "el": "Τα κτητικά άρθρα δείχνουν σε ποιον ανήκει κάτι. Κλίνονται όπως το αόριστο άρθρο ein- – η κατάληξη εξαρτάται από το γένος, την πτώση και τον αριθμό του ουσιαστικού."
   },
   "tables": [
    {
@@ -1849,7 +1977,9 @@ const GRAMMAR = [
      "am": "መሠረታዊ ቅርጾች፦ ተውላጠ ስም → የባለቤትነት አርቲክል",
      "es_mx": "Formas básicas: pronombre → posesivo",
      "ca": "Formes bàsiques: pronom → possessiu",
-     "hr": "Osnovni oblici: zamjenica → posvojni član"
+     "hr": "Osnovni oblici: zamjenica → posvojni član",
+     "sr": "Основни облици: заменица → присвојни детерминатор",
+     "el": "Βασικοί τύποι: αντωνυμία → κτητικό άρθρο"
     },
     "labelHeader": {
      "de": "Person",
@@ -1872,7 +2002,9 @@ const GRAMMAR = [
      "am": "አካል",
      "es_mx": "Persona",
      "ca": "Persona",
-     "hr": "Osoba"
+     "hr": "Osoba",
+     "sr": "Лице",
+     "el": "Πρόσωπο"
     },
     "columns": [
      {
@@ -1896,7 +2028,9 @@ const GRAMMAR = [
       "am": "ተውላጠ ስም",
       "es_mx": "Pronombre",
       "ca": "Pronom",
-      "hr": "Zamjenica"
+      "hr": "Zamjenica",
+      "sr": "Заменица",
+      "el": "Αντωνυμία"
      },
      {
       "de": "Possessivartikel",
@@ -1919,7 +2053,9 @@ const GRAMMAR = [
       "am": "የባለቤትነት አርቲክል",
       "es_mx": "Posesivo",
       "ca": "Possessiu",
-      "hr": "Posvojni član"
+      "hr": "Posvojni član",
+      "sr": "Присвојни детерминатор",
+      "el": "Κτητικό άρθρο"
      }
     ],
     "rows": [
@@ -1945,7 +2081,9 @@ const GRAMMAR = [
        "am": "1ኛ አካል ነጠላ",
        "es_mx": "1.ª persona del singular",
        "ca": "1a persona del singular",
-       "hr": "1. lice jednine"
+       "hr": "1. lice jednine",
+       "sr": "1. лице једнине",
+       "el": "1ο πρόσωπο ενικού"
       },
       "cells": [
        "ich",
@@ -1974,7 +2112,9 @@ const GRAMMAR = [
        "am": "2ኛ አካል ነጠላ (ኢመደበኛ)",
        "es_mx": "2.ª persona del singular (informal)",
        "ca": "2a persona del singular (informal)",
-       "hr": "2. lice jednine (neformalno)"
+       "hr": "2. lice jednine (neformalno)",
+       "sr": "2. лице једнине (неформално)",
+       "el": "2ο πρόσωπο ενικού (ανεπίσημο)"
       },
       "cells": [
        "du",
@@ -2003,7 +2143,9 @@ const GRAMMAR = [
        "am": "3ኛ አካል ነጠላ (ተባዕታይ)",
        "es_mx": "3.ª persona del sing. (masculino)",
        "ca": "3a persona del sing. (masculí)",
-       "hr": "3. lice jed. (muški rod)"
+       "hr": "3. lice jed. (muški rod)",
+       "sr": "3. лице једнине (мушки род)",
+       "el": "3ο πρόσωπο ενικού (αρσενικό)"
       },
       "cells": [
        "er",
@@ -2032,7 +2174,9 @@ const GRAMMAR = [
        "am": "3ኛ አካል ነጠላ (አንስታይ)",
        "es_mx": "3.ª persona del sing. (femenino)",
        "ca": "3a persona del sing. (femení)",
-       "hr": "3. lice jed. (ženski rod)"
+       "hr": "3. lice jed. (ženski rod)",
+       "sr": "3. лице једнине (женски род)",
+       "el": "3ο πρόσωπο ενικού (θηλυκό)"
       },
       "cells": [
        "sie",
@@ -2061,7 +2205,9 @@ const GRAMMAR = [
        "am": "3ኛ አካል ነጠላ (ገለልተኛ)",
        "es_mx": "3.ª persona del sing. (neutro)",
        "ca": "3a persona del sing. (neutre)",
-       "hr": "3. lice jed. (srednji rod)"
+       "hr": "3. lice jed. (srednji rod)",
+       "sr": "3. лице једнине (средњи род)",
+       "el": "3ο πρόσωπο ενικού (ουδέτερο)"
       },
       "cells": [
        "es",
@@ -2090,7 +2236,9 @@ const GRAMMAR = [
        "am": "1ኛ አካል ብዙ",
        "es_mx": "1.ª persona del plural",
        "ca": "1a persona del plural",
-       "hr": "1. lice množine"
+       "hr": "1. lice množine",
+       "sr": "1. лице множине",
+       "el": "1ο πρόσωπο πληθυντικού"
       },
       "cells": [
        "wir",
@@ -2119,7 +2267,9 @@ const GRAMMAR = [
        "am": "2ኛ አካል ብዙ",
        "es_mx": "2.ª persona del plural",
        "ca": "2a persona del plural",
-       "hr": "2. lice množine"
+       "hr": "2. lice množine",
+       "sr": "2. лице множине",
+       "el": "2ο πρόσωπο πληθυντικού"
       },
       "cells": [
        "ihr",
@@ -2148,7 +2298,9 @@ const GRAMMAR = [
        "am": "3ኛ አካል ብዙ",
        "es_mx": "3.ª persona del plural",
        "ca": "3a persona del plural",
-       "hr": "3. lice množine"
+       "hr": "3. lice množine",
+       "sr": "3. лице множине",
+       "el": "3ο πρόσωπο πληθυντικού"
       },
       "cells": [
        "sie",
@@ -2177,7 +2329,9 @@ const GRAMMAR = [
        "am": "የአክብሮት ቅርጽ (ነጠላ/ብዙ)",
        "es_mx": "Forma de cortesía (sing./pl.)",
        "ca": "Forma de cortesia (sing./pl.)",
-       "hr": "Iz poštovanja (jed./mn.)"
+       "hr": "Iz poštovanja (jed./mn.)",
+       "sr": "Учтиви облик (јд./мн.)",
+       "el": "Ευγενικός τύπος (εν./πληθ.)"
       },
       "cells": [
        "Sie",
@@ -2208,7 +2362,9 @@ const GRAMMAR = [
      "am": "mein- እንደ ein- ተመሳሳይ ሁኔታ ይለወጣል",
      "es_mx": "mein- se declina como ein-",
      "ca": "mein- es declina com ein-",
-     "hr": "mein- se sklanja kao ein-"
+     "hr": "mein- se sklanja kao ein-",
+     "sr": "mein- се деклинира као ein-",
+     "el": "το mein- κλίνεται όπως το ein-"
     },
     "labelHeader": {
      "de": "Kasus",
@@ -2231,7 +2387,9 @@ const GRAMMAR = [
      "am": "ጉዳይ",
      "es_mx": "Caso",
      "ca": "Cas",
-     "hr": "Padež"
+     "hr": "Padež",
+     "sr": "Падеж",
+     "el": "Πτώση"
     },
     "columns": [
      {
@@ -2255,7 +2413,9 @@ const GRAMMAR = [
       "am": "ተባዕታይ",
       "es_mx": "Masculino",
       "ca": "Masculí",
-      "hr": "Muški rod"
+      "hr": "Muški rod",
+      "sr": "Мушки род",
+      "el": "Αρσενικό"
      },
      {
       "de": "Femininum",
@@ -2278,7 +2438,9 @@ const GRAMMAR = [
       "am": "አንስታይ",
       "es_mx": "Femenino",
       "ca": "Femení",
-      "hr": "Ženski rod"
+      "hr": "Ženski rod",
+      "sr": "Женски род",
+      "el": "Θηλυκό"
      },
      {
       "de": "Neutrum",
@@ -2301,7 +2463,9 @@ const GRAMMAR = [
       "am": "ገለልተኛ",
       "es_mx": "Neutro",
       "ca": "Neutre",
-      "hr": "Srednji rod"
+      "hr": "Srednji rod",
+      "sr": "Средњи род",
+      "el": "Ουδέτερο"
      },
      {
       "de": "Plural",
@@ -2324,7 +2488,9 @@ const GRAMMAR = [
       "am": "ብዙ ቁጥር",
       "es_mx": "Plural",
       "ca": "Plural",
-      "hr": "Množina"
+      "hr": "Množina",
+      "sr": "Множина",
+      "el": "Πληθυντικός"
      }
     ],
     "rows": [
@@ -2350,7 +2516,9 @@ const GRAMMAR = [
        "am": "Nominativ",
        "es_mx": "Nominativo",
        "ca": "Nominatiu",
-       "hr": "Nominativ"
+       "hr": "Nominativ",
+       "sr": "Номинатив",
+       "el": "Ονομαστική"
       },
       "cells": [
        "mein",
@@ -2381,7 +2549,9 @@ const GRAMMAR = [
        "am": "Akkusativ",
        "es_mx": "Acusativo",
        "ca": "Acusatiu",
-       "hr": "Akuzativ"
+       "hr": "Akuzativ",
+       "sr": "Акузатив",
+       "el": "Αιτιατική"
       },
       "cells": [
        "meinen",
@@ -2412,7 +2582,9 @@ const GRAMMAR = [
        "am": "Dativ",
        "es_mx": "Dativo",
        "ca": "Datiu",
-       "hr": "Dativ"
+       "hr": "Dativ",
+       "sr": "Датив",
+       "el": "Δοτική"
       },
       "cells": [
        "meinem",
@@ -2443,7 +2615,9 @@ const GRAMMAR = [
        "am": "Genitiv",
        "es_mx": "Genitivo",
        "ca": "Genitiu",
-       "hr": "Genitiv"
+       "hr": "Genitiv",
+       "sr": "Генитив",
+       "el": "Γενική"
       },
       "cells": [
        "meines",
@@ -2477,7 +2651,9 @@ const GRAMMAR = [
     "am": "ይህ ወንድሜ ነው።",
     "es_mx": "Este es mi hermano.",
     "ca": "Aquest és el meu germà.",
-    "hr": "To je moj brat."
+    "hr": "To je moj brat.",
+    "sr": "Das ist mein Bruder. (Ово је мој брат.)",
+    "el": "Das ist mein Bruder. (Αυτός είναι ο αδερφός μου.)"
    },
    {
     "de": "Ich helfe meiner Schwester.",
@@ -2500,7 +2676,9 @@ const GRAMMAR = [
     "am": "እህቴን እረዳታለሁ።",
     "es_mx": "Ayudo a mi hermana.",
     "ca": "Ajudo la meva germana.",
-    "hr": "Pomažem svojoj sestri."
+    "hr": "Pomažem svojoj sestri.",
+    "sr": "Ich helfe meiner Schwester. (Помажем својој сестри.)",
+    "el": "Ich helfe meiner Schwester. (Βοηθάω την αδερφή μου.)"
    },
    {
     "de": "Wo sind eure Schlüssel?",
@@ -2523,7 +2701,9 @@ const GRAMMAR = [
     "am": "ቁልፎቻችሁ የት ናቸው?",
     "es_mx": "¿Dónde están sus llaves?",
     "ca": "On són les vostres claus?",
-    "hr": "Gdje su vaši ključevi?"
+    "hr": "Gdje su vaši ključevi?",
+    "sr": "Wo sind eure Schlüssel? (Где су ваши кључеви?)",
+    "el": "Wo sind eure Schlüssel? (Πού είναι τα κλειδιά σας;)"
    }
   ],
   "hints": {
@@ -2547,7 +2727,9 @@ const GRAMMAR = [
    "am": "ልብ በል፦ በመጀመሪያ በባለቤቱ መሠረት መሠረታዊውን ቅርጽ ምረጥ (mein, dein, sein, ihr …)፣ ከዚያ ተከታዩ ስም በያዘው ጾታ፣ ጉዳይ እና ቁጥር መሠረት የ ein- ቅጥያውን ጨምር። ጥንቃቄ፦ euer ከቅጥያ በፊት -e-ውን ያጣል (euer → eure, euren, eurem)።",
    "es_mx": "Recuerda: primero elige la forma básica según el poseedor (mein, dein, sein, ihr…) y luego añade la terminación de ein- según el género, el caso y el número del sustantivo que sigue. Atención: euer pierde la -e- antes de una terminación (euer → eure, euren, eurem).",
    "ca": "Recorda: primer tria la forma bàsica segons el posseïdor (mein, dein, sein, ihr…) i després afegeix la terminació d'ein- segons el gènere, el cas i el nombre del substantiu que segueix. Atenció: euer perd la -e- davant d'una terminació (euer → eure, euren, eurem).",
-   "hr": "Zapamti: prvo odaberi osnovni oblik prema posjedniku (mein, dein, sein, ihr …), a zatim dodaj nastavak kao kod ein- prema rodu, padežu i broju imenice koja slijedi. Pozor: euer gubi -e- ispred nastavka (euer → eure, euren, eurem). Osim toga, sein pokriva 'njegov' i 'njezin/njegov' za srednji rod, dok ihr pokriva 'njezin', 'njihov' i – s velikim slovom Ihr – iz poštovanja 'Vaš'."
+   "hr": "Zapamti: prvo odaberi osnovni oblik prema posjedniku (mein, dein, sein, ihr …), a zatim dodaj nastavak kao kod ein- prema rodu, padežu i broju imenice koja slijedi. Pozor: euer gubi -e- ispred nastavka (euer → eure, euren, eurem). Osim toga, sein pokriva 'njegov' i 'njezin/njegov' za srednji rod, dok ihr pokriva 'njezin', 'njihov' i – s velikim slovom Ihr – iz poštovanja 'Vaš'.",
+   "sr": "Запамти: прво изабери основни облик према власнику (mein, dein, sein, ihr …), а затим додај ein-наставак према роду, падежу и броју именице која следи. Пажња: euer губи -e- испред наставка (euer → eure, euren, eurem).",
+   "el": "Πρόσεξε: πρώτα διάλεξε τον βασικό τύπο ανάλογα με τον κάτοχο (mein, dein, sein, ihr …) και μετά πρόσθεσε την κατάληξη του ein- ανάλογα με το γένος, την πτώση και τον αριθμό του ουσιαστικού που ακολουθεί. Προσοχή: το euer χάνει το -e- πριν από μια κατάληξη (euer → eure, euren, eurem)."
   }
  },
  {
@@ -2574,7 +2756,9 @@ const GRAMMAR = [
    "am": "የቅጽል ቅጥያዎች (Adjektivendungen)",
    "es_mx": "Terminaciones del adjetivo",
    "ca": "Terminacions de l'adjectiu",
-   "hr": "Nastavci pridjeva"
+   "hr": "Nastavci pridjeva",
+   "sr": "Наставци придева",
+   "el": "Καταλήξεις επιθέτων"
   },
   "intro": {
    "de": "Ein Adjektiv vor einem Nomen bekommt eine Endung. Welche, hängt vom Wort davor ab: nach bestimmtem Artikel (der/die/das) schwach, nach ein/kein/mein gemischt, ohne Artikel stark. Als Prädikat (Das Auto ist gut) bleibt es endungslos.",
@@ -2597,7 +2781,9 @@ const GRAMMAR = [
    "am": "ከስም በፊት የሚመጣ ቅጽል ቅጥያ ይይዛል። የትኛው ቅጥያ እንደሚሆን የሚወሰነው ከፊት በሚመጣው ቃል ነው፦ ከተወሰነ አርቲክል (der/die/das) በኋላ ደካማ (schwach)፣ ከ ein/kein/mein በኋላ ድብልቅ (gemischt)፣ ያለ አርቲክል ደግሞ ጠንካራ (stark)። እንደ ተሳቢ ሆኖ ሲመጣ (Das Auto ist gut) ያለ ቅጥያ ይቀራል።",
    "es_mx": "Un adjetivo delante de un sustantivo lleva una terminación. Cuál depende de la palabra que va antes: tras un artículo determinado (der/die/das) es débil, tras ein/kein/mein es mixta, y sin artículo es fuerte. Usado como predicado (Das Auto ist gut) no lleva terminación.",
    "ca": "Un adjectiu davant d'un substantiu porta una terminació. Quina depèn de la paraula que va al davant: després d'un article determinat (der/die/das) és feble, després d'ein/kein/mein és mixta, i sense article és forta. Usat com a predicat (Das Auto ist gut) no porta terminació.",
-   "hr": "Pridjev ispred imenice dobiva nastavak. Koji, ovisi o riječi ispred njega: nakon određenog člana (der/die/das) slabi, nakon ein/kein/mein mješoviti, bez člana jaki. Kao predikat (Das Auto ist gut) ostaje bez nastavka."
+   "hr": "Pridjev ispred imenice dobiva nastavak. Koji, ovisi o riječi ispred njega: nakon određenog člana (der/die/das) slabi, nakon ein/kein/mein mješoviti, bez člana jaki. Kao predikat (Das Auto ist gut) ostaje bez nastavka.",
+   "sr": "Придев испред именице добија наставак. Који, зависи од речи испред њега: после одређеног члана (der/die/das) слаба промена, после ein/kein/mein мешовита, без члана јака. Као прирок (Das Auto ist gut) остаје без наставка.",
+   "el": "Ένα επίθετο πριν από ένα ουσιαστικό παίρνει κατάληξη. Ποια, εξαρτάται από τη λέξη που προηγείται: μετά από οριστικό άρθρο (der/die/das) είναι ασθενής, μετά από ein/kein/mein είναι μεικτή, χωρίς άρθρο είναι ισχυρή. Ως κατηγορούμενο (Das Auto ist gut) μένει χωρίς κατάληξη."
   },
   "tables": [
    {
@@ -2622,7 +2808,9 @@ const GRAMMAR = [
      "am": "ደካማ (Schwach) — ከተወሰነ አርቲክል በኋላ (der/die/das)",
      "es_mx": "Débil — tras el artículo determinado (der/die/das)",
      "ca": "Feble — després de l'article determinat (der/die/das)",
-     "hr": "Slaba — nakon određenog člana (der/die/das)"
+     "hr": "Slaba — nakon određenog člana (der/die/das)",
+     "sr": "Слаба — после одређеног члана (der/die/das)",
+     "el": "Ασθενής — μετά από οριστικό άρθρο (der/die/das)"
     },
     "labelHeader": {
      "de": "Kasus",
@@ -2645,7 +2833,9 @@ const GRAMMAR = [
      "am": "ጉዳይ",
      "es_mx": "Caso",
      "ca": "Cas",
-     "hr": "Padež"
+     "hr": "Padež",
+     "sr": "Падеж",
+     "el": "Πτώση"
     },
     "columns": [
      {
@@ -2669,7 +2859,9 @@ const GRAMMAR = [
       "am": "ተባዕታይ",
       "es_mx": "masculino",
       "ca": "masculí",
-      "hr": "muški rod"
+      "hr": "muški rod",
+      "sr": "мушки род",
+      "el": "αρσενικό"
      },
      {
       "de": "feminin",
@@ -2692,7 +2884,9 @@ const GRAMMAR = [
       "am": "አንስታይ",
       "es_mx": "femenino",
       "ca": "femení",
-      "hr": "ženski rod"
+      "hr": "ženski rod",
+      "sr": "женски род",
+      "el": "θηλυκό"
      },
      {
       "de": "neutral",
@@ -2715,7 +2909,9 @@ const GRAMMAR = [
       "am": "ገለልተኛ",
       "es_mx": "neutro",
       "ca": "neutre",
-      "hr": "srednji rod"
+      "hr": "srednji rod",
+      "sr": "средњи род",
+      "el": "ουδέτερο"
      },
      {
       "de": "Plural",
@@ -2738,7 +2934,9 @@ const GRAMMAR = [
       "am": "ብዙ ቁጥር",
       "es_mx": "plural",
       "ca": "plural",
-      "hr": "množina"
+      "hr": "množina",
+      "sr": "множина",
+      "el": "πληθυντικός"
      }
     ],
     "rows": [
@@ -2764,7 +2962,9 @@ const GRAMMAR = [
        "am": "Nominativ",
        "es_mx": "Nominativo",
        "ca": "Nominatiu",
-       "hr": "Nominativ"
+       "hr": "Nominativ",
+       "sr": "Номинатив",
+       "el": "Ονομαστική"
       },
       "cells": [
        "der gute Mann",
@@ -2795,7 +2995,9 @@ const GRAMMAR = [
        "am": "Akkusativ",
        "es_mx": "Acusativo",
        "ca": "Acusatiu",
-       "hr": "Akuzativ"
+       "hr": "Akuzativ",
+       "sr": "Акузатив",
+       "el": "Αιτιατική"
       },
       "cells": [
        "den guten Mann",
@@ -2826,7 +3028,9 @@ const GRAMMAR = [
        "am": "Dativ",
        "es_mx": "Dativo",
        "ca": "Datiu",
-       "hr": "Dativ"
+       "hr": "Dativ",
+       "sr": "Датив",
+       "el": "Δοτική"
       },
       "cells": [
        "dem guten Mann",
@@ -2857,7 +3061,9 @@ const GRAMMAR = [
        "am": "Genitiv",
        "es_mx": "Genitivo",
        "ca": "Genitiu",
-       "hr": "Genitiv"
+       "hr": "Genitiv",
+       "sr": "Генитив",
+       "el": "Γενική"
       },
       "cells": [
        "des guten Mannes",
@@ -2890,7 +3096,9 @@ const GRAMMAR = [
      "am": "ድብልቅ (Gemischt) — ከ ein/kein/mein በኋላ (ያልተወሰነ አርቲክል እና የባለቤትነት)",
      "es_mx": "Mixta — tras ein/kein/mein (artículo indeterminado y posesivos)",
      "ca": "Mixta — després d'ein/kein/mein (article indeterminat i possessius)",
-     "hr": "Mješovita — nakon ein/kein/mein (neodređeni član i posvojni)"
+     "hr": "Mješovita — nakon ein/kein/mein (neodređeni član i posvojni)",
+     "sr": "Мешовита — после ein/kein/mein (неодређени члан и присвојне речи)",
+     "el": "Μεικτή — μετά από ein/kein/mein (αόριστο άρθρο & κτητικά)"
     },
     "labelHeader": {
      "de": "Kasus",
@@ -2913,7 +3121,9 @@ const GRAMMAR = [
      "am": "ጉዳይ",
      "es_mx": "Caso",
      "ca": "Cas",
-     "hr": "Padež"
+     "hr": "Padež",
+     "sr": "Падеж",
+     "el": "Πτώση"
     },
     "columns": [
      {
@@ -2937,7 +3147,9 @@ const GRAMMAR = [
       "am": "ተባዕታይ",
       "es_mx": "masculino",
       "ca": "masculí",
-      "hr": "muški rod"
+      "hr": "muški rod",
+      "sr": "мушки род",
+      "el": "αρσενικό"
      },
      {
       "de": "feminin",
@@ -2960,7 +3172,9 @@ const GRAMMAR = [
       "am": "አንስታይ",
       "es_mx": "femenino",
       "ca": "femení",
-      "hr": "ženski rod"
+      "hr": "ženski rod",
+      "sr": "женски род",
+      "el": "θηλυκό"
      },
      {
       "de": "neutral",
@@ -2983,7 +3197,9 @@ const GRAMMAR = [
       "am": "ገለልተኛ",
       "es_mx": "neutro",
       "ca": "neutre",
-      "hr": "srednji rod"
+      "hr": "srednji rod",
+      "sr": "средњи род",
+      "el": "ουδέτερο"
      },
      {
       "de": "Plural",
@@ -3006,7 +3222,9 @@ const GRAMMAR = [
       "am": "ብዙ ቁጥር",
       "es_mx": "plural",
       "ca": "plural",
-      "hr": "množina"
+      "hr": "množina",
+      "sr": "множина",
+      "el": "πληθυντικός"
      }
     ],
     "rows": [
@@ -3032,7 +3250,9 @@ const GRAMMAR = [
        "am": "Nominativ",
        "es_mx": "Nominativo",
        "ca": "Nominatiu",
-       "hr": "Nominativ"
+       "hr": "Nominativ",
+       "sr": "Номинатив",
+       "el": "Ονομαστική"
       },
       "cells": [
        "ein guter Mann",
@@ -3063,7 +3283,9 @@ const GRAMMAR = [
        "am": "Akkusativ",
        "es_mx": "Acusativo",
        "ca": "Acusatiu",
-       "hr": "Akuzativ"
+       "hr": "Akuzativ",
+       "sr": "Акузатив",
+       "el": "Αιτιατική"
       },
       "cells": [
        "einen guten Mann",
@@ -3094,7 +3316,9 @@ const GRAMMAR = [
        "am": "Dativ",
        "es_mx": "Dativo",
        "ca": "Datiu",
-       "hr": "Dativ"
+       "hr": "Dativ",
+       "sr": "Датив",
+       "el": "Δοτική"
       },
       "cells": [
        "einem guten Mann",
@@ -3125,7 +3349,9 @@ const GRAMMAR = [
        "am": "Genitiv",
        "es_mx": "Genitivo",
        "ca": "Genitiu",
-       "hr": "Genitiv"
+       "hr": "Genitiv",
+       "sr": "Генитив",
+       "el": "Γενική"
       },
       "cells": [
        "eines guten Mannes",
@@ -3158,7 +3384,9 @@ const GRAMMAR = [
      "am": "ጠንካራ (Stark) — ያለ አርቲክል (ዜሮ አርቲክል)",
      "es_mx": "Fuerte — sin artículo (artículo cero)",
      "ca": "Forta — sense article (article zero)",
-     "hr": "Jaka — bez člana (nulti član)"
+     "hr": "Jaka — bez člana (nulti član)",
+     "sr": "Јака — без члана (нулти члан)",
+     "el": "Ισχυρή — χωρίς άρθρο (μηδενικό άρθρο)"
     },
     "labelHeader": {
      "de": "Kasus",
@@ -3181,7 +3409,9 @@ const GRAMMAR = [
      "am": "ጉዳይ",
      "es_mx": "Caso",
      "ca": "Cas",
-     "hr": "Padež"
+     "hr": "Padež",
+     "sr": "Падеж",
+     "el": "Πτώση"
     },
     "columns": [
      {
@@ -3205,7 +3435,9 @@ const GRAMMAR = [
       "am": "ተባዕታይ",
       "es_mx": "masculino",
       "ca": "masculí",
-      "hr": "muški rod"
+      "hr": "muški rod",
+      "sr": "мушки род",
+      "el": "αρσενικό"
      },
      {
       "de": "feminin",
@@ -3228,7 +3460,9 @@ const GRAMMAR = [
       "am": "አንስታይ",
       "es_mx": "femenino",
       "ca": "femení",
-      "hr": "ženski rod"
+      "hr": "ženski rod",
+      "sr": "женски род",
+      "el": "θηλυκό"
      },
      {
       "de": "neutral",
@@ -3251,7 +3485,9 @@ const GRAMMAR = [
       "am": "ገለልተኛ",
       "es_mx": "neutro",
       "ca": "neutre",
-      "hr": "srednji rod"
+      "hr": "srednji rod",
+      "sr": "средњи род",
+      "el": "ουδέτερο"
      },
      {
       "de": "Plural",
@@ -3274,7 +3510,9 @@ const GRAMMAR = [
       "am": "ብዙ ቁጥር",
       "es_mx": "plural",
       "ca": "plural",
-      "hr": "množina"
+      "hr": "množina",
+      "sr": "множина",
+      "el": "πληθυντικός"
      }
     ],
     "rows": [
@@ -3300,7 +3538,9 @@ const GRAMMAR = [
        "am": "Nominativ",
        "es_mx": "Nominativo",
        "ca": "Nominatiu",
-       "hr": "Nominativ"
+       "hr": "Nominativ",
+       "sr": "Номинатив",
+       "el": "Ονομαστική"
       },
       "cells": [
        "guter Wein",
@@ -3331,7 +3571,9 @@ const GRAMMAR = [
        "am": "Akkusativ",
        "es_mx": "Acusativo",
        "ca": "Acusatiu",
-       "hr": "Akuzativ"
+       "hr": "Akuzativ",
+       "sr": "Акузатив",
+       "el": "Αιτιατική"
       },
       "cells": [
        "guten Wein",
@@ -3362,7 +3604,9 @@ const GRAMMAR = [
        "am": "Dativ",
        "es_mx": "Dativo",
        "ca": "Datiu",
-       "hr": "Dativ"
+       "hr": "Dativ",
+       "sr": "Датив",
+       "el": "Δοτική"
       },
       "cells": [
        "gutem Wein",
@@ -3393,7 +3637,9 @@ const GRAMMAR = [
        "am": "Genitiv",
        "es_mx": "Genitivo",
        "ca": "Genitiu",
-       "hr": "Genitiv"
+       "hr": "Genitiv",
+       "sr": "Генитив",
+       "el": "Γενική"
       },
       "cells": [
        "guten Weines",
@@ -3427,7 +3673,9 @@ const GRAMMAR = [
     "am": "አዲሲቷ ባልደረባ በትልቁ ቢሮ ውስጥ ተቀምጣለች።",
     "es_mx": "La nueva colega está sentada en la oficina grande.",
     "ca": "La nova col·lega seu al despatx gran.",
-    "hr": "Die neue Kollegin sitzt in dem großen Büro. (Nova kolegica sjedi u velikom uredu.)"
+    "hr": "Die neue Kollegin sitzt in dem großen Büro. (Nova kolegica sjedi u velikom uredu.)",
+    "sr": "Нова колегиница седи у великој канцеларији.",
+    "el": "Η νέα συνάδελφος κάθεται στο μεγάλο γραφείο."
    },
    {
     "de": "Er hat einen alten Freund und eine gute Idee.",
@@ -3450,7 +3698,9 @@ const GRAMMAR = [
     "am": "እሱ አንድ አሮጌ ጓደኛና አንድ ጥሩ ሐሳብ አለው።",
     "es_mx": "Él tiene un viejo amigo y una buena idea.",
     "ca": "Ell té un vell amic i una bona idea.",
-    "hr": "Er hat einen alten Freund und eine gute Idee. (On ima starog prijatelja i dobru ideju.)"
+    "hr": "Er hat einen alten Freund und eine gute Idee. (On ima starog prijatelja i dobru ideju.)",
+    "sr": "Он има старог пријатеља и добру идеју.",
+    "el": "Έχει έναν παλιό φίλο και μια καλή ιδέα."
    },
    {
     "de": "Bei schönem Wetter trinken wir kaltes Bier.",
@@ -3473,7 +3723,9 @@ const GRAMMAR = [
     "am": "ጥሩ የአየር ሁኔታ ሲኖር ቀዝቃዛ ቢራ እንጠጣለን።",
     "es_mx": "Cuando hace buen tiempo tomamos cerveza fría.",
     "ca": "Quan fa bon temps bevem cervesa freda.",
-    "hr": "Bei schönem Wetter trinken wir kaltes Bier. (Po lijepom vremenu pijemo hladno pivo.)"
+    "hr": "Bei schönem Wetter trinken wir kaltes Bier. (Po lijepom vremenu pijemo hladno pivo.)",
+    "sr": "По лепом времену пијемо хладно пиво.",
+    "el": "Με ωραίο καιρό πίνουμε κρύα μπίρα."
    }
   ],
   "hints": {
@@ -3497,7 +3749,9 @@ const GRAMMAR = [
    "am": "ልብ በል፦ አርቲክሉ ራሱ ግልጽ ቅጥያ ካለው (der, dem, den …)፣ ቅጽሉ 'ሰነፍ' ይሆናል — አብዛኛውን ጊዜ -e ወይም -en። ይህ መረጃ ከጠፋ (አርቲክል ከሌለ፣ ወይም ein/mein በ Nom./Akk. ውስጥ ከሆነ)፣ ቅጽሉ ራሱ ምልክት ሰጪውን ቅጥያ መያዝ አለበት፦ guter, gutes, gutem። ከ sein በኋላ ያለ ቅጥያ ይቀራል፦ 'Das Auto ist gut.' (መኪናው ጥሩ ነው።)",
    "es_mx": "Recuerda: si el artículo ya lleva una terminación clara (der, dem, den …), el adjetivo se vuelve «perezoso» — casi siempre -e o -en. Si falta esa información (sin artículo, o ein/mein en nom./acus.), el adjetivo debe llevar él mismo la terminación de señal: guter, gutes, gutem. Tras sein queda sin terminación: «Das Auto ist gut.»",
    "ca": "Recorda: si l'article ja porta una terminació clara (der, dem, den …), l'adjectiu es torna «mandrós» — gairebé sempre -e o -en. Si falta aquesta informació (sense article, o ein/mein en nom./acus.), l'adjectiu ha de portar ell mateix la terminació de senyal: guter, gutes, gutem. Després de sein queda sense terminació: «Das Auto ist gut.»",
-   "hr": "Zapamti: ako član već nosi jasan nastavak (der, dem, den …), pridjev je „lijen“ — najčešće -e ili -en. Ako te informacije nema (nema člana, ili ein/mein u nominativu/akuzativu), pridjev sam mora nositi signalni nastavak: guter, gutes, gutem. Nakon sein ostaje bez nastavka: „Das Auto ist gut.“"
+   "hr": "Zapamti: ako član već nosi jasan nastavak (der, dem, den …), pridjev je „lijen“ — najčešće -e ili -en. Ako te informacije nema (nema člana, ili ein/mein u nominativu/akuzativu), pridjev sam mora nositi signalni nastavak: guter, gutes, gutem. Nakon sein ostaje bez nastavka: „Das Auto ist gut.“",
+   "sr": "Запамти: ако сам члан већ носи јасан наставак (der, dem, den …), придев је „лењ“ — најчешће -e или -en. Ако те информације нема (нема члана, или ein/mein у номинативу/акузативу), придев сам мора да носи сигнални наставак: guter, gutes, gutem. После sein остаје без наставка: „Das Auto ist gut.“",
+   "el": "Πρόσεξε: Αν το άρθρο φέρει ήδη ξεκάθαρη κατάληξη (der, dem, den …), το επίθετο είναι «τεμπέλικο» — συνήθως -e ή -en. Αν λείπει αυτή η πληροφορία (χωρίς άρθρο, ή ein/mein στην ονομαστική/αιτιατική), το επίθετο πρέπει να φέρει το ίδιο την κατάληξη-σήμα: guter, gutes, gutem. Μετά το sein μένει χωρίς κατάληξη: «Das Auto ist gut.»"
   }
  },
  {
@@ -3524,7 +3778,9 @@ const GRAMMAR = [
    "am": "Präsens (የአሁን ጊዜ)",
    "es_mx": "Presente (Präsens)",
    "ca": "Present (Präsens)",
-   "hr": "Prezent (sadašnje vrijeme)"
+   "hr": "Prezent (sadašnje vrijeme)",
+   "sr": "Презент (садашње време)",
+   "el": "Ενεστώτας (Präsens)"
   },
   "intro": {
    "de": "Das Präsens beschreibt Gegenwart und Gewohnheiten. Deutsch hat nur eine Präsensform – sie ersetzt die englische Verlaufsform (I am doing) und drückt oft die nahe Zukunft aus (Morgen fahre ich nach Berlin).",
@@ -3547,7 +3803,9 @@ const GRAMMAR = [
    "am": "Präsens የአሁን ጊዜንና ልማዳዊ ድርጊቶችን ይገልጻል። ጀርመንኛ አንድ የ Präsens ቅርጽ ብቻ አለው — ይህም እንደ እንግሊዝኛው ቀጣይ ጊዜ (I am doing) ሆኖ ያገለግላል፣ እንዲሁም ብዙ ጊዜ ቅርብ የወደፊት ጊዜን ይገልጻል (Morgen fahre ich nach Berlin — ነገ ወደ በርሊን እሄዳለሁ)።",
    "es_mx": "El presente describe lo que sucede ahora y las acciones habituales. El alemán tiene una sola forma de presente, así que también cubre el presente continuo del inglés ('I am doing') y con frecuencia el futuro cercano ('Mañana voy a Berlín').",
    "ca": "El present descriu el que passa ara i les accions habituals. L'alemany té una sola forma de present, de manera que també cobreix el present continu de l'anglès ('I am doing') i sovint el futur proper ('Demà vaig a Berlín').",
-   "hr": "Prezent opisuje sadašnjost i navike. Njemački ima samo jedan oblik prezenta – on zamjenjuje englesko trajno vrijeme (I am doing) i često izražava blisku budućnost (Morgen fahre ich nach Berlin – Sutra idem u Berlin)."
+   "hr": "Prezent opisuje sadašnjost i navike. Njemački ima samo jedan oblik prezenta – on zamjenjuje englesko trajno vrijeme (I am doing) i često izražava blisku budućnost (Morgen fahre ich nach Berlin – Sutra idem u Berlin).",
+   "sr": "Презент описује садашњост и навике. Немачки има само један облик презента – он замењује енглески трајни облик (I am doing) и често изражава блиску будућност (Morgen fahre ich nach Berlin – Сутра путујем у Берлин).",
+   "el": "Ο ενεστώτας περιγράφει το παρόν και τις συνήθειες. Τα Γερμανικά έχουν μόνο έναν τύπο ενεστώτα – αντικαθιστά τον αγγλικό εξακολουθητικό τύπο (I am doing) και συχνά εκφράζει το εγγύς μέλλον (Morgen fahre ich nach Berlin: Αύριο πηγαίνω στο Βερολίνο)."
   },
   "tables": [
    {
@@ -3572,7 +3830,9 @@ const GRAMMAR = [
      "am": "መደበኛ ቅጥያዎች (ምሳሌ፦ machen)",
      "es_mx": "Terminaciones regulares del presente (ejemplo: machen)",
      "ca": "Terminacions regulars del present (exemple: machen)",
-     "hr": "Pravilni nastavci u prezentu (primjer: machen)"
+     "hr": "Pravilni nastavci u prezentu (primjer: machen)",
+     "sr": "Правилни наставци (пример: machen)",
+     "el": "Κανονικές καταλήξεις (παράδειγμα: machen)"
     },
     "labelHeader": {
      "de": "Person",
@@ -3595,7 +3855,9 @@ const GRAMMAR = [
      "am": "አካል",
      "es_mx": "Persona",
      "ca": "Persona",
-     "hr": "Lice"
+     "hr": "Lice",
+     "sr": "Лице",
+     "el": "Πρόσωπο"
     },
     "columns": [
      {
@@ -3619,7 +3881,9 @@ const GRAMMAR = [
       "am": "ቅጥያ",
       "es_mx": "Terminación",
       "ca": "Terminació",
-      "hr": "Nastavak"
+      "hr": "Nastavak",
+      "sr": "Наставак",
+      "el": "Κατάληξη"
      },
      {
       "de": "machen",
@@ -3642,7 +3906,9 @@ const GRAMMAR = [
       "am": "machen (ማድረግ)",
       "es_mx": "machen (hacer)",
       "ca": "machen (fer)",
-      "hr": "machen (raditi / činiti)"
+      "hr": "machen (raditi / činiti)",
+      "sr": "machen (радити, правити)",
+      "el": "machen (κάνω)"
      }
     ],
     "rows": [
@@ -3668,7 +3934,9 @@ const GRAMMAR = [
        "am": "ich (እኔ)",
        "es_mx": "ich (yo)",
        "ca": "ich (jo)",
-       "hr": "ich (ja)"
+       "hr": "ich (ja)",
+       "sr": "ich (ја)",
+       "el": "ich (εγώ)"
       },
       "cells": [
        "-e",
@@ -3697,7 +3965,9 @@ const GRAMMAR = [
        "am": "du (አንተ/አንቺ)",
        "es_mx": "du (tú, sing.)",
        "ca": "du (tu, sing.)",
-       "hr": "du (ti)"
+       "hr": "du (ti)",
+       "sr": "du (ти)",
+       "el": "du (εσύ, ενικός)"
       },
       "cells": [
        "-st",
@@ -3726,7 +3996,9 @@ const GRAMMAR = [
        "am": "er/sie/es (እሱ/እሷ/እሱ-ገለልተኛ)",
        "es_mx": "er/sie/es (él/ella/ello)",
        "ca": "er/sie/es (ell/ella/això)",
-       "hr": "er/sie/es (on/ona/ono)"
+       "hr": "er/sie/es (on/ona/ono)",
+       "sr": "er/sie/es (он/она/оно)",
+       "el": "er/sie/es (αυτός/αυτή/αυτό)"
       },
       "cells": [
        "-t",
@@ -3755,7 +4027,9 @@ const GRAMMAR = [
        "am": "wir (እኛ)",
        "es_mx": "wir (nosotros)",
        "ca": "wir (nosaltres)",
-       "hr": "wir (mi)"
+       "hr": "wir (mi)",
+       "sr": "wir (ми)",
+       "el": "wir (εμείς)"
       },
       "cells": [
        "-en",
@@ -3784,7 +4058,9 @@ const GRAMMAR = [
        "am": "ihr (እናንተ)",
        "es_mx": "ihr (ustedes/vosotros, pl.)",
        "ca": "ihr (vosaltres, pl.)",
-       "hr": "ihr (vi)"
+       "hr": "ihr (vi)",
+       "sr": "ihr (ви, множина)",
+       "el": "ihr (εσείς, πληθυντικός)"
       },
       "cells": [
        "-t",
@@ -3813,7 +4089,9 @@ const GRAMMAR = [
        "am": "sie/Sie (እነሱ/እርስዎ)",
        "es_mx": "sie/Sie (ellos/usted formal)",
        "ca": "sie/Sie (ells/vostè formal)",
-       "hr": "sie/Sie (oni/Vi iz poštovanja)"
+       "hr": "sie/Sie (oni/Vi iz poštovanja)",
+       "sr": "sie/Sie (они/Ви из поштовања)",
+       "el": "sie/Sie (αυτοί/εσείς, ευγενικός τύπος)"
       },
       "cells": [
        "-en",
@@ -3844,7 +4122,9 @@ const GRAMMAR = [
      "am": "ሦስቱ አስፈላጊ ረዳት ግሦች፦ sein, haben, werden",
      "es_mx": "Los tres verbos auxiliares clave: sein, haben, werden",
      "ca": "Els tres verbs auxiliars clau: sein, haben, werden",
-     "hr": "Tri važna pomoćna glagola: sein, haben, werden"
+     "hr": "Tri važna pomoćna glagola: sein, haben, werden",
+     "sr": "Три важна помоћна глагола: sein, haben, werden",
+     "el": "Τα τρία βασικά βοηθητικά ρήματα: sein, haben, werden"
     },
     "labelHeader": {
      "de": "Person",
@@ -3867,7 +4147,9 @@ const GRAMMAR = [
      "am": "አካል",
      "es_mx": "Persona",
      "ca": "Persona",
-     "hr": "Lice"
+     "hr": "Lice",
+     "sr": "Лице",
+     "el": "Πρόσωπο"
     },
     "columns": [
      {
@@ -3891,7 +4173,9 @@ const GRAMMAR = [
       "am": "sein (መሆን)",
       "es_mx": "sein (ser/estar)",
       "ca": "sein (ser/estar)",
-      "hr": "sein (biti)"
+      "hr": "sein (biti)",
+      "sr": "sein (бити)",
+      "el": "sein (είμαι)"
      },
      {
       "de": "haben",
@@ -3914,7 +4198,9 @@ const GRAMMAR = [
       "am": "haben (መያዝ)",
       "es_mx": "haben (tener)",
       "ca": "haben (tenir)",
-      "hr": "haben (imati)"
+      "hr": "haben (imati)",
+      "sr": "haben (имати)",
+      "el": "haben (έχω)"
      },
      {
       "de": "werden",
@@ -3937,7 +4223,9 @@ const GRAMMAR = [
       "am": "werden (መሆን/ወደፊት)",
       "es_mx": "werden (llegar a ser)",
       "ca": "werden (esdevenir)",
-      "hr": "werden (postati)"
+      "hr": "werden (postati)",
+      "sr": "werden (постати)",
+      "el": "werden (γίνομαι)"
      }
     ],
     "rows": [
@@ -3963,7 +4251,9 @@ const GRAMMAR = [
        "am": "ich (እኔ)",
        "es_mx": "ich (yo)",
        "ca": "ich (jo)",
-       "hr": "ich (ja)"
+       "hr": "ich (ja)",
+       "sr": "ich (ја)",
+       "el": "ich (εγώ)"
       },
       "cells": [
        "bin",
@@ -3993,7 +4283,9 @@ const GRAMMAR = [
        "am": "du (አንተ/አንቺ)",
        "es_mx": "du (tú, sing.)",
        "ca": "du (tu, sing.)",
-       "hr": "du (ti)"
+       "hr": "du (ti)",
+       "sr": "du (ти)",
+       "el": "du (εσύ, ενικός)"
       },
       "cells": [
        "bist",
@@ -4023,7 +4315,9 @@ const GRAMMAR = [
        "am": "er/sie/es (እሱ/እሷ/እሱ-ገለልተኛ)",
        "es_mx": "er/sie/es (él/ella/ello)",
        "ca": "er/sie/es (ell/ella/això)",
-       "hr": "er/sie/es (on/ona/ono)"
+       "hr": "er/sie/es (on/ona/ono)",
+       "sr": "er/sie/es (он/она/оно)",
+       "el": "er/sie/es (αυτός/αυτή/αυτό)"
       },
       "cells": [
        "ist",
@@ -4053,7 +4347,9 @@ const GRAMMAR = [
        "am": "wir (እኛ)",
        "es_mx": "wir (nosotros)",
        "ca": "wir (nosaltres)",
-       "hr": "wir (mi)"
+       "hr": "wir (mi)",
+       "sr": "wir (ми)",
+       "el": "wir (εμείς)"
       },
       "cells": [
        "sind",
@@ -4083,7 +4379,9 @@ const GRAMMAR = [
        "am": "ihr (እናንተ)",
        "es_mx": "ihr (ustedes/vosotros, pl.)",
        "ca": "ihr (vosaltres, pl.)",
-       "hr": "ihr (vi)"
+       "hr": "ihr (vi)",
+       "sr": "ihr (ви, множина)",
+       "el": "ihr (εσείς, πληθυντικός)"
       },
       "cells": [
        "seid",
@@ -4113,7 +4411,9 @@ const GRAMMAR = [
        "am": "sie/Sie (እነሱ/እርስዎ)",
        "es_mx": "sie/Sie (ellos/usted formal)",
        "ca": "sie/Sie (ells/vostè formal)",
-       "hr": "sie/Sie (oni/Vi iz poštovanja)"
+       "hr": "sie/Sie (oni/Vi iz poštovanja)",
+       "sr": "sie/Sie (они/Ви из поштовања)",
+       "el": "sie/Sie (αυτοί/εσείς, ευγενικός τύπος)"
       },
       "cells": [
        "sind",
@@ -4145,7 +4445,9 @@ const GRAMMAR = [
      "am": "ጠንካራ ግሦች ከድምጸ አናባቢ ለውጥ ጋር (du እና er/sie/es ብቻ)",
      "es_mx": "Verbos fuertes con cambio de vocal en la raíz (solo du y er/sie/es)",
      "ca": "Verbs forts amb canvi de vocal a l'arrel (només du i er/sie/es)",
-     "hr": "Jaki glagoli s promjenom samoglasnika (samo du i er/sie/es)"
+     "hr": "Jaki glagoli s promjenom samoglasnika (samo du i er/sie/es)",
+     "sr": "Јаки глаголи са променом самогласника (само du и er/sie/es)",
+     "el": "Ισχυρά ρήματα με αλλαγή φωνήεντος (μόνο στο du και στο er/sie/es)"
     },
     "labelHeader": {
      "de": "Bedeutung",
@@ -4168,7 +4470,9 @@ const GRAMMAR = [
      "am": "ትርጉም",
      "es_mx": "Significado",
      "ca": "Significat",
-     "hr": "Značenje"
+     "hr": "Značenje",
+     "sr": "Значење",
+     "el": "Σημασία"
     },
     "columns": [
      {
@@ -4192,7 +4496,9 @@ const GRAMMAR = [
       "am": "Infinitiv (መሠረታዊ ቅርጽ)",
       "es_mx": "Infinitivo",
       "ca": "Infinitiu",
-      "hr": "Infinitiv"
+      "hr": "Infinitiv",
+      "sr": "Инфинитив",
+      "el": "Απαρέμφατο"
      },
      {
       "de": "Vokalwechsel",
@@ -4215,7 +4521,9 @@ const GRAMMAR = [
       "am": "የድምጸ አናባቢ ለውጥ",
       "es_mx": "Cambio de vocal",
       "ca": "Canvi de vocal",
-      "hr": "Promjena samoglasnika"
+      "hr": "Promjena samoglasnika",
+      "sr": "Промена самогласника",
+      "el": "Αλλαγή φωνήεντος"
      },
      {
       "de": "du",
@@ -4238,7 +4546,9 @@ const GRAMMAR = [
       "am": "du (አንተ/አንቺ)",
       "es_mx": "du (tú, sing.)",
       "ca": "du (tu, sing.)",
-      "hr": "du (ti)"
+      "hr": "du (ti)",
+      "sr": "du (ти)",
+      "el": "du (εσύ, ενικός)"
      },
      {
       "de": "er/sie/es",
@@ -4261,7 +4571,9 @@ const GRAMMAR = [
       "am": "er/sie/es (እሱ/እሷ)",
       "es_mx": "er/sie/es (él/ella/ello)",
       "ca": "er/sie/es (ell/ella/això)",
-      "hr": "er/sie/es (on/ona/ono)"
+      "hr": "er/sie/es (on/ona/ono)",
+      "sr": "er/sie/es (он/она/оно)",
+      "el": "er/sie/es (αυτός/αυτή/αυτό)"
      }
     ],
     "rows": [
@@ -4287,7 +4599,9 @@ const GRAMMAR = [
        "am": "fahren (መንዳት/መሄድ)",
        "es_mx": "conducir / ir",
        "ca": "conduir / anar",
-       "hr": "voziti (se) / ići"
+       "hr": "voziti (se) / ići",
+       "sr": "fahren (возити се / путовати)",
+       "el": "fahren (οδηγώ / πηγαίνω)"
       },
       "cells": [
        "fahren",
@@ -4318,7 +4632,9 @@ const GRAMMAR = [
        "am": "geben (መስጠት)",
        "es_mx": "dar",
        "ca": "donar",
-       "hr": "dati"
+       "hr": "dati",
+       "sr": "geben (давати)",
+       "el": "geben (δίνω)"
       },
       "cells": [
        "geben",
@@ -4349,7 +4665,9 @@ const GRAMMAR = [
        "am": "lesen (ማንበብ)",
        "es_mx": "leer",
        "ca": "llegir",
-       "hr": "čitati"
+       "hr": "čitati",
+       "sr": "lesen (читати)",
+       "el": "lesen (διαβάζω)"
       },
       "cells": [
        "lesen",
@@ -4380,7 +4698,9 @@ const GRAMMAR = [
        "am": "sprechen (መናገር)",
        "es_mx": "hablar",
        "ca": "parlar",
-       "hr": "govoriti"
+       "hr": "govoriti",
+       "sr": "sprechen (говорити)",
+       "el": "sprechen (μιλάω)"
       },
       "cells": [
        "sprechen",
@@ -4411,7 +4731,9 @@ const GRAMMAR = [
        "am": "nehmen (መውሰድ)",
        "es_mx": "tomar",
        "ca": "prendre",
-       "hr": "uzeti"
+       "hr": "uzeti",
+       "sr": "nehmen (узети)",
+       "el": "nehmen (παίρνω)"
       },
       "cells": [
        "nehmen",
@@ -4445,7 +4767,9 @@ const GRAMMAR = [
     "am": "አሁን የቤት ሥራዬን እየሠራሁ ነው።",
     "es_mx": "Estoy haciendo mi tarea en este momento.",
     "ca": "Estic fent els deures ara mateix.",
-    "hr": "Ich mache gerade meine Hausaufgaben. (Upravo pišem zadaću.)"
+    "hr": "Ich mache gerade meine Hausaufgaben. (Upravo pišem zadaću.)",
+    "sr": "Управо радим домаћи задатак.",
+    "el": "Ich mache gerade meine Hausaufgaben. (Κάνω τώρα τα μαθήματά μου.)"
    },
    {
     "de": "Morgen fahre ich nach Berlin.",
@@ -4468,7 +4792,9 @@ const GRAMMAR = [
     "am": "ነገ ወደ በርሊን እሄዳለሁ።",
     "es_mx": "Mañana voy a Berlín.",
     "ca": "Demà vaig a Berlín.",
-    "hr": "Morgen fahre ich nach Berlin. (Sutra idem u Berlin.)"
+    "hr": "Morgen fahre ich nach Berlin. (Sutra idem u Berlin.)",
+    "sr": "Сутра путујем у Берлин.",
+    "el": "Morgen fahre ich nach Berlin. (Αύριο πηγαίνω στο Βερολίνο.)"
    },
    {
     "de": "Er nimmt den Bus und liest die Zeitung.",
@@ -4491,7 +4817,9 @@ const GRAMMAR = [
     "am": "እሱ አውቶቡስ ይይዛል እና ጋዜጣ ያነባል።",
     "es_mx": "Él toma el autobús y lee el periódico.",
     "ca": "Ell agafa l'autobús i llegeix el diari.",
-    "hr": "Er nimmt den Bus und liest die Zeitung. (On uzima autobus i čita novine.)"
+    "hr": "Er nimmt den Bus und liest die Zeitung. (On uzima autobus i čita novine.)",
+    "sr": "Он узима аутобус и чита новине.",
+    "el": "Er nimmt den Bus und liest die Zeitung. (Παίρνει το λεωφορείο και διαβάζει την εφημερίδα.)"
    }
   ],
   "hints": {
@@ -4515,7 +4843,9 @@ const GRAMMAR = [
    "am": "አንድ Präsens ለሁሉም ነገር፦ የአሁን ጊዜ፣ ቀጣይ ድርጊት እና ቅርብ የወደፊት ጊዜ። ቅጥያዎቹ -e/-st/-t/-en/-t/-en ናቸው፤ ጠንካራ ግሦች ውስጥ የግንዱ ድምጸ አናባቢ የሚለወጠው በ du እና er/sie/es ብቻ ነው (a→ä, e→i/ie)።",
    "es_mx": "El alemán tiene un solo presente que hace tres trabajos del inglés: 'ich mache' significa I make, I am making y (con una palabra de tiempo) I'll make. No existe el 'am/is + -ing' alemán, así que nunca agregues un auxiliar: simplemente conjuga el verbo principal.",
    "ca": "L'alemany té un sol present que fa tres feines de l'anglès: 'ich mache' significa I make, I am making i (amb una paraula de temps) I'll make. No existeix el 'am/is + -ing' alemany, així que mai no afegeixis un auxiliar: només cal conjugar el verb principal.",
-   "hr": "Jedan prezent za sve: sadašnjost, trajnu radnju i blisku budućnost. Nastavci -e/-st/-t/-en/-t/-en; kod jakih glagola samoglasnik osnove mijenja se samo u du i er/sie/es (a→ä, e→i/ie)."
+   "hr": "Jedan prezent za sve: sadašnjost, trajnu radnju i blisku budućnost. Nastavci -e/-st/-t/-en/-t/-en; kod jakih glagola samoglasnik osnove mijenja se samo u du i er/sie/es (a→ä, e→i/ie).",
+   "sr": "Један презент за све: садашњост, трајање и блиску будућност. Наставци -e/-st/-t/-en/-t/-en; код јаких глагола коренски самогласник мења се само у du и er/sie/es (a→ä, e→i/ie).",
+   "el": "Ένας ενεστώτας για όλα: παρόν, εξακολουθητική πράξη και εγγύς μέλλον. Καταλήξεις -e/-st/-t/-en/-t/-en· στα ισχυρά ρήματα το φωνήεν του θέματος αλλάζει μόνο στο du και στο er/sie/es (a→ä, e→i/ie). Δεν υπάρχει γερμανικός τύπος «am/is + -ing», οπότε ποτέ μην προσθέτετε βοηθητικό – απλώς κλίνετε το κύριο ρήμα."
   }
  },
  {
@@ -4542,7 +4872,9 @@ const GRAMMAR = [
    "am": "Perfekt (የአሁን ፍጹም ጊዜ)",
    "es_mx": "Perfekt (pretérito perfecto)",
    "ca": "Perfekt (pretèrit perfet)",
-   "hr": "Perfekt"
+   "hr": "Perfekt",
+   "sr": "Перфекат",
+   "el": "Παρακείμενος (Perfekt)"
   },
   "intro": {
    "de": "Das Perfekt ist die wichtigste Vergangenheitsform der gesprochenen Sprache. Man bildet es mit dem konjugierten Hilfsverb haben oder sein plus dem Partizip II, das ans Satzende rückt.",
@@ -4565,7 +4897,9 @@ const GRAMMAR = [
    "am": "Perfekt በንግግር ጀርመንኛ ውስጥ ዋነኛው ያለፈ ጊዜ ቅርጽ ነው። የሚሠራው በተገለበጠ ረዳት ግስ haben ወይም sein እና ከዚያም Partizip II (ያለፈ ተካፋይ) ተጨምሮ ነው፣ Partizip IIም ወደ ዓረፍተ ነገሩ መጨረሻ ይንቀሳቀሳል።",
    "es_mx": "El Perfekt es el tiempo pasado más importante de la lengua hablada. Se forma con el verbo auxiliar conjugado haben o sein más el Partizip II (participio), que se coloca al final de la oración.",
    "ca": "El Perfekt és el temps passat més important de la llengua parlada. Es forma amb el verb auxiliar conjugat haben o sein més el Partizip II (participi), que es col·loca al final de la frase.",
-   "hr": "Perfekt je najvažnije prošlo vrijeme govornoga jezika. Tvori se pomoćnim glagolom haben ili sein u odgovarajućem licu plus participom (Partizip II), koji dolazi na kraj rečenice."
+   "hr": "Perfekt je najvažnije prošlo vrijeme govornoga jezika. Tvori se pomoćnim glagolom haben ili sein u odgovarajućem licu plus participom (Partizip II), koji dolazi na kraj rečenice.",
+   "sr": "Перфекат је најважније прошло време у говорном језику. Гради се помоћу конјугованог помоћног глагола haben или sein и партиципа перфекта (Partizip II), који се помера на крај реченице.",
+   "el": "Ο παρακείμενος (Perfekt) είναι ο σημαντικότερος χρόνος του παρελθόντος στον προφορικό λόγο. Σχηματίζεται με το κλιτό βοηθητικό ρήμα haben ή sein συν τη μετοχή παρακειμένου (Partizip II), η οποία μεταφέρεται στο τέλος της πρότασης."
   },
   "tables": [
    {
@@ -4590,7 +4924,9 @@ const GRAMMAR = [
      "am": "Partizip II አፈጣጠር",
      "es_mx": "Formación del Partizip II (participio)",
      "ca": "Formació del Partizip II (participi)",
-     "hr": "Tvorba participa (Partizip II)"
+     "hr": "Tvorba participa (Partizip II)",
+     "sr": "Грађење партиципа перфекта (Partizip II)",
+     "el": "Σχηματισμός της μετοχής παρακειμένου (Partizip II)"
     },
     "labelHeader": {
      "de": "Verbtyp",
@@ -4613,7 +4949,9 @@ const GRAMMAR = [
      "am": "የግስ ዓይነት",
      "es_mx": "Tipo de verbo",
      "ca": "Tipus de verb",
-     "hr": "Vrsta glagola"
+     "hr": "Vrsta glagola",
+     "sr": "Тип глагола",
+     "el": "Τύπος ρήματος"
     },
     "columns": [
      {
@@ -4637,7 +4975,9 @@ const GRAMMAR = [
       "am": "Infinitiv",
       "es_mx": "Infinitivo",
       "ca": "Infinitiu",
-      "hr": "Infinitiv"
+      "hr": "Infinitiv",
+      "sr": "Инфинитив",
+      "el": "Απαρέμφατο"
      },
      {
       "de": "Partizip II",
@@ -4660,7 +5000,9 @@ const GRAMMAR = [
       "am": "Partizip II",
       "es_mx": "Participio",
       "ca": "Participi",
-      "hr": "Particip (Partizip II)"
+      "hr": "Particip (Partizip II)",
+      "sr": "Партицип перфекта",
+      "el": "Μετοχή παρακειμένου"
      },
      {
       "de": "Regel",
@@ -4683,7 +5025,9 @@ const GRAMMAR = [
       "am": "ደንብ",
       "es_mx": "Regla",
       "ca": "Regla",
-      "hr": "Pravilo"
+      "hr": "Pravilo",
+      "sr": "Правило",
+      "el": "Κανόνας"
      }
     ],
     "rows": [
@@ -4709,7 +5053,9 @@ const GRAMMAR = [
        "am": "መደበኛ (ደካማ)",
        "es_mx": "regular (débil)",
        "ca": "regular (feble)",
-       "hr": "pravilni (slabi)"
+       "hr": "pravilni (slabi)",
+       "sr": "правилни (слаби)",
+       "el": "ομαλά (ασθενή)"
       },
       "cells": [
        "machen",
@@ -4739,7 +5085,9 @@ const GRAMMAR = [
        "am": "ጠንካራ",
        "es_mx": "fuerte",
        "ca": "fort",
-       "hr": "jaki"
+       "hr": "jaki",
+       "sr": "јаки",
+       "el": "ισχυρά"
       },
       "cells": [
        "sehen · gehen · trinken",
@@ -4769,7 +5117,9 @@ const GRAMMAR = [
        "am": "-ieren የሚያበቁ ግሦች",
        "es_mx": "verbos en -ieren",
        "ca": "verbs en -ieren",
-       "hr": "glagoli na -ieren"
+       "hr": "glagoli na -ieren",
+       "sr": "глаголи на -ieren",
+       "el": "Ρήματα σε -ieren"
       },
       "cells": [
        "studieren",
@@ -4799,7 +5149,9 @@ const GRAMMAR = [
        "am": "የማይነጣጠል ቅድመ ቅጥያ",
        "es_mx": "prefijo inseparable",
        "ca": "prefix inseparable",
-       "hr": "nedjeljivi prefiks"
+       "hr": "nedjeljivi prefiks",
+       "sr": "нераздвојиви предметак",
+       "el": "αχώριστο πρόθημα"
       },
       "cells": [
        "verstehen · besuchen",
@@ -4829,7 +5181,9 @@ const GRAMMAR = [
        "am": "የሚነጣጠል ቅድመ ቅጥያ",
        "es_mx": "prefijo separable",
        "ca": "prefix separable",
-       "hr": "djeljivi prefiks"
+       "hr": "djeljivi prefiks",
+       "sr": "раздвојиви предметак",
+       "el": "χωριστό πρόθημα"
       },
       "cells": [
        "aufstehen",
@@ -4861,7 +5215,9 @@ const GRAMMAR = [
      "am": "haben ወይስ sein?",
      "es_mx": "¿haben o sein?",
      "ca": "haben o sein?",
-     "hr": "haben ili sein?"
+     "hr": "haben ili sein?",
+     "sr": "haben или sein?",
+     "el": "haben ή sein;"
     },
     "labelHeader": {
      "de": "Hilfsverb",
@@ -4884,7 +5240,9 @@ const GRAMMAR = [
      "am": "ረዳት ግስ",
      "es_mx": "Auxiliar",
      "ca": "Auxiliar",
-     "hr": "Pomoćni glagol"
+     "hr": "Pomoćni glagol",
+     "sr": "Помоћни глагол",
+     "el": "Βοηθητικό ρήμα"
     },
     "columns": [
      {
@@ -4908,7 +5266,9 @@ const GRAMMAR = [
       "am": "መቼ?",
       "es_mx": "¿Cuándo?",
       "ca": "Quan?",
-      "hr": "Kada?"
+      "hr": "Kada?",
+      "sr": "Када?",
+      "el": "Πότε;"
      },
      {
       "de": "Beispiel",
@@ -4931,7 +5291,9 @@ const GRAMMAR = [
       "am": "ምሳሌ",
       "es_mx": "Ejemplo",
       "ca": "Exemple",
-      "hr": "Primjer"
+      "hr": "Primjer",
+      "sr": "Пример",
+      "el": "Παράδειγμα"
      }
     ],
     "rows": [
@@ -4957,7 +5319,9 @@ const GRAMMAR = [
        "am": "haben",
        "es_mx": "haben",
        "ca": "haben",
-       "hr": "haben"
+       "hr": "haben",
+       "sr": "haben",
+       "el": "haben"
       },
       "cells": [
        "die meisten Verben (auch mit Objekt)",
@@ -4986,7 +5350,9 @@ const GRAMMAR = [
        "am": "sein",
        "es_mx": "sein",
        "ca": "sein",
-       "hr": "sein"
+       "hr": "sein",
+       "sr": "sein",
+       "el": "sein"
       },
       "cells": [
        "Bewegung + Zustandsänderung: gehen, fahren, kommen, aufstehen, sterben, werden, sein, bleiben",
@@ -5018,7 +5384,9 @@ const GRAMMAR = [
     "am": "ትናንት አንድ ፊልም አይቻለሁ።",
     "es_mx": "Ayer vi una película.",
     "ca": "Ahir vaig veure una pel·lícula.",
-    "hr": "Ich habe gestern einen Film gesehen. (Jučer sam gledao film.)"
+    "hr": "Ich habe gestern einen Film gesehen. (Jučer sam gledao film.)",
+    "sr": "Јуче сам гледао филм.",
+    "el": "Χθες είδα μια ταινία."
    },
    {
     "de": "Wir sind mit dem Zug nach Berlin gefahren.",
@@ -5041,7 +5409,9 @@ const GRAMMAR = [
     "am": "በባቡር ወደ በርሊን ሄድን።",
     "es_mx": "Fuimos a Berlín en tren.",
     "ca": "Vam anar a Berlín en tren.",
-    "hr": "Wir sind mit dem Zug nach Berlin gefahren. (Vlakom smo otputovali u Berlin.)"
+    "hr": "Wir sind mit dem Zug nach Berlin gefahren. (Vlakom smo otputovali u Berlin.)",
+    "sr": "Возом смо путовали у Берлин.",
+    "el": "Πήγαμε στο Βερολίνο με το τρένο."
    },
    {
     "de": "Sie hat drei Jahre in Wien studiert.",
@@ -5064,7 +5434,9 @@ const GRAMMAR = [
     "am": "እሷ ለሦስት ዓመታት በቪየና ተምራለች።",
     "es_mx": "Ella estudió tres años en Viena.",
     "ca": "Ella va estudiar tres anys a Viena.",
-    "hr": "Sie hat drei Jahre in Wien studiert. (Tri je godine studirala u Beču.)"
+    "hr": "Sie hat drei Jahre in Wien studiert. (Tri je godine studirala u Beču.)",
+    "sr": "Она је три године студирала у Бечу.",
+    "el": "Σπούδασε τρία χρόνια στη Βιέννη."
    }
   ],
   "hints": {
@@ -5088,7 +5460,9 @@ const GRAMMAR = [
    "am": "ቀመር፦ haben/sein (የተገለበጠ) + Partizip II ወደ ዓረፍተ ነገሩ መጨረሻ። sein የሚመረጠው ለእንቅስቃሴና ለሁኔታ ለውጥ ግሦች ነው (gehen, fahren, aufstehen, werden, bleiben)፣ ለቀሪው ደግሞ haben። -ieren በሚያበቁ ግሦችና በማይነጣጠሉ ቅድመ ቅጥያዎች ge- አይመጣም።",
    "es_mx": "Fórmula: haben/sein (conjugado) + Partizip II al final de la oración. sein se usa con movimiento y cambio de estado (gehen, fahren, aufstehen, werden, bleiben), en los demás casos haben. Sin ge- en los verbos en -ieren ni en los prefijos inseparables.",
    "ca": "Fórmula: haben/sein (conjugat) + Partizip II al final de la frase. sein s'usa amb moviment i canvi d'estat (gehen, fahren, aufstehen, werden, bleiben), en els altres casos haben. Sense ge- en els verbs en -ieren ni en els prefixos inseparables.",
-   "hr": "Obrazac: haben/sein (u odgovarajućem licu) + particip (Partizip II) na kraju rečenice. sein se koristi kod kretanja i promjene stanja (gehen, fahren, aufstehen, werden, bleiben), inače haben. Nema ge- kod glagola na -ieren i kod nedjeljivih prefiksa."
+   "hr": "Obrazac: haben/sein (u odgovarajućem licu) + particip (Partizip II) na kraju rečenice. sein se koristi kod kretanja i promjene stanja (gehen, fahren, aufstehen, werden, bleiben), inače haben. Nema ge- kod glagola na -ieren i kod nedjeljivih prefiksa.",
+   "sr": "Формула: haben/sein (конјуговано) + партицип перфекта на крају реченице. sein се користи код кретања и промене стања (gehen, fahren, aufstehen, werden, bleiben), иначе haben. Нема ge- код глагола на -ieren и код нераздвојивих предметака.",
+   "el": "Τύπος: haben/sein (κλιτό) + μετοχή παρακειμένου (Partizip II) στο τέλος της πρότασης. Το sein χρησιμοποιείται σε ρήματα κίνησης και αλλαγής κατάστασης (gehen, fahren, aufstehen, werden, bleiben), αλλιώς haben. Δεν παίρνουν ge- τα ρήματα σε -ieren και τα ρήματα με αχώριστα προθήματα."
   }
  },
  {
@@ -5115,7 +5489,9 @@ const GRAMMAR = [
    "am": "Präteritum (ቀላል ያለፈ ጊዜ)",
    "es_mx": "Präteritum (pasado simple)",
    "ca": "Präteritum (passat simple)",
-   "hr": "Präteritum (jednostavno prošlo vrijeme)"
+   "hr": "Präteritum (jednostavno prošlo vrijeme)",
+   "sr": "Претеритум (прошло време)",
+   "el": "Παρατατικός (απλός παρελθοντικός χρόνος)"
   },
   "intro": {
    "de": "Das Präteritum ist die einfache Vergangenheit und steht vor allem beim Schreiben und Erzählen. Im Gespräch nimmt man es aber fast nur für sein, haben und die Modalverben — sonst sagt man das Perfekt.",
@@ -5138,7 +5514,9 @@ const GRAMMAR = [
    "am": "Präteritum ቀላሉ ያለፈ ጊዜ ሲሆን በተለይ በጽሑፍና በትረካ ውስጥ ይገኛል። በንግግር ግን ማለት ይቻላል የሚያገለግለው ለ sein, haben እና ለሞዳል ግሦች ብቻ ነው — ለቀሪው ደግሞ Perfekt ይባላል።",
    "es_mx": "El Präteritum es el pasado simple y se usa sobre todo al escribir y al narrar. En la conversación, sin embargo, los alemanes casi solo lo emplean con sein, haben y los verbos modales; para todo lo demás prefieren el Perfekt.",
    "ca": "El Präteritum és el passat simple i s'utilitza sobretot en escriure i narrar. En la conversa, però, els alemanys gairebé només l'empren amb sein, haben i els verbs modals; per a tota la resta prefereixen el Perfekt.",
-   "hr": "Präteritum je jednostavno prošlo vrijeme i koristi se prije svega u pisanju i pripovijedanju. U razgovoru se, međutim, gotovo isključivo upotrebljava za sein, haben i modalne glagole — inače se govori perfekt."
+   "hr": "Präteritum je jednostavno prošlo vrijeme i koristi se prije svega u pisanju i pripovijedanju. U razgovoru se, međutim, gotovo isključivo upotrebljava za sein, haben i modalne glagole — inače se govori perfekt.",
+   "sr": "Претеритум је просто прошло време и користи се пре свега у писању и приповедању. У разговору се, међутим, готово искључиво употребљава за глаголе sein, haben и модалне глаголе — иначе се говори перфекат.",
+   "el": "Ο παρατατικός (Präteritum) είναι ο απλός παρελθοντικός χρόνος και χρησιμοποιείται κυρίως στον γραπτό λόγο και στην αφήγηση. Στον καθημερινό προφορικό λόγο όμως οι Γερμανοί τον χρησιμοποιούν σχεδόν μόνο για τα ρήματα sein, haben και τα βοηθητικά τροπικά ρήματα — για όλα τα άλλα προτιμούν τον παρακείμενο (Perfekt)."
   },
   "tables": [
    {
@@ -5163,7 +5541,9 @@ const GRAMMAR = [
      "am": "መደበኛ ግሦች፦ ግንድ + -te (machen)",
      "es_mx": "Verbos regulares: raíz + -te (machen)",
      "ca": "Verbs regulars: arrel + -te (machen)",
-     "hr": "Pravilni glagoli: osnova + -te (machen)"
+     "hr": "Pravilni glagoli: osnova + -te (machen)",
+     "sr": "Правилни глаголи: основа + -te (machen)",
+     "el": "Ομαλά ρήματα: θέμα + -te (machen)"
     },
     "labelHeader": {
      "de": "Person",
@@ -5186,7 +5566,9 @@ const GRAMMAR = [
      "am": "አካል",
      "es_mx": "Persona",
      "ca": "Persona",
-     "hr": "Lice"
+     "hr": "Lice",
+     "sr": "Лице",
+     "el": "Πρόσωπο"
     },
     "columns": [
      {
@@ -5210,7 +5592,9 @@ const GRAMMAR = [
       "am": "ቅጥያ",
       "es_mx": "Terminación",
       "ca": "Terminació",
-      "hr": "Nastavak"
+      "hr": "Nastavak",
+      "sr": "Наставак",
+      "el": "Κατάληξη"
      },
      {
       "de": "Beispiel",
@@ -5233,7 +5617,9 @@ const GRAMMAR = [
       "am": "ምሳሌ",
       "es_mx": "Ejemplo",
       "ca": "Exemple",
-      "hr": "Primjer"
+      "hr": "Primjer",
+      "sr": "Пример",
+      "el": "Παράδειγμα"
      }
     ],
     "rows": [
@@ -5259,7 +5645,9 @@ const GRAMMAR = [
        "am": "1ኛ አካል ነጠላ",
        "es_mx": "1.ª persona sing.",
        "ca": "1a persona sing.",
-       "hr": "1. lice jednine"
+       "hr": "1. lice jednine",
+       "sr": "1. лице једнине",
+       "el": "α΄ ενικού"
       },
       "cells": [
        "-te",
@@ -5288,7 +5676,9 @@ const GRAMMAR = [
        "am": "2ኛ አካል ነጠላ",
        "es_mx": "2.ª persona sing.",
        "ca": "2a persona sing.",
-       "hr": "2. lice jednine"
+       "hr": "2. lice jednine",
+       "sr": "2. лице једнине",
+       "el": "β΄ ενικού"
       },
       "cells": [
        "-test",
@@ -5317,7 +5707,9 @@ const GRAMMAR = [
        "am": "3ኛ አካል ነጠላ",
        "es_mx": "3.ª persona sing.",
        "ca": "3a persona sing.",
-       "hr": "3. lice jednine"
+       "hr": "3. lice jednine",
+       "sr": "3. лице једнине",
+       "el": "γ΄ ενικού"
       },
       "cells": [
        "-te",
@@ -5346,7 +5738,9 @@ const GRAMMAR = [
        "am": "1ኛ አካል ብዙ",
        "es_mx": "1.ª persona pl.",
        "ca": "1a persona pl.",
-       "hr": "1. lice množine"
+       "hr": "1. lice množine",
+       "sr": "1. лице множине",
+       "el": "α΄ πληθυντικού"
       },
       "cells": [
        "-ten",
@@ -5375,7 +5769,9 @@ const GRAMMAR = [
        "am": "2ኛ አካል ብዙ",
        "es_mx": "2.ª persona pl.",
        "ca": "2a persona pl.",
-       "hr": "2. lice množine"
+       "hr": "2. lice množine",
+       "sr": "2. лице множине",
+       "el": "β΄ πληθυντικού"
       },
       "cells": [
        "-tet",
@@ -5404,7 +5800,9 @@ const GRAMMAR = [
        "am": "3ኛ አካል ብዙ / አክብሮት",
        "es_mx": "3.ª persona pl. / formal",
        "ca": "3a persona pl. / formal",
-       "hr": "3. lice množine / iz poštovanja"
+       "hr": "3. lice množine / iz poštovanja",
+       "sr": "3. лице множине / из поштовања",
+       "el": "γ΄ πληθυντικού / ευγενείας"
       },
       "cells": [
        "-ten",
@@ -5435,7 +5833,9 @@ const GRAMMAR = [
      "am": "ጠንካራ/መደበኛ-ያልሆኑ ግሦች (3ኛ አካል ነጠላ)",
      "es_mx": "Verbos fuertes/irregulares (3.ª persona del singular)",
      "ca": "Verbs forts/irregulars (3a persona del singular)",
-     "hr": "Jaki/nepravilni glagoli (3. lice jednine)"
+     "hr": "Jaki/nepravilni glagoli (3. lice jednine)",
+     "sr": "Јаки/неправилни глаголи (3. лице једнине)",
+     "el": "Ισχυρά/ανώμαλα ρήματα (γ΄ ενικό πρόσωπο)"
     },
     "labelHeader": {
      "de": "",
@@ -5468,7 +5868,9 @@ const GRAMMAR = [
       "am": "Infinitiv",
       "es_mx": "Infinitivo",
       "ca": "Infinitiu",
-      "hr": "Infinitiv"
+      "hr": "Infinitiv",
+      "sr": "Инфинитив",
+      "el": "Απαρέμφατο"
      },
      {
       "de": "Präteritum (3. Sg.)",
@@ -5491,7 +5893,9 @@ const GRAMMAR = [
       "am": "Präteritum (3ኛ አካል ነጠላ)",
       "es_mx": "Präteritum (3.ª sing.)",
       "ca": "Präteritum (3a sing.)",
-      "hr": "Präteritum (3. lice jd.)"
+      "hr": "Präteritum (3. lice jd.)",
+      "sr": "Претеритум (3. лице једнине)",
+      "el": "Παρατατικός (γ΄ εν.)"
      }
     ],
     "rows": [
@@ -5669,7 +6073,9 @@ const GRAMMAR = [
      "am": "ሞዳል ግሦች — ያለ Umlaut በያለፈ ጊዜ",
      "es_mx": "Verbos modales — sin diéresis (Umlaut) en el pasado",
      "ca": "Verbs modals — sense dièresi (Umlaut) en el passat",
-     "hr": "Modalni glagoli — bez preglasa u prošlom vremenu"
+     "hr": "Modalni glagoli — bez preglasa u prošlom vremenu",
+     "sr": "Модални глаголи — без прегласа (умлаута) у прошлом времену",
+     "el": "Τροπικά ρήματα — χωρίς Umlaut στον παρελθοντικό χρόνο"
     },
     "labelHeader": {
      "de": "",
@@ -5702,7 +6108,9 @@ const GRAMMAR = [
       "am": "Infinitiv",
       "es_mx": "Infinitivo",
       "ca": "Infinitiu",
-      "hr": "Infinitiv"
+      "hr": "Infinitiv",
+      "sr": "Инфинитив",
+      "el": "Απαρέμφατο"
      },
      {
       "de": "Präteritum (3. Sg.)",
@@ -5725,7 +6133,9 @@ const GRAMMAR = [
       "am": "Präteritum (3ኛ አካል ነጠላ)",
       "es_mx": "Präteritum (3.ª sing.)",
       "ca": "Präteritum (3a sing.)",
-      "hr": "Präteritum (3. lice jd.)"
+      "hr": "Präteritum (3. lice jd.)",
+      "sr": "Претеритум (3. лице једнине)",
+      "el": "Παρατατικός (γ΄ εν.)"
      }
     ],
     "rows": [
@@ -5844,7 +6254,9 @@ const GRAMMAR = [
     "am": "ትናንት በቤት ነበርኩ እና ጊዜ አልነበረኝም።",
     "es_mx": "Ayer estuve en casa y no tenía tiempo.",
     "ca": "Ahir vaig estar a casa i no tenia temps.",
-    "hr": "Jučer sam bio kod kuće i nisam imao vremena."
+    "hr": "Jučer sam bio kod kuće i nisam imao vremena.",
+    "sr": "Јуче сам био код куће и нисам имао времена.",
+    "el": "Χθες ήμουν στο σπίτι και δεν είχα χρόνο."
    },
    {
     "de": "Als Kind wollte ich Astronaut werden.",
@@ -5867,7 +6279,9 @@ const GRAMMAR = [
     "am": "ልጅ እያለሁ ጠፈርተኛ መሆን እፈልግ ነበር።",
     "es_mx": "De niño quería ser astronauta.",
     "ca": "De petit volia ser astronauta.",
-    "hr": "Kao dijete htio sam postati astronaut."
+    "hr": "Kao dijete htio sam postati astronaut.",
+    "sr": "Као дете сам желео да постанем астронаут.",
+    "el": "Όταν ήμουν παιδί, ήθελα να γίνω αστροναύτης."
    },
    {
     "de": "Sie ging zur Tür und sprach kein Wort.",
@@ -5890,7 +6304,9 @@ const GRAMMAR = [
     "am": "እሷ ወደ በሩ ሄደች እና አንዲትም ቃል አልተናገረችም።",
     "es_mx": "Ella fue hacia la puerta y no dijo ni una palabra.",
     "ca": "Ella va anar cap a la porta i no va dir ni una paraula.",
-    "hr": "Otišla je do vrata i nije rekla ni riječi."
+    "hr": "Otišla je do vrata i nije rekla ni riječi.",
+    "sr": "Отишла је до врата и није проговорила ни реч.",
+    "el": "Πήγε στην πόρτα και δεν είπε λέξη."
    }
   ],
   "hints": {
@@ -5914,7 +6330,9 @@ const GRAMMAR = [
    "am": "መደበኛ፦ ግንድ + -te + ቅጥያ (machte)። መደበኛ ያልሆኑ ግሦች ድምጸ አናባቢውን ይለውጣሉ (gehen → ging) እና በቃል መጠናት አለባቸው። በንግግር ውስጥ አብዛኛውን ጊዜ Perfekt ጥቅም ላይ ይውላል — ከ sein, haben እና ከሞዳል ግሦች በስተቀር።",
    "es_mx": "Regular: raíz + -te + terminación (machte). Los verbos irregulares cambian la vocal (gehen → ging) y hay que aprenderlos de memoria. Al hablar se usa casi siempre el Perfekt, salvo con sein, haben y los verbos modales.",
    "ca": "Regular: arrel + -te + terminació (machte). Els verbs irregulars canvien la vocal (gehen → ging) i s'han d'aprendre de memòria. En parlar es fa servir gairebé sempre el Perfekt, tret de sein, haben i els verbs modals.",
-   "hr": "Pravilni: osnova + -te + nastavak (machte). Nepravilni glagoli mijenjaju samoglasnik (gehen → ging) i moraju se naučiti napamet. U govoru se uglavnom koristi perfekt — osim kod sein, haben i modalnih glagola."
+   "hr": "Pravilni: osnova + -te + nastavak (machte). Nepravilni glagoli mijenjaju samoglasnik (gehen → ging) i moraju se naučiti napamet. U govoru se uglavnom koristi perfekt — osim kod sein, haben i modalnih glagola.",
+   "sr": "Правилно: основа + -te + наставак (machte). Неправилни глаголи мењају самогласник (gehen → ging) и морају се научити напамет. У говору се углавном користи перфекат — осим код sein, haben и модалних глагола.",
+   "el": "Ομαλά: θέμα + -te + κατάληξη (machte). Τα ανώμαλα ρήματα αλλάζουν το φωνήεν (gehen → ging) και πρέπει να τα μάθεις απ' έξω. Στον προφορικό λόγο χρησιμοποιείται κυρίως ο παρακείμενος — εκτός από τα sein, haben και τα τροπικά ρήματα."
   }
  },
  {
@@ -5941,7 +6359,9 @@ const GRAMMAR = [
    "am": "Plusquamperfekt እና Futur I",
    "es_mx": "Pluscuamperfecto y Futuro I",
    "ca": "Plusquamperfet i Futur I",
-   "hr": "Pluskvamperfekt i futur I"
+   "hr": "Pluskvamperfekt i futur I",
+   "sr": "Плусквамперфекат и Футур I",
+   "el": "Υπερσυντέλικος & Μέλλοντας Ι (Futur I)"
   },
   "intro": {
    "de": "Zwei Zeitformen für Vergangenheit und Zukunft. Das Plusquamperfekt (hatte/war + Partizip II) beschreibt die Vorvergangenheit — was vor einem anderen Ereignis in der Vergangenheit geschah, oft mit nachdem. Futur I (werden + Infinitiv) drückt Zukunft und Vermutungen aus (wird wohl …).",
@@ -5964,7 +6384,9 @@ const GRAMMAR = [
    "am": "ለያለፈና ለወደፊት ጊዜ ሁለት ቅርጾች። Plusquamperfekt (hatte/war + Partizip II) 'ያለፈ ከያለፈ በፊት'ን ይገልጻል — ከሌላ ያለፈ ክስተት በፊት የተከሰተውን፣ ብዙ ጊዜ በ nachdem የሚጀምር። Futur I (werden + Infinitiv) ወደፊትንና ግምቶችን ይገልጻል (wird wohl …)።",
    "es_mx": "Dos tiempos verbales para el pasado y el futuro. El Plusquamperfekt (pluscuamperfecto: hatte/war + Partizip II) marca el 'pasado anterior al pasado': lo que ocurrió antes de otro hecho pasado, a menudo introducido por nachdem. El Futur I (werden + infinitivo) expresa el futuro y suposiciones (wird wohl …).",
    "ca": "Dos temps verbals per al passat i el futur. El Plusquamperfekt (plusquamperfet: hatte/war + Partizip II) marca el 'passat anterior al passat': allò que va passar abans d'un altre fet passat, sovint introduït per nachdem. El Futur I (werden + infinitiu) expressa el futur i suposicions (wird wohl …).",
-   "hr": "Dva glagolska vremena za prošlost i budućnost. Pluskvamperfekt (hatte/war + particip perfekta) opisuje pretprošlost — ono što se dogodilo prije nekog drugog događaja u prošlosti, često uz nachdem. Futur I (werden + infinitiv) izražava budućnost i pretpostavke (wird wohl …)."
+   "hr": "Dva glagolska vremena za prošlost i budućnost. Pluskvamperfekt (hatte/war + particip perfekta) opisuje pretprošlost — ono što se dogodilo prije nekog drugog događaja u prošlosti, često uz nachdem. Futur I (werden + infinitiv) izražava budućnost i pretpostavke (wird wohl …).",
+   "sr": "Два глаголска времена за прошлост и будућност. Плусквамперфекат (hatte/war + Partizip II) описује предпрошлост — оно што се догодило пре неког другог догађаја у прошлости, често уз nachdem. Футур I (werden + инфинитив) изражава будућност и претпоставке (wird wohl …).",
+   "el": "Δύο χρόνοι για το παρελθόν και το μέλλον. Ο υπερσυντέλικος (Plusquamperfekt: hatte/war + Partizip II) περιγράφει το προπαρελθόν — ό,τι συνέβη πριν από ένα άλλο γεγονός στο παρελθόν, συχνά με το nachdem. Ο Μέλλοντας Ι (Futur I: werden + απαρέμφατο) εκφράζει το μέλλον και υποθέσεις (wird wohl …)."
   },
   "tables": [
    {
@@ -5989,7 +6411,9 @@ const GRAMMAR = [
      "am": "Plusquamperfekt፦ hatte/war + Partizip II",
      "es_mx": "Pluscuamperfecto: hatte/war + participio (Partizip II)",
      "ca": "Plusquamperfet: hatte/war + participi (Partizip II)",
-     "hr": "Pluskvamperfekt: hatte/war + particip perfekta (Partizip II)"
+     "hr": "Pluskvamperfekt: hatte/war + particip perfekta (Partizip II)",
+     "sr": "Плусквамперфекат: hatte/war + партицип перфекта (Partizip II)",
+     "el": "Υπερσυντέλικος: hatte/war + Partizip II"
     },
     "labelHeader": {
      "de": "Person",
@@ -6012,7 +6436,9 @@ const GRAMMAR = [
      "am": "አካል",
      "es_mx": "Persona",
      "ca": "Persona",
-     "hr": "Lice"
+     "hr": "Lice",
+     "sr": "Лице",
+     "el": "Πρόσωπο"
     },
     "columns": [
      {
@@ -6036,7 +6462,9 @@ const GRAMMAR = [
       "am": "ከ haben ጋር (machen)",
       "es_mx": "con haben (machen)",
       "ca": "amb haben (machen)",
-      "hr": "s haben (machen)"
+      "hr": "s haben (machen)",
+      "sr": "са haben (machen)",
+      "el": "με το haben (machen)"
      },
      {
       "de": "mit sein (gehen)",
@@ -6059,7 +6487,9 @@ const GRAMMAR = [
       "am": "ከ sein ጋር (gehen)",
       "es_mx": "con sein (gehen)",
       "ca": "amb sein (gehen)",
-      "hr": "sa sein (gehen)"
+      "hr": "sa sein (gehen)",
+      "sr": "са sein (gehen)",
+      "el": "με το sein (gehen)"
      }
     ],
     "rows": [
@@ -6085,7 +6515,9 @@ const GRAMMAR = [
        "am": "1ኛ አካል ነጠላ",
        "es_mx": "1.ª persona sing.",
        "ca": "1a persona sing.",
-       "hr": "1. lice jd."
+       "hr": "1. lice jd.",
+       "sr": "1. лице једнине",
+       "el": "α΄ πρόσωπο ενικού"
       },
       "cells": [
        "ich hatte gemacht",
@@ -6114,7 +6546,9 @@ const GRAMMAR = [
        "am": "2ኛ አካል ነጠላ",
        "es_mx": "2.ª persona sing.",
        "ca": "2a persona sing.",
-       "hr": "2. lice jd."
+       "hr": "2. lice jd.",
+       "sr": "2. лице једнине",
+       "el": "β΄ πρόσωπο ενικού"
       },
       "cells": [
        "du hattest gemacht",
@@ -6143,7 +6577,9 @@ const GRAMMAR = [
        "am": "3ኛ አካል ነጠላ",
        "es_mx": "3.ª persona sing.",
        "ca": "3a persona sing.",
-       "hr": "3. lice jd."
+       "hr": "3. lice jd.",
+       "sr": "3. лице једнине",
+       "el": "γ΄ πρόσωπο ενικού"
       },
       "cells": [
        "er hatte gemacht",
@@ -6172,7 +6608,9 @@ const GRAMMAR = [
        "am": "1ኛ አካል ብዙ",
        "es_mx": "1.ª persona pl.",
        "ca": "1a persona pl.",
-       "hr": "1. lice mn."
+       "hr": "1. lice mn.",
+       "sr": "1. лице множине",
+       "el": "α΄ πρόσωπο πληθυντικού"
       },
       "cells": [
        "wir hatten gemacht",
@@ -6203,7 +6641,9 @@ const GRAMMAR = [
      "am": "Futur I፦ werden (የተገለበጠ) + Infinitiv በዓረፍተ ነገር መጨረሻ",
      "es_mx": "Futuro I: werden (conjugado) + infinitivo al final de la oración",
      "ca": "Futur I: werden (conjugat) + infinitiu al final de la frase",
-     "hr": "Futur I: werden (konjugiran) + infinitiv na kraju rečenice"
+     "hr": "Futur I: werden (konjugiran) + infinitiv na kraju rečenice",
+     "sr": "Футур I: werden (промењено) + инфинитив на крају реченице",
+     "el": "Μέλλοντας Ι: werden (κλιτό) + απαρέμφατο στο τέλος της πρότασης"
     },
     "labelHeader": {
      "de": "Person",
@@ -6226,7 +6666,9 @@ const GRAMMAR = [
      "am": "አካል",
      "es_mx": "Persona",
      "ca": "Persona",
-     "hr": "Lice"
+     "hr": "Lice",
+     "sr": "Лице",
+     "el": "Πρόσωπο"
     },
     "columns": [
      {
@@ -6250,7 +6692,9 @@ const GRAMMAR = [
       "am": "werden + Infinitiv (machen)",
       "es_mx": "werden + infinitivo (machen)",
       "ca": "werden + infinitiu (machen)",
-      "hr": "werden + infinitiv (machen)"
+      "hr": "werden + infinitiv (machen)",
+      "sr": "werden + инфинитив (machen)",
+      "el": "werden + απαρέμφατο (machen)"
      }
     ],
     "rows": [
@@ -6276,7 +6720,9 @@ const GRAMMAR = [
        "am": "1ኛ አካል ነጠላ",
        "es_mx": "1.ª persona sing.",
        "ca": "1a persona sing.",
-       "hr": "1. lice jd."
+       "hr": "1. lice jd.",
+       "sr": "1. лице једнине",
+       "el": "α΄ πρόσωπο ενικού"
       },
       "cells": [
        "ich werde machen"
@@ -6304,7 +6750,9 @@ const GRAMMAR = [
        "am": "2ኛ አካል ነጠላ",
        "es_mx": "2.ª persona sing.",
        "ca": "2a persona sing.",
-       "hr": "2. lice jd."
+       "hr": "2. lice jd.",
+       "sr": "2. лице једнине",
+       "el": "β΄ πρόσωπο ενικού"
       },
       "cells": [
        "du wirst machen"
@@ -6332,7 +6780,9 @@ const GRAMMAR = [
        "am": "3ኛ አካል ነጠላ",
        "es_mx": "3.ª persona sing.",
        "ca": "3a persona sing.",
-       "hr": "3. lice jd."
+       "hr": "3. lice jd.",
+       "sr": "3. лице једнине",
+       "el": "γ΄ πρόσωπο ενικού"
       },
       "cells": [
        "er wird machen"
@@ -6360,7 +6810,9 @@ const GRAMMAR = [
        "am": "1ኛ አካል ብዙ",
        "es_mx": "1.ª persona pl.",
        "ca": "1a persona pl.",
-       "hr": "1. lice mn."
+       "hr": "1. lice mn.",
+       "sr": "1. лице множине",
+       "el": "α΄ πρόσωπο πληθυντικού"
       },
       "cells": [
        "wir werden machen"
@@ -6388,7 +6840,9 @@ const GRAMMAR = [
        "am": "2ኛ አካል ብዙ",
        "es_mx": "2.ª persona pl.",
        "ca": "2a persona pl.",
-       "hr": "2. lice mn."
+       "hr": "2. lice mn.",
+       "sr": "2. лице множине",
+       "el": "β΄ πρόσωπο πληθυντικού"
       },
       "cells": [
        "ihr werdet machen"
@@ -6416,7 +6870,9 @@ const GRAMMAR = [
        "am": "3ኛ አካል ብዙ",
        "es_mx": "3.ª persona pl.",
        "ca": "3a persona pl.",
-       "hr": "3. lice mn."
+       "hr": "3. lice mn.",
+       "sr": "3. лице множине",
+       "el": "γ΄ πρόσωπο πληθυντικού"
       },
       "cells": [
        "sie werden machen"
@@ -6447,7 +6903,9 @@ const GRAMMAR = [
     "am": "ከበላ በኋላ ወደ አልጋው ሄደ።",
     "es_mx": "Después de que hubo comido, se fue a la cama.",
     "ca": "Després d'haver menjat, se'n va anar al llit.",
-    "hr": "Nachdem er gegessen hatte, ging er ins Bett. (Nakon što je pojeo, otišao je u krevet.)"
+    "hr": "Nachdem er gegessen hatte, ging er ins Bett. (Nakon što je pojeo, otišao je u krevet.)",
+    "sr": "Nachdem er gegessen hatte, ging er ins Bett. (Пошто је појео, отишао је у кревет.)",
+    "el": "Nachdem er gegessen hatte, ging er ins Bett. (Αφού είχε φάει, πήγε για ύπνο.)"
    },
    {
     "de": "Nächstes Jahr werde ich in Berlin studieren.",
@@ -6470,7 +6928,9 @@ const GRAMMAR = [
     "am": "በሚቀጥለው ዓመት በበርሊን እማራለሁ።",
     "es_mx": "El próximo año voy a estudiar en Berlín.",
     "ca": "L'any que ve estudiaré a Berlín.",
-    "hr": "Nächstes Jahr werde ich in Berlin studieren. (Sljedeće godine studirat ću u Berlinu.)"
+    "hr": "Nächstes Jahr werde ich in Berlin studieren. (Sljedeće godine studirat ću u Berlinu.)",
+    "sr": "Nächstes Jahr werde ich in Berlin studieren. (Следеће године студираћу у Берлину.)",
+    "el": "Nächstes Jahr werde ich in Berlin studieren. (Του χρόνου θα σπουδάσω στο Βερολίνο.)"
    },
    {
     "de": "Sie wird wohl schon zu Hause sein.",
@@ -6493,7 +6953,9 @@ const GRAMMAR = [
     "am": "እሷ ምናልባት አሁን በቤት ትሆናለች።",
     "es_mx": "Seguramente ya está en casa.",
     "ca": "Segurament ja deu ser a casa.",
-    "hr": "Sie wird wohl schon zu Hause sein. (Ona je vjerojatno već kod kuće.)"
+    "hr": "Sie wird wohl schon zu Hause sein. (Ona je vjerojatno već kod kuće.)",
+    "sr": "Sie wird wohl schon zu Hause sein. (Она је вероватно већ код куће.)",
+    "el": "Sie wird wohl schon zu Hause sein. (Θα είναι μάλλον ήδη σπίτι.)"
    }
   ],
   "hints": {
@@ -6517,7 +6979,9 @@ const GRAMMAR = [
    "am": "ልብ በል፦ በ nachdem-ዓረፍተ ነገር ውስጥ ረዳት ግሱ ልክ በመጨረሻ ይመጣል (…gegessen hatte)። ለእንቅስቃሴ/ለሁኔታ ለውጥ ግሦች (gehen, kommen) war ምረጥ፣ ለቀሪው ደግሞ hatte። Futur I = werden (የተገለበጠ) + Infinitiv በዓረፍተ ነገር መጨረሻ።",
    "es_mx": "El Plusquamperfekt equivale exactamente al pluscuamperfecto: 'había ido' = war gegangen. Pero fíjate en dos cosas: el alemán elige war (no hatte) para los verbos de movimiento/cambio de estado (gehen, kommen), y en el Futur I el infinitivo salta hasta el final: ich werde morgen kommen.",
    "ca": "El Plusquamperfekt equival exactament al plusquamperfet: 'havia anat' = war gegangen. Però fixa't en dues coses: l'alemany tria war (no hatte) per als verbs de moviment/canvi d'estat (gehen, kommen), i en el Futur I l'infinitiu salta fins al final: ich werde morgen kommen.",
-   "hr": "Zapamti: u rečenici s nachdem pomoćni glagol stoji sasvim na kraju (…gegessen hatte). Uzmi war kod glagola kretanja ili promjene stanja (gehen, kommen), inače hatte. Futur I = werden (konjugiran) + infinitiv na kraju rečenice: ich werde morgen kommen."
+   "hr": "Zapamti: u rečenici s nachdem pomoćni glagol stoji sasvim na kraju (…gegessen hatte). Uzmi war kod glagola kretanja ili promjene stanja (gehen, kommen), inače hatte. Futur I = werden (konjugiran) + infinitiv na kraju rečenice: ich werde morgen kommen.",
+   "sr": "Запамти: у реченици са nachdem помоћни глагол стоји на самом крају (…gegessen hatte). Бирај war код глагола кретања/промене стања (gehen, kommen), иначе hatte. Футур I = werden (промењено) + инфинитив на крају реченице.",
+   "el": "Θυμήσου: Στην πρόταση με nachdem το βοηθητικό ρήμα μπαίνει τελείως στο τέλος (…gegessen hatte). Διάλεξε war για ρήματα κίνησης/αλλαγής κατάστασης (gehen, kommen), αλλιώς hatte. Μέλλοντας Ι = werden (κλιτό) + απαρέμφατο στο τέλος της πρότασης: ich werde morgen kommen."
   }
  },
  {
@@ -6544,7 +7008,9 @@ const GRAMMAR = [
    "am": "ሞዳል ግሦች (Modalverben)",
    "es_mx": "Verbos modales",
    "ca": "Verbs modals",
-   "hr": "Modalni glagoli"
+   "hr": "Modalni glagoli",
+   "sr": "Модални глаголи",
+   "el": "Βοηθητικά ρήματα (τροπικά ρήματα)"
   },
   "intro": {
    "de": "Deutsch hat sechs Modalverben: können, müssen, wollen, sollen, dürfen und mögen (mit der höflichen Form möchte). Sie stehen konjugiert auf Position 2; das Vollverb steht als Infinitiv am Satzende – das ist die Satzklammer.",
@@ -6567,7 +7033,9 @@ const GRAMMAR = [
    "am": "ጀርመንኛ ስድስት ሞዳል ግሦች አሉት፦ können, müssen, wollen, sollen, dürfen እና mögen (ከአክብሮት ቅርጹ möchte ጋር)። እነዚህ በተገለበጠ ቅርጽ በሁለተኛ ቦታ ይቀመጣሉ፤ ዋናው ግስ እንደ Infinitiv በዓረፍተ ነገሩ መጨረሻ ይቀመጣል — ይህ 'የዓረፍተ ነገር ማሰሪያ' (Satzklammer) ይባላል።",
    "es_mx": "El alemán tiene seis verbos modales: können, müssen, wollen, sollen, dürfen y mögen (más la forma cortés möchte). El modal va conjugado en la segunda posición, mientras que el verbo principal se coloca al final de la oración en infinitivo: es el «paréntesis oracional» (Satzklammer).",
    "ca": "L'alemany té sis verbs modals: können, müssen, wollen, sollen, dürfen i mögen (més la forma de cortesia möchte). El modal va conjugat a la segona posició, mentre que el verb principal se situa al final de l'oració en infinitiu: és el «parèntesi oracional» (Satzklammer).",
-   "hr": "Njemački ima šest modalnih glagola: können, müssen, wollen, sollen, dürfen i mögen (uz uljudni oblik möchte). Modalni glagol dolazi u konjugiranom obliku na drugom mjestu, a glavni glagol stoji kao infinitiv na kraju rečenice – to je rečenična zagrada (Satzklammer)."
+   "hr": "Njemački ima šest modalnih glagola: können, müssen, wollen, sollen, dürfen i mögen (uz uljudni oblik möchte). Modalni glagol dolazi u konjugiranom obliku na drugom mjestu, a glavni glagol stoji kao infinitiv na kraju rečenice – to je rečenična zagrada (Satzklammer).",
+   "sr": "Немачки има шест модалних глагола: können, müssen, wollen, sollen, dürfen и mögen (уз учтиви облик möchte). Модални глагол стоји спрегнут на другом месту, а пуни глагол иде на крај реченице у инфинитиву — то је реченични оквир (Satzklammer).",
+   "el": "Τα γερμανικά έχουν έξι τροπικά ρήματα: können, müssen, wollen, sollen, dürfen και mögen (με τον ευγενικό τύπο möchte). Βρίσκονται κλιμένα στη 2η θέση· το κύριο ρήμα μπαίνει ως απαρέμφατο στο τέλος της πρότασης — αυτό είναι η «προτασιακή παρένθεση» (Satzklammer)."
   },
   "tables": [
    {
@@ -6592,7 +7060,9 @@ const GRAMMAR = [
      "am": "Präsens፦ የሞዳል ግሦች ውቅር",
      "es_mx": "Presente: conjugación de los verbos modales",
      "ca": "Present: conjugació dels verbs modals",
-     "hr": "Prezent: konjugacija modalnih glagola"
+     "hr": "Prezent: konjugacija modalnih glagola",
+     "sr": "Презент: спрезање модалних глагола",
+     "el": "Ενεστώτας: κλίση των τροπικών ρημάτων"
     },
     "labelHeader": {
      "de": "Person",
@@ -6615,7 +7085,9 @@ const GRAMMAR = [
      "am": "አካል",
      "es_mx": "Persona",
      "ca": "Persona",
-     "hr": "Osoba"
+     "hr": "Osoba",
+     "sr": "Лице",
+     "el": "Πρόσωπο"
     },
     "columns": [
      {
@@ -6639,7 +7111,9 @@ const GRAMMAR = [
       "am": "können",
       "es_mx": "können",
       "ca": "können",
-      "hr": "können"
+      "hr": "können",
+      "sr": "können",
+      "el": "können"
      },
      {
       "de": "müssen",
@@ -6662,7 +7136,9 @@ const GRAMMAR = [
       "am": "müssen",
       "es_mx": "müssen",
       "ca": "müssen",
-      "hr": "müssen"
+      "hr": "müssen",
+      "sr": "müssen",
+      "el": "müssen"
      },
      {
       "de": "wollen",
@@ -6685,7 +7161,9 @@ const GRAMMAR = [
       "am": "wollen",
       "es_mx": "wollen",
       "ca": "wollen",
-      "hr": "wollen"
+      "hr": "wollen",
+      "sr": "wollen",
+      "el": "wollen"
      },
      {
       "de": "sollen",
@@ -6708,7 +7186,9 @@ const GRAMMAR = [
       "am": "sollen",
       "es_mx": "sollen",
       "ca": "sollen",
-      "hr": "sollen"
+      "hr": "sollen",
+      "sr": "sollen",
+      "el": "sollen"
      },
      {
       "de": "dürfen",
@@ -6731,7 +7211,9 @@ const GRAMMAR = [
       "am": "dürfen",
       "es_mx": "dürfen",
       "ca": "dürfen",
-      "hr": "dürfen"
+      "hr": "dürfen",
+      "sr": "dürfen",
+      "el": "dürfen"
      },
      {
       "de": "mögen",
@@ -6754,7 +7236,9 @@ const GRAMMAR = [
       "am": "mögen",
       "es_mx": "mögen",
       "ca": "mögen",
-      "hr": "mögen"
+      "hr": "mögen",
+      "sr": "mögen",
+      "el": "mögen"
      }
     ],
     "rows": [
@@ -6780,7 +7264,9 @@ const GRAMMAR = [
        "am": "ich (እኔ)",
        "es_mx": "ich (yo)",
        "ca": "ich (jo)",
-       "hr": "ich (ja)"
+       "hr": "ich (ja)",
+       "sr": "ich (ја)",
+       "el": "ich (εγώ)"
       },
       "cells": [
        "kann",
@@ -6813,7 +7299,9 @@ const GRAMMAR = [
        "am": "du (አንተ/አንቺ)",
        "es_mx": "du (tú)",
        "ca": "du (tu)",
-       "hr": "du (ti)"
+       "hr": "du (ti)",
+       "sr": "du (ти)",
+       "el": "du (εσύ, ενικός)"
       },
       "cells": [
        "kannst",
@@ -6846,7 +7334,9 @@ const GRAMMAR = [
        "am": "er/sie/es (እሱ/እሷ)",
        "es_mx": "er/sie/es (él/ella/ello)",
        "ca": "er/sie/es (ell/ella/això)",
-       "hr": "er/sie/es (on/ona/ono)"
+       "hr": "er/sie/es (on/ona/ono)",
+       "sr": "er/sie/es (он/она/оно)",
+       "el": "er/sie/es (αυτός/αυτή/αυτό)"
       },
       "cells": [
        "kann",
@@ -6879,7 +7369,9 @@ const GRAMMAR = [
        "am": "wir (እኛ)",
        "es_mx": "wir (nosotros)",
        "ca": "wir (nosaltres)",
-       "hr": "wir (mi)"
+       "hr": "wir (mi)",
+       "sr": "wir (ми)",
+       "el": "wir (εμείς)"
       },
       "cells": [
        "können",
@@ -6912,7 +7404,9 @@ const GRAMMAR = [
        "am": "ihr (እናንተ)",
        "es_mx": "ihr (ustedes)",
        "ca": "ihr (vosaltres)",
-       "hr": "ihr (vi)"
+       "hr": "ihr (vi)",
+       "sr": "ihr (ви)",
+       "el": "ihr (εσείς, πληθυντικός)"
       },
       "cells": [
        "könnt",
@@ -6945,7 +7439,9 @@ const GRAMMAR = [
        "am": "sie/Sie (እነሱ/እርስዎ)",
        "es_mx": "sie/Sie (ellos / usted formal)",
        "ca": "sie/Sie (ells / vostè formal)",
-       "hr": "sie/Sie (oni / Vi iz poštovanja)"
+       "hr": "sie/Sie (oni / Vi iz poštovanja)",
+       "sr": "sie/Sie (они / Ви из учтивости)",
+       "el": "sie/Sie (αυτοί / εσείς, ευγενικά)"
       },
       "cells": [
        "können",
@@ -6980,7 +7476,9 @@ const GRAMMAR = [
      "am": "የሞዳል ግሦች ትርጉም",
      "es_mx": "Significado de cada modal",
      "ca": "Significat de cada modal",
-     "hr": "Značenje modalnih glagola"
+     "hr": "Značenje modalnih glagola",
+     "sr": "Значење модалних глагола",
+     "el": "Τι σημαίνει το καθένα τροπικό ρήμα"
     },
     "labelHeader": {
      "de": "Bedeutung",
@@ -7003,7 +7501,9 @@ const GRAMMAR = [
      "am": "ትርጉም",
      "es_mx": "Significado",
      "ca": "Significat",
-     "hr": "Značenje"
+     "hr": "Značenje",
+     "sr": "Значење",
+     "el": "Σημασία"
     },
     "columns": [
      {
@@ -7027,7 +7527,9 @@ const GRAMMAR = [
       "am": "ግስ",
       "es_mx": "Verbo",
       "ca": "Verb",
-      "hr": "Glagol"
+      "hr": "Glagol",
+      "sr": "Глагол",
+      "el": "Ρήμα"
      },
      {
       "de": "Beispiel",
@@ -7050,7 +7552,9 @@ const GRAMMAR = [
       "am": "ምሳሌ",
       "es_mx": "Ejemplo",
       "ca": "Exemple",
-      "hr": "Primjer"
+      "hr": "Primjer",
+      "sr": "Пример",
+      "el": "Παράδειγμα"
      }
     ],
     "rows": [
@@ -7076,7 +7580,9 @@ const GRAMMAR = [
        "am": "ችሎታ / እድል",
        "es_mx": "capacidad / posibilidad",
        "ca": "capacitat / possibilitat",
-       "hr": "sposobnost / mogućnost"
+       "hr": "sposobnost / mogućnost",
+       "sr": "способност / могућност",
+       "el": "ικανότητα / δυνατότητα"
       },
       "cells": [
        "können",
@@ -7105,7 +7611,9 @@ const GRAMMAR = [
        "am": "አስፈላጊነት / ግዴታ",
        "es_mx": "necesidad / obligación",
        "ca": "necessitat / obligació",
-       "hr": "nužnost / prisila"
+       "hr": "nužnost / prisila",
+       "sr": "неопходност / принуда",
+       "el": "αναγκαιότητα / υποχρέωση (πρέπει)"
       },
       "cells": [
        "müssen",
@@ -7134,7 +7642,9 @@ const GRAMMAR = [
        "am": "ፍላጎት / ዓላማ",
        "es_mx": "voluntad / intención",
        "ca": "voluntat / intenció",
-       "hr": "volja / namjera"
+       "hr": "volja / namjera",
+       "sr": "воља / намера",
+       "el": "θέληση / πρόθεση"
       },
       "cells": [
        "wollen",
@@ -7163,7 +7673,9 @@ const GRAMMAR = [
        "am": "ከሌሎች የሚመጣ ማዘዣ",
        "es_mx": "petición / obligación impuesta por otros",
        "ca": "petició / obligació imposada per altres",
-       "hr": "poticaj ili naredba od drugih"
+       "hr": "poticaj ili naredba od drugih",
+       "sr": "налог / захтев других",
+       "el": "οφειλόμενο / υποχρέωση από άλλους (θα έπρεπε)"
       },
       "cells": [
        "sollen",
@@ -7192,7 +7704,9 @@ const GRAMMAR = [
        "am": "ፈቃድ",
        "es_mx": "permiso (poder / estar permitido)",
        "ca": "permís (poder / estar permès)",
-       "hr": "dopuštenje"
+       "hr": "dopuštenje",
+       "sr": "дозвола",
+       "el": "άδεια (επιτρέπεται / μπορώ)"
       },
       "cells": [
        "dürfen",
@@ -7221,7 +7735,9 @@ const GRAMMAR = [
        "am": "መውደድ / በአክብሮት መጠየቅ",
        "es_mx": "gustar / querer (cortés)",
        "ca": "agradar / voler (cortès)",
-       "hr": "sviđanje / uljudna želja"
+       "hr": "sviđanje / uljudna želja",
+       "sr": "свиђање / учтива жеља",
+       "el": "μου αρέσει / θα ήθελα"
       },
       "cells": [
        "mögen → möchte",
@@ -7253,7 +7769,9 @@ const GRAMMAR = [
     "am": "ጀርመንኛ በጣም ጥሩ አድርጌ መናገር እችላለሁ።",
     "es_mx": "Puedo hablar alemán muy bien.",
     "ca": "Puc parlar alemany molt bé.",
-    "hr": "Ich kann sehr gut Deutsch sprechen. (Mogu vrlo dobro govoriti njemački.)"
+    "hr": "Ich kann sehr gut Deutsch sprechen. (Mogu vrlo dobro govoriti njemački.)",
+    "sr": "Ich kann sehr gut Deutsch sprechen. (Врло добро говорим немачки.)",
+    "el": "Μπορώ να μιλάω πολύ καλά γερμανικά."
    },
    {
     "de": "Am Wochenende müssen wir leider arbeiten.",
@@ -7276,7 +7794,9 @@ const GRAMMAR = [
     "am": "በሳምንቱ መጨረሻ በሚያሳዝን ሁኔታ መሥራት አለብን።",
     "es_mx": "Por desgracia, el fin de semana tenemos que trabajar.",
     "ca": "Malauradament, el cap de setmana hem de treballar.",
-    "hr": "Am Wochenende müssen wir leider arbeiten. (Nažalost, vikendom moramo raditi.)"
+    "hr": "Am Wochenende müssen wir leider arbeiten. (Nažalost, vikendom moramo raditi.)",
+    "sr": "Am Wochenende müssen wir leider arbeiten. (Нажалост, викендом морамо да радимо.)",
+    "el": "Δυστυχώς το Σαββατοκύριακο πρέπει να δουλέψουμε."
    },
    {
     "de": "Ich möchte bitte ein Glas Wasser bestellen.",
@@ -7299,7 +7819,9 @@ const GRAMMAR = [
     "am": "እባክዎን አንድ ብርጭቆ ውሃ ማዘዝ እፈልጋለሁ።",
     "es_mx": "Quisiera pedir un vaso de agua, por favor.",
     "ca": "Voldria demanar un got d'aigua, si us plau.",
-    "hr": "Ich möchte bitte ein Glas Wasser bestellen. (Htio/htjela bih naručiti čašu vode, molim.)"
+    "hr": "Ich möchte bitte ein Glas Wasser bestellen. (Htio/htjela bih naručiti čašu vode, molim.)",
+    "sr": "Ich möchte bitte ein Glas Wasser bestellen. (Желео бих да наручим чашу воде, молим.)",
+    "el": "Θα ήθελα να παραγγείλω ένα ποτήρι νερό, παρακαλώ."
    }
   ],
   "hints": {
@@ -7323,7 +7845,9 @@ const GRAMMAR = [
    "am": "ሞዳል ግሱ በተገለበጠ ቅርጽ በሁለተኛ ቦታ ይመጣል፤ ዋናው ግስ እንደ Infinitiv በዓረፍተ ነገሩ መጨረሻ ይቀመጣል (Satzklammer)። በነጠላ ቁጥር የግንዱ ድምጸ አናባቢ ይለወጣል (ich kann, muss, will, soll, darf, mag)፣ በብዙ ቁጥር ግን አይለወጥም። 'möchte' የ'mögen' የአክብሮት ቅርጽ ነው።",
    "es_mx": "Como can/must/may en inglés, un modal alemán rige un infinitivo sin «zu», pero hay dos diferencias: el modal cambia de forma en el singular (ich kann, du kannst, er kann) y el verbo principal se manda al FINAL de la oración. No digas «Ich kann sprechen Deutsch»: es «Ich kann gut Deutsch sprechen».",
    "ca": "Com can/must/may en anglès, un modal alemany regeix un infinitiu sense «zu», però hi ha dues diferències: el modal canvia de forma al singular (ich kann, du kannst, er kann) i el verb principal es porta al FINAL de l'oració. No diguis «Ich kann sprechen Deutsch»: és «Ich kann gut Deutsch sprechen».",
-   "hr": "Modalni glagol stoji u konjugiranom obliku na drugom mjestu, a glavni glagol kao infinitiv na kraju rečenice (rečenična zagrada). U jednini se mijenja samoglasnik u korijenu (ich kann, muss, will, soll, darf, mag), a u množini ne. „möchte“ je uljudni oblik glagola „mögen“."
+   "hr": "Modalni glagol stoji u konjugiranom obliku na drugom mjestu, a glavni glagol kao infinitiv na kraju rečenice (rečenična zagrada). U jednini se mijenja samoglasnik u korijenu (ich kann, muss, will, soll, darf, mag), a u množini ne. „möchte“ je uljudni oblik glagola „mögen“.",
+   "sr": "Модални глагол спрегнут је на другом месту, а пуни глагол стоји у инфинитиву на крају реченице (реченични оквир). У једнини се мења самогласник у основи (ich kann, muss, will, soll, darf, mag), у множини не. „möchte“ је учтиви облик глагола „mögen“.",
+   "el": "Όπως και στα αγγλικά can/must/may, το γερμανικό τροπικό ρήμα παίρνει γυμνό απαρέμφατο — αλλά δύο πράγματα διαφέρουν: το τροπικό ρήμα αλλάζει μορφή στον ενικό (ich kann, du kannst, er kann) και το κύριο ρήμα σπρώχνεται στο ΤΕΛΟΣ της πρότασης. Μη λέτε «Ich kann sprechen Deutsch» — το σωστό είναι «Ich kann gut Deutsch sprechen». Το «möchte» είναι ο ευγενικός τύπος του «mögen»."
   }
  },
  {
@@ -7350,7 +7874,9 @@ const GRAMMAR = [
    "am": "የሚነጣጠሉና የማይነጣጠሉ ግሦች",
    "es_mx": "Verbos separables e inseparables",
    "ca": "Verbs separables i inseparables",
-   "hr": "Odvojivi i neodvojivi glagoli"
+   "hr": "Odvojivi i neodvojivi glagoli",
+   "sr": "Раздвојиви и нераздвојиви глаголи",
+   "el": "Χωριζόμενα και μη χωριζόμενα ρήματα"
   },
   "intro": {
    "de": "Trennbare Verben haben ein betontes Präfix, das im Hauptsatz ans Satzende rückt (Ich stehe um 7 Uhr auf) und im Partizip II ein -ge- einschließt (aufgestanden). Untrennbare Präfixe (be-, ver- …) sind unbetont, bleiben immer am Verb und bilden das Partizip II ohne ge- (verstanden). Die Betonung verrät den Typ.",
@@ -7373,7 +7899,9 @@ const GRAMMAR = [
    "am": "የሚነጣጠሉ ግሦች ጎላ ያለ ድምጸት ያለው ቅድመ ቅጥያ አላቸው፣ በዋና ዓረፍተ ነገር ውስጥ ወደ ዓረፍተ ነገሩ መጨረሻ ይንቀሳቀሳል (Ich stehe um 7 Uhr auf — በ7 ሰዓት እነሳለሁ) እንዲሁም በ Partizip II ውስጥ -ge- ይይዛል (aufgestanden)። የማይነጣጠሉ ቅድመ ቅጥያዎች (be-, ver- …) ድምጸታቸው ደካማ ነው፣ ሁልጊዜ ከግሱ ጋር ተጣብቀው ይቆያሉ እና Partizip IIን ያለ ge- ይሠራሉ (verstanden)። ድምጸቱ ዓይነቱን ይነግርሃል።",
    "es_mx": "Los verbos separables tienen un prefijo acentuado que se va al final de la oración principal (Ich stehe um 7 Uhr auf) y encierra el -ge- dentro del participio (aufgestanden). Los prefijos inseparables (be-, ver- …) son átonos, nunca se separan y forman el participio sin ge- (verstanden). El acento te dice cuál es cuál.",
    "ca": "Els verbs separables tenen un prefix accentuat que se'n va al final de l'oració principal (Ich stehe um 7 Uhr auf) i tanca el -ge- dins del participi (aufgestanden). Els prefixos inseparables (be-, ver- …) són àtons, no se separen mai i formen el participi sense ge- (verstanden). L'accent et diu quin és quin.",
-   "hr": "Odvojivi glagoli imaju naglašeni prefiks koji se u glavnoj rečenici pomiče na kraj rečenice (Ich stehe um 7 Uhr auf), a u participu perfekta obuhvaća -ge- (aufgestanden). Neodvojivi prefiksi (be-, ver- …) nenaglašeni su, nikad se ne odvajaju i tvore particip perfekta bez ge- (verstanden). Naglasak odaje o kojoj se vrsti radi."
+   "hr": "Odvojivi glagoli imaju naglašeni prefiks koji se u glavnoj rečenici pomiče na kraj rečenice (Ich stehe um 7 Uhr auf), a u participu perfekta obuhvaća -ge- (aufgestanden). Neodvojivi prefiksi (be-, ver- …) nenaglašeni su, nikad se ne odvajaju i tvore particip perfekta bez ge- (verstanden). Naglasak odaje o kojoj se vrsti radi.",
+   "sr": "Раздвојиви глаголи имају наглашени префикс који у главној реченици прелази на крај реченице (Ich stehe um 7 Uhr auf), а у партиципу перфекта обухвата -ge- (aufgestanden). Нераздвојиви префикси (be-, ver- …) су ненаглашени, увек остају уз глагол и граде партицип перфекта без ge- (verstanden). Нагласак открива о ком типу је реч.",
+   "el": "Τα χωριζόμενα ρήματα έχουν ένα τονισμένο πρόθεμα, το οποίο στην κύρια πρόταση μεταφέρεται στο τέλος της πρότασης (Ich stehe um 7 Uhr auf) και στη μετοχή αορίστου (Partizip II) περικλείει το -ge- (aufgestanden). Τα μη χωριζόμενα προθέματα (be-, ver- …) είναι άτονα, μένουν πάντα προσκολλημένα στο ρήμα και σχηματίζουν τη μετοχή χωρίς ge- (verstanden). Ο τονισμός φανερώνει τον τύπο."
   },
   "tables": [
    {
@@ -7398,7 +7926,9 @@ const GRAMMAR = [
      "am": "የሚነጣጠሉ ቅድመ ቅጥያዎች",
      "es_mx": "Prefijos separables",
      "ca": "Prefixos separables",
-     "hr": "Odvojivi prefiksi"
+     "hr": "Odvojivi prefiksi",
+     "sr": "Раздвојиви префикси",
+     "el": "Χωριζόμενα προθέματα"
     },
     "labelHeader": {
      "de": "",
@@ -7431,7 +7961,9 @@ const GRAMMAR = [
       "am": "ቅድመ ቅጥያ",
       "es_mx": "Prefijo",
       "ca": "Prefix",
-      "hr": "Prefiks"
+      "hr": "Prefiks",
+      "sr": "Префикс",
+      "el": "Πρόθεμα"
      },
      {
       "de": "Beispielverb",
@@ -7454,7 +7986,9 @@ const GRAMMAR = [
       "am": "ምሳሌ ግስ",
       "es_mx": "Verbo de ejemplo",
       "ca": "Verb d'exemple",
-      "hr": "Primjer glagola"
+      "hr": "Primjer glagola",
+      "sr": "Пример глагола",
+      "el": "Παράδειγμα ρήματος"
      },
      {
       "de": "Hauptsatz (Präfix am Ende)",
@@ -7477,7 +8011,9 @@ const GRAMMAR = [
       "am": "ዋና ዓረፍተ ነገር (ቅድመ ቅጥያ በመጨረሻ)",
       "es_mx": "Oración principal (prefijo al final)",
       "ca": "Oració principal (prefix al final)",
-      "hr": "Glavna rečenica (prefiks na kraju)"
+      "hr": "Glavna rečenica (prefiks na kraju)",
+      "sr": "Главна реченица (префикс на крају)",
+      "el": "Κύρια πρόταση (πρόθεμα στο τέλος)"
      }
     ],
     "rows": [
@@ -7665,7 +8201,9 @@ const GRAMMAR = [
      "am": "የማይነጣጠሉ ቅድመ ቅጥያዎች",
      "es_mx": "Prefijos inseparables",
      "ca": "Prefixos inseparables",
-     "hr": "Neodvojivi prefiksi"
+     "hr": "Neodvojivi prefiksi",
+     "sr": "Нераздвојиви префикси",
+     "el": "Μη χωριζόμενα προθέματα"
     },
     "labelHeader": {
      "de": "",
@@ -7698,7 +8236,9 @@ const GRAMMAR = [
       "am": "ቅድመ ቅጥያ",
       "es_mx": "Prefijo",
       "ca": "Prefix",
-      "hr": "Prefiks"
+      "hr": "Prefiks",
+      "sr": "Префикс",
+      "el": "Πρόθεμα"
      },
      {
       "de": "Beispielverb",
@@ -7721,7 +8261,9 @@ const GRAMMAR = [
       "am": "ምሳሌ ግስ",
       "es_mx": "Verbo de ejemplo",
       "ca": "Verb d'exemple",
-      "hr": "Primjer glagola"
+      "hr": "Primjer glagola",
+      "sr": "Пример глагола",
+      "el": "Παράδειγμα ρήματος"
      },
      {
       "de": "Partizip II (ohne ge-)",
@@ -7744,7 +8286,9 @@ const GRAMMAR = [
       "am": "Partizip II (ያለ ge-)",
       "es_mx": "Participio (Partizip II, sin ge-)",
       "ca": "Participi (Partizip II, sense ge-)",
-      "hr": "Particip perfekta (bez ge-)"
+      "hr": "Particip perfekta (bez ge-)",
+      "sr": "Партицип перфекта (без ge-)",
+      "el": "Μετοχή αορίστου (Partizip II) (χωρίς ge-)"
      }
     ],
     "rows": [
@@ -7885,7 +8429,9 @@ const GRAMMAR = [
     "am": "በየቀኑ ጠዋት በሰባት ሰዓት እነሳለሁ።",
     "es_mx": "Me levanto todas las mañanas a las siete.",
     "ca": "Em llevo cada matí a les set.",
-    "hr": "Ustajem svako jutro u sedam sati."
+    "hr": "Ustajem svako jutro u sedam sati.",
+    "sr": "Устајем сваког јутра у седам сати.",
+    "el": "Σηκώνομαι κάθε πρωί στις εφτά η ώρα."
    },
    {
     "de": "Gestern bin ich erst um neun Uhr aufgestanden.",
@@ -7908,7 +8454,9 @@ const GRAMMAR = [
     "am": "ትናንት በዘጠኝ ሰዓት ብቻ ነው የተነሳሁት።",
     "es_mx": "Ayer no me levanté sino hasta las nueve.",
     "ca": "Ahir no em vaig llevar fins a les nou.",
-    "hr": "Jučer sam ustao tek u devet sati."
+    "hr": "Jučer sam ustao tek u devet sati.",
+    "sr": "Јуче сам устао тек у девет сати.",
+    "el": "Χθες σηκώθηκα μόλις στις εννιά η ώρα."
    },
    {
     "de": "Ich habe die Grammatik endlich verstanden.",
@@ -7931,7 +8479,9 @@ const GRAMMAR = [
     "am": "በመጨረሻ ሰዋሰውን ተረድቻለሁ።",
     "es_mx": "Por fin entendí la gramática.",
     "ca": "Per fi he entès la gramàtica.",
-    "hr": "Napokon sam razumio gramatiku."
+    "hr": "Napokon sam razumio gramatiku.",
+    "sr": "Коначно сам разумео граматику.",
+    "el": "Επιτέλους κατάλαβα τη γραμματική."
    }
   ],
   "hints": {
@@ -7955,7 +8505,9 @@ const GRAMMAR = [
    "am": "ልብ በል፦ ጎላ ያለ ድምጸት ያለው ቅድመ ቅጥያ = የሚነጣጠል (ወደ ዓረፍተ ነገሩ መጨረሻ ይበራል፣ Partizip ከ-ge- ጋር፦ aufgestanden)። ደካማ ድምጸት ያለው be-, ge-, er-, ver-, zer-, ent-, emp- = የማይነጣጠል (ከግሱ ጋር ይቆያል፣ Partizip ያለ ge-፦ verstanden)።",
    "es_mx": "Piensa en los prefijos separables como las partículas de los verbos ingleses (get UP, come BACK) que salen disparadas al final de la oración: la parte acentuada es la que «vuela». Los inseparables be-/ge-/er-/ver-/zer-/ent-/emp- se portan como el prefijo fijo de «forGET» o «underSTAND»: átonos, inamovibles y sin ge- en el participio.",
    "ca": "Pensa en els prefixos separables com les partícules dels verbs anglesos (get UP, come BACK) que surten disparades al final de l'oració: la part accentuada és la que «vola». Els inseparables be-/ge-/er-/ver-/zer-/ent-/emp- es comporten com el prefix fix de «forGET» o «underSTAND»: àtons, inamovibles i sense ge- al participi.",
-   "hr": "Zapamti: naglašeni prefiks = odvojiv (leti na kraj rečenice, particip s -ge-: aufgestanden). Nenaglašeni be-, ge-, er-, ver-, zer-, ent-, emp- = neodvojiv (ostaje uz glagol, particip bez ge-: verstanden)."
+   "hr": "Zapamti: naglašeni prefiks = odvojiv (leti na kraj rečenice, particip s -ge-: aufgestanden). Nenaglašeni be-, ge-, er-, ver-, zer-, ent-, emp- = neodvojiv (ostaje uz glagol, particip bez ge-: verstanden).",
+   "sr": "Запамти: наглашени префикс = раздвојив (лети на крај реченице, партицип са -ge-: aufgestanden). Ненаглашени be-, ge-, er-, ver-, zer-, ent-, emp- = нераздвојиви (остају уз глагол, партицип без ge-: verstanden).",
+   "el": "Θυμήσου: τονισμένο πρόθεμα = χωριζόμενο (πετάει στο τέλος της πρότασης, μετοχή με -ge-: aufgestanden). Άτονα be-, ge-, er-, ver-, zer-, ent-, emp- = μη χωριζόμενα (μένουν στο ρήμα, μετοχή χωρίς ge-: verstanden)."
   }
  },
  {
@@ -7982,7 +8534,9 @@ const GRAMMAR = [
    "am": "ራስ-ተመላሽ ግሦች (sich)",
    "es_mx": "Verbos reflexivos (sich)",
    "ca": "Verbs reflexius (sich)",
-   "hr": "Povratni glagoli (sich)"
+   "hr": "Povratni glagoli (sich)",
+   "sr": "Повратни глаголи (sich)",
+   "el": "Αυτοπαθή ρήματα (sich)"
   },
   "intro": {
    "de": "Reflexive Verben brauchen ein Reflexivpronomen (sich), das sich auf das Subjekt zurückbezieht. Nur in der 1. und 2. Person Singular unterscheiden sich Akkusativ (mich/dich) und Dativ (mir/dir) – sonst heißt es überall sich. Steht ein zusätzliches Akkusativobjekt im Satz, kommt das Reflexivpronomen in den Dativ: Ich wasche mich, aber Ich wasche mir die Hände.",
@@ -8005,7 +8559,9 @@ const GRAMMAR = [
    "am": "ራስ-ተመላሽ ግሦች ወደ ባለቤቱ የሚመለስ ራስ-ተመላሽ ተውላጠ ስም (sich) ያስፈልጋቸዋል። Akkusativ (mich/dich) እና Dativ (mir/dir) የሚለያዩት በ1ኛ እና በ2ኛ አካል ነጠላ ብቻ ነው — በሌላው ሁሉ ቦታ sich ይባላል። በዓረፍተ ነገሩ ውስጥ ተጨማሪ የ Akkusativ ተሳቢ ካለ፣ ራስ-ተመላሽ ተውላጠ ስሙ ወደ Dativ ይለወጣል፦ Ich wasche mich (ራሴን እታጠባለሁ)፣ ነገር ግን Ich wasche mir die Hände (እጆቼን እታጠባለሁ)።",
    "es_mx": "Los verbos reflexivos necesitan un pronombre reflexivo (sich) que remite al sujeto. Solo en la 1.ª y 2.ª persona del singular se distinguen el acusativo (mich/dich) y el dativo (mir/dir); en todas las demás la forma es simplemente sich. Cuando la oración lleva además un objeto en acusativo, el pronombre reflexivo pasa al dativo: Ich wasche mich (me lavo) pero Ich wasche mir die Hände (me lavo las manos).",
    "ca": "Els verbs reflexius necessiten un pronom reflexiu (sich) que remet al subjecte. Només a la 1a i 2a persona del singular es distingeixen l'acusatiu (mich/dich) i el datiu (mir/dir); a la resta la forma és simplement sich. Quan l'oració porta a més un objecte en acusatiu, el pronom reflexiu passa al datiu: Ich wasche mich (em rento) però Ich wasche mir die Hände (em rento les mans).",
-   "hr": "Povratni glagoli trebaju povratnu zamjenicu (sich) koja se odnosi natrag na subjekt. Samo se u 1. i 2. licu jednine razlikuju akuzativ (mich/dich) i dativ (mir/dir) – inače je svugdje sich. Ako je u rečenici i dodatni objekt u akuzativu, povratna zamjenica dolazi u dativ: Ich wasche mich, ali Ich wasche mir die Hände."
+   "hr": "Povratni glagoli trebaju povratnu zamjenicu (sich) koja se odnosi natrag na subjekt. Samo se u 1. i 2. licu jednine razlikuju akuzativ (mich/dich) i dativ (mir/dir) – inače je svugdje sich. Ako je u rečenici i dodatni objekt u akuzativu, povratna zamjenica dolazi u dativ: Ich wasche mich, ali Ich wasche mir die Hände.",
+   "sr": "Повратним глаголима потребна је повратна заменица (sich) која се односи на субјекат. Само у 1. и 2. лицу једнине разликују се акузатив (mich/dich) и датив (mir/dir) – свуда другде стоји sich. Ако у реченици постоји и додатни објекат у акузативу, повратна заменица прелази у датив: Ich wasche mich, али Ich wasche mir die Hände.",
+   "el": "Τα αυτοπαθή ρήματα χρειάζονται μια αυτοπαθή αντωνυμία (sich) που αναφέρεται πίσω στο υποκείμενο. Μόνο στο 1ο και 2ο πρόσωπο ενικού διαφέρουν η αιτιατική (mich/dich) και η δοτική (mir/dir) – παντού αλλού η μορφή είναι απλώς sich. Όταν στην πρόταση υπάρχει και ένα ξεχωριστό αντικείμενο σε αιτιατική, η αυτοπαθής αντωνυμία μπαίνει σε δοτική: Ich wasche mich, αλλά Ich wasche mir die Hände."
   },
   "tables": [
    {
@@ -8030,7 +8586,9 @@ const GRAMMAR = [
      "am": "ራስ-ተመላሽ ተውላጠ ስሞች፦ Akkusativ እና Dativ",
      "es_mx": "Pronombres reflexivos: acusativo y dativo",
      "ca": "Pronoms reflexius: acusatiu i datiu",
-     "hr": "Povratne zamjenice: akuzativ i dativ"
+     "hr": "Povratne zamjenice: akuzativ i dativ",
+     "sr": "Повратне заменице: акузатив и датив",
+     "el": "Αυτοπαθείς αντωνυμίες: αιτιατική και δοτική"
     },
     "labelHeader": {
      "de": "",
@@ -8063,7 +8621,9 @@ const GRAMMAR = [
       "am": "ባለቤት",
       "es_mx": "Sujeto",
       "ca": "Subjecte",
-      "hr": "Subjekt"
+      "hr": "Subjekt",
+      "sr": "Субјекат",
+      "el": "Υποκείμενο"
      },
      {
       "de": "Akkusativ",
@@ -8086,7 +8646,9 @@ const GRAMMAR = [
       "am": "Akkusativ",
       "es_mx": "Acusativo",
       "ca": "Acusatiu",
-      "hr": "Akuzativ"
+      "hr": "Akuzativ",
+      "sr": "Акузатив",
+      "el": "Αιτιατική"
      },
      {
       "de": "Dativ",
@@ -8109,7 +8671,9 @@ const GRAMMAR = [
       "am": "Dativ",
       "es_mx": "Dativo",
       "ca": "Datiu",
-      "hr": "Dativ"
+      "hr": "Dativ",
+      "sr": "Датив",
+      "el": "Δοτική"
      }
     ],
     "rows": [
@@ -8233,7 +8797,9 @@ const GRAMMAR = [
      "am": "የተለመዱ ራስ-ተመላሽ ግሦች",
      "es_mx": "Verbos reflexivos frecuentes",
      "ca": "Verbs reflexius freqüents",
-     "hr": "Česti povratni glagoli"
+     "hr": "Česti povratni glagoli",
+     "sr": "Чести повратни глаголи",
+     "el": "Συχνά αυτοπαθή ρήματα"
     },
     "labelHeader": {
      "de": "Bedeutung",
@@ -8256,7 +8822,9 @@ const GRAMMAR = [
      "am": "ትርጉም",
      "es_mx": "Significado",
      "ca": "Significat",
-     "hr": "Značenje"
+     "hr": "Značenje",
+     "sr": "Значење",
+     "el": "Σημασία"
     },
     "columns": [
      {
@@ -8280,7 +8848,9 @@ const GRAMMAR = [
       "am": "ግስ + ተያያዥ ጉዳይ/መስተዋድድ",
       "es_mx": "Verbo + caso / preposición",
       "ca": "Verb + cas / preposició",
-      "hr": "Glagol + rekcija (padež / prijedlog)"
+      "hr": "Glagol + rekcija (padež / prijedlog)",
+      "sr": "Глагол + рекција",
+      "el": "Ρήμα + σύνταξη (πτώση / πρόθεση)"
      }
     ],
     "rows": [
@@ -8306,7 +8876,9 @@ const GRAMMAR = [
        "am": "sich freuen (መደሰት/በጉጉት መጠባበቅ)",
        "es_mx": "alegrarse / ilusionarse por",
        "ca": "alegrar-se / esperar amb il·lusió",
-       "hr": "sich freuen (radost / radovanje unaprijed)"
+       "hr": "sich freuen (radost / radovanje unaprijed)",
+       "sr": "sich freuen (радост/радовање унапред)",
+       "el": "sich freuen (χαρά / προσμονή)"
       },
       "cells": [
        "sich freuen über/auf + Akk."
@@ -8334,7 +8906,9 @@ const GRAMMAR = [
        "am": "ፍላጎት/ትኩረት መያዝ",
        "es_mx": "interesarse por",
        "ca": "interessar-se per",
-       "hr": "zanimati se za"
+       "hr": "zanimati se za",
+       "sr": "интересовати се за",
+       "el": "έχω ενδιαφέρον για κάτι"
       },
       "cells": [
        "sich interessieren für + Akk."
@@ -8362,7 +8936,9 @@ const GRAMMAR = [
        "am": "sich erinnern (ማስታወስ)",
        "es_mx": "acordarse de, recordar",
        "ca": "recordar, recordar-se de",
-       "hr": "sjećati se"
+       "hr": "sjećati se",
+       "sr": "сећати се",
+       "el": "θυμάμαι"
       },
       "cells": [
        "sich erinnern an + Akk."
@@ -8390,7 +8966,9 @@ const GRAMMAR = [
        "am": "sich waschen (ራስን መታጠብ)",
        "es_mx": "lavarse",
        "ca": "rentar-se",
-       "hr": "prati se"
+       "hr": "prati se",
+       "sr": "прати се",
+       "el": "πλένομαι"
       },
       "cells": [
        "sich waschen (Akk.); + Objekt → Dat."
@@ -8421,7 +8999,9 @@ const GRAMMAR = [
     "am": "ራሴን እታጠባለሁ።",
     "es_mx": "Me lavo.",
     "ca": "Em rento.",
-    "hr": "Ich wasche mich. (Perem se.)"
+    "hr": "Ich wasche mich. (Perem se.)",
+    "sr": "Ich wasche mich.",
+    "el": "Ich wasche mich. (Πλένομαι.)"
    },
    {
     "de": "Ich wasche mir die Hände.",
@@ -8444,7 +9024,9 @@ const GRAMMAR = [
     "am": "እጆቼን እታጠባለሁ።",
     "es_mx": "Me lavo las manos.",
     "ca": "Em rento les mans.",
-    "hr": "Ich wasche mir die Hände. (Perem si ruke.)"
+    "hr": "Ich wasche mir die Hände. (Perem si ruke.)",
+    "sr": "Ich wasche mir die Hände.",
+    "el": "Ich wasche mir die Hände. (Πλένω τα χέρια μου.)"
    },
    {
     "de": "Ich freue mich auf das Wochenende.",
@@ -8467,7 +9049,9 @@ const GRAMMAR = [
     "am": "የሳምንቱን መጨረሻ በጉጉት እጠባበቃለሁ።",
     "es_mx": "Tengo ilusión por el fin de semana.",
     "ca": "Espero amb il·lusió el cap de setmana.",
-    "hr": "Ich freue mich auf das Wochenende. (Veselim se vikendu.)"
+    "hr": "Ich freue mich auf das Wochenende. (Veselim se vikendu.)",
+    "sr": "Ich freue mich auf das Wochenende.",
+    "el": "Ich freue mich auf das Wochenende. (Ανυπομονώ για το Σαββατοκύριακο.)"
    }
   ],
   "hints": {
@@ -8491,7 +9075,9 @@ const GRAMMAR = [
    "am": "ልብ በል፦ ich እና du ብቻ ናቸው Akkusativ (mich/dich) እና Dativ (mir/dir)ን የሚለያዩት — ሌላው ሁሉ ቅርጽ sich ነው። በዓረፍተ ነገሩ ውስጥ የ Akkusativ ተሳቢ እንደተገኘ ራስ-ተመላሽ ተውላጠ ስሙ ራሱ ወደ Dativ ይሸጋገራል (Ich wasche mir die Hände)።",
    "es_mx": "El inglés tiene pronombres reflexivos (myself/yourself), pero no cambian según el caso; el alemán sí: cambia a mir/dir en vez de mich/dich en cuanto hay un objeto directo aparte (Ich wasche mir die Hände). Además, muchos verbos son reflexivos en alemán pero no en español: sich freuen = «alegrarse», no «alegrarse a uno mismo».",
    "ca": "L'anglès té pronoms reflexius (myself/yourself), però no canvien segons el cas; l'alemany sí: canvia a mir/dir en lloc de mich/dich tan bon punt hi ha un objecte directe a part (Ich wasche mir die Hände). A més, molts verbs són reflexius en alemany però no en català: sich freuen = «alegrar-se», no «alegrar-se a un mateix».",
-   "hr": "Zapamti: Samo ich i du razlikuju akuzativ (mich/dich) i dativ (mir/dir) – svi ostali oblici su sich. Čim se u rečenici pojavi objekt u akuzativu, povratna zamjenica automatski prelazi u dativ (Ich wasche mir die Hände). Osim toga, mnogi su glagoli povratni u njemačkom, ali ne i u hrvatskom, i obrnuto: sich freuen = 'veseliti se'."
+   "hr": "Zapamti: Samo ich i du razlikuju akuzativ (mich/dich) i dativ (mir/dir) – svi ostali oblici su sich. Čim se u rečenici pojavi objekt u akuzativu, povratna zamjenica automatski prelazi u dativ (Ich wasche mir die Hände). Osim toga, mnogi su glagoli povratni u njemačkom, ali ne i u hrvatskom, i obrnuto: sich freuen = 'veseliti se'.",
+   "sr": "Запамти: Само ich и du разликују акузатив (mich/dich) и датив (mir/dir) – сви остали облици су sich. Чим се у реченици појави објекат у акузативу, повратна заменица аутоматски прелази у датив (Ich wasche mir die Hände). Осим тога, многи глаголи су у немачком повратни, а у српском не морају бити на исти начин: sich freuen = 'радовати се'.",
+   "el": "Πρόσεξε: Μόνο τα ich και du ξεχωρίζουν αιτιατική (mich/dich) και δοτική (mir/dir) – όλες οι άλλες μορφές είναι sich. Μόλις υπάρξει στην πρόταση ένα αντικείμενο σε αιτιατική, η αυτοπαθής αντωνυμία μετακινείται αυτόματα στη δοτική (Ich wasche mir die Hände). Επίσης, πολλά ρήματα είναι αυτοπαθή στα γερμανικά ενώ στα ελληνικά όχι: sich freuen = «χαίρομαι»."
   }
  },
  {
@@ -8518,7 +9104,9 @@ const GRAMMAR = [
    "am": "Konjunktiv II (würde / ምናባዊ ሁኔታ)",
    "es_mx": "Konjunktiv II (condicional / irreal)",
    "ca": "Konjunktiv II (condicional / hipotètic)",
-   "hr": "Konjunktiv II (würde / irealni)"
+   "hr": "Konjunktiv II (würde / irealni)",
+   "sr": "Конјунктив II (würde / иреалис)",
+   "el": "Konjunktiv II (würde / υποθετικός)"
   },
   "intro": {
    "de": "Der Konjunktiv II drückt Höflichkeit, Wünsche und irreale (hypothetische) Bedingungen aus – das deutsche „würde“. Im Alltag meist würde + Infinitiv, aber sein, haben und die Modalverben haben eigene Formen (wäre, hätte, könnte …).",
@@ -8541,7 +9129,9 @@ const GRAMMAR = [
    "am": "Konjunktiv II አክብሮትን፣ ምኞቶችን እና ምናባዊ (ግምታዊ) ሁኔታዎችን ይገልጻል — የጀርመንኛው 'would' ማለት ነው። በዕለት ተዕለት ንግግር አብዛኛውን ጊዜ würde + Infinitiv ጥቅም ላይ ይውላል፤ ነገር ግን sein, haben እና ሞዳል ግሦች የራሳቸው ቅርጽ አላቸው (wäre, hätte, könnte …)።",
    "es_mx": "El Konjunktiv II expresa cortesía, deseos y condiciones irreales (hipotéticas): el «would» del inglés, nuestro condicional. En el día a día: würde + infinitivo, pero sein, haben y los verbos modales tienen formas propias (wäre, hätte, könnte …).",
    "ca": "El Konjunktiv II expressa cortesia, desitjos i condicions irreals (hipotètiques): el «would» de l'anglès, el nostre condicional. En el dia a dia: würde + infinitiu, però sein, haben i els verbs modals tenen formes pròpies (wäre, hätte, könnte …).",
-   "hr": "Konjunktiv II izražava uljudnost, želje i irealne (hipotetske) uvjete – njemačko „würde“. U svakodnevnom govoru najčešće würde + infinitiv, ali sein, haben i modalni glagoli imaju vlastite oblike (wäre, hätte, könnte …)."
+   "hr": "Konjunktiv II izražava uljudnost, želje i irealne (hipotetske) uvjete – njemačko „würde“. U svakodnevnom govoru najčešće würde + infinitiv, ali sein, haben i modalni glagoli imaju vlastite oblike (wäre, hätte, könnte …).",
+   "sr": "Конјунктив II изражава учтивост, жеље и иреалне (хипотетичке) услове – немачко „würde“. У свакодневном говору најчешће würde + инфинитив, али sein, haben и модални глаголи имају сопствене облике (wäre, hätte, könnte …).",
+   "el": "Ο Konjunktiv II εκφράζει ευγένεια, ευχές και μη πραγματικές (υποθετικές) συνθήκες – το γερμανικό „würde“ (θα). Στην καθημερινότητα συνήθως würde + απαρέμφατο, αλλά τα sein, haben και τα βοηθητικά ρήματα τρόπου έχουν δικούς τους τύπους (wäre, hätte, könnte …)."
   },
   "tables": [
    {
@@ -8566,7 +9156,9 @@ const GRAMMAR = [
      "am": "würde + Infinitiv (ምሳሌ፦ gehen = መሄድ)",
      "es_mx": "würde + infinitivo (ejemplo: gehen = ir)",
      "ca": "würde + infinitiu (exemple: gehen = anar)",
-     "hr": "würde + infinitiv (primjer: gehen = ići)"
+     "hr": "würde + infinitiv (primjer: gehen = ići)",
+     "sr": "würde + инфинитив (пример: gehen = ићи)",
+     "el": "würde + απαρέμφατο (παράδειγμα: gehen = πηγαίνω)"
     },
     "labelHeader": {
      "de": "",
@@ -8599,7 +9191,9 @@ const GRAMMAR = [
       "am": "አካል",
       "es_mx": "Persona",
       "ca": "Persona",
-      "hr": "Osoba"
+      "hr": "Osoba",
+      "sr": "Лице",
+      "el": "Πρόσωπο"
      },
      {
       "de": "würde-Form + Infinitiv",
@@ -8622,7 +9216,9 @@ const GRAMMAR = [
       "am": "würde-ቅርጽ + Infinitiv",
       "es_mx": "forma würde + infinitivo",
       "ca": "forma würde + infinitiu",
-      "hr": "oblik würde + infinitiv"
+      "hr": "oblik würde + infinitiv",
+      "sr": "облик würde + инфинитив",
+      "el": "τύπος würde + απαρέμφατο"
      }
     ],
     "rows": [
@@ -8740,7 +9336,9 @@ const GRAMMAR = [
      "am": "ወሳኝ የራሳቸው Konjunktiv II ቅርጽ ያላቸው ግሦች (መደበኛ ያልሆኑ)",
      "es_mx": "Verbos clave con forma propia de Konjunktiv II (irregulares)",
      "ca": "Verbs clau amb forma pròpia de Konjunktiv II (irregulars)",
-     "hr": "Važni glagoli s vlastitim oblikom konjunktiva II (nepravilni)"
+     "hr": "Važni glagoli s vlastitim oblikom konjunktiva II (nepravilni)",
+     "sr": "Важни глаголи са сопственим обликом конјунктива II (неправилни)",
+     "el": "Σημαντικά ρήματα με δικό τους τύπο Konjunktiv II (ανώμαλα)"
     },
     "labelHeader": {
      "de": "Verb",
@@ -8763,7 +9361,9 @@ const GRAMMAR = [
      "am": "ግስ",
      "es_mx": "Verbo",
      "ca": "Verb",
-     "hr": "Glagol"
+     "hr": "Glagol",
+     "sr": "Глагол",
+     "el": "Ρήμα"
     },
     "columns": [
      {
@@ -8787,7 +9387,9 @@ const GRAMMAR = [
       "am": "እኔ",
       "es_mx": "yo",
       "ca": "jo",
-      "hr": "ja"
+      "hr": "ja",
+      "sr": "ја",
+      "el": "εγώ"
      },
      {
       "de": "du",
@@ -8810,7 +9412,9 @@ const GRAMMAR = [
       "am": "አንተ/አንቺ",
       "es_mx": "tú",
       "ca": "tu",
-      "hr": "ti"
+      "hr": "ti",
+      "sr": "ти",
+      "el": "εσύ"
      },
      {
       "de": "er/sie/es",
@@ -8833,7 +9437,9 @@ const GRAMMAR = [
       "am": "እሱ/እሷ",
       "es_mx": "él/ella/ello",
       "ca": "ell/ella/això",
-      "hr": "on/ona/ono"
+      "hr": "on/ona/ono",
+      "sr": "он/она/оно",
+      "el": "αυτός/αυτή/αυτό"
      }
     ],
     "rows": [
@@ -8859,7 +9465,9 @@ const GRAMMAR = [
        "am": "sein (መሆን)",
        "es_mx": "sein (ser/estar)",
        "ca": "sein (ser/estar)",
-       "hr": "sein (biti)"
+       "hr": "sein (biti)",
+       "sr": "sein (бити)",
+       "el": "sein (είμαι)"
       },
       "cells": [
        "wäre",
@@ -8889,7 +9497,9 @@ const GRAMMAR = [
        "am": "haben (መያዝ)",
        "es_mx": "haben (tener/haber)",
        "ca": "haben (tenir/haver)",
-       "hr": "haben (imati)"
+       "hr": "haben (imati)",
+       "sr": "haben (имати)",
+       "el": "haben (έχω)"
       },
       "cells": [
        "hätte",
@@ -8919,7 +9529,9 @@ const GRAMMAR = [
        "am": "werden (መሆን)",
        "es_mx": "werden (futuro / volverse)",
        "ca": "werden (futur / esdevenir)",
-       "hr": "werden (postati / pomoćni za futur)"
+       "hr": "werden (postati / pomoćni za futur)",
+       "sr": "werden (постати / помоћни за футур)",
+       "el": "werden (θα / γίνομαι)"
       },
       "cells": [
        "würde",
@@ -8949,7 +9561,9 @@ const GRAMMAR = [
        "am": "können (መቻል)",
        "es_mx": "können (poder)",
        "ca": "können (poder)",
-       "hr": "können (moći)"
+       "hr": "können (moći)",
+       "sr": "können (моћи)",
+       "el": "können (μπορώ)"
       },
       "cells": [
        "könnte",
@@ -8979,7 +9593,9 @@ const GRAMMAR = [
        "am": "müssen (መገደድ)",
        "es_mx": "müssen (deber / tener que)",
        "ca": "müssen (haver de)",
-       "hr": "müssen (morati)"
+       "hr": "müssen (morati)",
+       "sr": "müssen (морати)",
+       "el": "müssen (πρέπει)"
       },
       "cells": [
        "müsste",
@@ -9009,7 +9625,9 @@ const GRAMMAR = [
        "am": "dürfen (መፈቀድ)",
        "es_mx": "dürfen (poder / tener permiso)",
        "ca": "dürfen (poder / tenir permís)",
-       "hr": "dürfen (smjeti)"
+       "hr": "dürfen (smjeti)",
+       "sr": "dürfen (смети)",
+       "el": "dürfen (επιτρέπεται)"
       },
       "cells": [
        "dürfte",
@@ -9039,7 +9657,9 @@ const GRAMMAR = [
        "am": "sollen (ይገባል)",
        "es_mx": "sollen (deber)",
        "ca": "sollen (haver de)",
-       "hr": "sollen (trebati)"
+       "hr": "sollen (trebati)",
+       "sr": "sollen (требати)",
+       "el": "sollen (οφείλω / θα έπρεπε)"
       },
       "cells": [
        "sollte",
@@ -9069,7 +9689,9 @@ const GRAMMAR = [
        "am": "wollen (መፈለግ)",
        "es_mx": "wollen (querer)",
        "ca": "wollen (voler)",
-       "hr": "wollen (htjeti)"
+       "hr": "wollen (htjeti)",
+       "sr": "wollen (хтети)",
+       "el": "wollen (θέλω)"
       },
       "cells": [
        "wollte",
@@ -9099,7 +9721,9 @@ const GRAMMAR = [
        "am": "mögen → möchte (መውደድ → እፈልጋለሁ)",
        "es_mx": "mögen → möchte (querría / gustaría)",
        "ca": "mögen → möchte (voldria / agradaria)",
-       "hr": "mögen → möchte (želio bih / htio bih)"
+       "hr": "mögen → möchte (želio bih / htio bih)",
+       "sr": "mögen → möchte (желео бих)",
+       "el": "mögen → möchte (θα ήθελα)"
       },
       "cells": [
        "möchte",
@@ -9132,7 +9756,9 @@ const GRAMMAR = [
     "am": "እባክዎን ሊረዱኝ ይችሉ ይሆን?",
     "es_mx": "¿Podría ayudarme, por favor?",
     "ca": "Em podria ajudar, si us plau?",
-    "hr": "Könnten Sie mir bitte helfen? (Biste li mi, molim Vas, mogli pomoći?)"
+    "hr": "Könnten Sie mir bitte helfen? (Biste li mi, molim Vas, mogli pomoći?)",
+    "sr": "Können Sie mir bitte helfen? (Да ли бисте могли да ми помогнете, молим вас?)",
+    "el": "Könnten Sie mir bitte helfen? (Θα μπορούσατε να με βοηθήσετε, παρακαλώ;)"
    },
    {
     "de": "Wenn ich mehr Zeit hätte, würde ich mehr lesen.",
@@ -9155,7 +9781,9 @@ const GRAMMAR = [
     "am": "ተጨማሪ ጊዜ ቢኖረኝ ኖሮ ብዙ ባነበብኩ ነበር።",
     "es_mx": "Si tuviera más tiempo, leería más.",
     "ca": "Si tingués més temps, llegiria més.",
-    "hr": "Wenn ich mehr Zeit hätte, würde ich mehr lesen. (Kad bih imao više vremena, više bih čitao.)"
+    "hr": "Wenn ich mehr Zeit hätte, würde ich mehr lesen. (Kad bih imao više vremena, više bih čitao.)",
+    "sr": "Wenn ich mehr Zeit hätte, würde ich mehr lesen. (Кад бих имао више времена, више бих читао.)",
+    "el": "Wenn ich mehr Zeit hätte, würde ich mehr lesen. (Αν είχα περισσότερο χρόνο, θα διάβαζα περισσότερο.)"
    },
    {
     "de": "Du solltest zum Arzt gehen.",
@@ -9178,7 +9806,9 @@ const GRAMMAR = [
     "am": "ወደ ሐኪም መሄድ አለብህ።",
     "es_mx": "Deberías ir al médico.",
     "ca": "Hauries d'anar al metge.",
-    "hr": "Du solltest zum Arzt gehen. (Trebao bi otići liječniku.)"
+    "hr": "Du solltest zum Arzt gehen. (Trebao bi otići liječniku.)",
+    "sr": "Du solltest zum Arzt gehen. (Требало би да одеш код лекара.)",
+    "el": "Du solltest zum Arzt gehen. (Θα έπρεπε να πας στον γιατρό.)"
    }
   ],
   "hints": {
@@ -9202,7 +9832,9 @@ const GRAMMAR = [
    "am": "በዕለት ተዕለት ንግግር፦ würde + Infinitiv። ነገር ግን sein, haben እና ሞዳል ግሦች የራሳቸውን ቅርጽ ይይዛሉ፦ wäre, hätte, könnte, müsste, dürfte, sollte, wollte, möchte። መሠረታዊ ደንብ፦ 'würde sein/haben/können' ማለትን አስወግድ — በቀጥታ wäre/hätte/könnte በል።",
    "es_mx": "El Konjunktiv II ≈ el condicional español: würde + verbo equivale a la terminación -ría (leería), y wäre/hätte/könnte/sollte corresponden a «fuera/sería, tuviera/tendría, podría, debería». Trampa: nunca lo formes con würde + sein/haben/können; usa las formas de una sola palabra wäre/hätte/könnte, igual que en español dices «si tuviera», no «si tendría».",
    "ca": "El Konjunktiv II ≈ el condicional català: würde + verb equival a la terminació -ria (llegiria), i wäre/hätte/könnte/sollte corresponen a «fos/seria, tingués/tindria, podria, hauria de». Parany: no el formis mai amb würde + sein/haben/können; usa les formes d'una sola paraula wäre/hätte/könnte, igual que en català dius «si tingués», no «si tindria».",
-   "hr": "Svakodnevno: würde + infinitiv. Ali sein, haben i modalni glagoli uzimaju vlastite oblike: wäre, hätte, könnte, müsste, dürfte, sollte, wollte, möchte. Pravilo: izbjegavaj „würde sein/haben/können“ – reci izravno wäre/hätte/könnte."
+   "hr": "Svakodnevno: würde + infinitiv. Ali sein, haben i modalni glagoli uzimaju vlastite oblike: wäre, hätte, könnte, müsste, dürfte, sollte, wollte, möchte. Pravilo: izbjegavaj „würde sein/haben/können“ – reci izravno wäre/hätte/könnte.",
+   "sr": "Свакодневни говор: würde + инфинитив. Али sein, haben и модални глаголи узимају сопствене облике: wäre, hätte, könnte, müsste, dürfte, sollte, wollte, möchte. Правило: избегавајте „würde sein/haben/können“ – реците директно wäre/hätte/könnte.",
+   "el": "Καθημερινά: würde + απαρέμφατο. Όμως τα sein, haben και τα ρήματα τρόπου παίρνουν δικούς τους τύπους: wäre, hätte, könnte, müsste, dürfte, sollte, wollte, möchte. Κανόνας: απόφυγε το „würde sein/haben/können“ – πες κατευθείαν wäre/hätte/könnte."
   }
  },
  {
@@ -9229,7 +9861,9 @@ const GRAMMAR = [
    "am": "ተገብሮ (Passiv) — የሂደት ተገብሮ (Vorgangspassiv)",
    "es_mx": "La voz pasiva (Vorgangspassiv)",
    "ca": "La veu passiva (Vorgangspassiv)",
-   "hr": "Pasiv (pasiv radnje)"
+   "hr": "Pasiv (pasiv radnje)",
+   "sr": "Пасив (пасив радње)",
+   "el": "Η παθητική φωνή (παθητική ενέργειας)"
   },
   "intro": {
    "de": "Das Vorgangspassiv bildet man mit werden (konjugiert) + Partizip II am Satzende. Es rückt die Handlung in den Vordergrund; wer sie ausführt, bleibt oft ungenannt.",
@@ -9252,7 +9886,9 @@ const GRAMMAR = [
    "am": "የሂደት ተገብሮ (Vorgangspassiv) የሚሠራው በተገለበጠ werden + Partizip II በዓረፍተ ነገሩ መጨረሻ ነው። ይህ ድርጊቱን ወደ ፊት ያመጣል፤ ማን እንዳደረገው ብዙ ጊዜ አይጠቀስም።",
    "es_mx": "La pasiva de proceso (Vorgangspassiv) se forma con werden conjugado más el participio (Partizip II) al final de la oración. Pone en primer plano la acción misma, mientras que quien la realiza suele quedar sin mencionar.",
    "ca": "La passiva de procés (Vorgangspassiv) es forma amb werden conjugat més el participi (Partizip II) al final de l'oració. Posa en primer pla l'acció mateixa, mentre que qui la fa sovint queda sense esmentar.",
-   "hr": "Pasiv radnje (Vorgangspassiv) tvori se pomoću konjugiranog glagola werden i participa perfekta (Partizip II) na kraju rečenice. Ističe samu radnju, dok onaj tko je vrši često ostaje nespomenut."
+   "hr": "Pasiv radnje (Vorgangspassiv) tvori se pomoću konjugiranog glagola werden i participa perfekta (Partizip II) na kraju rečenice. Ističe samu radnju, dok onaj tko je vrši često ostaje nespomenut.",
+   "sr": "Пасив радње (Vorgangspassiv) гради се помоћу конјугованог глагола werden и партиципа перфекта (Partizip II) на крају реченице. Он ставља саму радњу у први план, док онај ко је врши често остаје непоменут.",
+   "el": "Την παθητική ενέργειας (Vorgangspassiv) τη σχηματίζουμε με το werden (κλιμένο) + μετοχή παρακειμένου (Partizip II) στο τέλος της πρότασης. Φέρνει την πράξη στο προσκήνιο· ποιος την εκτελεί μένει συχνά ανείπωτο."
   },
   "tables": [
    {
@@ -9277,7 +9913,9 @@ const GRAMMAR = [
      "am": "ተገብሮ በተለያዩ ጊዜያት (ምሳሌ ግስ፦ bauen = መገንባት)",
      "es_mx": "La pasiva en los distintos tiempos (verbo de ejemplo: bauen = construir)",
      "ca": "La passiva en els diferents temps (verb d'exemple: bauen = construir)",
-     "hr": "Pasiv kroz vremena (primjer glagola: bauen)"
+     "hr": "Pasiv kroz vremena (primjer glagola: bauen)",
+     "sr": "Пасив кроз времена (пример глагола: bauen)",
+     "el": "Η παθητική στους χρόνους (παράδειγμα ρήματος: bauen)"
     },
     "labelHeader": {
      "de": "Zeitform",
@@ -9300,7 +9938,9 @@ const GRAMMAR = [
      "am": "የጊዜ ቅርጽ",
      "es_mx": "Tiempo",
      "ca": "Temps",
-     "hr": "Glagolsko vrijeme"
+     "hr": "Glagolsko vrijeme",
+     "sr": "Глаголско време",
+     "el": "Χρόνος"
     },
     "columns": [
      {
@@ -9324,7 +9964,9 @@ const GRAMMAR = [
       "am": "የተገብሮ ቅርጽ",
       "es_mx": "Forma pasiva",
       "ca": "Forma passiva",
-      "hr": "Pasivni oblik"
+      "hr": "Pasivni oblik",
+      "sr": "Пасивни облик",
+      "el": "Παθητικός τύπος"
      },
      {
       "de": "Beispielsatz",
@@ -9347,7 +9989,9 @@ const GRAMMAR = [
       "am": "ምሳሌ ዓረፍተ ነገር",
       "es_mx": "Oración de ejemplo",
       "ca": "Oració d'exemple",
-      "hr": "Primjer rečenice"
+      "hr": "Primjer rečenice",
+      "sr": "Пример реченице",
+      "el": "Παράδειγμα πρότασης"
      }
     ],
     "rows": [
@@ -9373,7 +10017,9 @@ const GRAMMAR = [
        "am": "Präsens",
        "es_mx": "Presente",
        "ca": "Present",
-       "hr": "Prezent"
+       "hr": "Prezent",
+       "sr": "Презент",
+       "el": "Ενεστώτας"
       },
       "cells": [
        "wird gebaut",
@@ -9402,7 +10048,9 @@ const GRAMMAR = [
        "am": "Präteritum",
        "es_mx": "Pretérito (Präteritum)",
        "ca": "Passat simple (Präteritum)",
-       "hr": "Preterit"
+       "hr": "Preterit",
+       "sr": "Претерит",
+       "el": "Παρατατικός/Αόριστος"
       },
       "cells": [
        "wurde gebaut",
@@ -9431,7 +10079,9 @@ const GRAMMAR = [
        "am": "Perfekt",
        "es_mx": "Perfecto (Perfekt)",
        "ca": "Perfet (Perfekt)",
-       "hr": "Perfekt"
+       "hr": "Perfekt",
+       "sr": "Перфекат",
+       "el": "Παρακείμενος"
       },
       "cells": [
        "ist gebaut worden",
@@ -9460,7 +10110,9 @@ const GRAMMAR = [
        "am": "Futur I",
        "es_mx": "Futuro (Futur I)",
        "ca": "Futur (Futur I)",
-       "hr": "Futur I."
+       "hr": "Futur I.",
+       "sr": "Футур I",
+       "el": "Μέλλοντας I"
       },
       "cells": [
        "wird gebaut werden",
@@ -9489,7 +10141,9 @@ const GRAMMAR = [
        "am": "ከሞዳል ግስ ጋር",
        "es_mx": "con verbo modal",
        "ca": "amb verb modal",
-       "hr": "S modalnim glagolom"
+       "hr": "S modalnim glagolom",
+       "sr": "са модалним глаголом",
+       "el": "Με βοηθητικό ρήμα (modal)"
       },
       "cells": [
        "muss gebaut werden",
@@ -9520,7 +10174,9 @@ const GRAMMAR = [
      "am": "ፈጻሚው፦ von ወይስ durch",
      "es_mx": "El agente: von o durch",
      "ca": "L'agent: von o durch",
-     "hr": "Vršitelj radnje: von ili durch"
+     "hr": "Vršitelj radnje: von ili durch",
+     "sr": "Вршилац радње: von или durch",
+     "el": "Ο δράστης: von ή durch"
     },
     "labelHeader": {
      "de": "Bedeutung",
@@ -9543,7 +10199,9 @@ const GRAMMAR = [
      "am": "ትርጉም",
      "es_mx": "Significado",
      "ca": "Significat",
-     "hr": "Značenje"
+     "hr": "Značenje",
+     "sr": "Значење",
+     "el": "Σημασία"
     },
     "columns": [
      {
@@ -9567,7 +10225,9 @@ const GRAMMAR = [
       "am": "መስተዋድድ + ጉዳይ",
       "es_mx": "Preposición + caso",
       "ca": "Preposició + cas",
-      "hr": "Prijedlog + padež"
+      "hr": "Prijedlog + padež",
+      "sr": "Предлог + падеж",
+      "el": "Πρόθεση + πτώση"
      },
      {
       "de": "Beispiel",
@@ -9590,7 +10250,9 @@ const GRAMMAR = [
       "am": "ምሳሌ",
       "es_mx": "Ejemplo",
       "ca": "Exemple",
-      "hr": "Primjer"
+      "hr": "Primjer",
+      "sr": "Пример",
+      "el": "Παράδειγμα"
      }
     ],
     "rows": [
@@ -9616,7 +10278,9 @@ const GRAMMAR = [
        "am": "ሰው / ምክንያት (ፈጻሚ)",
        "es_mx": "persona / causa (agente)",
        "ca": "persona / causa (agent)",
-       "hr": "Osoba / uzrok (vršitelj)"
+       "hr": "Osoba / uzrok (vršitelj)",
+       "sr": "Особа / узрок (вршилац)",
+       "el": "Πρόσωπο / αιτία (δράστης)"
       },
       "cells": [
        "von + Dativ",
@@ -9645,7 +10309,9 @@ const GRAMMAR = [
        "am": "መሣሪያ / ዘዴ",
        "es_mx": "medio / instrumento",
        "ca": "mitjà / instrument",
-       "hr": "Sredstvo / instrument"
+       "hr": "Sredstvo / instrument",
+       "sr": "Средство / инструмент",
+       "el": "Μέσο / εργαλείο"
       },
       "cells": [
        "durch + Akkusativ",
@@ -9676,7 +10342,9 @@ const GRAMMAR = [
      "am": "ንቁ ወደ ተገብሮ ይለወጣል",
      "es_mx": "El activo se convierte en pasivo",
      "ca": "L'activa esdevé passiva",
-     "hr": "Aktiv postaje pasiv"
+     "hr": "Aktiv postaje pasiv",
+     "sr": "Актив постаје пасив",
+     "el": "Η ενεργητική γίνεται παθητική"
     },
     "labelHeader": {
      "de": "",
@@ -9709,7 +10377,9 @@ const GRAMMAR = [
       "am": "ንቁ (Aktiv)",
       "es_mx": "Activa",
       "ca": "Activa",
-      "hr": "Aktiv"
+      "hr": "Aktiv",
+      "sr": "Актив",
+      "el": "Ενεργητική"
      },
      {
       "de": "Passiv",
@@ -9732,7 +10402,9 @@ const GRAMMAR = [
       "am": "ተገብሮ (Passiv)",
       "es_mx": "Pasiva",
       "ca": "Passiva",
-      "hr": "Pasiv"
+      "hr": "Pasiv",
+      "sr": "Пасив",
+      "el": "Παθητική"
      }
     ],
     "rows": [
@@ -9775,7 +10447,9 @@ const GRAMMAR = [
      "am": "ሂደት (werden) በተቃራኒ ሁኔታ (sein)",
      "es_mx": "Proceso (werden) vs. estado (sein)",
      "ca": "Procés (werden) vs. estat (sein)",
-     "hr": "Radnja (werden) nasuprot stanju (sein)"
+     "hr": "Radnja (werden) nasuprot stanju (sein)",
+     "sr": "Радња (werden) наспрам стања (sein)",
+     "el": "Ενέργεια (werden) vs. κατάσταση (sein)"
     },
     "labelHeader": {
      "de": "",
@@ -9808,7 +10482,9 @@ const GRAMMAR = [
       "am": "የሂደት ተገብሮ — werden",
       "es_mx": "Pasiva de proceso – werden",
       "ca": "Passiva de procés – werden",
-      "hr": "Pasiv radnje – werden"
+      "hr": "Pasiv radnje – werden",
+      "sr": "Пасив радње – werden",
+      "el": "Παθητική ενέργειας – werden"
      },
      {
       "de": "Zustandspassiv – sein",
@@ -9831,7 +10507,9 @@ const GRAMMAR = [
       "am": "የሁኔታ ተገብሮ — sein",
       "es_mx": "Pasiva de estado – sein",
       "ca": "Passiva d'estat – sein",
-      "hr": "Pasiv stanja – sein"
+      "hr": "Pasiv stanja – sein",
+      "sr": "Пасив стања – sein",
+      "el": "Παθητική κατάστασης – sein"
      }
     ],
     "rows": [
@@ -9875,7 +10553,9 @@ const GRAMMAR = [
     "am": "ደብዳቤው ነገ በጸሐፊዋ ይጻፋል።",
     "es_mx": "La carta será escrita mañana por la secretaria.",
     "ca": "La carta serà escrita demà per la secretària.",
-    "hr": "Der Brief wird morgen von der Sekretärin geschrieben. (Pismo će sutra napisati tajnica.)"
+    "hr": "Der Brief wird morgen von der Sekretärin geschrieben. (Pismo će sutra napisati tajnica.)",
+    "sr": "Der Brief wird morgen von der Sekretärin geschrieben. (Писмо ће сутра написати секретарица.)",
+    "el": "Der Brief wird morgen von der Sekretärin geschrieben. (Το γράμμα θα γραφτεί αύριο από τη γραμματέα.)"
    },
    {
     "de": "Das alte Rathaus wurde durch einen Brand zerstört.",
@@ -9898,7 +10578,9 @@ const GRAMMAR = [
     "am": "አሮጌው የከተማ አዳራሽ በእሳት ቃጠሎ ወድሟል።",
     "es_mx": "El antiguo ayuntamiento fue destruido por un incendio.",
     "ca": "L'antic ajuntament va ser destruït per un incendi.",
-    "hr": "Das alte Rathaus wurde durch einen Brand zerstört. (Stara je vijećnica uništena u požaru.)"
+    "hr": "Das alte Rathaus wurde durch einen Brand zerstört. (Stara je vijećnica uništena u požaru.)",
+    "sr": "Das alte Rathaus wurde durch einen Brand zerstört. (Стара градска већница уништена је пожаром.)",
+    "el": "Das alte Rathaus wurde durch einen Brand zerstört. (Το παλιό δημαρχείο καταστράφηκε από μια πυρκαγιά.)"
    },
    {
     "de": "Die Rechnung muss bis Freitag bezahlt werden.",
@@ -9921,7 +10603,9 @@ const GRAMMAR = [
     "am": "ክፍያው እስከ ዓርብ መከፈል አለበት።",
     "es_mx": "La factura tiene que pagarse antes del viernes.",
     "ca": "La factura s'ha de pagar abans de divendres.",
-    "hr": "Die Rechnung muss bis Freitag bezahlt werden. (Račun mora biti plaćen do petka.)"
+    "hr": "Die Rechnung muss bis Freitag bezahlt werden. (Račun mora biti plaćen do petka.)",
+    "sr": "Die Rechnung muss bis Freitag bezahlt werden. (Рачун мора бити плаћен до петка.)",
+    "el": "Die Rechnung muss bis Freitag bezahlt werden. (Ο λογαριασμός πρέπει να πληρωθεί μέχρι την Παρασκευή.)"
    }
   ],
   "hints": {
@@ -9945,7 +10629,9 @@ const GRAMMAR = [
    "am": "የሂደት ተገብሮ = werden + Partizip II (Partizip በዓረፍተ ነገሩ መጨረሻ)። ልብ በል፦ በ Perfekt ውስጥ 'ist gebaut worden' ይባላል (worden እንጂ geworden አይደለም)። ፈጻሚ/ምክንያት ከ von + Dativ ጋር፣ መሣሪያ ደግሞ ከ durch + Akkusativ ጋር ይገለጻል።",
    "es_mx": "El inglés también usa «be + participio» (the house is built), así que la idea es familiar; pero el alemán la divide: werden marca la acción en curso y sein el estado resultante. «wird gebaut» = se está construyendo; «ist gebaut» = ya está construido. En el Perfekt el participio es «worden», nunca «geworden». El agente se introduce con von + dativo (persona/causa) y el medio con durch + acusativo.",
    "ca": "L'anglès també usa «be + participi» (the house is built), així que la idea és familiar; però l'alemany la divideix: werden marca l'acció en curs i sein l'estat resultant. «wird gebaut» = s'està construint; «ist gebaut» = ja està construït. Al Perfekt el participi és «worden», mai «geworden». L'agent s'introdueix amb von + datiu (persona/causa) i el mitjà amb durch + acusatiu.",
-   "hr": "Pasiv radnje = werden + Partizip II (particip na kraju rečenice). Zapamti: u perfektu glasi „ist gebaut worden“ (worden, a ne geworden). Vršitelj/uzrok s von + dativ, sredstvo s durch + akuzativ."
+   "hr": "Pasiv radnje = werden + Partizip II (particip na kraju rečenice). Zapamti: u perfektu glasi „ist gebaut worden“ (worden, a ne geworden). Vršitelj/uzrok s von + dativ, sredstvo s durch + akuzativ.",
+   "sr": "Пасив радње = werden + Partizip II (партицип на крају реченице). Запамти: у перфекту се каже „ist gebaut worden“ (worden, а не geworden). Вршилац/узрок се изражава са von + датив, а средство са durch + акузатив.",
+   "el": "Παθητική ενέργειας = werden + μετοχή παρακειμένου (η μετοχή στο τέλος της πρότασης). Πρόσεξε: στον παρακείμενο λέμε „ist gebaut worden“ (worden, όχι geworden). Δράστης/αιτία με von + δοτική, μέσο με durch + αιτιατική."
   }
  },
  {
@@ -9972,7 +10658,9 @@ const GRAMMAR = [
    "am": "መስተዋድዶች እና ጉዳዮች (Präpositionen & Fälle)",
    "es_mx": "Preposiciones y casos",
    "ca": "Preposicions i casos",
-   "hr": "Prijedlozi i padeži"
+   "hr": "Prijedlozi i padeži",
+   "sr": "Предлози и падежи",
+   "el": "Προθέσεις & πτώσεις"
   },
   "intro": {
    "de": "Präpositionen bestimmen den Fall des folgenden Nomens. Manche verlangen immer den Akkusativ, andere den Dativ oder Genitiv. Neun Wechselpräpositionen wechseln je nach Bedeutung: Akkusativ bei Bewegung (wohin?), Dativ bei Position (wo?).",
@@ -9995,7 +10683,9 @@ const GRAMMAR = [
    "am": "መስተዋድዶች ተከታዩ ስም የሚይዘውን ጉዳይ ይወስናሉ። አንዳንዶቹ ሁልጊዜ Akkusativ ይፈልጋሉ፣ ሌሎቹ ደግሞ Dativ ወይም Genitiv። ዘጠኝ ተለዋዋጭ መስተዋድዶች እንደ ትርጉማቸው ይለዋወጣሉ፦ Akkusativ ለእንቅስቃሴ (wohin? — ወዴት?)፣ Dativ ለቦታ (wo? — የት?)።",
    "es_mx": "Las preposiciones determinan el caso del sustantivo que las sigue. Algunas rigen siempre acusativo, otras dativo o genitivo. Nueve preposiciones de doble régimen (Wechselpräpositionen) cambian según el significado: acusativo con movimiento (wohin? – ¿a dónde?), dativo con posición (wo? – ¿dónde?).",
    "ca": "Les preposicions determinen el cas del substantiu que les segueix. Algunes regeixen sempre acusatiu, altres datiu o genitiu. Nou preposicions de doble règim (Wechselpräpositionen) canvien segons el significat: acusatiu amb moviment (wohin? – cap a on?), datiu amb posició (wo? – on?).",
-   "hr": "Prijedlozi određuju padež imenice koja slijedi. Neki uvijek traže akuzativ, drugi dativ ili genitiv. Devet dvosmjernih prijedloga mijenja padež prema značenju: akuzativ kod kretanja (wohin? – kamo?), dativ kod mjesta (wo? – gdje?)."
+   "hr": "Prijedlozi određuju padež imenice koja slijedi. Neki uvijek traže akuzativ, drugi dativ ili genitiv. Devet dvosmjernih prijedloga mijenja padež prema značenju: akuzativ kod kretanja (wohin? – kamo?), dativ kod mjesta (wo? – gdje?).",
+   "sr": "Предлози одређују падеж именице која следи. Неки увек захтевају акузатив, други датив или генитив. Девет предлога с двоструким падежом мења падеж према значењу: акузатив код кретања (wohin? – куда?), датив код положаја (wo? – где?).",
+   "el": "Οι προθέσεις καθορίζουν την πτώση του ουσιαστικού που ακολουθεί. Ορισμένες απαιτούν πάντα αιτιατική, άλλες δοτική ή γενική. Εννέα προθέσεις διπλής χρήσης (Wechselpräpositionen) εναλλάσσονται ανάλογα με τη σημασία: αιτιατική στην κίνηση (wohin; = προς τα πού;), δοτική στη θέση (wo; = πού;)."
   },
   "tables": [
    {
@@ -10020,7 +10710,9 @@ const GRAMMAR = [
      "am": "ሁልጊዜ ከ Akkusativ ጋር",
      "es_mx": "Siempre con acusativo",
      "ca": "Sempre amb acusatiu",
-     "hr": "Uvijek s akuzativom"
+     "hr": "Uvijek s akuzativom",
+     "sr": "Увек с акузативом",
+     "el": "Πάντα με αιτιατική"
     },
     "labelHeader": {
      "de": "Bedeutung",
@@ -10043,7 +10735,9 @@ const GRAMMAR = [
      "am": "ትርጉም",
      "es_mx": "Significado",
      "ca": "Significat",
-     "hr": "Značenje"
+     "hr": "Značenje",
+     "sr": "Значење",
+     "el": "Σημασία"
     },
     "columns": [
      {
@@ -10067,7 +10761,9 @@ const GRAMMAR = [
       "am": "መስተዋድድ",
       "es_mx": "Preposición",
       "ca": "Preposició",
-      "hr": "Prijedlog"
+      "hr": "Prijedlog",
+      "sr": "Предлог",
+      "el": "Πρόθεση"
      },
      {
       "de": "Beispiel (+Akk)",
@@ -10090,7 +10786,9 @@ const GRAMMAR = [
       "am": "ምሳሌ (+Akk)",
       "es_mx": "Ejemplo (+Akk)",
       "ca": "Exemple (+Akk)",
-      "hr": "Primjer (+akuzativ)"
+      "hr": "Primjer (+akuzativ)",
+      "sr": "Пример (+акузатив)",
+      "el": "Παράδειγμα (+Akk)"
      }
     ],
     "rows": [
@@ -10116,7 +10814,9 @@ const GRAMMAR = [
        "am": "(hin)durch (በኩል)",
        "es_mx": "a través de / por",
        "ca": "a través de / per",
-       "hr": "kroz"
+       "hr": "kroz",
+       "sr": "кроз",
+       "el": "μέσα από / διαμέσου"
       },
       "cells": [
        "durch",
@@ -10145,7 +10845,9 @@ const GRAMMAR = [
        "am": "für / zugunsten (ለ / በጥቅም)",
        "es_mx": "para / a favor de",
        "ca": "per / a favor de",
-       "hr": "za / u korist"
+       "hr": "za / u korist",
+       "sr": "за / у корист",
+       "el": "για / υπέρ"
       },
       "cells": [
        "für",
@@ -10174,7 +10876,9 @@ const GRAMMAR = [
        "am": "gegen (ተቃራኒ / ገደማ)",
        "es_mx": "contra / hacia (hora)",
        "ca": "contra / cap a (hora)",
-       "hr": "protiv / oko (vrijeme)"
+       "hr": "protiv / oko (vrijeme)",
+       "sr": "против / око (време)",
+       "el": "ενάντια / κατά (και για χρόνο: γύρω στις)"
       },
       "cells": [
        "gegen",
@@ -10203,7 +10907,9 @@ const GRAMMAR = [
        "am": "ohne (ያለ)",
        "es_mx": "sin",
        "ca": "sense",
-       "hr": "bez"
+       "hr": "bez",
+       "sr": "без",
+       "el": "χωρίς"
       },
       "cells": [
        "ohne",
@@ -10232,7 +10938,9 @@ const GRAMMAR = [
        "am": "um (… herum) (ዙሪያ / በ...ሰዓት)",
        "es_mx": "alrededor de / a (hora)",
        "ca": "al voltant de / a (hora)",
-       "hr": "oko (… naokolo)"
+       "hr": "oko (… naokolo)",
+       "sr": "око / у (време)",
+       "el": "γύρω (από) / στις (ώρα)"
       },
       "cells": [
        "um",
@@ -10261,7 +10969,9 @@ const GRAMMAR = [
        "am": "bis (እስከ)",
        "es_mx": "hasta",
        "ca": "fins a",
-       "hr": "do"
+       "hr": "do",
+       "sr": "до",
+       "el": "μέχρι / έως"
       },
       "cells": [
        "bis",
@@ -10290,7 +11000,9 @@ const GRAMMAR = [
        "am": "entlang (ተከትሎ የሚመጣ) (ተከትሎ/ጎን ለጎን)",
        "es_mx": "a lo largo de (pospuesta)",
        "ca": "al llarg de (posposada)",
-       "hr": "uzduž (dolazi iza imenice)"
+       "hr": "uzduž (dolazi iza imenice)",
+       "sr": "дуж (стоји иза именице)",
+       "el": "κατά μήκος (μπαίνει μετά το ουσιαστικό)"
       },
       "cells": [
        "entlang",
@@ -10321,7 +11033,9 @@ const GRAMMAR = [
      "am": "ሁልጊዜ ከ Dativ ጋር",
      "es_mx": "Siempre con dativo",
      "ca": "Sempre amb datiu",
-     "hr": "Uvijek s dativom"
+     "hr": "Uvijek s dativom",
+     "sr": "Увек с дативом",
+     "el": "Πάντα με δοτική"
     },
     "labelHeader": {
      "de": "Bedeutung",
@@ -10344,7 +11058,9 @@ const GRAMMAR = [
      "am": "ትርጉም",
      "es_mx": "Significado",
      "ca": "Significat",
-     "hr": "Značenje"
+     "hr": "Značenje",
+     "sr": "Значење",
+     "el": "Σημασία"
     },
     "columns": [
      {
@@ -10368,7 +11084,9 @@ const GRAMMAR = [
       "am": "መስተዋድድ",
       "es_mx": "Preposición",
       "ca": "Preposició",
-      "hr": "Prijedlog"
+      "hr": "Prijedlog",
+      "sr": "Предлог",
+      "el": "Πρόθεση"
      },
      {
       "de": "Beispiel (+Dat)",
@@ -10391,7 +11109,9 @@ const GRAMMAR = [
       "am": "ምሳሌ (+Dat)",
       "es_mx": "Ejemplo (+Dat)",
       "ca": "Exemple (+Dat)",
-      "hr": "Primjer (+dativ)"
+      "hr": "Primjer (+dativ)",
+      "sr": "Пример (+датив)",
+      "el": "Παράδειγμα (+Dat)"
      }
     ],
     "rows": [
@@ -10417,7 +11137,9 @@ const GRAMMAR = [
        "am": "aus (heraus) (ከ... ውስጥ)",
        "es_mx": "de / desde (el interior de)",
        "ca": "de / des de (l'interior de)",
-       "hr": "iz (van)"
+       "hr": "iz (van)",
+       "sr": "из",
+       "el": "από (μέσα από)"
       },
       "cells": [
        "aus",
@@ -10446,7 +11168,9 @@ const GRAMMAR = [
        "am": "bei / nahe (ጋር / አጠገብ)",
        "es_mx": "en (casa de) / cerca de",
        "ca": "a (casa de) / a prop de",
-       "hr": "kod / blizu"
+       "hr": "kod / blizu",
+       "sr": "код / близу",
+       "el": "σε / κοντά σε / στου (σπίτι κάποιου)"
       },
       "cells": [
        "bei",
@@ -10475,7 +11199,9 @@ const GRAMMAR = [
        "am": "mit / mittels (ከ... ጋር / በ... አማካኝነት)",
        "es_mx": "con / mediante",
        "ca": "amb / mitjançant",
-       "hr": "s / pomoću"
+       "hr": "s / pomoću",
+       "sr": "с(а) / помоћу",
+       "el": "με / μέσω"
       },
       "cells": [
        "mit",
@@ -10504,7 +11230,9 @@ const GRAMMAR = [
        "am": "nach / zu (ወደ ቦታዎች)",
        "es_mx": "después de / a (lugares, ciudades)",
        "ca": "després de / a (llocs, ciutats)",
-       "hr": "poslije / u (mjesta, gradovi)"
+       "hr": "poslije / u (mjesta, gradovi)",
+       "sr": "после / у (места, градови)",
+       "el": "μετά / προς (τόπους, πόλεις)"
       },
       "cells": [
        "nach",
@@ -10533,7 +11261,9 @@ const GRAMMAR = [
        "am": "seit (ከ... ጀምሮ)",
        "es_mx": "desde (hace) / durante",
        "ca": "des de (fa) / durant",
-       "hr": "od (vremenski, otkad)"
+       "hr": "od (vremenski, otkad)",
+       "sr": "од (тренутка) / већ (о трајању)",
+       "el": "από τότε / εδώ και (διάρκεια)"
       },
       "cells": [
        "seit",
@@ -10562,7 +11292,9 @@ const GRAMMAR = [
        "am": "von (ከ / የ)",
        "es_mx": "de / desde / por",
        "ca": "de / des de / per",
-       "hr": "od / o / po (vršitelj)"
+       "hr": "od / o / po (vršitelj)",
+       "sr": "од / о / од стране",
+       "el": "από / του (κτητικό) / από (ποιητικό αίτιο)"
       },
       "cells": [
        "von",
@@ -10591,7 +11323,9 @@ const GRAMMAR = [
        "am": "zu (ወደ ሰዎች/ቦታዎች)",
        "es_mx": "a (personas / lugares)",
        "ca": "a (persones / llocs)",
-       "hr": "k (osobama / mjestima)"
+       "hr": "k (osobama / mjestima)",
+       "sr": "к(а) (људима / местима)",
+       "el": "προς / σε (πρόσωπα ή τόπους)"
       },
       "cells": [
        "zu",
@@ -10620,7 +11354,9 @@ const GRAMMAR = [
        "am": "gegenüber (ትይዩ)",
        "es_mx": "enfrente de",
        "ca": "davant de / enfront de",
-       "hr": "nasuprot"
+       "hr": "nasuprot",
+       "sr": "наспрам / преко пута",
+       "el": "απέναντι από"
       },
       "cells": [
        "gegenüber",
@@ -10651,7 +11387,9 @@ const GRAMMAR = [
      "am": "ተለዋዋጭ መስተዋድዶች፦ Akkusativ (wohin? — ወዴት?) ወይም Dativ (wo? — የት?)",
      "es_mx": "Wechselpräpositionen: acusativo (wohin? = movimiento) o dativo (wo? = posición)",
      "ca": "Wechselpräpositionen: acusatiu (wohin? = moviment) o datiu (wo? = posició)",
-     "hr": "Dvosmjerni prijedlozi: akuzativ (wohin? = kamo?) ili dativ (wo? = gdje?)"
+     "hr": "Dvosmjerni prijedlozi: akuzativ (wohin? = kamo?) ili dativ (wo? = gdje?)",
+     "sr": "Предлози с двоструким падежом: акузатив (wohin? = кретање) или датив (wo? = положај)",
+     "el": "Προθέσεις διπλής χρήσης: αιτιατική (wohin; = κίνηση) ή δοτική (wo; = θέση)"
     },
     "labelHeader": {
      "de": "Bedeutung",
@@ -10674,7 +11412,9 @@ const GRAMMAR = [
      "am": "ትርጉም",
      "es_mx": "Significado",
      "ca": "Significat",
-     "hr": "Značenje"
+     "hr": "Značenje",
+     "sr": "Значење",
+     "el": "Σημασία"
     },
     "columns": [
      {
@@ -10698,7 +11438,9 @@ const GRAMMAR = [
       "am": "መስተዋድድ",
       "es_mx": "Preposición",
       "ca": "Preposició",
-      "hr": "Prijedlog"
+      "hr": "Prijedlog",
+      "sr": "Предлог",
+      "el": "Πρόθεση"
      },
      {
       "de": "wohin? +Akk",
@@ -10721,7 +11463,9 @@ const GRAMMAR = [
       "am": "wohin? (እንቅስቃሴ) +Akk",
       "es_mx": "wohin? (movimiento) +Akk",
       "ca": "wohin? (moviment) +Akk",
-      "hr": "wohin? (kretanje) +akuzativ"
+      "hr": "wohin? (kretanje) +akuzativ",
+      "sr": "wohin? (куда, кретање) +акузатив",
+      "el": "wohin; (κίνηση) +Akk"
      },
      {
       "de": "wo? +Dat",
@@ -10744,7 +11488,9 @@ const GRAMMAR = [
       "am": "wo? (ቦታ) +Dat",
       "es_mx": "wo? (posición) +Dat",
       "ca": "wo? (posició) +Dat",
-      "hr": "wo? (mjesto) +dativ"
+      "hr": "wo? (mjesto) +dativ",
+      "sr": "wo? (где, положај) +датив",
+      "el": "wo; (θέση) +Dat"
      }
     ],
     "rows": [
@@ -10770,7 +11516,9 @@ const GRAMMAR = [
        "am": "an (ጠርዝ/ገጽ ላይ)",
        "es_mx": "en / junto a (borde, superficie vertical)",
        "ca": "a / tocant a (vora, superfície vertical)",
-       "hr": "na / uz (rub, ploha)"
+       "hr": "na / uz (rub, ploha)",
+       "sr": "на / уз (ивицу, површину)",
+       "el": "σε / πάνω σε (άκρη ή κάθετη επιφάνεια)"
       },
       "cells": [
        "an",
@@ -10800,7 +11548,9 @@ const GRAMMAR = [
        "am": "auf (ላይ)",
        "es_mx": "sobre / encima de",
        "ca": "sobre / damunt de",
-       "hr": "na (površina)"
+       "hr": "na (površina)",
+       "sr": "на (горњој површини)",
+       "el": "πάνω σε (οριζόντια επιφάνεια)"
       },
       "cells": [
        "auf",
@@ -10830,7 +11580,9 @@ const GRAMMAR = [
        "am": "hinter (ከኋላ)",
        "es_mx": "detrás de",
        "ca": "darrere de",
-       "hr": "iza"
+       "hr": "iza",
+       "sr": "иза",
+       "el": "πίσω από"
       },
       "cells": [
        "hinter",
@@ -10860,7 +11612,9 @@ const GRAMMAR = [
        "am": "in (ውስጥ)",
        "es_mx": "en / dentro de",
        "ca": "a / dins de",
-       "hr": "u"
+       "hr": "u",
+       "sr": "у",
+       "el": "σε / μέσα (σε)"
       },
       "cells": [
        "in",
@@ -10890,7 +11644,9 @@ const GRAMMAR = [
        "am": "neben (ጎን)",
        "es_mx": "al lado de / junto a",
        "ca": "al costat de",
-       "hr": "pored / uz"
+       "hr": "pored / uz",
+       "sr": "поред / до",
+       "el": "δίπλα σε"
       },
       "cells": [
        "neben",
@@ -10920,7 +11676,9 @@ const GRAMMAR = [
        "am": "über (ከላይ)",
        "es_mx": "sobre / por encima de",
        "ca": "sobre / per damunt de",
-       "hr": "preko / iznad"
+       "hr": "preko / iznad",
+       "sr": "преко / изнад",
+       "el": "πάνω από / υπεράνω"
       },
       "cells": [
        "über",
@@ -10950,7 +11708,9 @@ const GRAMMAR = [
        "am": "unter (ከታች)",
        "es_mx": "debajo de / entre",
        "ca": "sota / entre",
-       "hr": "ispod / među"
+       "hr": "ispod / među",
+       "sr": "испод / међу",
+       "el": "κάτω από / ανάμεσα"
       },
       "cells": [
        "unter",
@@ -10980,7 +11740,9 @@ const GRAMMAR = [
        "am": "vor (ፊት ለፊት / ከዚህ በፊት)",
        "es_mx": "delante de / antes de (tiempo)",
        "ca": "davant de / abans de (temps)",
-       "hr": "ispred / prije (mjesto/vrijeme)"
+       "hr": "ispred / prije (mjesto/vrijeme)",
+       "sr": "испред / пре (место / време)",
+       "el": "μπροστά από / πριν (τόπος ή χρόνος)"
       },
       "cells": [
        "vor",
@@ -11010,7 +11772,9 @@ const GRAMMAR = [
        "am": "zwischen (መካከል)",
        "es_mx": "entre",
        "ca": "entre",
-       "hr": "između"
+       "hr": "između",
+       "sr": "између",
+       "el": "ανάμεσα / μεταξύ"
       },
       "cells": [
        "zwischen",
@@ -11042,7 +11806,9 @@ const GRAMMAR = [
      "am": "ከ Genitiv ጋር (በአነጋገር ብዙ ጊዜ Dativ)",
      "es_mx": "Con genitivo (coloquialmente a menudo dativo)",
      "ca": "Amb genitiu (col·loquialment sovint datiu)",
-     "hr": "S genitivom (u razgovornom jeziku često dativ)"
+     "hr": "S genitivom (u razgovornom jeziku često dativ)",
+     "sr": "С генитивом (у разговорном језику често с дативом)",
+     "el": "Με γενική (στον προφορικό λόγο συχνά με δοτική)"
     },
     "labelHeader": {
      "de": "Bedeutung",
@@ -11065,7 +11831,9 @@ const GRAMMAR = [
      "am": "ትርጉም",
      "es_mx": "Significado",
      "ca": "Significat",
-     "hr": "Značenje"
+     "hr": "Značenje",
+     "sr": "Значење",
+     "el": "Σημασία"
     },
     "columns": [
      {
@@ -11089,7 +11857,9 @@ const GRAMMAR = [
       "am": "መስተዋድድ",
       "es_mx": "Preposición",
       "ca": "Preposició",
-      "hr": "Prijedlog"
+      "hr": "Prijedlog",
+      "sr": "Предлог",
+      "el": "Πρόθεση"
      },
      {
       "de": "Beispiel (+Gen)",
@@ -11112,7 +11882,9 @@ const GRAMMAR = [
       "am": "ምሳሌ (+Gen)",
       "es_mx": "Ejemplo (+Gen)",
       "ca": "Exemple (+Gen)",
-      "hr": "Primjer (+genitiv)"
+      "hr": "Primjer (+genitiv)",
+      "sr": "Пример (+генитив)",
+      "el": "Παράδειγμα (+Gen)"
      }
     ],
     "rows": [
@@ -11138,7 +11910,9 @@ const GRAMMAR = [
        "am": "während (በ... ጊዜ)",
        "es_mx": "durante",
        "ca": "durant",
-       "hr": "tijekom / za vrijeme"
+       "hr": "tijekom / za vrijeme",
+       "sr": "током / за време",
+       "el": "κατά τη διάρκεια"
       },
       "cells": [
        "während",
@@ -11167,7 +11941,9 @@ const GRAMMAR = [
        "am": "wegen (በ... ምክንያት)",
        "es_mx": "a causa de / por",
        "ca": "a causa de / per",
-       "hr": "zbog"
+       "hr": "zbog",
+       "sr": "због",
+       "el": "εξαιτίας / λόγω"
       },
       "cells": [
        "wegen",
@@ -11196,7 +11972,9 @@ const GRAMMAR = [
        "am": "trotz (ቢሆንም)",
        "es_mx": "a pesar de",
        "ca": "malgrat / tot i",
-       "hr": "usprkos / unatoč"
+       "hr": "usprkos / unatoč",
+       "sr": "упркос",
+       "el": "παρά / παρ' όλο"
       },
       "cells": [
        "trotz",
@@ -11225,7 +12003,9 @@ const GRAMMAR = [
        "am": "(an)statt (ከ... ይልቅ)",
        "es_mx": "en lugar de",
        "ca": "en lloc de",
-       "hr": "umjesto"
+       "hr": "umjesto",
+       "sr": "уместо",
+       "el": "αντί για"
       },
       "cells": [
        "(an)statt",
@@ -11256,7 +12036,9 @@ const GRAMMAR = [
      "am": "የተለመዱ ውህዶች (መስተዋድድ + አርቲክል)",
      "es_mx": "Contracciones frecuentes (preposición + artículo)",
      "ca": "Contraccions freqüents (preposició + article)",
-     "hr": "Česta stapanja (prijedlog + član)"
+     "hr": "Česta stapanja (prijedlog + član)",
+     "sr": "Честа сажимања (предлог + члан)",
+     "el": "Συχνές συγχωνεύσεις (πρόθεση + άρθρο)"
     },
     "labelHeader": {
      "de": "",
@@ -11289,7 +12071,9 @@ const GRAMMAR = [
       "am": "ውህድ",
       "es_mx": "Contracción",
       "ca": "Contracció",
-      "hr": "Stopljeni oblik"
+      "hr": "Stopljeni oblik",
+      "sr": "Сажимање",
+      "el": "Συγχώνευση"
      },
      {
       "de": "= Präp. + Artikel",
@@ -11312,7 +12096,9 @@ const GRAMMAR = [
       "am": "= መስተዋድድ + አርቲክል",
       "es_mx": "= preposición + artículo",
       "ca": "= preposició + article",
-      "hr": "= prijedlog + član"
+      "hr": "= prijedlog + član",
+      "sr": "= предлог + члан",
+      "el": "= πρόθ. + άρθρο"
      },
      {
       "de": "Beispiel",
@@ -11335,7 +12121,9 @@ const GRAMMAR = [
       "am": "ምሳሌ",
       "es_mx": "Ejemplo",
       "ca": "Exemple",
-      "hr": "Primjer"
+      "hr": "Primjer",
+      "sr": "Пример",
+      "el": "Παράδειγμα"
      }
     ],
     "rows": [
@@ -11492,7 +12280,9 @@ const GRAMMAR = [
     "am": "በፓርኩ ውስጥ አልፋለሁ።",
     "es_mx": "Camino a través del parque.",
     "ca": "Camino a través del parc.",
-    "hr": "Idem kroz park."
+    "hr": "Idem kroz park.",
+    "sr": "Идем кроз парк.",
+    "el": "Ich gehe durch den Park. (Περπατάω μέσα από το πάρκο.)"
    },
    {
     "de": "Wir fahren mit dem Bus in die Stadt.",
@@ -11515,7 +12305,9 @@ const GRAMMAR = [
     "am": "በአውቶቡስ ወደ ከተማ እንሄዳለን።",
     "es_mx": "Vamos a la ciudad en autobús.",
     "ca": "Anem a la ciutat amb autobús.",
-    "hr": "Idemo autobusom u grad."
+    "hr": "Idemo autobusom u grad.",
+    "sr": "Идемо аутобусом у град.",
+    "el": "Wir fahren mit dem Bus in die Stadt. (Πάμε με το λεωφορείο στην πόλη.)"
    },
    {
     "de": "Trotz des Regens spielen die Kinder im Garten.",
@@ -11538,7 +12330,9 @@ const GRAMMAR = [
     "am": "ዝናቡ ቢዘንብም ልጆቹ በአትክልት ስፍራው ይጫወታሉ።",
     "es_mx": "A pesar de la lluvia, los niños juegan en el jardín.",
     "ca": "Malgrat la pluja, els nens juguen al jardí.",
-    "hr": "Usprkos kiši djeca se igraju u vrtu."
+    "hr": "Usprkos kiši djeca se igraju u vrtu.",
+    "sr": "Упркос киши, деца се играју у башти.",
+    "el": "Trotz des Regens spielen die Kinder im Garten. (Παρά τη βροχή, τα παιδιά παίζουν στον κήπο.)"
    }
   ],
   "hints": {
@@ -11562,7 +12356,9 @@ const GRAMMAR = [
    "am": "መሠረታዊ ደንብ፦ ከእያንዳንዱ መስተዋድድ በኋላ የተወሰነ ጉዳይ ይመጣል። በዘጠኙ ተለዋዋጭ መስተዋድዶች ጥያቄው ይወስናል፦ wohin? (ወዴት?) → Akkusativ (እንቅስቃሴ)፣ wo? (የት?) → Dativ (ቦታ)። በአጭሩ፦ 'ወዴት? Akkusativ ውሰድ — የት? በ Dativ ቆይ።'",
    "es_mx": "El inglés perdió casi todas las desinencias de caso, así que nada cambia tras una preposición. En alemán la preposición fija el caso y eso reforma el artículo (der → den en acusativo, der → dem en dativo). Con las nueve de doble régimen, pregúntate wohin? (movimiento → acusativo) o wo? (reposo → dativo). En resumen: «¿wohin? toma el acusativo; ¿wo? quédate en el dativo».",
    "ca": "L'anglès va perdre gairebé totes les desinències de cas, així que res no canvia després d'una preposició. En alemany la preposició fixa el cas i això reforma l'article (der → den en acusatiu, der → dem en datiu). Amb les nou de doble règim, pregunta't wohin? (moviment → acusatiu) o wo? (repòs → datiu). En resum: «wohin? pren l'acusatiu; wo? queda't al datiu».",
-   "hr": "Engleski je izgubio gotovo sve padežne nastavke, pa se iza prijedloga ništa ne mijenja („through the park”, „in the park”). U njemačkom prijedlog određuje padež, a to mijenja oblik člana (der → den za akuzativ, der → dem za dativ). Kod devet dvosmjernih prijedloga pitaj wohin? (kretanje → akuzativ) nasuprot wo? (mirovanje → dativ)."
+   "hr": "Engleski je izgubio gotovo sve padežne nastavke, pa se iza prijedloga ništa ne mijenja („through the park”, „in the park”). U njemačkom prijedlog određuje padež, a to mijenja oblik člana (der → den za akuzativ, der → dem za dativ). Kod devet dvosmjernih prijedloga pitaj wohin? (kretanje → akuzativ) nasuprot wo? (mirovanje → dativ).",
+   "sr": "Енглески је изгубио готово све падежне наставке, па се иза предлога ништа не мења по облику („through the park“, „in the park“). У немачком предлог одређује падеж, а то мења облик члана (der → den за акузатив, der → dem за датив). Код девет предлога с двоструким падежом питајте wohin? (кретање → акузатив) наспрам wo? (мировање → датив).",
+   "el": "Κανόνας μνήμης: Μετά από κάθε πρόθεση ακολουθεί μια σταθερή πτώση. Στις εννέα προθέσεις διπλής χρήσης αποφασίζει η ερώτηση: wohin; (προς τα πού;) → αιτιατική (κίνηση), wo; (πού;) → δοτική (θέση). Εν συντομία: «wohin; πάρε την αιτιατική – wo; μείνε στη δοτική.» Επιπλέον, η πρόθεση αλλάζει το άρθρο (der → den στην αιτιατική, der → dem στη δοτική)."
   }
  },
  {
@@ -11589,7 +12385,9 @@ const GRAMMAR = [
    "am": "ከቋሚ መስተዋድዶች ጋር የሚሄዱ ግሦች",
    "es_mx": "Verbos con preposición fija",
    "ca": "Verbs amb preposició fixa",
-   "hr": "Glagoli s fiksnim prijedlozima"
+   "hr": "Glagoli s fiksnim prijedlozima",
+   "sr": "Глаголи са сталним предлозима",
+   "el": "Ρήματα με σταθερές προθέσεις"
   },
   "intro": {
    "de": "Viele Verben verlangen eine feste Präposition mit festem Kasus – lerne beides zusammen als Einheit. Für Sachen ersetzt man Präposition + Pronomen durch ein da-Kompositum (darauf), in Fragen durch ein wo-Kompositum (worauf). Beginnt die Präposition mit einem Vokal, wird ein -r- eingefügt (da + r + auf).",
@@ -11612,7 +12410,9 @@ const GRAMMAR = [
    "am": "ብዙ ግሦች ቋሚ መስተዋድድ ከቋሚ ጉዳይ ጋር ይፈልጋሉ — ሁለቱንም አንድ ላይ እንደ አንድ ክፍል ተማራቸው። ለነገሮች መስተዋድድ + ተውላጠ ስም በ da- ውህድ ይተካል (darauf)፣ በጥያቄ ውስጥ ደግሞ በ wo- ውህድ (worauf)። መስተዋድዱ በድምጸ አናባቢ ከጀመረ -r- ይጨመራል (da + r + auf)።",
    "es_mx": "Muchos verbos exigen una preposición fija con un caso fijo; apréndelos como un bloque. Para cosas, preposición + pronombre se convierte en un compuesto con da- (darauf); en preguntas, en uno con wo- (worauf). Si la preposición empieza por vocal, se intercala una -r- (da + r + auf).",
    "ca": "Molts verbs exigeixen una preposició fixa amb un cas fix; aprèn-los com un bloc. Per a coses, preposició + pronom es converteix en un compost amb da- (darauf); en preguntes, en un amb wo- (worauf). Si la preposició comença per vocal, s'hi intercala una -r- (da + r + auf).",
-   "hr": "Mnogi glagoli zahtijevaju određeni prijedlog s određenim padežom – nauči oboje zajedno kao cjelinu. Za stvari se prijedlog + zamjenica zamjenjuju složenicom s 'da-' (darauf), a u pitanjima složenicom s 'wo-' (worauf). Ako prijedlog počinje samoglasnikom, umeće se '-r-' (da + r + auf)."
+   "hr": "Mnogi glagoli zahtijevaju određeni prijedlog s određenim padežom – nauči oboje zajedno kao cjelinu. Za stvari se prijedlog + zamjenica zamjenjuju složenicom s 'da-' (darauf), a u pitanjima složenicom s 'wo-' (worauf). Ako prijedlog počinje samoglasnikom, umeće se '-r-' (da + r + auf).",
+   "sr": "Многи глаголи захтевају одређени предлог са одређеним падежом – научи обоје заједно као целину. За ствари се предлог + заменица замењује сложеницом са да- (darauf), а у питањима сложеницом са во- (worauf). Ако предлог почиње самогласником, умеће се -r- (da + r + auf).",
+   "el": "Πολλά ρήματα απαιτούν μια συγκεκριμένη πρόθεση με συγκεκριμένη πτώση – μάθε τα δύο μαζί ως ενιαία μονάδα. Για πράγματα, η πρόθεση + αντωνυμία αντικαθίσταται από ένα σύνθετο με 'da-' (darauf), και στις ερωτήσεις από ένα σύνθετο με 'wo-' (worauf). Αν η πρόθεση αρχίζει με φωνήεν, παρεμβάλλεται ένα -r- (da + r + auf)."
   },
   "tables": [
    {
@@ -11637,7 +12437,9 @@ const GRAMMAR = [
      "am": "ግስ + ቋሚ መስተዋድድ + ጉዳይ",
      "es_mx": "Verbo + preposición fija + caso",
      "ca": "Verb + preposició fixa + cas",
-     "hr": "Glagol + fiksni prijedlog + padež"
+     "hr": "Glagol + fiksni prijedlog + padež",
+     "sr": "Глагол + стални предлог + падеж",
+     "el": "Ρήμα + σταθερή πρόθεση + πτώση"
     },
     "labelHeader": {
      "de": "Bedeutung",
@@ -11660,7 +12462,9 @@ const GRAMMAR = [
      "am": "ትርጉም",
      "es_mx": "Significado",
      "ca": "Significat",
-     "hr": "Značenje"
+     "hr": "Značenje",
+     "sr": "Значење",
+     "el": "Σημασία"
     },
     "columns": [
      {
@@ -11684,7 +12488,9 @@ const GRAMMAR = [
       "am": "ግስ + መስተዋድድ",
       "es_mx": "Verbo + preposición",
       "ca": "Verb + preposició",
-      "hr": "Glagol + prijedlog"
+      "hr": "Glagol + prijedlog",
+      "sr": "Глагол + предлог",
+      "el": "Ρήμα + πρόθεση"
      },
      {
       "de": "Kasus",
@@ -11707,7 +12513,9 @@ const GRAMMAR = [
       "am": "ጉዳይ",
       "es_mx": "Caso",
       "ca": "Cas",
-      "hr": "Padež"
+      "hr": "Padež",
+      "sr": "Падеж",
+      "el": "Πτώση"
      }
     ],
     "rows": [
@@ -11733,7 +12541,9 @@ const GRAMMAR = [
        "am": "erwarten (መጠባበቅ)",
        "es_mx": "esperar (a)",
        "ca": "esperar",
-       "hr": "čekati (na nešto)"
+       "hr": "čekati (na nešto)",
+       "sr": "чекати (некога/нешто)",
+       "el": "περιμένω"
       },
       "cells": [
        "warten auf",
@@ -11762,7 +12572,9 @@ const GRAMMAR = [
        "am": "im Sinn haben (በአእምሮ ማሰብ)",
        "es_mx": "pensar en",
        "ca": "pensar en",
-       "hr": "misliti na, imati na umu"
+       "hr": "misliti na, imati na umu",
+       "sr": "имати на уму",
+       "el": "σκέφτομαι κάτι"
       },
       "cells": [
        "denken an",
@@ -11791,7 +12603,9 @@ const GRAMMAR = [
        "am": "Vorfreude haben (በጉጉት መጠባበቅ)",
        "es_mx": "tener ilusión por",
        "ca": "esperar amb il·lusió",
-       "hr": "radovati se (unaprijed)"
+       "hr": "radovati se (unaprijed)",
+       "sr": "радовати се унапред",
+       "el": "ανυπομονώ για"
       },
       "cells": [
        "sich freuen auf",
@@ -11820,7 +12634,9 @@ const GRAMMAR = [
        "am": "froh sein über (ደስተኛ መሆን)",
        "es_mx": "alegrarse de/por",
        "ca": "alegrar-se de/per",
-       "hr": "biti sretan zbog"
+       "hr": "biti sretan zbog",
+       "sr": "бити срећан због",
+       "el": "χαίρομαι για"
       },
       "cells": [
        "sich freuen über",
@@ -11849,7 +12665,9 @@ const GRAMMAR = [
        "am": "Interesse haben (ፍላጎት መያዝ)",
        "es_mx": "interesarse por",
        "ca": "interessar-se per",
-       "hr": "zanimati se za"
+       "hr": "zanimati se za",
+       "sr": "занимати се за",
+       "el": "ενδιαφέρομαι για"
       },
       "cells": [
        "sich interessieren für",
@@ -11878,7 +12696,9 @@ const GRAMMAR = [
        "am": "sich ins Gedächtnis rufen (ማስታወስ)",
        "es_mx": "acordarse de",
        "ca": "recordar-se de",
-       "hr": "prisjetiti se"
+       "hr": "prisjetiti se",
+       "sr": "присетити се",
+       "el": "θυμάμαι"
       },
       "cells": [
        "sich erinnern an",
@@ -11907,7 +12727,9 @@ const GRAMMAR = [
        "am": "verärgert sein (መበሳጨት)",
        "es_mx": "enojarse por",
        "ca": "empipar-se per",
-       "hr": "biti ljut zbog"
+       "hr": "biti ljut zbog",
+       "sr": "бити љут због",
+       "el": "είμαι εκνευρισμένος για"
       },
       "cells": [
        "sich ärgern über",
@@ -11936,7 +12758,9 @@ const GRAMMAR = [
        "am": "erbitten (መጠየቅ)",
        "es_mx": "pedir, solicitar",
        "ca": "demanar, sol·licitar",
-       "hr": "zamoliti za, tražiti"
+       "hr": "zamoliti za, tražiti",
+       "sr": "замолити за, тражити",
+       "el": "ζητώ, αιτούμαι"
       },
       "cells": [
        "bitten um",
@@ -11965,7 +12789,9 @@ const GRAMMAR = [
        "am": "sorgen für, betreuen (መንከባከብ)",
        "es_mx": "encargarse de, cuidar",
        "ca": "encarregar-se de, tenir cura de",
-       "hr": "brinuti se za"
+       "hr": "brinuti se za",
+       "sr": "бринути се о, старати се о",
+       "el": "φροντίζω, μεριμνώ για"
       },
       "cells": [
        "sich kümmern um",
@@ -11994,7 +12820,9 @@ const GRAMMAR = [
        "am": "mitmachen (መሳተፍ)",
        "es_mx": "participar en",
        "ca": "participar en",
-       "hr": "sudjelovati"
+       "hr": "sudjelovati",
+       "sr": "учествовати",
+       "el": "συμμετέχω"
       },
       "cells": [
        "teilnehmen an",
@@ -12023,7 +12851,9 @@ const GRAMMAR = [
        "am": "dazugehören (የአንድ ክፍል መሆን)",
        "es_mx": "pertenecer a / formar parte de",
        "ca": "pertànyer a / formar part de",
-       "hr": "pripadati"
+       "hr": "pripadati",
+       "sr": "припадати",
+       "el": "ανήκω σε"
       },
       "cells": [
        "gehören zu",
@@ -12052,7 +12882,9 @@ const GRAMMAR = [
        "am": "abhängig sein von (ጥገኛ መሆን)",
        "es_mx": "depender de",
        "ca": "dependre de",
-       "hr": "ovisiti o"
+       "hr": "ovisiti o",
+       "sr": "зависити од",
+       "el": "εξαρτώμαι από"
       },
       "cells": [
        "abhängen von",
@@ -12081,7 +12913,9 @@ const GRAMMAR = [
        "am": "sich erträumen (ማለም)",
        "es_mx": "soñar con",
        "ca": "somiar en/amb",
-       "hr": "sanjati o"
+       "hr": "sanjati o",
+       "sr": "сањати о",
+       "el": "ονειρεύομαι"
       },
       "cells": [
        "träumen von",
@@ -12110,7 +12944,9 @@ const GRAMMAR = [
        "am": "reden über (ስለ... ማውራት)",
        "es_mx": "hablar de/sobre",
        "ca": "parlar de/sobre",
-       "hr": "govoriti o, razgovarati o"
+       "hr": "govoriti o, razgovarati o",
+       "sr": "причати о",
+       "el": "μιλώ για"
       },
       "cells": [
        "sprechen über / von",
@@ -12139,7 +12975,9 @@ const GRAMMAR = [
        "am": "sich befassen mit (መሳተፍ/መያዝ)",
        "es_mx": "ocuparse de / dedicarse a",
        "ca": "ocupar-se de / dedicar-se a",
-       "hr": "baviti se"
+       "hr": "baviti se",
+       "sr": "бавити се",
+       "el": "ασχολούμαι με"
       },
       "cells": [
        "sich beschäftigen mit",
@@ -12170,7 +13008,9 @@ const GRAMMAR = [
      "am": "da-/wo- ውህዶች (መስተዋድድ + ተውላጠ ስም ይተካሉ)",
      "es_mx": "Compuestos con da-/wo- (sustituyen preposición + pronombre)",
      "ca": "Compostos amb da-/wo- (substitueixen preposició + pronom)",
-     "hr": "Složenice s 'da-'/'wo-' (zamjenjuju prijedlog + zamjenicu)"
+     "hr": "Složenice s 'da-'/'wo-' (zamjenjuju prijedlog + zamjenicu)",
+     "sr": "Сложенице са да-/во- (замењују предлог + заменицу)",
+     "el": "Σύνθετα με 'da-'/'wo-' (αντικαθιστούν πρόθεση + αντωνυμία)"
     },
     "labelHeader": {
      "de": "",
@@ -12203,7 +13043,9 @@ const GRAMMAR = [
       "am": "መስተዋድድ",
       "es_mx": "Preposición",
       "ca": "Preposició",
-      "hr": "Prijedlog"
+      "hr": "Prijedlog",
+      "sr": "Предлог",
+      "el": "Πρόθεση"
      },
      {
       "de": "da- (Sache)",
@@ -12226,7 +13068,9 @@ const GRAMMAR = [
       "am": "da- (ነገር)",
       "es_mx": "da- (cosa)",
       "ca": "da- (cosa)",
-      "hr": "da- (stvar)"
+      "hr": "da- (stvar)",
+      "sr": "да- (ствар)",
+      "el": "da- (πράγμα)"
      },
      {
       "de": "wo- (Frage)",
@@ -12249,7 +13093,9 @@ const GRAMMAR = [
       "am": "wo- (ጥያቄ)",
       "es_mx": "wo- (pregunta)",
       "ca": "wo- (pregunta)",
-      "hr": "wo- (pitanje)"
+      "hr": "wo- (pitanje)",
+      "sr": "во- (питање)",
+      "el": "wo- (ερώτηση)"
      }
     ],
     "rows": [
@@ -12374,7 +13220,9 @@ const GRAMMAR = [
     "am": "አውቶቡሱን እየጠበቅሁ ነው።",
     "es_mx": "Espero el autobús.",
     "ca": "Espero l'autobús.",
-    "hr": "Ich warte auf den Bus. (Čekam autobus.)"
+    "hr": "Ich warte auf den Bus. (Čekam autobus.)",
+    "sr": "Ich warte auf den Bus. (Чекам аутобус.)",
+    "el": "Ich warte auf den Bus. (Περιμένω το λεωφορείο.)"
    },
    {
     "de": "Woran denkst du? – Ich denke an die Ferien.",
@@ -12397,7 +13245,9 @@ const GRAMMAR = [
     "am": "ስለ ምን እያሰብክ ነው? — ስለ ዕረፍት ጊዜ እያሰብኩ ነው።",
     "es_mx": "¿En qué piensas? – Pienso en las vacaciones.",
     "ca": "En què penses? – Penso en les vacances.",
-    "hr": "Woran denkst du? – Ich denke an die Ferien. (Na što misliš? – Mislim na praznike.)"
+    "hr": "Woran denkst du? – Ich denke an die Ferien. (Na što misliš? – Mislim na praznike.)",
+    "sr": "Woran denkst du? – Ich denke an die Ferien. (На шта мислиш? – Мислим на распуст.)",
+    "el": "Woran denkst du? – Ich denke an die Ferien. (Τι σκέφτεσαι; – Σκέφτομαι τις διακοπές.)"
    },
    {
     "de": "Sie nimmt an einem Deutschkurs teil.",
@@ -12420,7 +13270,9 @@ const GRAMMAR = [
     "am": "እሷ በጀርመንኛ ኮርስ ትሳተፋለች።",
     "es_mx": "Ella participa en un curso de alemán.",
     "ca": "Ella participa en un curs d'alemany.",
-    "hr": "Sie nimmt an einem Deutschkurs teil. (Ona sudjeluje na tečaju njemačkog.)"
+    "hr": "Sie nimmt an einem Deutschkurs teil. (Ona sudjeluje na tečaju njemačkog.)",
+    "sr": "Sie nimmt an einem Deutschkurs teil. (Она учествује на курсу немачког.)",
+    "el": "Sie nimmt an einem Deutschkurs teil. (Συμμετέχει σε ένα μάθημα γερμανικών.)"
    }
   ],
   "hints": {
@@ -12444,7 +13296,9 @@ const GRAMMAR = [
    "am": "መስተዋድዱና ጉዳዩ ከግሱ ጋር በማይነጣጠል ሁኔታ ይያያዛሉ፦ 'warten auf' ሁልጊዜ + Akkusativ፣ 'teilnehmen an' ሁልጊዜ + Dativ። በትርጉም ላይ ብቻ አትታመን — የእንግሊዝኛው 'wait FOR' ከጀርመንኛው 'warten AUF' የተለየ መስተዋድድ ይጠቀማል።",
    "es_mx": "No traduzcas la preposición desde el español: «esperar A», «pensar EN», «depender DE» rara vez coinciden con la alemana (warten AUF, denken AN, abhängen VON). Aprende verbo + preposición + caso como un solo bloque, y recuerda que el alemán además fija el caso (acusativo o dativo), que el español ya no marca.",
    "ca": "No tradueixis la preposició des del català: «esperar», «pensar EN», «dependre DE» poques vegades coincideixen amb l'alemanya (warten AUF, denken AN, abhängen VON). Aprèn verb + preposició + cas com un sol bloc, i recorda que l'alemany a més fixa el cas (acusatiu o datiu), que el català ja no marca.",
-   "hr": "Prijedlog i padež neodvojivo pripadaju glagolu: 'warten auf' uvijek + akuzativ, 'teilnehmen an' uvijek + dativ. Ne oslanjaj se na značenje – ne prevodi prijedlog iz hrvatskog. Nauči glagol + prijedlog + padež kao jednu cjelinu i zapamti da njemački uz to fiksira i padež (akuzativ ili dativ)."
+   "hr": "Prijedlog i padež neodvojivo pripadaju glagolu: 'warten auf' uvijek + akuzativ, 'teilnehmen an' uvijek + dativ. Ne oslanjaj se na značenje – ne prevodi prijedlog iz hrvatskog. Nauči glagol + prijedlog + padež kao jednu cjelinu i zapamti da njemački uz to fiksira i padež (akuzativ ili dativ).",
+   "sr": "Немој да преводиш предлог са свог језика – српско „чекати НЕКОГА“, „мислити НА“, „зависити ОД“ ретко се поклапа са немачким (warten AUF, denken AN, abhängen VON). Научи глагол + предлог + падеж као једну целину и запамти да немачки при томе одређује и падеж (акузатив или датив).",
+   "el": "Η πρόθεση και η πτώση ανήκουν αναπόσπαστα στο ρήμα: το 'warten auf' πάντα + αιτιατική, το 'teilnehmen an' πάντα + δοτική. Μη μεταφράζεις την πρόθεση από τα ελληνικά ή τα αγγλικά – το αγγλικό 'wait FOR' έχει άλλη πρόθεση από το γερμανικό 'warten AUF'. Μάθε το ρήμα + πρόθεση + πτώση ως ενιαίο σύνολο και θυμήσου ότι τα γερμανικά καθορίζουν και την πτώση (αιτιατική ή δοτική)."
   }
  },
  {
@@ -12471,7 +13325,9 @@ const GRAMMAR = [
    "am": "ማወዳደሪያ እና በላቅ ደረጃ (Komparativ und Superlativ)",
    "es_mx": "Comparativo y superlativo",
    "ca": "Comparatiu i superlatiu",
-   "hr": "Komparativ i superlativ"
+   "hr": "Komparativ i superlativ",
+   "sr": "Компаратив и суперлатив",
+   "el": "Συγκριτικός και υπερθετικός βαθμός"
   },
   "intro": {
    "de": "Adjektive und Adverbien haben drei Stufen: Positiv (schnell), Komparativ (schneller, +er) und Superlativ (am schnellsten oder der/die/das schnellste). Viele einsilbige Adjektive mit a/o/u bekommen einen Umlaut. „als“ steht beim Vergleich (größer als), „(genau)so … wie“ bei Gleichheit.",
@@ -12494,7 +13350,9 @@ const GRAMMAR = [
    "am": "ቅጽሎችና ተውሳከ ግሶች ሦስት ደረጃዎች አሏቸው፦ መደበኛ ደረጃ (schnell)፣ ማወዳደሪያ ደረጃ (schneller, +er) እና በላቅ ደረጃ (am schnellsten ወይም der/die/das schnellste)። ብዙ ነጠላ-ድምጸት ቅጽሎች a/o/u ካላቸው Umlaut ያገኛሉ። 'als' ለንጽጽር ይጠቅማል (größer als — ከ... የበለጠ)፣ '(genau)so … wie' ደግሞ ለእኩልነት (so … wie — እንደ...)።",
    "es_mx": "Los adjetivos y adverbios alemanes tienen tres grados: positivo (schnell), comparativo (schneller, se añade -er) y superlativo (am schnellsten o der/die/das schnellste). Muchos adjetivos cortos toman Umlaut. Usa als para «que» (größer als) y (genau)so … wie para la igualdad.",
    "ca": "Els adjectius i adverbis alemanys tenen tres graus: positiu (schnell), comparatiu (schneller, s'hi afegeix -er) i superlatiu (am schnellsten o der/die/das schnellste). Molts adjectius curts prenen Umlaut. Fes servir als per a «que» (größer als) i (genau)so … wie per a la igualtat.",
-   "hr": "Pridjevi i prilozi imaju tri stupnja: pozitiv (schnell), komparativ (schneller, +er) i superlativ (am schnellsten ili der/die/das schnellste). Mnogi jednosložni pridjevi s a/o/u dobivaju preglas (Umlaut). „als“ se koristi kod usporedbe (größer als), a „(genau)so … wie“ kod jednakosti."
+   "hr": "Pridjevi i prilozi imaju tri stupnja: pozitiv (schnell), komparativ (schneller, +er) i superlativ (am schnellsten ili der/die/das schnellste). Mnogi jednosložni pridjevi s a/o/u dobivaju preglas (Umlaut). „als“ se koristi kod usporedbe (größer als), a „(genau)so … wie“ kod jednakosti.",
+   "sr": "Придеви и прилози имају три степена: позитив (schnell), компаратив (schneller, +er) и суперлатив (am schnellsten или der/die/das schnellste). Многи једносложни придеви са a/o/u добијају умлаут. „als“ стоји код поређења (größer als), а „(genau)so … wie“ код једнакости.",
+   "el": "Τα επίθετα και τα επιρρήματα έχουν τρεις βαθμούς: θετικό (schnell), συγκριτικό (schneller, +er) και υπερθετικό (am schnellsten ή der/die/das schnellste). Πολλά μονοσύλλαβα επίθετα με a/o/u παίρνουν umlaut. Το „als“ χρησιμοποιείται στη σύγκριση (größer als), το „(genau)so … wie“ στην ισότητα."
   },
   "tables": [
    {
@@ -12519,7 +13377,9 @@ const GRAMMAR = [
      "am": "መደበኛ ማወዳደሪያ አሠራር",
      "es_mx": "Comparación regular",
      "ca": "Comparació regular",
-     "hr": "Pravilno stupnjevanje"
+     "hr": "Pravilno stupnjevanje",
+     "sr": "Правилно степеновање",
+     "el": "Ομαλός σχηματισμός βαθμών"
     },
     "labelHeader": {
      "de": "",
@@ -12552,7 +13412,9 @@ const GRAMMAR = [
       "am": "መደበኛ ደረጃ (Positiv)",
       "es_mx": "Positivo",
       "ca": "Positiu",
-      "hr": "Pozitiv"
+      "hr": "Pozitiv",
+      "sr": "Позитив",
+      "el": "Θετικός"
      },
      {
       "de": "Komparativ",
@@ -12575,7 +13437,9 @@ const GRAMMAR = [
       "am": "ማወዳደሪያ ደረጃ (Komparativ)",
       "es_mx": "Comparativo",
       "ca": "Comparatiu",
-      "hr": "Komparativ"
+      "hr": "Komparativ",
+      "sr": "Компаратив",
+      "el": "Συγκριτικός"
      },
      {
       "de": "Superlativ",
@@ -12598,7 +13462,9 @@ const GRAMMAR = [
       "am": "በላቅ ደረጃ (Superlativ)",
       "es_mx": "Superlativo",
       "ca": "Superlatiu",
-      "hr": "Superlativ"
+      "hr": "Superlativ",
+      "sr": "Суперлатив",
+      "el": "Υπερθετικός"
      }
     ],
     "rows": [
@@ -12674,7 +13540,9 @@ const GRAMMAR = [
      "am": "Umlaut በነጠላ-ድምጸት ቅጽሎች",
      "es_mx": "Umlaut en adjetivos monosílabos",
      "ca": "Umlaut en adjectius monosíl·labs",
-     "hr": "Preglas (Umlaut) kod jednosložnih pridjeva"
+     "hr": "Preglas (Umlaut) kod jednosložnih pridjeva",
+     "sr": "Умлаут код једносложних придева",
+     "el": "Umlaut στα μονοσύλλαβα επίθετα"
     },
     "labelHeader": {
      "de": "",
@@ -12707,7 +13575,9 @@ const GRAMMAR = [
       "am": "መደበኛ ደረጃ (Positiv)",
       "es_mx": "Positivo",
       "ca": "Positiu",
-      "hr": "Pozitiv"
+      "hr": "Pozitiv",
+      "sr": "Позитив",
+      "el": "Θετικός"
      },
      {
       "de": "Komparativ",
@@ -12730,7 +13600,9 @@ const GRAMMAR = [
       "am": "ማወዳደሪያ ደረጃ (Komparativ)",
       "es_mx": "Comparativo",
       "ca": "Comparatiu",
-      "hr": "Komparativ"
+      "hr": "Komparativ",
+      "sr": "Компаратив",
+      "el": "Συγκριτικός"
      },
      {
       "de": "Superlativ",
@@ -12753,7 +13625,9 @@ const GRAMMAR = [
       "am": "በላቅ ደረጃ (Superlativ)",
       "es_mx": "Superlativo",
       "ca": "Superlatiu",
-      "hr": "Superlativ"
+      "hr": "Superlativ",
+      "sr": "Суперлатив",
+      "el": "Υπερθετικός"
      }
     ],
     "rows": [
@@ -12861,7 +13735,9 @@ const GRAMMAR = [
      "am": "መደበኛ ያልሆኑ ቅርጾች",
      "es_mx": "Formas irregulares",
      "ca": "Formes irregulars",
-     "hr": "Nepravilni oblici"
+     "hr": "Nepravilni oblici",
+     "sr": "Неправилни облици",
+     "el": "Ανώμαλοι τύποι"
     },
     "labelHeader": {
      "de": "",
@@ -12894,7 +13770,9 @@ const GRAMMAR = [
       "am": "መደበኛ ደረጃ (Positiv)",
       "es_mx": "Positivo",
       "ca": "Positiu",
-      "hr": "Pozitiv"
+      "hr": "Pozitiv",
+      "sr": "Позитив",
+      "el": "Θετικός"
      },
      {
       "de": "Komparativ",
@@ -12917,7 +13795,9 @@ const GRAMMAR = [
       "am": "ማወዳደሪያ ደረጃ (Komparativ)",
       "es_mx": "Comparativo",
       "ca": "Comparatiu",
-      "hr": "Komparativ"
+      "hr": "Komparativ",
+      "sr": "Компаратив",
+      "el": "Συγκριτικός"
      },
      {
       "de": "Superlativ",
@@ -12940,7 +13820,9 @@ const GRAMMAR = [
       "am": "በላቅ ደረጃ (Superlativ)",
       "es_mx": "Superlativo",
       "ca": "Superlatiu",
-      "hr": "Superlativ"
+      "hr": "Superlativ",
+      "sr": "Суперлатив",
+      "el": "Υπερθετικός"
      }
     ],
     "rows": [
@@ -13048,7 +13930,9 @@ const GRAMMAR = [
      "am": "ንጽጽሮች፦ als እና (genau)so … wie",
      "es_mx": "Comparaciones: als y (genau)so … wie",
      "ca": "Comparacions: als i (genau)so … wie",
-     "hr": "Usporedbe: als i (genau)so … wie"
+     "hr": "Usporedbe: als i (genau)so … wie",
+     "sr": "Поређења: als и (genau)so … wie",
+     "el": "Συγκρίσεις: als και (genau)so … wie"
     },
     "labelHeader": {
      "de": "Verhältnis",
@@ -13071,7 +13955,9 @@ const GRAMMAR = [
      "am": "ግንኙነት",
      "es_mx": "Relación",
      "ca": "Relació",
-     "hr": "Odnos"
+     "hr": "Odnos",
+     "sr": "Однос",
+     "el": "Σχέση"
     },
     "columns": [
      {
@@ -13095,7 +13981,9 @@ const GRAMMAR = [
       "am": "አወቃቀር",
       "es_mx": "Estructura",
       "ca": "Estructura",
-      "hr": "Struktura"
+      "hr": "Struktura",
+      "sr": "Структура",
+      "el": "Δομή"
      },
      {
       "de": "Beispiel",
@@ -13118,7 +14006,9 @@ const GRAMMAR = [
       "am": "ምሳሌ",
       "es_mx": "Ejemplo",
       "ca": "Exemple",
-      "hr": "Primjer"
+      "hr": "Primjer",
+      "sr": "Пример",
+      "el": "Παράδειγμα"
      }
     ],
     "rows": [
@@ -13144,7 +14034,9 @@ const GRAMMAR = [
        "am": "አለመመጣጠን (የበለጠ)",
        "es_mx": "Desigualdad (más)",
        "ca": "Desigualtat (més)",
-       "hr": "Nejednakost (više)"
+       "hr": "Nejednakost (više)",
+       "sr": "Неједнакост (више)",
+       "el": "Ανισότητα (περισσότερο)"
       },
       "cells": [
        "Komparativ + als",
@@ -13173,7 +14065,9 @@ const GRAMMAR = [
        "am": "እኩልነት",
        "es_mx": "Igualdad",
        "ca": "Igualtat",
-       "hr": "Jednakost"
+       "hr": "Jednakost",
+       "sr": "Једнакост",
+       "el": "Ισότητα"
       },
       "cells": [
        "(genau)so + Positiv + wie",
@@ -13202,7 +14096,9 @@ const GRAMMAR = [
        "am": "አለመመጣጠን (ያነሰ)",
        "es_mx": "Desigualdad (menos)",
        "ca": "Desigualtat (menys)",
-       "hr": "Nejednakost (manje)"
+       "hr": "Nejednakost (manje)",
+       "sr": "Неједнакост (мање)",
+       "el": "Ανισότητα (λιγότερο)"
       },
       "cells": [
        "nicht so + Positiv + wie",
@@ -13234,7 +14130,9 @@ const GRAMMAR = [
     "am": "ICE ባቡር ከአውቶቡስ ይልቅ ፈጣን ነው፣ ግን አውሮፕላኑ ከሁሉም የበለጠ ፈጣን ነው።",
     "es_mx": "El tren de alta velocidad es más rápido que el autobús, pero el avión es el más rápido.",
     "ca": "El tren d'alta velocitat és més ràpid que l'autobús, però l'avió és el més ràpid.",
-    "hr": "Brzi vlak (ICE) je brži od autobusa, ali je zrakoplov najbrži."
+    "hr": "Brzi vlak (ICE) je brži od autobusa, ali je zrakoplov najbrži.",
+    "sr": "Брзи воз (ICE) је бржи од аутобуса, али је авион најбржи.",
+    "el": "Το ICE είναι πιο γρήγορο από το λεωφορείο, αλλά το αεροπλάνο είναι το πιο γρήγορο."
    },
    {
     "de": "Meine Schwester ist genauso alt wie ich.",
@@ -13257,7 +14155,9 @@ const GRAMMAR = [
     "am": "እህቴ ልክ እንደ እኔ ዕድሜ አላት።",
     "es_mx": "Mi hermana tiene exactamente la misma edad que yo.",
     "ca": "La meva germana té exactament la mateixa edat que jo.",
-    "hr": "Moja je sestra jednako stara kao ja."
+    "hr": "Moja je sestra jednako stara kao ja.",
+    "sr": "Моја сестра је тачно исто толико стара као ја.",
+    "el": "Η αδελφή μου είναι ακριβώς το ίδιο μεγάλη σε ηλικία με εμένα."
    },
    {
     "de": "Das ist der beste Film des Jahres.",
@@ -13280,7 +14180,9 @@ const GRAMMAR = [
     "am": "ይህ የዓመቱ ምርጥ ፊልም ነው።",
     "es_mx": "Esa es la mejor película del año.",
     "ca": "Aquesta és la millor pel·lícula de l'any.",
-    "hr": "To je najbolji film godine."
+    "hr": "To je najbolji film godine.",
+    "sr": "То је најбољи филм године.",
+    "el": "Αυτή είναι η καλύτερη ταινία της χρονιάς."
    }
   ],
   "hints": {
@@ -13304,7 +14206,9 @@ const GRAMMAR = [
    "am": "ነጠላ-ድምጸት ቅጽሎች a/o/u ካላቸው ብዙ ጊዜ Umlaut ያገኛሉ (alt → älter፣ groß → größer)። ልብ በል፦ 'als' ለአለመመጣጠን (größer als — ከ... የበለጠ)፣ 'wie' ለእኩልነት ((genau)so groß wie — ልክ እንደ...)።",
    "es_mx": "A diferencia del inglés (y del español), el alemán casi siempre usa la terminación -er, incluso en adjetivos largos: interessanter, no «mehr interessant». Usa als para «que» (größer als) y wie para «como» (so groß wie); no los intercambies.",
    "ca": "A diferència de l'anglès (i del català), l'alemany gairebé sempre usa la terminació -er, fins i tot en adjectius llargs: interessanter, no «mehr interessant». Fes servir als per a «que» (größer als) i wie per a «com» (so groß wie); no els intercanviïs.",
-   "hr": "Za razliku od engleskoga, njemački gotovo uvijek koristi nastavak -er, čak i kod dugih pridjeva: interessanter, a ne „more interesting“ (nikada mehr interessant). „als“ se koristi za usporedbu razlike (größer als), a „wie“ za jednakost (so groß wie) — nemoj ih zamijeniti."
+   "hr": "Za razliku od engleskoga, njemački gotovo uvijek koristi nastavak -er, čak i kod dugih pridjeva: interessanter, a ne „more interesting“ (nikada mehr interessant). „als“ se koristi za usporedbu razlike (größer als), a „wie“ za jednakost (so groß wie) — nemoj ih zamijeniti.",
+   "sr": "Једносложни придеви са a/o/u често добијају умлаут (alt → älter, groß → größer). Запамти: „als“ код неједнакости (größer als), „wie“ код једнакости ((genau)so groß wie).",
+   "el": "Τα μονοσύλλαβα επίθετα με a/o/u παίρνουν συχνά umlaut (alt → älter, groß → größer). Θυμήσου: „als“ στην ανισότητα (größer als), „wie“ στην ισότητα ((genau)so groß wie)."
   }
  },
  {
@@ -13331,7 +14235,9 @@ const GRAMMAR = [
    "am": "የቃላት አቀማመጥ (ዋና ዓረፍተ ነገር)",
    "es_mx": "Orden de las palabras (oración principal)",
    "ca": "Ordre de les paraules (oració principal)",
-   "hr": "Red riječi (glavna rečenica)"
+   "hr": "Red riječi (glavna rečenica)",
+   "sr": "Ред речи (главна реченица)",
+   "el": "Σειρά των λέξεων (κύρια πρόταση)"
   },
   "intro": {
    "de": "Im Hauptsatz steht das gebeugte Verb immer an Position 2. Auf Position 1 kann das Subjekt oder ein anderes Element stehen – steht dort etwas anderes, rückt das Subjekt hinter das Verb (Inversion). Das Mittelfeld folgt der Reihenfolge TeKaMoLo (temporal–kausal–modal–lokal). Ja/Nein-Fragen beginnen mit dem Verb, W-Fragen mit dem Fragewort + Verb.",
@@ -13354,7 +14260,9 @@ const GRAMMAR = [
    "am": "በዋና ዓረፍተ ነገር ውስጥ የተገለበጠው ግስ ሁልጊዜ በሁለተኛ ቦታ ይገኛል። በአንደኛ ቦታ ባለቤቱ ወይም ሌላ ክፍል ሊሆን ይችላል — ሌላ ነገር እዚያ ከሆነ፣ ባለቤቱ ከግሱ በኋላ ይመጣል (ግልበጣ / Inversion)። መሃል ስፍራው የ TeKaMoLo ቅደም ተከተል ይከተላል (ጊዜ–ምክንያት–ሁኔታ–ቦታ)። አዎ/አይ ጥያቄዎች በግስ ይጀምራሉ፣ በጥያቄ ቃል የሚጀምሩ ጥያቄዎች ደግሞ በጥያቄ ቃል + ግስ ይጀምራሉ።",
    "es_mx": "En la oración principal, el verbo conjugado va siempre en la posición 2. La posición 1 puede ocuparla el sujeto u otro elemento; si es otro elemento, el sujeto pasa detrás del verbo (inversión). El campo central sigue el orden TeKaMoLo (tiempo–causa–modo–lugar). Las preguntas de sí/no empiezan por el verbo; las de partícula interrogativa, por el pronombre/adverbio interrogativo + verbo.",
    "ca": "A l'oració principal, el verb conjugat va sempre a la posició 2. La posició 1 la pot ocupar el subjecte o un altre element; si és un altre element, el subjecte passa darrere del verb (inversió). El camp central segueix l'ordre TeKaMoLo (temps–causa–manera–lloc). Les preguntes de sí/no comencen pel verb; les de partícula interrogativa, pel mot interrogatiu + verb.",
-   "hr": "U glavnoj rečenici sprezani glagol uvijek stoji na drugom mjestu. Na prvom mjestu može stajati subjekt ili neki drugi element – ako je ondje nešto drugo, subjekt dolazi iza glagola (inverzija). Sredina rečenice slijedi redoslijed TeKaMoLo (vrijeme–uzrok–način–mjesto). Pitanja s da/ne počinju glagolom, a pitanja s upitnom riječju upitnom riječju + glagolom."
+   "hr": "U glavnoj rečenici sprezani glagol uvijek stoji na drugom mjestu. Na prvom mjestu može stajati subjekt ili neki drugi element – ako je ondje nešto drugo, subjekt dolazi iza glagola (inverzija). Sredina rečenice slijedi redoslijed TeKaMoLo (vrijeme–uzrok–način–mjesto). Pitanja s da/ne počinju glagolom, a pitanja s upitnom riječju upitnom riječju + glagolom.",
+   "sr": "У главној реченици лични глаголски облик увек стоји на другом месту. На првом месту може стајати субјекат или неки други елемент — ако тамо стоји нешто друго, субјекат прелази иза глагола (инверзија). Средње поље прати редослед TeKaMoLo (временски–узрочни–начински–месни). Да/не питања почињу глаголом, а питања с упитном речју почињу упитном речју + глаголом.",
+   "el": "Στην κύρια πρόταση το κλιτό ρήμα βρίσκεται πάντα στη θέση 2. Στη θέση 1 μπορεί να μπει το υποκείμενο ή κάποιο άλλο στοιχείο – αν μπει κάτι άλλο, το υποκείμενο μετακινείται πίσω από το ρήμα (αναστροφή). Το μεσαίο πεδίο ακολουθεί τη σειρά TeKaMoLo (χρόνος–αιτία–τρόπος–τόπος). Οι ερωτήσεις ναι/όχι ξεκινούν με το ρήμα, οι ερωτήσεις με ερωτηματική λέξη με την ερωτηματική λέξη + ρήμα."
   },
   "tables": [
    {
@@ -13379,7 +14287,9 @@ const GRAMMAR = [
      "am": "ግስ-ሁለተኛ አቀማመጥ፦ ቦታ 1 / ግስ / ቀሪው",
      "es_mx": "Verbo en segunda posición: posición 1 / verbo / resto",
      "ca": "Verb en segona posició: posició 1 / verb / resta",
-     "hr": "Glagol na drugom mjestu: prvo mjesto / glagol / ostatak"
+     "hr": "Glagol na drugom mjestu: prvo mjesto / glagol / ostatak",
+     "sr": "Глагол на другом месту: прво место / глагол / остатак",
+     "el": "Ρήμα στη δεύτερη θέση: θέση 1 / ρήμα / υπόλοιπο"
     },
     "labelHeader": {
      "de": "Vorfeld",
@@ -13402,7 +14312,9 @@ const GRAMMAR = [
      "am": "የፊት ስፍራ (Vorfeld)",
      "es_mx": "Campo anterior (Vorfeld)",
      "ca": "Camp anterior (Vorfeld)",
-     "hr": "Prvo polje (Vorfeld)"
+     "hr": "Prvo polje (Vorfeld)",
+     "sr": "Предпоље",
+     "el": "Πρόθεμα (Vorfeld)"
     },
     "columns": [
      {
@@ -13426,7 +14338,9 @@ const GRAMMAR = [
       "am": "ቦታ 1",
       "es_mx": "Posición 1",
       "ca": "Posició 1",
-      "hr": "Prvo mjesto"
+      "hr": "Prvo mjesto",
+      "sr": "Прво место",
+      "el": "Θέση 1"
      },
      {
       "de": "Verb (Pos. 2)",
@@ -13449,7 +14363,9 @@ const GRAMMAR = [
       "am": "ግስ (ቦታ 2)",
       "es_mx": "Verbo (pos. 2)",
       "ca": "Verb (pos. 2)",
-      "hr": "Glagol (2. mjesto)"
+      "hr": "Glagol (2. mjesto)",
+      "sr": "Глагол (2. место)",
+      "el": "Ρήμα (θέση 2)"
      },
      {
       "de": "Rest / Mittelfeld",
@@ -13472,7 +14388,9 @@ const GRAMMAR = [
       "am": "ቀሪው / መሃል ስፍራ",
       "es_mx": "Resto / campo central",
       "ca": "Resta / camp central",
-      "hr": "Ostatak / sredina rečenice"
+      "hr": "Ostatak / sredina rečenice",
+      "sr": "Остатак / средње поље",
+      "el": "Υπόλοιπο / μεσαίο πεδίο"
      }
     ],
     "rows": [
@@ -13498,7 +14416,9 @@ const GRAMMAR = [
        "am": "ባለቤት",
        "es_mx": "Sujeto",
        "ca": "Subjecte",
-       "hr": "Subjekt"
+       "hr": "Subjekt",
+       "sr": "Субјекат",
+       "el": "Υποκείμενο"
       },
       "cells": [
        "Ich",
@@ -13528,7 +14448,9 @@ const GRAMMAR = [
        "am": "ጊዜ",
        "es_mx": "Tiempo",
        "ca": "Temps",
-       "hr": "Vrijeme"
+       "hr": "Vrijeme",
+       "sr": "Време",
+       "el": "Χρόνος"
       },
       "cells": [
        "Morgen",
@@ -13558,7 +14480,9 @@ const GRAMMAR = [
        "am": "ቦታ",
        "es_mx": "Lugar",
        "ca": "Lloc",
-       "hr": "Mjesto"
+       "hr": "Mjesto",
+       "sr": "Место",
+       "el": "Τόπος"
       },
       "cells": [
        "Nach Berlin",
@@ -13590,7 +14514,9 @@ const GRAMMAR = [
      "am": "መሃል ስፍራ፦ TeKaMoLo (የመግለጫዎች ቅደም ተከተል) — ለምሳሌ Ich fahre …",
      "es_mx": "Campo central: TeKaMoLo (orden de los complementos) – p. ej. Ich fahre …",
      "ca": "Camp central: TeKaMoLo (ordre dels complements) – p. ex. Ich fahre …",
-     "hr": "Sredina rečenice: TeKaMoLo (redoslijed priložnih oznaka) – npr. Ich fahre …"
+     "hr": "Sredina rečenice: TeKaMoLo (redoslijed priložnih oznaka) – npr. Ich fahre …",
+     "sr": "Средње поље: TeKaMoLo (редослед прилошких одредаба) — нпр. Ich fahre …",
+     "el": "Μεσαίο πεδίο: TeKaMoLo (σειρά των προσδιορισμών) – π.χ. Ich fahre …"
     },
     "labelHeader": {
      "de": "",
@@ -13623,7 +14549,9 @@ const GRAMMAR = [
       "am": "ጊዜ — መቼ? (Te)",
       "es_mx": "Temporal – ¿cuándo? (Te)",
       "ca": "Temporal – quan? (Te)",
-      "hr": "Vremenska – kada? (Te)"
+      "hr": "Vremenska – kada? (Te)",
+      "sr": "Временска — кад? (Te)",
+      "el": "Χρονικός – πότε; (Te)"
      },
      {
       "de": "Kausal – warum? (Ka)",
@@ -13646,7 +14574,9 @@ const GRAMMAR = [
       "am": "ምክንያት — ለምን? (Ka)",
       "es_mx": "Causal – ¿por qué? (Ka)",
       "ca": "Causal – per què? (Ka)",
-      "hr": "Uzročna – zašto? (Ka)"
+      "hr": "Uzročna – zašto? (Ka)",
+      "sr": "Узрочна — зашто? (Ka)",
+      "el": "Αιτιολογικός – γιατί; (Ka)"
      },
      {
       "de": "Modal – wie? (Mo)",
@@ -13669,7 +14599,9 @@ const GRAMMAR = [
       "am": "ሁኔታ — እንዴት? (Mo)",
       "es_mx": "Modal – ¿cómo? (Mo)",
       "ca": "Modal – com? (Mo)",
-      "hr": "Načinska – kako? (Mo)"
+      "hr": "Načinska – kako? (Mo)",
+      "sr": "Начинска — како? (Mo)",
+      "el": "Τροπικός – πώς; (Mo)"
      },
      {
       "de": "Lokal – wo/wohin? (Lo)",
@@ -13692,7 +14624,9 @@ const GRAMMAR = [
       "am": "ቦታ — የት/ወዴት? (Lo)",
       "es_mx": "Local – ¿dónde/a dónde? (Lo)",
       "ca": "Local – on/cap a on? (Lo)",
-      "hr": "Mjesna – gdje/kamo? (Lo)"
+      "hr": "Mjesna – gdje/kamo? (Lo)",
+      "sr": "Месна — где/куда? (Lo)",
+      "el": "Τοπικός – πού/προς τα πού; (Lo)"
      }
     ],
     "rows": [
@@ -13737,7 +14671,9 @@ const GRAMMAR = [
      "am": "ጥያቄዎች፦ አዎ/አይ እና በጥያቄ ቃል የሚጀምሩ ጥያቄዎች",
      "es_mx": "Preguntas: de sí/no y con partícula interrogativa",
      "ca": "Preguntes: de sí/no i amb partícula interrogativa",
-     "hr": "Pitanja: s da/ne i s upitnom riječju"
+     "hr": "Pitanja: s da/ne i s upitnom riječju",
+     "sr": "Питања: да/не и питања с упитном речју",
+     "el": "Ερωτήσεις: ναι/όχι και ερωτήσεις με ερωτηματική λέξη"
     },
     "labelHeader": {
      "de": "Fragetyp",
@@ -13760,7 +14696,9 @@ const GRAMMAR = [
      "am": "የጥያቄ ዓይነት",
      "es_mx": "Tipo de pregunta",
      "ca": "Tipus de pregunta",
-     "hr": "Vrsta pitanja"
+     "hr": "Vrsta pitanja",
+     "sr": "Врста питања",
+     "el": "Τύπος ερώτησης"
     },
     "columns": [
      {
@@ -13784,7 +14722,9 @@ const GRAMMAR = [
       "am": "አወቃቀር",
       "es_mx": "Estructura",
       "ca": "Estructura",
-      "hr": "Struktura"
+      "hr": "Struktura",
+      "sr": "Структура",
+      "el": "Δομή"
      },
      {
       "de": "Beispiel",
@@ -13807,7 +14747,9 @@ const GRAMMAR = [
       "am": "ምሳሌ",
       "es_mx": "Ejemplo",
       "ca": "Exemple",
-      "hr": "Primjer"
+      "hr": "Primjer",
+      "sr": "Пример",
+      "el": "Παράδειγμα"
      }
     ],
     "rows": [
@@ -13833,7 +14775,9 @@ const GRAMMAR = [
        "am": "አዎ/አይ ጥያቄ",
        "es_mx": "Pregunta de sí/no",
        "ca": "Pregunta de sí/no",
-       "hr": "Pitanje s da/ne"
+       "hr": "Pitanje s da/ne",
+       "sr": "Да/не питање",
+       "el": "Ερώτηση ναι/όχι"
       },
       "cells": [
        "Verb + Subjekt …?",
@@ -13862,7 +14806,9 @@ const GRAMMAR = [
        "am": "በጥያቄ ቃል የሚጀምር ጥያቄ",
        "es_mx": "Pregunta con W- (Fragewort)",
        "ca": "Pregunta amb W- (Fragewort)",
-       "hr": "Pitanje s upitnom riječju (W-pitanje)"
+       "hr": "Pitanje s upitnom riječju (W-pitanje)",
+       "sr": "Питање с упитном речју",
+       "el": "Ερώτηση με ερωτηματική λέξη"
       },
       "cells": [
        "W-Wort + Verb + Subjekt …?",
@@ -13894,7 +14840,9 @@ const GRAMMAR = [
     "am": "ዛሬ ማታ ወደ ሲኒማ እሄዳለሁ።",
     "es_mx": "Esta noche voy al cine.",
     "ca": "Aquest vespre vaig al cine.",
-    "hr": "Heute Abend gehe ich ins Kino. (Večeras idem u kino.)"
+    "hr": "Heute Abend gehe ich ins Kino. (Večeras idem u kino.)",
+    "sr": "Heute Abend gehe ich ins Kino. (Вечерас идем у биоскоп.)",
+    "el": "Heute Abend gehe ich ins Kino. (Απόψε πηγαίνω στον κινηματογράφο.)"
    },
    {
     "de": "Warum antwortest du nicht?",
@@ -13917,7 +14865,9 @@ const GRAMMAR = [
     "am": "ለምን አትመልስም?",
     "es_mx": "¿Por qué no contestas?",
     "ca": "Per què no contestes?",
-    "hr": "Warum antwortest du nicht? (Zašto ne odgovaraš?)"
+    "hr": "Warum antwortest du nicht? (Zašto ne odgovaraš?)",
+    "sr": "Warum antwortest du nicht? (Зашто не одговараш?)",
+    "el": "Warum antwortest du nicht? (Γιατί δεν απαντάς;)"
    },
    {
     "de": "Ich fahre heute wegen des Wetters mit dem Bus zur Arbeit.",
@@ -13940,7 +14890,9 @@ const GRAMMAR = [
     "am": "ዛሬ በአየር ሁኔታው ምክንያት በአውቶቡስ ወደ ሥራ እሄዳለሁ።",
     "es_mx": "Hoy, por el clima, voy al trabajo en autobús.",
     "ca": "Avui, pel temps, vaig a la feina amb autobús.",
-    "hr": "Ich fahre heute wegen des Wetters mit dem Bus zur Arbeit. (Danas zbog vremena idem autobusom na posao.)"
+    "hr": "Ich fahre heute wegen des Wetters mit dem Bus zur Arbeit. (Danas zbog vremena idem autobusom na posao.)",
+    "sr": "Ich fahre heute wegen des Wetters mit dem Bus zur Arbeit. (Данас због времена идем аутобусом на посао.)",
+    "el": "Ich fahre heute wegen des Wetters mit dem Bus zur Arbeit. (Σήμερα, λόγω του καιρού, πηγαίνω με το λεωφορείο στη δουλειά.)"
    }
   ],
   "hints": {
@@ -13964,7 +14916,9 @@ const GRAMMAR = [
    "am": "የተገለበጠው ግስ ሁልጊዜ በሁለተኛ ቦታ ይገኛል። ከባለቤቱ ውጪ ሌላ ነገር ከፊት ከመጣ፣ ባለቤቱ ወዲያውኑ ከግሱ በኋላ ይንሸራተታል (ግልበጣ)። በመሃል ስፍራው TeKaMoLo ተፈጻሚ ይሆናል፤ 'nicht' በቀጥታ ከሚያስተባብለው ቃል በፊት ይመጣል፣ ለጠቅላላ ዓረፍተ ነገር አሉታ ደግሞ በመጨረሻ ይመጣል — ነገር ግን እንደ Partizip ወይም Infinitiv ካሉ የግስ ክፍሎች በፊት።",
    "es_mx": "El inglés (y el español) también pueden anteponer un adverbio («Mañana voy a casa») manteniendo sujeto–verbo; el alemán, en cambio, invierte: el verbo se aferra al puesto 2 y el sujeto salta detrás («Morgen gehe ich…»). Nunca digas «Morgen ich gehe». En la negación, «nicht» va al final si niega toda la oración, pero justo antes de la palabra concreta que niega.",
    "ca": "L'anglès (i el català) també poden anteposar un adverbi («Demà vaig a casa») mantenint subjecte–verb; l'alemany, en canvi, inverteix: el verb s'aferra al lloc 2 i el subjecte salta al darrere («Morgen gehe ich…»). No diguis mai «Morgen ich gehe». En la negació, «nicht» va al final si nega tota l'oració, però just abans de la paraula concreta que nega.",
-   "hr": "Sprezani glagol uvijek stoji na drugom mjestu. Ako je na početku nešto drugo osim subjekta, subjekt dolazi neposredno iza glagola (inverzija). U sredini rečenice vrijedi TeKaMoLo; 'nicht' stoji neposredno ispred riječi koja se niječe, a kod nijekanja cijele rečenice na kraju rečenice – ali ispred glagolskih dijelova poput participa ili infinitiva. Nikada ne recite 'Morgen ich gehe.'"
+   "hr": "Sprezani glagol uvijek stoji na drugom mjestu. Ako je na početku nešto drugo osim subjekta, subjekt dolazi neposredno iza glagola (inverzija). U sredini rečenice vrijedi TeKaMoLo; 'nicht' stoji neposredno ispred riječi koja se niječe, a kod nijekanja cijele rečenice na kraju rečenice – ali ispred glagolskih dijelova poput participa ili infinitiva. Nikada ne recite 'Morgen ich gehe.'",
+   "sr": "Лични глаголски облик увек стоји на другом месту. Ако на почетку дође нешто друго осим субјекта, субјекат прелази непосредно иза глагола (инверзија). У средњем пољу важи TeKaMoLo; 'nicht' стоји непосредно испред речи која се негира, а код негације целе реченице на крају реченице — али испред глаголских делова као што су партицип или инфинитив.",
+   "el": "Το κλιτό ρήμα βρίσκεται πάντα στη θέση 2. Αν στην αρχή μπει κάτι άλλο εκτός από το υποκείμενο, το υποκείμενο μετακινείται αμέσως πίσω από το ρήμα (αναστροφή). Στα ελληνικά η σειρά είναι πιο ελεύθερη, αλλά στα γερμανικά ποτέ δεν λέμε 'Morgen ich gehe' – σωστό είναι 'Morgen gehe ich…'. Στο μεσαίο πεδίο ισχύει το TeKaMoLo· το 'nicht' μπαίνει ακριβώς πριν από τη λέξη που αρνείται, ενώ στην άρνηση όλης της πρότασης στο τέλος – όμως πριν από μέρη του ρήματος όπως μετοχή ή απαρέμφατο."
   }
  },
  {
@@ -13991,7 +14945,9 @@ const GRAMMAR = [
    "am": "ንዑስ ዓረፍተ ነገሮች እና መስተጻምሮች",
    "es_mx": "Oraciones subordinadas y conjunciones",
    "ca": "Oracions subordinades i conjuncions",
-   "hr": "Zavisne rečenice i veznici"
+   "hr": "Zavisne rečenice i veznici",
+   "sr": "Зависне реченице и везници",
+   "el": "Δευτερεύουσες προτάσεις & σύνδεσμοι"
   },
   "intro": {
    "de": "In Nebensätzen wandert das konjugierte Verb ans Satzende. Unterordnende Konjunktionen wie weil, dass oder wenn lösen diese Endstellung aus; nebenordnende wie und, aber, denn ändern die Wortstellung nicht. Steht der Nebensatz vorne, folgt gleich nach dem Komma das Verb des Hauptsatzes.",
@@ -14014,7 +14970,9 @@ const GRAMMAR = [
    "am": "በንዑስ ዓረፍተ ነገር ውስጥ የተገለበጠው ግስ ወደ ዓረፍተ ነገሩ መጨረሻ ይንቀሳቀሳል። እንደ weil, dass ወይም wenn ያሉ የበታች መስተጻምሮች ይህንን የመጨረሻ አቀማመጥ ያስከትላሉ፤ እንደ und, aber, denn ያሉ አቻ መስተጻምሮች ግን የቃላቱን አቀማመጥ አይለውጡም። ንዑስ ዓረፍተ ነገሩ ከፊት ከመጣ፣ ወዲያውኑ ከነጠላ ሰረዙ በኋላ የዋናው ዓረፍተ ነገር ግስ ይከተላል።",
    "es_mx": "En una oración subordinada, el verbo conjugado se va al final del todo. Las conjunciones subordinantes (weil, dass, wenn…) provocan esa posición final; las coordinantes (und, aber, denn…) mantienen el orden normal de verbo en segunda posición. Si la subordinada va delante, el verbo de la principal viene justo después de la coma.",
    "ca": "En una oració subordinada, el verb conjugat se'n va al final de tot. Les conjuncions subordinants (weil, dass, wenn…) provoquen aquesta posició final; les coordinants (und, aber, denn…) mantenen l'ordre normal de verb en segona posició. Si la subordinada va davant, el verb de la principal ve just després de la coma.",
-   "hr": "U zavisnim rečenicama sprezani glagol ide na kraj rečenice. Podredni (zavisni) veznici poput weil, dass ili wenn izazivaju taj krajnji položaj glagola; naporedni (nezavisni) veznici poput und, aber, denn ne mijenjaju red riječi. Ako zavisna rečenica stoji na početku, odmah nakon zareza slijedi glagol glavne rečenice."
+   "hr": "U zavisnim rečenicama sprezani glagol ide na kraj rečenice. Podredni (zavisni) veznici poput weil, dass ili wenn izazivaju taj krajnji položaj glagola; naporedni (nezavisni) veznici poput und, aber, denn ne mijenjaju red riječi. Ako zavisna rečenica stoji na početku, odmah nakon zareza slijedi glagol glavne rečenice.",
+   "sr": "У зависним реченицама лични глаголски облик прелази на крај реченице. Зависни везници као што су weil, dass или wenn изазивају тај крајњи положај; напоредни везници као und, aber, denn не мењају ред речи. Ако зависна реченица стоји на почетку, одмах иза зареза следи глагол главне реченице.",
+   "el": "Στις δευτερεύουσες προτάσεις το κλιτό ρήμα πηγαίνει στο τέλος της πρότασης. Υποτακτικοί σύνδεσμοι όπως weil, dass ή wenn προκαλούν αυτή την τελική θέση· οι παρατακτικοί όπως und, aber, denn δεν αλλάζουν τη σειρά των λέξεων. Αν η δευτερεύουσα πρόταση προηγείται, αμέσως μετά το κόμμα ακολουθεί το ρήμα της κύριας πρότασης."
   },
   "tables": [
    {
@@ -14039,7 +14997,9 @@ const GRAMMAR = [
      "am": "የበታች መስተጻምሮች — ግስ ወደ ዓረፍተ ነገሩ መጨረሻ",
      "es_mx": "Conjunciones subordinantes: el verbo va al final",
      "ca": "Conjuncions subordinants: el verb va al final",
-     "hr": "Podredni veznici – glagol ide na kraj rečenice"
+     "hr": "Podredni veznici – glagol ide na kraj rečenice",
+     "sr": "Зависни везници — глагол иде на крај реченице",
+     "el": "Υποτακτικοί σύνδεσμοι – το ρήμα πηγαίνει στο τέλος της πρότασης"
     },
     "labelHeader": {
      "de": "Bedeutung / Funktion",
@@ -14062,7 +15022,9 @@ const GRAMMAR = [
      "am": "ትርጉም / ተግባር",
      "es_mx": "Significado / función",
      "ca": "Significat / funció",
-     "hr": "Značenje / funkcija"
+     "hr": "Značenje / funkcija",
+     "sr": "Значење / функција",
+     "el": "Σημασία / Λειτουργία"
     },
     "columns": [
      {
@@ -14086,7 +15048,9 @@ const GRAMMAR = [
       "am": "መስተጻምር",
       "es_mx": "Conjunción",
       "ca": "Conjunció",
-      "hr": "Veznik"
+      "hr": "Veznik",
+      "sr": "Везник",
+      "el": "Σύνδεσμος"
      },
      {
       "de": "Beispiel (Verb am Satzende)",
@@ -14109,7 +15073,9 @@ const GRAMMAR = [
       "am": "ምሳሌ (ግስ በመጨረሻ)",
       "es_mx": "Ejemplo (verbo al final)",
       "ca": "Exemple (verb al final)",
-      "hr": "Primjer (glagol na kraju rečenice)"
+      "hr": "Primjer (glagol na kraju rečenice)",
+      "sr": "Пример (глагол на крају реченице)",
+      "el": "Παράδειγμα (ρήμα στο τέλος της πρότασης)"
      }
     ],
     "rows": [
@@ -14135,7 +15101,9 @@ const GRAMMAR = [
        "am": "ምክንያት (ለምን?)",
        "es_mx": "porque",
        "ca": "perquè",
-       "hr": "razlog (zašto?)"
+       "hr": "razlog (zašto?)",
+       "sr": "узрок (зашто?)",
+       "el": "αιτία (γιατί;)"
       },
       "cells": [
        "weil",
@@ -14164,7 +15132,9 @@ const GRAMMAR = [
        "am": "ይዘት (ምን?)",
        "es_mx": "que",
        "ca": "que",
-       "hr": "sadržaj (što?)"
+       "hr": "sadržaj (što?)",
+       "sr": "садржај (шта?)",
+       "el": "περιεχόμενο (τι;)"
       },
       "cells": [
        "dass",
@@ -14193,7 +15163,9 @@ const GRAMMAR = [
        "am": "ሁኔታ / ጊዜ",
        "es_mx": "si / cuando",
        "ca": "si / quan",
-       "hr": "uvjet / vrijeme"
+       "hr": "uvjet / vrijeme",
+       "sr": "услов / време",
+       "el": "προϋπόθεση / χρόνος"
       },
       "cells": [
        "wenn",
@@ -14222,7 +15194,9 @@ const GRAMMAR = [
        "am": "አንድ ጊዜ በያለፈ ጊዜ",
        "es_mx": "cuando (hecho puntual en el pasado)",
        "ca": "quan (fet puntual del passat)",
-       "hr": "jednokratni događaj u prošlosti"
+       "hr": "jednokratni događaj u prošlosti",
+       "sr": "једном у прошлости",
+       "el": "μία φορά στο παρελθόν"
       },
       "cells": [
        "als",
@@ -14251,7 +15225,9 @@ const GRAMMAR = [
        "am": "ተቃርኖ",
        "es_mx": "aunque",
        "ca": "encara que",
-       "hr": "suprotnost (iako)"
+       "hr": "suprotnost (iako)",
+       "sr": "супротност",
+       "el": "αντίθεση"
       },
       "cells": [
        "obwohl",
@@ -14280,7 +15256,9 @@ const GRAMMAR = [
        "am": "ዓላማ (ለምን ዓላማ?)",
        "es_mx": "para que",
        "ca": "a fi que / perquè (finalitat)",
-       "hr": "svrha (čemu?)"
+       "hr": "svrha (čemu?)",
+       "sr": "циљ (у коју сврху?)",
+       "el": "σκοπός (για ποιον σκοπό;)"
       },
       "cells": [
        "damit",
@@ -14309,7 +15287,9 @@ const GRAMMAR = [
        "am": "በተመሳሳይ ጊዜ",
        "es_mx": "mientras",
        "ca": "mentre",
-       "hr": "istodobno (dok)"
+       "hr": "istodobno (dok)",
+       "sr": "истовремено",
+       "el": "ταυτόχρονα"
       },
       "cells": [
        "während",
@@ -14338,7 +15318,9 @@ const GRAMMAR = [
        "am": "ከዚያ በፊት",
        "es_mx": "antes de que",
        "ca": "abans que",
-       "hr": "prije"
+       "hr": "prije",
+       "sr": "пре тога",
+       "el": "πριν"
       },
       "cells": [
        "bevor",
@@ -14367,7 +15349,9 @@ const GRAMMAR = [
        "am": "ከዚያ በኋላ",
        "es_mx": "después de que",
        "ca": "després que",
-       "hr": "poslije"
+       "hr": "poslije",
+       "sr": "после тога",
+       "el": "μετά"
       },
       "cells": [
        "nachdem",
@@ -14396,7 +15380,9 @@ const GRAMMAR = [
        "am": "ኢቀጥተኛ ጥያቄ",
        "es_mx": "si (interrogativa indirecta)",
        "ca": "si (interrogativa indirecta)",
-       "hr": "neizravno pitanje (da li)"
+       "hr": "neizravno pitanje (da li)",
+       "sr": "индиректно питање",
+       "el": "πλάγια ερώτηση"
       },
       "cells": [
        "ob",
@@ -14425,7 +15411,9 @@ const GRAMMAR = [
        "am": "ሁኔታ (ግምት)",
        "es_mx": "en caso de que / por si",
        "ca": "en cas que / per si",
-       "hr": "uvjet (u slučaju da)"
+       "hr": "uvjet (u slučaju da)",
+       "sr": "услов",
+       "el": "προϋπόθεση"
       },
       "cells": [
        "falls",
@@ -14454,7 +15442,9 @@ const GRAMMAR = [
        "am": "ከአንድ ጊዜ ጀምሮ",
        "es_mx": "desde que",
        "ca": "des que",
-       "hr": "vrijeme od neke točke (otkad)"
+       "hr": "vrijeme od neke točke (otkad)",
+       "sr": "време од неке тачке",
+       "el": "χρόνος από ένα σημείο και μετά"
       },
       "cells": [
        "seitdem",
@@ -14485,7 +15475,9 @@ const GRAMMAR = [
      "am": "አቻ መስተጻምሮች — የቃላት አቀማመጥ አይለወጥም",
      "es_mx": "Conjunciones coordinantes: el orden no cambia",
      "ca": "Conjuncions coordinants: l'ordre no canvia",
-     "hr": "Naporedni veznici – red riječi ostaje isti"
+     "hr": "Naporedni veznici – red riječi ostaje isti",
+     "sr": "Напоредни везници — ред речи остаје исти",
+     "el": "Παρατακτικοί σύνδεσμοι – η σειρά των λέξεων παραμένει ίδια"
     },
     "labelHeader": {
      "de": "Bedeutung / Funktion",
@@ -14508,7 +15500,9 @@ const GRAMMAR = [
      "am": "ትርጉም / ተግባር",
      "es_mx": "Significado / función",
      "ca": "Significat / funció",
-     "hr": "Značenje / funkcija"
+     "hr": "Značenje / funkcija",
+     "sr": "Значење / функција",
+     "el": "Σημασία / Λειτουργία"
     },
     "columns": [
      {
@@ -14532,7 +15526,9 @@ const GRAMMAR = [
       "am": "መስተጻምር",
       "es_mx": "Conjunción",
       "ca": "Conjunció",
-      "hr": "Veznik"
+      "hr": "Veznik",
+      "sr": "Везник",
+      "el": "Σύνδεσμος"
      },
      {
       "de": "Beispiel (Verb bleibt auf Position 2)",
@@ -14555,7 +15551,9 @@ const GRAMMAR = [
       "am": "ምሳሌ (ግስ በቦታ 2 ይቆያል)",
       "es_mx": "Ejemplo (el verbo se queda en la posición 2)",
       "ca": "Exemple (el verb es queda a la posició 2)",
-      "hr": "Primjer (glagol ostaje na 2. mjestu)"
+      "hr": "Primjer (glagol ostaje na 2. mjestu)",
+      "sr": "Пример (глагол остаје на другом месту)",
+      "el": "Παράδειγμα (το ρήμα παραμένει στη 2η θέση)"
      }
     ],
     "rows": [
@@ -14581,7 +15579,9 @@ const GRAMMAR = [
        "am": "መደመር",
        "es_mx": "y",
        "ca": "i",
-       "hr": "dodavanje (i)"
+       "hr": "dodavanje (i)",
+       "sr": "додавање",
+       "el": "πρόσθεση"
       },
       "cells": [
        "und",
@@ -14610,7 +15610,9 @@ const GRAMMAR = [
        "am": "ተቃርኖ",
        "es_mx": "pero",
        "ca": "però",
-       "hr": "suprotnost (ali)"
+       "hr": "suprotnost (ali)",
+       "sr": "супротност",
+       "el": "αντίθεση"
       },
       "cells": [
        "aber",
@@ -14639,7 +15641,9 @@ const GRAMMAR = [
        "am": "አማራጭ",
        "es_mx": "o",
        "ca": "o",
-       "hr": "alternativa (ili)"
+       "hr": "alternativa (ili)",
+       "sr": "алтернатива",
+       "el": "εναλλακτική"
       },
       "cells": [
        "oder",
@@ -14668,7 +15672,9 @@ const GRAMMAR = [
        "am": "ምክንያት (= weil)",
        "es_mx": "porque, pues (= weil)",
        "ca": "perquè, ja que (= weil)",
-       "hr": "razlog (= weil)"
+       "hr": "razlog (= weil)",
+       "sr": "узрок (= weil)",
+       "el": "αιτία (= weil)"
       },
       "cells": [
        "denn",
@@ -14697,7 +15703,9 @@ const GRAMMAR = [
        "am": "ከአሉታ በኋላ ያለ ተቃርኖ",
        "es_mx": "sino (tras una negación)",
        "ca": "sinó (després d'una negació)",
-       "hr": "suprotnost nakon niječnice (nego)"
+       "hr": "suprotnost nakon niječnice (nego)",
+       "sr": "супротност после негације",
+       "el": "αντίθεση μετά από άρνηση"
       },
       "cells": [
        "sondern",
@@ -14728,7 +15736,9 @@ const GRAMMAR = [
      "am": "weil እና denn — ተመሳሳይ ትርጉም፣ የተለየ አቀማመጥ",
      "es_mx": "weil vs. denn: mismo significado, distinto orden",
      "ca": "weil vs. denn: mateix significat, ordre diferent",
-     "hr": "weil vs. denn – isto značenje, drugačiji red riječi"
+     "hr": "weil vs. denn – isto značenje, drugačiji red riječi",
+     "sr": "weil против denn — исто значење, другачији ред речи",
+     "el": "weil vs. denn – ίδια σημασία, διαφορετική σειρά λέξεων"
     },
     "labelHeader": {
      "de": "Konjunktion",
@@ -14751,7 +15761,9 @@ const GRAMMAR = [
      "am": "መስተጻምር",
      "es_mx": "Conjunción",
      "ca": "Conjunció",
-     "hr": "Veznik"
+     "hr": "Veznik",
+     "sr": "Везник",
+     "el": "Σύνδεσμος"
     },
     "columns": [
      {
@@ -14775,7 +15787,9 @@ const GRAMMAR = [
       "am": "የዓረፍተ ነገር ዓይነት",
       "es_mx": "Tipo de oración",
       "ca": "Tipus d'oració",
-      "hr": "Vrsta rečenice"
+      "hr": "Vrsta rečenice",
+      "sr": "Тип реченице",
+      "el": "Τύπος πρότασης"
      },
      {
       "de": "Wortstellung",
@@ -14798,7 +15812,9 @@ const GRAMMAR = [
       "am": "የቃላት አቀማመጥ",
       "es_mx": "Orden de las palabras",
       "ca": "Ordre de les paraules",
-      "hr": "Red riječi"
+      "hr": "Red riječi",
+      "sr": "Ред речи",
+      "el": "Σειρά λέξεων"
      },
      {
       "de": "Beispiel (gleiche Bedeutung)",
@@ -14821,7 +15837,9 @@ const GRAMMAR = [
       "am": "ምሳሌ (ተመሳሳይ ትርጉም)",
       "es_mx": "Ejemplo (mismo significado)",
       "ca": "Exemple (mateix significat)",
-      "hr": "Primjer (isto značenje)"
+      "hr": "Primjer (isto značenje)",
+      "sr": "Пример (исто значење)",
+      "el": "Παράδειγμα (ίδια σημασία)"
      }
     ],
     "rows": [
@@ -14847,7 +15865,9 @@ const GRAMMAR = [
        "am": "weil",
        "es_mx": "weil",
        "ca": "weil",
-       "hr": "weil"
+       "hr": "weil",
+       "sr": "weil",
+       "el": "weil"
       },
       "cells": [
        "Nebensatz",
@@ -14877,7 +15897,9 @@ const GRAMMAR = [
        "am": "denn",
        "es_mx": "denn",
        "ca": "denn",
-       "hr": "denn"
+       "hr": "denn",
+       "sr": "denn",
+       "el": "denn"
       },
       "cells": [
        "Hauptsatz",
@@ -14910,7 +15932,9 @@ const GRAMMAR = [
     "am": "ስለታመምኩ በቤት እቆያለሁ።",
     "es_mx": "Como estoy enfermo, me quedo en casa.",
     "ca": "Com que estic malalt, em quedo a casa.",
-    "hr": "Weil ich krank bin, bleibe ich zu Hause. (Jer sam bolestan, ostajem kod kuće.)"
+    "hr": "Weil ich krank bin, bleibe ich zu Hause. (Jer sam bolestan, ostajem kod kuće.)",
+    "sr": "Weil ich krank bin, bleibe ich zu Hause. (Пошто сам болестан, остајем код куће.)",
+    "el": "Weil ich krank bin, bleibe ich zu Hause. (Επειδή είμαι άρρωστος, μένω σπίτι.)"
    },
    {
     "de": "Obwohl es regnet, gehen wir spazieren.",
@@ -14933,7 +15957,9 @@ const GRAMMAR = [
     "am": "ዝናብ ቢዘንብም እንዞራለን (የእግር ጉዞ እናደርጋለን)።",
     "es_mx": "Aunque llueve, salimos a pasear.",
     "ca": "Encara que plou, sortim a passejar.",
-    "hr": "Obwohl es regnet, gehen wir spazieren. (Iako pada kiša, idemo u šetnju.)"
+    "hr": "Obwohl es regnet, gehen wir spazieren. (Iako pada kiša, idemo u šetnju.)",
+    "sr": "Obwohl es regnet, gehen wir spazieren. (Иако пада киша, идемо у шетњу.)",
+    "el": "Obwohl es regnet, gehen wir spazieren. (Παρόλο που βρέχει, πάμε βόλτα.)"
    },
    {
     "de": "Ich rufe dich an, wenn ich ankomme.",
@@ -14956,7 +15982,9 @@ const GRAMMAR = [
     "am": "ስደርስ እደውልልሃለሁ።",
     "es_mx": "Te llamo cuando llegue.",
     "ca": "Et truco quan arribi.",
-    "hr": "Ich rufe dich an, wenn ich ankomme. (Nazvat ću te kad stignem.)"
+    "hr": "Ich rufe dich an, wenn ich ankomme. (Nazvat ću te kad stignem.)",
+    "sr": "Ich rufe dich an, wenn ich ankomme. (Позваћу те кад стигнем.)",
+    "el": "Ich rufe dich an, wenn ich ankomme. (Θα σου τηλεφωνήσω όταν φτάσω.)"
    }
   ],
   "hints": {
@@ -14980,7 +16008,9 @@ const GRAMMAR = [
    "am": "ልብ በል፦ የበታች መስተጻምር (weil, dass, wenn, obwohl …) → ግስ ወደ መጨረሻ ይሄዳል፤ አቻ መስተጻምር (und, aber, oder, denn, sondern) → ግስ በቦታ 2 ይቆያል። ንዑስ ዓረፍተ ነገሩ ከፊት ከሆነ፣ ወዲያውኑ ከነጠላ ሰረዙ በኋላ የዋናው ዓረፍተ ነገር ግስ ይከተላል፦ 'Weil ich müde bin, gehe ich schlafen.' (ስለደከመኝ ልተኛ እሄዳለሁ።)",
    "es_mx": "El inglés (y el español) mantienen el orden normal en «porque estoy enfermo»: nada se mueve. El giro alemán es la «patada verbal»: tras weil/dass/wenn, el verbo conjugado salta al final del todo (…weil ich krank BIN). Ojo con la trampa clásica: weil manda el verbo al final, pero denn (mismo significado) mantiene el verbo en segunda posición.",
    "ca": "L'anglès (i el català) mantenen l'ordre normal en «perquè estic malalt»: res no es mou. El gir alemany és la «puntada verbal»: després de weil/dass/wenn, el verb conjugat salta al final de tot (…weil ich krank BIN). Compte amb el parany clàssic: weil envia el verb al final, però denn (mateix significat) manté el verb en segona posició.",
-   "hr": "Zapamti: podredni veznici (weil, dass, wenn, obwohl …) → glagol ide na kraj; naporedni (und, aber, oder, denn, sondern) → glagol ostaje na 2. mjestu. Ako zavisna rečenica stoji na početku, odmah nakon zareza slijedi glagol glavne rečenice: „Weil ich müde bin, gehe ich schlafen.“ Pazi na klasičnu zamku: weil šalje glagol na kraj, ali denn (isto značenje) zadržava glagol na 2. mjestu."
+   "hr": "Zapamti: podredni veznici (weil, dass, wenn, obwohl …) → glagol ide na kraj; naporedni (und, aber, oder, denn, sondern) → glagol ostaje na 2. mjestu. Ako zavisna rečenica stoji na početku, odmah nakon zareza slijedi glagol glavne rečenice: „Weil ich müde bin, gehe ich schlafen.“ Pazi na klasičnu zamku: weil šalje glagol na kraj, ali denn (isto značenje) zadržava glagol na 2. mjestu.",
+   "sr": "Запамти: зависни везници (weil, dass, wenn, obwohl …) → глагол иде на крај; напоредни (und, aber, oder, denn, sondern) → глагол остаје на другом месту. Ако зависна реченица стоји напред, одмах иза зареза следи глагол главне реченице: „Weil ich müde bin, gehe ich schlafen.“",
+   "el": "Πρόσεξε: υποτακτικοί (weil, dass, wenn, obwohl …) → το ρήμα στο τέλος· παρατακτικοί (und, aber, oder, denn, sondern) → το ρήμα παραμένει στη 2η θέση. Αν η δευτερεύουσα πρόταση προηγείται, αμέσως μετά το κόμμα ακολουθεί το ρήμα της κύριας πρότασης: „Weil ich müde bin, gehe ich schlafen.“ Η κλασική παγίδα: το weil στέλνει το ρήμα στο τέλος, ενώ το denn (ίδια σημασία) κρατά το ρήμα στη 2η θέση."
   }
  },
  {
@@ -15007,7 +16037,9 @@ const GRAMMAR = [
    "am": "አንጻራዊ ዓረፍተ ነገሮች (Relativsätze)",
    "es_mx": "Oraciones de relativo",
    "ca": "Oracions de relatiu",
-   "hr": "Odnosne rečenice"
+   "hr": "Odnosne rečenice",
+   "sr": "Односне реченице",
+   "el": "Αναφορικές προτάσεις"
   },
   "intro": {
    "de": "Ein Relativsatz beschreibt ein Nomen genauer; das Verb steht am Ende. Das Relativpronomen richtet sich in Genus und Numerus nach dem Bezugsnomen, seinen Kasus bekommt es aber von seiner Rolle im Relativsatz. Der Relativsatz steht zwischen Kommas.",
@@ -15030,7 +16062,9 @@ const GRAMMAR = [
    "am": "አንጻራዊ ዓረፍተ ነገር አንድን ስም በዝርዝር ይገልጻል፤ ግሱ በመጨረሻ ይመጣል። አንጻራዊ ተውላጠ ስሙ ጾታና ቁጥሩን ከሚያመለክተው ስም ይወስዳል፣ ጉዳዩን ግን በአንጻራዊ ዓረፍተ ነገሩ ውስጥ ካለው ተግባር ያገኛል። አንጻራዊ ዓረፍተ ነገሩ በሁለት ነጠላ ሰረዞች መካከል ይቀመጣል።",
    "es_mx": "Una oración de relativo da más detalle sobre un sustantivo, y su verbo se va al final. El pronombre relativo concuerda en género y número con el sustantivo al que se refiere, pero su caso viene de la función que cumple dentro de la oración de relativo. Va entre comas.",
    "ca": "Una oració de relatiu dóna més detall sobre un substantiu, i el seu verb se'n va al final. El pronom relatiu concorda en gènere i nombre amb el substantiu a què es refereix, però el seu cas ve de la funció que fa dins de l'oració de relatiu. Va entre comes.",
-   "hr": "Odnosna rečenica pobliže opisuje imenicu; glagol stoji na kraju. Odnosna zamjenica slaže se s imenicom na koju se odnosi u rodu i broju, ali padež dobiva prema svojoj ulozi u odnosnoj rečenici. Odnosna rečenica odvaja se zarezima."
+   "hr": "Odnosna rečenica pobliže opisuje imenicu; glagol stoji na kraju. Odnosna zamjenica slaže se s imenicom na koju se odnosi u rodu i broju, ali padež dobiva prema svojoj ulozi u odnosnoj rečenici. Odnosna rečenica odvaja se zarezima.",
+   "sr": "Односна реченица ближе описује именицу; глагол стоји на крају. Односна заменица се у роду и броју слаже са именицом на коју се односи, али падеж добија према својој улози у односној реченици. Односна реченица се одваја зарезима.",
+   "el": "Μια αναφορική πρόταση περιγράφει ένα ουσιαστικό με μεγαλύτερη ακρίβεια· το ρήμα μπαίνει στο τέλος. Η αναφορική αντωνυμία συμφωνεί σε γένος και αριθμό με το ουσιαστικό στο οποίο αναφέρεται, την πτώση της όμως την παίρνει από τον ρόλο που έχει μέσα στην αναφορική πρόταση. Η αναφορική πρόταση μπαίνει ανάμεσα σε κόμματα."
   },
   "tables": [
    {
@@ -15055,7 +16089,9 @@ const GRAMMAR = [
      "am": "የአንጻራዊ ተውላጠ ስም ለውጥ",
      "es_mx": "Declinación del pronombre relativo",
      "ca": "Declinació del pronom relatiu",
-     "hr": "Deklinacija odnosne zamjenice"
+     "hr": "Deklinacija odnosne zamjenice",
+     "sr": "Деклинација односне заменице",
+     "el": "Κλίση της αναφορικής αντωνυμίας"
     },
     "labelHeader": {
      "de": "Kasus",
@@ -15078,7 +16114,9 @@ const GRAMMAR = [
      "am": "ጉዳይ",
      "es_mx": "Caso",
      "ca": "Cas",
-     "hr": "Padež"
+     "hr": "Padež",
+     "sr": "Падеж",
+     "el": "Πτώση"
     },
     "columns": [
      {
@@ -15102,7 +16140,9 @@ const GRAMMAR = [
       "am": "ተባዕታይ",
       "es_mx": "masculino",
       "ca": "masculí",
-      "hr": "muški rod"
+      "hr": "muški rod",
+      "sr": "мушки род",
+      "el": "αρσενικό"
      },
      {
       "de": "feminin",
@@ -15125,7 +16165,9 @@ const GRAMMAR = [
       "am": "አንስታይ",
       "es_mx": "femenino",
       "ca": "femení",
-      "hr": "ženski rod"
+      "hr": "ženski rod",
+      "sr": "женски род",
+      "el": "θηλυκό"
      },
      {
       "de": "neutral",
@@ -15148,7 +16190,9 @@ const GRAMMAR = [
       "am": "ገለልተኛ",
       "es_mx": "neutro",
       "ca": "neutre",
-      "hr": "srednji rod"
+      "hr": "srednji rod",
+      "sr": "средњи род",
+      "el": "ουδέτερο"
      },
      {
       "de": "Plural",
@@ -15171,7 +16215,9 @@ const GRAMMAR = [
       "am": "ብዙ ቁጥር",
       "es_mx": "plural",
       "ca": "plural",
-      "hr": "množina"
+      "hr": "množina",
+      "sr": "множина",
+      "el": "πληθυντικός"
      }
     ],
     "rows": [
@@ -15197,7 +16243,9 @@ const GRAMMAR = [
        "am": "Nominativ",
        "es_mx": "Nominativo",
        "ca": "Nominatiu",
-       "hr": "Nominativ"
+       "hr": "Nominativ",
+       "sr": "Номинатив",
+       "el": "Ονομαστική"
       },
       "cells": [
        "der",
@@ -15228,7 +16276,9 @@ const GRAMMAR = [
        "am": "Akkusativ",
        "es_mx": "Acusativo",
        "ca": "Acusatiu",
-       "hr": "Akuzativ"
+       "hr": "Akuzativ",
+       "sr": "Акузатив",
+       "el": "Αιτιατική"
       },
       "cells": [
        "den",
@@ -15259,7 +16309,9 @@ const GRAMMAR = [
        "am": "Dativ",
        "es_mx": "Dativo",
        "ca": "Datiu",
-       "hr": "Dativ"
+       "hr": "Dativ",
+       "sr": "Датив",
+       "el": "Δοτική"
       },
       "cells": [
        "dem",
@@ -15290,7 +16342,9 @@ const GRAMMAR = [
        "am": "Genitiv",
        "es_mx": "Genitivo",
        "ca": "Genitiu",
-       "hr": "Genitiv"
+       "hr": "Genitiv",
+       "sr": "Генитив",
+       "el": "Γενική"
       },
       "cells": [
        "dessen",
@@ -15323,7 +16377,9 @@ const GRAMMAR = [
      "am": "መስተዋድድ + አንጻራዊ ተውላጠ ስም (መስተዋድዱ ጉዳዩን ይወስናል)",
      "es_mx": "Preposición + pronombre relativo (la preposición fija el caso)",
      "ca": "Preposició + pronom relatiu (la preposició fixa el cas)",
-     "hr": "Prijedlog + odnosna zamjenica (prijedlog određuje padež)"
+     "hr": "Prijedlog + odnosna zamjenica (prijedlog određuje padež)",
+     "sr": "Предлог + односна заменица (предлог одређује падеж)",
+     "el": "Πρόθεση + αναφορική αντωνυμία (η πρόθεση καθορίζει την πτώση)"
     },
     "labelHeader": {
      "de": "Präposition (Kasus)",
@@ -15346,7 +16402,9 @@ const GRAMMAR = [
      "am": "መስተዋድድ (ጉዳይ)",
      "es_mx": "Preposición (caso)",
      "ca": "Preposició (cas)",
-     "hr": "Prijedlog (padež)"
+     "hr": "Prijedlog (padež)",
+     "sr": "Предлог (падеж)",
+     "el": "Πρόθεση (πτώση)"
     },
     "columns": [
      {
@@ -15370,7 +16428,9 @@ const GRAMMAR = [
       "am": "ተባዕታይ",
       "es_mx": "masculino",
       "ca": "masculí",
-      "hr": "muški rod"
+      "hr": "muški rod",
+      "sr": "мушки род",
+      "el": "αρσενικό"
      },
      {
       "de": "feminin",
@@ -15393,7 +16453,9 @@ const GRAMMAR = [
       "am": "አንስታይ",
       "es_mx": "femenino",
       "ca": "femení",
-      "hr": "ženski rod"
+      "hr": "ženski rod",
+      "sr": "женски род",
+      "el": "θηλυκό"
      },
      {
       "de": "neutral",
@@ -15416,7 +16478,9 @@ const GRAMMAR = [
       "am": "ገለልተኛ",
       "es_mx": "neutro",
       "ca": "neutre",
-      "hr": "srednji rod"
+      "hr": "srednji rod",
+      "sr": "средњи род",
+      "el": "ουδέτερο"
      },
      {
       "de": "Plural",
@@ -15439,7 +16503,9 @@ const GRAMMAR = [
       "am": "ብዙ ቁጥር",
       "es_mx": "plural",
       "ca": "plural",
-      "hr": "množina"
+      "hr": "množina",
+      "sr": "множина",
+      "el": "πληθυντικός"
      }
     ],
     "rows": [
@@ -15465,7 +16531,9 @@ const GRAMMAR = [
        "am": "mit — ከ... ጋር (Dativ)",
        "es_mx": "mit — con (dativo)",
        "ca": "mit — amb (datiu)",
-       "hr": "mit — s, sa (dativ)"
+       "hr": "mit — s, sa (dativ)",
+       "sr": "mit — са (датив)",
+       "el": "mit — με (δοτική)"
       },
       "cells": [
        "mit dem",
@@ -15496,7 +16564,9 @@ const GRAMMAR = [
        "am": "für — ለ... (Akkusativ)",
        "es_mx": "für — para (acusativo)",
        "ca": "für — per a (acusatiu)",
-       "hr": "für — za (akuzativ)"
+       "hr": "für — za (akuzativ)",
+       "sr": "für — за (акузатив)",
+       "el": "für — για (αιτιατική)"
       },
       "cells": [
        "für den",
@@ -15530,7 +16600,9 @@ const GRAMMAR = [
     "am": "እዚያ የቆመው ሰው መምህሬ ነው።",
     "es_mx": "El hombre que está parado ahí es mi maestro.",
     "ca": "L'home que hi ha allà dret és el meu professor.",
-    "hr": "Der Mann, der dort steht, ist mein Lehrer. (Čovjek koji ondje stoji moj je učitelj.)"
+    "hr": "Der Mann, der dort steht, ist mein Lehrer. (Čovjek koji ondje stoji moj je učitelj.)",
+    "sr": "Der Mann, der dort steht, ist mein Lehrer. (Човек који стоји тамо је мој учитељ.)",
+    "el": "Der Mann, der dort steht, ist mein Lehrer. (Ο άντρας που στέκεται εκεί είναι ο δάσκαλός μου.)"
    },
    {
     "de": "Der Mann, den ich kenne, wohnt in Berlin.",
@@ -15553,7 +16625,9 @@ const GRAMMAR = [
     "am": "የማውቀው ሰው በበርሊን ይኖራል።",
     "es_mx": "El hombre al que conozco vive en Berlín.",
     "ca": "L'home que conec viu a Berlín.",
-    "hr": "Der Mann, den ich kenne, wohnt in Berlin. (Čovjek kojeg poznajem živi u Berlinu.)"
+    "hr": "Der Mann, den ich kenne, wohnt in Berlin. (Čovjek kojeg poznajem živi u Berlinu.)",
+    "sr": "Der Mann, den ich kenne, wohnt in Berlin. (Човек кога познајем живи у Берлину.)",
+    "el": "Der Mann, den ich kenne, wohnt in Berlin. (Ο άντρας που γνωρίζω μένει στο Βερολίνο.)"
    },
    {
     "de": "Der Mann, dem ich helfe, ist mein Nachbar.",
@@ -15576,7 +16650,9 @@ const GRAMMAR = [
     "am": "የምረዳው ሰው ጎረቤቴ ነው።",
     "es_mx": "El hombre al que ayudo es mi vecino.",
     "ca": "L'home a qui ajudo és el meu veí.",
-    "hr": "Der Mann, dem ich helfe, ist mein Nachbar. (Čovjek kojem pomažem moj je susjed.)"
+    "hr": "Der Mann, dem ich helfe, ist mein Nachbar. (Čovjek kojem pomažem moj je susjed.)",
+    "sr": "Der Mann, dem ich helfe, ist mein Nachbar. (Човек коме помажем је мој комшија.)",
+    "el": "Der Mann, dem ich helfe, ist mein Nachbar. (Ο άντρας που βοηθώ είναι ο γείτονάς μου.)"
    },
    {
     "de": "Der Mann, dessen Auto rot ist, ist Arzt.",
@@ -15599,7 +16675,9 @@ const GRAMMAR = [
     "am": "መኪናው ቀይ የሆነው ሰው ሐኪም ነው።",
     "es_mx": "El hombre cuyo carro es rojo es médico.",
     "ca": "L'home el cotxe del qual és vermell és metge.",
-    "hr": "Der Mann, dessen Auto rot ist, ist Arzt. (Čovjek čiji je auto crven liječnik je.)"
+    "hr": "Der Mann, dessen Auto rot ist, ist Arzt. (Čovjek čiji je auto crven liječnik je.)",
+    "sr": "Der Mann, dessen Auto rot ist, ist Arzt. (Човек чији је ауто црвен је лекар.)",
+    "el": "Der Mann, dessen Auto rot ist, ist Arzt. (Ο άντρας του οποίου το αυτοκίνητο είναι κόκκινο είναι γιατρός.)"
    },
    {
     "de": "Die Frau, mit der ich spreche, ist Ärztin.",
@@ -15622,7 +16700,9 @@ const GRAMMAR = [
     "am": "የማወራት ሴት ሐኪም ናት።",
     "es_mx": "La mujer con la que hablo es médica.",
     "ca": "La dona amb qui parlo és metgessa.",
-    "hr": "Die Frau, mit der ich spreche, ist Ärztin. (Žena s kojom razgovaram liječnica je.)"
+    "hr": "Die Frau, mit der ich spreche, ist Ärztin. (Žena s kojom razgovaram liječnica je.)",
+    "sr": "Die Frau, mit der ich spreche, ist Ärztin. (Жена са којом разговарам је лекарка.)",
+    "el": "Die Frau, mit der ich spreche, ist Ärztin. (Η γυναίκα με την οποία μιλάω είναι γιατρός.)"
    }
   ],
   "hints": {
@@ -15646,7 +16726,9 @@ const GRAMMAR = [
    "am": "ልብ በል፦ ጾታና ቁጥር ከሚያመለክተው ስም ይመጣሉ፣ ጉዳዩ ግን ከአንጻራዊ ዓረፍተ ነገሩ ውስጥ ካለው ተግባር ይመጣል። ከፊት መስተዋድድ ካለ፣ እሱ ጉዳዩን ይወስናል (mit dem, für den)፣ ግሱም ወደ ዓረፍተ ነገሩ መጨረሻ ይንሸራተታል። Genitiv ሁልጊዜ dessen/deren ነው — sein/ihr በፍጹም አይደለም።",
    "es_mx": "El inglés solo conserva who/whom/which/that y a menudo lo omite («the man I know»); el alemán nunca lo omite y debe declinarlo. Dos pasos: género y número del sustantivo; el caso, de la función dentro de la oración (sujeto → der/die/das, objeto → den/die/das, tras mit/aus/… → dem/der/denen). «Cuyo» es siempre dessen (m/n) o deren (f/pl).",
    "ca": "L'anglès només conserva who/whom/which/that i sovint l'omet («the man I know»); l'alemany no l'omet mai i l'ha de declinar. Dos passos: gènere i nombre del substantiu; el cas, de la funció dins de l'oració (subjecte → der/die/das, objecte → den/die/das, després de mit/aus/… → dem/der/denen). «El… del qual» (whose) és sempre dessen (m/n) o deren (f/pl).",
-   "hr": "Zapamti: rod i broj dolaze od imenice na koju se odnosi, a padež od funkcije u odnosnoj rečenici. Ako ispred stoji prijedlog, on određuje padež (mit dem, für den), a glagol se pomiče na kraj rečenice. Genitiv je uvijek dessen/deren – nikada sein/ihr."
+   "hr": "Zapamti: rod i broj dolaze od imenice na koju se odnosi, a padež od funkcije u odnosnoj rečenici. Ako ispred stoji prijedlog, on određuje padež (mit dem, für den), a glagol se pomiče na kraj rečenice. Genitiv je uvijek dessen/deren – nikada sein/ihr.",
+   "sr": "Запамти: род и број долазе од именице на коју се односи, а падеж од функције у односној реченици. Ако испред стоји предлог, он одређује падеж ('mit dem', 'für den'), а глагол се помера на крај реченице. Генитив је увек 'dessen'/'deren' – никада 'sein'/'ihr'.",
+   "el": "Πρόσεξε: Το γένος και ο αριθμός προέρχονται από το ουσιαστικό αναφοράς, η πτώση από τη λειτουργία μέσα στην αναφορική πρόταση. Αν προηγείται πρόθεση, αυτή καθορίζει την πτώση (mit dem, für den) και το ρήμα πηγαίνει στο τέλος της πρότασης. Η γενική είναι πάντα dessen/deren – ποτέ sein/ihr."
   }
  }
 ];

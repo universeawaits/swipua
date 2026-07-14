@@ -558,7 +558,9 @@ const GRAMMAR = [
    "ar_eg": "الحالات الإعرابية الأربعة",
    "ar_lb": "الحالات الأربعة (Fälle)",
    "ar_sy": "الحالات الإعرابية الأربعة",
-   "am": "አራቱ ጉዳዮች (Kasus)"
+   "am": "አራቱ ጉዳዮች (Kasus)",
+   "es_mx": "Los cuatro casos",
+   "ca": "Els quatre casos"
   },
   "intro": {
    "de": "Deutsch hat vier Fälle (Kasus): Nominativ, Akkusativ, Dativ und Genitiv. Der Fall zeigt die Rolle eines Wortes im Satz – wer etwas tut, wen oder was es betrifft, wem etwas gegeben wird und wem etwas gehört. Nicht das Substantiv, sondern vor allem der Artikel verändert sich je nach Fall.",
@@ -578,7 +580,9 @@ const GRAMMAR = [
    "ar_eg": "الألماني عنده أربع حالات إعرابية (Kasus): Nominativ و Akkusativ و Dativ و Genitiv. الحالة بتوضح دور الكلمة في الجملة – مين اللي بيعمل الفعل، ومين أو إيه اللي بيتأثر بيه، ومين اللي بياخد حاجة، ومين اللي حاجة بتاعته. مش الاسم نفسه اللي بيتغير، لكن قبل كل حاجة الأداة بتاعته.",
    "ar_lb": "الألماني عندو أربع حالات (Kasus): Nominativ، Akkusativ، Dativ، وGenitiv. الحالة بتبيّن دور الكلمة بالجملة – مين عم يعمل الشي، مين أو شو المقصود فيه، لمين عم يُعطى الشي، ولمين هالشي عائد. مش الاسم هو يلي بيتغيّر، إنما بالأكتر الأداة (Artikel) هي يلي بتتغيّر حسب الحالة.",
    "ar_sy": "الألماني عندو أربع حالات إعرابية (Kasus): Nominativ وAkkusativ وDativ وGenitiv. الحالة بتبيّن دور الكلمة بالجملة – مين عم يعمل الشي، مين أو شو المقصود فيه، لمين عم يُعطى الشي، ولمين هالشي تبعو. مو الاسم يلي بيتغيّر، الأداة هي يلي بتتغيّر حسب الحالة.",
-   "am": "ጀርመንኛ አራት ጉዳዮች (Kasus) አሉት፦ Nominativ፣ Akkusativ፣ Dativ እና Genitiv። ጉዳዩ በዓረፍተ ነገር ውስጥ የቃሉን ሚና ያሳያል — ማን ድርጊቱን እንደሚፈጽም፣ ተግባሩ ማንን ወይም ምንን እንደሚነካ፣ ለማን ነገር እንደሚሰጥ እና የማን ንብረት እንደሆነ። የሚለወጠው ስሙ ሳይሆን በዋናነት አርቲክሉ ነው፣ እንደ ጉዳዩ ይለያያል።"
+   "am": "ጀርመንኛ አራት ጉዳዮች (Kasus) አሉት፦ Nominativ፣ Akkusativ፣ Dativ እና Genitiv። ጉዳዩ በዓረፍተ ነገር ውስጥ የቃሉን ሚና ያሳያል — ማን ድርጊቱን እንደሚፈጽም፣ ተግባሩ ማንን ወይም ምንን እንደሚነካ፣ ለማን ነገር እንደሚሰጥ እና የማን ንብረት እንደሆነ። የሚለወጠው ስሙ ሳይሆን በዋናነት አርቲክሉ ነው፣ እንደ ጉዳዩ ይለያያል።",
+   "es_mx": "El alemán tiene cuatro casos (Kasus): nominativo, acusativo, dativo y genitivo. El caso muestra el papel de una palabra en la oración: quién hace algo, a quién o qué afecta, a quién se le da algo y de quién es algo. No es el sustantivo, sino sobre todo el artículo lo que cambia según el caso.",
+   "ca": "L'alemany té quatre casos (Kasus): nominatiu, acusatiu, datiu i genitiu. El cas mostra el paper d'una paraula dins la frase: qui fa alguna cosa, a qui o a què afecta, a qui es dona alguna cosa i de qui és alguna cosa. No és el substantiu, sinó sobretot l'article, el que canvia segons el cas."
   },
   "tables": [
    {
@@ -600,7 +604,9 @@ const GRAMMAR = [
      "ar_eg": "أداة التعريف (der/die/das) – يعني «الـ»",
      "ar_lb": "الأداة المعرّفة (der/die/das) – يعني „the“",
      "ar_sy": "الأداة المعرّفة (der/die/das) – يعني 'ال' بالعربي",
-     "am": "የተወሰነ አርቲክል (der/die/das) — 'the'"
+     "am": "የተወሰነ አርቲክል (der/die/das) — 'the'",
+     "es_mx": "Artículo determinado (der/die/das) – «the»",
+     "ca": "Article determinat (der/die/das) – «the»"
     },
     "labelHeader": {
      "de": "Kasus (Fall)",
@@ -620,7 +626,9 @@ const GRAMMAR = [
      "ar_eg": "الحالة الإعرابية (Kasus)",
      "ar_lb": "الحالة (Kasus/Fall)",
      "ar_sy": "الحالة الإعرابية",
-     "am": "ጉዳይ (Kasus)"
+     "am": "ጉዳይ (Kasus)",
+     "es_mx": "Caso (Kasus)",
+     "ca": "Cas (Kasus)"
     },
     "columns": [
      {
@@ -641,7 +649,9 @@ const GRAMMAR = [
       "ar_eg": "مذكر (m)",
       "ar_lb": "مذكر (m)",
       "ar_sy": "مذكر (m)",
-      "am": "ተባዕታይ (m)"
+      "am": "ተባዕታይ (m)",
+      "es_mx": "masculino (m)",
+      "ca": "masculí (m)"
      },
      {
       "de": "feminin (f)",
@@ -661,7 +671,9 @@ const GRAMMAR = [
       "ar_eg": "مؤنث (f)",
       "ar_lb": "مؤنث (f)",
       "ar_sy": "مؤنث (f)",
-      "am": "አንስታይ (f)"
+      "am": "አንስታይ (f)",
+      "es_mx": "femenino (f)",
+      "ca": "femení (f)"
      },
      {
       "de": "neutral (n)",
@@ -681,7 +693,9 @@ const GRAMMAR = [
       "ar_eg": "محايد (n)",
       "ar_lb": "محايد (n)",
       "ar_sy": "محايد (n)",
-      "am": "ገለልተኛ (n)"
+      "am": "ገለልተኛ (n)",
+      "es_mx": "neutro (n)",
+      "ca": "neutre (n)"
      },
      {
       "de": "Plural",
@@ -701,7 +715,9 @@ const GRAMMAR = [
       "ar_eg": "جمع",
       "ar_lb": "جمع (Plural)",
       "ar_sy": "جمع",
-      "am": "ብዙ ቁጥር"
+      "am": "ብዙ ቁጥር",
+      "es_mx": "plural",
+      "ca": "plural"
      }
     ],
     "rows": [
@@ -724,7 +740,9 @@ const GRAMMAR = [
        "ar_eg": "Nominativ (الفاعل – مين؟)",
        "ar_lb": "Nominativ (الفاعل – مين؟)",
        "ar_sy": "Nominativ (الفاعل – مين؟)",
-       "am": "Nominativ (ባለቤት — ማን?)"
+       "am": "Nominativ (ባለቤት — ማን?)",
+       "es_mx": "Nominativo (sujeto – ¿quién?)",
+       "ca": "Nominatiu (subjecte – qui?)"
       },
       "cells": [
        "der",
@@ -752,7 +770,9 @@ const GRAMMAR = [
        "ar_eg": "Akkusativ (المفعول به – مين/إيه؟)",
        "ar_lb": "Akkusativ (المفعول به – مين/شو؟)",
        "ar_sy": "Akkusativ (المفعول به – مين/شو؟)",
-       "am": "Akkusativ (ተሳቢ — ማንን/ምንን?)"
+       "am": "Akkusativ (ተሳቢ — ማንን/ምንን?)",
+       "es_mx": "Acusativo (objeto directo – ¿a quién/qué?)",
+       "ca": "Acusatiu (objecte directe – a qui/què?)"
       },
       "cells": [
        "den",
@@ -780,7 +800,9 @@ const GRAMMAR = [
        "ar_eg": "Dativ (المفعول غير المباشر – لمين؟)",
        "ar_lb": "Dativ (المفعول غير المباشر – لمين؟)",
        "ar_sy": "Dativ (المفعول غير المباشر – لمين؟)",
-       "am": "Dativ (ኢቀጥተኛ ተሳቢ — ለማን?)"
+       "am": "Dativ (ኢቀጥተኛ ተሳቢ — ለማን?)",
+       "es_mx": "Dativo (objeto indirecto – ¿a quién?)",
+       "ca": "Datiu (objecte indirecte – a qui?)"
       },
       "cells": [
        "dem",
@@ -808,7 +830,9 @@ const GRAMMAR = [
        "ar_eg": "Genitiv (الملكية – ملك مين؟)",
        "ar_lb": "Genitiv (الملكية – تبع مين؟)",
        "ar_sy": "Genitiv (الملكية – تبع مين؟)",
-       "am": "Genitiv (ንብረት — የማን?)"
+       "am": "Genitiv (ንብረት — የማን?)",
+       "es_mx": "Genitivo (posesión – ¿de quién?)",
+       "ca": "Genitiu (possessió – de qui?)"
       },
       "cells": [
        "des",
@@ -838,7 +862,9 @@ const GRAMMAR = [
      "ar_eg": "كلمات ein: أداة التنكير ein يعني «واحد/واحدة»، والنفي kein يعني «ولا واحد/مفيش». نفس النهايات. كل خانة في الجدول بتوضح ein / kein. ein مالوش صيغة جمع (في الجمع بتستخدم الاسم لوحده من غير أداة)؛ kein بس هو اللي له صيغ جمع.",
      "ar_lb": "كلمات الـ ein: الأداة النكرة ein يعني „a/an“ (وحدة/واحد)، ونفيها kein يعني „ما في/ولا“ – نفس النهايات. كل خانة بتوريك ein / kein. ein ما إلها جمع (بهالحالة بيستعملو الاسم لحالو بلا أداة)؛ بس kein إلها صيغ جمع.",
      "ar_sy": "كلمات ein: أداة النكرة ein 'واحد/ة' ونفيها kein 'ولا واحد/مش' – نفس النهايات. الخانة بتبيّن ein / kein. ein ما إلها جمع (بهالحالة بتحكي الاسم لحاله)؛ بس kein إلها صيغ جمع.",
-     "am": "ein-ቃላት፦ ያልተወሰነ አርቲክል ein ('a/an') እና አሉታ kein ('አንድም/ምንም') — ተመሳሳይ ቅጥያዎች አሏቸው። እያንዳንዱ ሳጥን ein / kein ያሳያል። ein የብዙ ቁጥር ቅርጽ የለውም (እዚያ ራቁት ስሙ ብቻ ይቀመጣል)፤ kein ብቻ የብዙ ቁጥር ቅርጽ አለው።"
+     "am": "ein-ቃላት፦ ያልተወሰነ አርቲክል ein ('a/an') እና አሉታ kein ('አንድም/ምንም') — ተመሳሳይ ቅጥያዎች አሏቸው። እያንዳንዱ ሳጥን ein / kein ያሳያል። ein የብዙ ቁጥር ቅርጽ የለውም (እዚያ ራቁት ስሙ ብቻ ይቀመጣል)፤ kein ብቻ የብዙ ቁጥር ቅርጽ አለው።",
+     "es_mx": "Palabras tipo ein: el artículo indeterminado ein «a/an» y su negación kein «no/ningún» tienen las mismas terminaciones. Cada celda muestra ein / kein. ein no tiene plural (ahí se usa el sustantivo solo); solo kein tiene formas de plural.",
+     "ca": "Paraules tipus ein: l'article indeterminat ein «a/an» i la seva negació kein «cap/no un» tenen les mateixes terminacions. Cada cel·la mostra ein / kein. ein no té plural (aquí s'hi posa el substantiu sol); només kein té formes de plural."
     },
     "labelHeader": {
      "de": "Kasus (Fall)",
@@ -858,7 +884,9 @@ const GRAMMAR = [
      "ar_eg": "الحالة الإعرابية (Kasus)",
      "ar_lb": "الحالة (Kasus/Fall)",
      "ar_sy": "الحالة الإعرابية",
-     "am": "ጉዳይ (Kasus)"
+     "am": "ጉዳይ (Kasus)",
+     "es_mx": "Caso (Kasus)",
+     "ca": "Cas (Kasus)"
     },
     "columns": [
      {
@@ -879,7 +907,9 @@ const GRAMMAR = [
       "ar_eg": "مذكر (m)",
       "ar_lb": "مذكر (m)",
       "ar_sy": "مذكر (m)",
-      "am": "ተባዕታይ (m)"
+      "am": "ተባዕታይ (m)",
+      "es_mx": "masculino (m)",
+      "ca": "masculí (m)"
      },
      {
       "de": "feminin (f)",
@@ -899,7 +929,9 @@ const GRAMMAR = [
       "ar_eg": "مؤنث (f)",
       "ar_lb": "مؤنث (f)",
       "ar_sy": "مؤنث (f)",
-      "am": "አንስታይ (f)"
+      "am": "አንስታይ (f)",
+      "es_mx": "femenino (f)",
+      "ca": "femení (f)"
      },
      {
       "de": "neutral (n)",
@@ -919,7 +951,9 @@ const GRAMMAR = [
       "ar_eg": "محايد (n)",
       "ar_lb": "محايد (n)",
       "ar_sy": "محايد (n)",
-      "am": "ገለልተኛ (n)"
+      "am": "ገለልተኛ (n)",
+      "es_mx": "neutro (n)",
+      "ca": "neutre (n)"
      },
      {
       "de": "Plural (nur kein)",
@@ -939,7 +973,9 @@ const GRAMMAR = [
       "ar_eg": "جمع (kein بس)",
       "ar_lb": "جمع (kein بس)",
       "ar_sy": "جمع (بس kein)",
-      "am": "ብዙ ቁጥር (kein ብቻ)"
+      "am": "ብዙ ቁጥር (kein ብቻ)",
+      "es_mx": "plural (solo kein)",
+      "ca": "plural (només kein)"
      }
     ],
     "rows": [
@@ -962,7 +998,9 @@ const GRAMMAR = [
        "ar_eg": "Nominativ (مين؟)",
        "ar_lb": "Nominativ (مين؟)",
        "ar_sy": "Nominativ (مين؟)",
-       "am": "Nominativ (ማን?)"
+       "am": "Nominativ (ማን?)",
+       "es_mx": "Nominativo (¿quién?)",
+       "ca": "Nominatiu (qui?)"
       },
       "cells": [
        "ein / kein",
@@ -990,7 +1028,9 @@ const GRAMMAR = [
        "ar_eg": "Akkusativ (مين/إيه؟)",
        "ar_lb": "Akkusativ (مين/شو؟)",
        "ar_sy": "Akkusativ (مين/شو؟)",
-       "am": "Akkusativ (ማንን/ምንን?)"
+       "am": "Akkusativ (ማንን/ምንን?)",
+       "es_mx": "Acusativo (¿a quién/qué?)",
+       "ca": "Acusatiu (a qui/què?)"
       },
       "cells": [
        "einen / keinen",
@@ -1018,7 +1058,9 @@ const GRAMMAR = [
        "ar_eg": "Dativ (لمين؟)",
        "ar_lb": "Dativ (لمين؟)",
        "ar_sy": "Dativ (لمين؟)",
-       "am": "Dativ (ለማን?)"
+       "am": "Dativ (ለማን?)",
+       "es_mx": "Dativo (¿a quién?)",
+       "ca": "Datiu (a qui?)"
       },
       "cells": [
        "einem / keinem",
@@ -1046,7 +1088,9 @@ const GRAMMAR = [
        "ar_eg": "Genitiv (ملك مين؟)",
        "ar_lb": "Genitiv (تبع مين؟)",
        "ar_sy": "Genitiv (تبع مين؟)",
-       "am": "Genitiv (የማን?)"
+       "am": "Genitiv (የማን?)",
+       "es_mx": "Genitivo (¿de quién?)",
+       "ca": "Genitiu (de qui?)"
       },
       "cells": [
        "eines / keines",
@@ -1077,7 +1121,9 @@ const GRAMMAR = [
     "ar_eg": "الراجل بيدي الست تفاحة الولد.",
     "ar_lb": "الرجّال عم يعطي المرا تفاحة الولد. (Nom: der Mann · Dat: der Frau · Akk: den Apfel · Gen: des Kindes)",
     "ar_sy": "الرجّال عم يعطي المرا تفاحة الولد. (Nom: der Mann · Dat: der Frau · Akk: den Apfel · Gen: des Kindes)",
-    "am": "ሰውየው ለሴትዮዋ የልጁን ፖም ይሰጣል።"
+    "am": "ሰውየው ለሴትዮዋ የልጁን ፖም ይሰጣል።",
+    "es_mx": "El hombre le da a la mujer la manzana del niño. (Nom: der Mann · Dat: der Frau · Akk: den Apfel · Gen: des Kindes)",
+    "ca": "L'home dona a la dona la poma del nen. (Nom: der Mann · Dat: der Frau · Akk: den Apfel · Gen: des Kindes)"
    },
    {
     "de": "Der Hund beißt den Mann, nicht der Mann den Hund.",
@@ -1097,7 +1143,9 @@ const GRAMMAR = [
     "ar_eg": "الكلب بيعض الراجل، مش الراجل بيعض الكلب.",
     "ar_lb": "الكلب عم يعض الرجّال، مش الرجّال عم يعض الكلب. (der مقابل den بتبيّن مين عم يعمل الفعل، فبتضل الأدوار واضحة حتى لو تحرّكت الكلمات.)",
     "ar_sy": "الكلب عم يعض الرجّال، مو الرجّال الكلب. (der مقابل den بيبيّن مين عم يعمل الفعل، فبتضل الأدوار واضحة حتى لو تحرّكت الكلمات.)",
-    "am": "ውሻው ሰውየውን ነከሰ እንጂ ሰውየው ውሻውን አልነከሰም።"
+    "am": "ውሻው ሰውየውን ነከሰ እንጂ ሰውየው ውሻውን አልነከሰም።",
+    "es_mx": "El perro muerde al hombre, no el hombre al perro. (der frente a den muestra quién actúa, así que los papeles quedan claros aunque las palabras cambien de lugar.)",
+    "ca": "El gos mossega l'home, no l'home el gos. (der en contrast amb den mostra qui actua, de manera que els papers queden clars encara que les paraules canviïn de lloc.)"
    }
   ],
   "hints": {
@@ -1118,7 +1166,9 @@ const GRAMMAR = [
    "ar_eg": "احفظ الحالات كأسئلة: Nominativ = مين؟، Akkusativ = مين/إيه؟، Dativ = لمين؟، Genitiv = ملك مين؟. احفظ الأول جدول أداة التعريف عن ظهر قلب – بس الـ Akkusativ المذكر (der → den) هو اللي بيكسر القاعدة فعلاً.",
    "ar_lb": "احفظ الحالات كأسئلة: Nominativ = مين؟، Akkusativ = مين/شو؟، Dativ = لمين؟، Genitiv = تبع مين؟ احفظ أول شي جدول الأداة المعرّفة عن ظهر قلب – بس المذكر بالـ Akkusativ (der → den) هو يلي فعليًا بيكسر النمط.",
    "ar_sy": "احفظ الحالات كأسئلة: Nominativ = مين؟، Akkusativ = مين/شو؟، Dativ = لمين؟، Genitiv = تبع مين؟ تعلّم أول شي جدول الأداة المعرّفة عن ظهر قلب – بس المذكر بالـAkkusativ (der → den) هوي يلي بيكسر القاعدة فعلياً.",
-   "am": "ጉዳዮቹን እንደ ጥያቄ አድርገህ አስታውስ፦ Nominativ = ማን?፣ Akkusativ = ማንን/ምንን?፣ Dativ = ለማን?፣ Genitiv = የማን? መጀመሪያ የተወሰነውን አርቲክል ሠንጠረዥ በቃል ተማር — የተባዕታይ Akkusativ ብቻ (der → den) ነው ስርዓቱን በእውነት የሚሰብረው።"
+   "am": "ጉዳዮቹን እንደ ጥያቄ አድርገህ አስታውስ፦ Nominativ = ማን?፣ Akkusativ = ማንን/ምንን?፣ Dativ = ለማን?፣ Genitiv = የማን? መጀመሪያ የተወሰነውን አርቲክል ሠንጠረዥ በቃል ተማር — የተባዕታይ Akkusativ ብቻ (der → den) ነው ስርዓቱን በእውነት የሚሰብረው።",
+   "es_mx": "Recuerda los casos como preguntas: nominativo = ¿quién?, acusativo = ¿a quién/qué?, dativo = ¿a quién?, genitivo = ¿de quién? Aprende primero de memoria la tabla del artículo determinado: solo el acusativo masculino (der → den) rompe de verdad el patrón.",
+   "ca": "Recorda els casos com a preguntes: nominatiu = qui?, acusatiu = a qui/què?, datiu = a qui?, genitiu = de qui? Aprèn primer de memòria la taula de l'article determinat: només l'acusatiu masculí (der → den) trenca de veritat el patró."
   }
  },
  {
@@ -1142,7 +1192,9 @@ const GRAMMAR = [
    "ar_eg": "ضمائر المتكلم/المخاطب/الغائب",
    "ar_lb": "الضمائر الشخصية (Personalpronomen)",
    "ar_sy": "ضمائر الشخص",
-   "am": "የግል ተውላጠ ስም (Personalpronomen)"
+   "am": "የግል ተውላጠ ስም (Personalpronomen)",
+   "es_mx": "Pronombres personales",
+   "ca": "Pronoms personals"
   },
   "intro": {
    "de": "Personalpronomen ändern ihre Form je nach Funktion im Satz: Subjekt (Nominativ), direktes Objekt (Akkusativ) oder indirektes Objekt (Dativ). Die Höflichkeitsform Sie/Ihnen entspricht der 3. Person Plural und wird immer großgeschrieben.",
@@ -1162,7 +1214,9 @@ const GRAMMAR = [
    "ar_eg": "ضمائر الشخص بتغيّر شكلها حسب دورها في الجملة: فاعل (Nominativ)، مفعول به مباشر (Akkusativ)، أو مفعول به غير مباشر (Dativ). صيغة الاحترام Sie/Ihnen هي نفسها صيغة الغائب الجمع (3. Person Plural) وبتتكتب دايمًا بحرف كبير.",
    "ar_lb": "الضمائر الشخصية بتغيّر شكلها حسب دورها بالجملة: فاعل (Nominativ)، مفعول به مباشر (Akkusativ)، أو مفعول به غير مباشر (Dativ). صيغة الاحترام Sie/Ihnen هي نفس صيغة الغائب الجمع (3. Person Plural) ودايمًا بتنكتب بحرف كبير.",
    "ar_sy": "ضمائر الشخص بالألماني بتغيّر شكلها حسب دورها بالجملة: فاعل (Nominativ)، مفعول به مباشر (Akkusativ)، أو مفعول به غير مباشر (Dativ). صيغة الاحترام Sie/Ihnen هي نفسا صيغة الغائب الجمع (هنّي) ودايماً بتنكتب بحرف كبير.",
-   "am": "የግል ተውላጠ ስሞች በዓረፍተ ነገር ውስጥ ባላቸው ተግባር መሠረት ቅርጻቸውን ይለውጣሉ፦ ባለቤት (Nominativ)፣ ቀጥተኛ ተሳቢ (Akkusativ) ወይም ኢቀጥተኛ ተሳቢ (Dativ)። የአክብሮት ቅርጽ Sie/Ihnen ከ3ኛ አካል ብዙ ቁጥር ጋር ተመሳሳይ ሲሆን ሁልጊዜ በካፒታል ፊደል ይጻፋል።"
+   "am": "የግል ተውላጠ ስሞች በዓረፍተ ነገር ውስጥ ባላቸው ተግባር መሠረት ቅርጻቸውን ይለውጣሉ፦ ባለቤት (Nominativ)፣ ቀጥተኛ ተሳቢ (Akkusativ) ወይም ኢቀጥተኛ ተሳቢ (Dativ)። የአክብሮት ቅርጽ Sie/Ihnen ከ3ኛ አካል ብዙ ቁጥር ጋር ተመሳሳይ ሲሆን ሁልጊዜ በካፒታል ፊደል ይጻፋል።",
+   "es_mx": "Los pronombres personales alemanes cambian de forma según su función en la oración: sujeto (nominativo), objeto directo (acusativo) u objeto indirecto (dativo). La forma de cortesía Sie/Ihnen retoma las formas de la 3.ª persona del plural y siempre se escribe con mayúscula.",
+   "ca": "Els pronoms personals alemanys canvien de forma segons la seva funció dins la frase: subjecte (nominatiu), objecte directe (acusatiu) o objecte indirecte (datiu). La forma de cortesia Sie/Ihnen reutilitza les formes de la 3a persona del plural i sempre s'escriu amb majúscula."
   },
   "tables": [
    {
@@ -1184,7 +1238,9 @@ const GRAMMAR = [
      "ar_eg": "ضمائر الشخص حسب الحالة الإعرابية (Nominativ / Akkusativ / Dativ)",
      "ar_lb": "الضمائر الشخصية حسب الحالة (Nominativ / Akkusativ / Dativ)",
      "ar_sy": "ضمائر الشخص حسب الحالة الإعرابية (Nominativ / Akkusativ / Dativ)",
-     "am": "የግል ተውላጠ ስሞች በጉዳይ (Nominativ / Akkusativ / Dativ)"
+     "am": "የግል ተውላጠ ስሞች በጉዳይ (Nominativ / Akkusativ / Dativ)",
+     "es_mx": "Pronombres personales alemanes por caso (nominativo / acusativo / dativo)",
+     "ca": "Pronoms personals alemanys per cas (nominatiu / acusatiu / datiu)"
     },
     "labelHeader": {
      "de": "Person",
@@ -1204,7 +1260,9 @@ const GRAMMAR = [
      "ar_eg": "الضمير",
      "ar_lb": "الشخص (Person)",
      "ar_sy": "الشخص",
-     "am": "አካል"
+     "am": "አካል",
+     "es_mx": "Persona",
+     "ca": "Persona"
     },
     "columns": [
      {
@@ -1225,7 +1283,9 @@ const GRAMMAR = [
       "ar_eg": "Nominativ (الفاعل)",
       "ar_lb": "Nominativ (الفاعل)",
       "ar_sy": "Nominativ (الفاعل)",
-      "am": "Nominativ (ባለቤት)"
+      "am": "Nominativ (ባለቤት)",
+      "es_mx": "Nominativo (sujeto)",
+      "ca": "Nominatiu (subjecte)"
      },
      {
       "de": "Akkusativ (dir. Objekt)",
@@ -1245,7 +1305,9 @@ const GRAMMAR = [
       "ar_eg": "Akkusativ (المفعول المباشر)",
       "ar_lb": "Akkusativ (مفعول به مباشر)",
       "ar_sy": "Akkusativ (مفعول مباشر)",
-      "am": "Akkusativ (ቀጥተኛ ተሳቢ)"
+      "am": "Akkusativ (ቀጥተኛ ተሳቢ)",
+      "es_mx": "Acusativo (obj. directo)",
+      "ca": "Acusatiu (obj. directe)"
      },
      {
       "de": "Dativ (indir. Objekt)",
@@ -1265,7 +1327,9 @@ const GRAMMAR = [
       "ar_eg": "Dativ (المفعول غير المباشر)",
       "ar_lb": "Dativ (مفعول به غير مباشر)",
       "ar_sy": "Dativ (مفعول غير مباشر)",
-      "am": "Dativ (ኢቀጥተኛ ተሳቢ)"
+      "am": "Dativ (ኢቀጥተኛ ተሳቢ)",
+      "es_mx": "Dativo (obj. indirecto)",
+      "ca": "Datiu (obj. indirecte)"
      }
     ],
     "rows": [
@@ -1288,7 +1352,9 @@ const GRAMMAR = [
        "ar_eg": "المتكلم المفرد",
        "ar_lb": "متكلم مفرد (أنا)",
        "ar_sy": "متكلم مفرد (أنا)",
-       "am": "1ኛ አካል ነጠላ"
+       "am": "1ኛ አካል ነጠላ",
+       "es_mx": "yo",
+       "ca": "jo"
       },
       "cells": [
        "ich",
@@ -1315,7 +1381,9 @@ const GRAMMAR = [
        "ar_eg": "المخاطب المفرد",
        "ar_lb": "مخاطب مفرد (إنتَ/إنتِ)",
        "ar_sy": "مخاطب مفرد (إنت)",
-       "am": "2ኛ አካል ነጠላ"
+       "am": "2ኛ አካል ነጠላ",
+       "es_mx": "tú (sing., informal)",
+       "ca": "tu (sing., informal)"
       },
       "cells": [
        "du",
@@ -1342,7 +1410,9 @@ const GRAMMAR = [
        "ar_eg": "الغائب المفرد (مذكر)",
        "ar_lb": "غائب مفرد مذكر (هو)",
        "ar_sy": "غائب مفرد مذكر (هوي)",
-       "am": "3ኛ አካል ነጠላ (ተባዕታይ)"
+       "am": "3ኛ አካል ነጠላ (ተባዕታይ)",
+       "es_mx": "él / ello (m.)",
+       "ca": "ell / això (m.)"
       },
       "cells": [
        "er",
@@ -1369,7 +1439,9 @@ const GRAMMAR = [
        "ar_eg": "الغائب المفرد (مؤنث)",
        "ar_lb": "غائب مفرد مؤنث (هي)",
        "ar_sy": "غائب مفرد مؤنث (هي)",
-       "am": "3ኛ አካል ነጠላ (አንስታይ)"
+       "am": "3ኛ አካል ነጠላ (አንስታይ)",
+       "es_mx": "ella / ella (f.)",
+       "ca": "ella (f.)"
       },
       "cells": [
        "sie",
@@ -1396,7 +1468,9 @@ const GRAMMAR = [
        "ar_eg": "الغائب المفرد (محايد)",
        "ar_lb": "غائب مفرد محايد (هو/هي – شي)",
        "ar_sy": "غائب مفرد محايد (الشي)",
-       "am": "3ኛ አካል ነጠላ (ገለልተኛ)"
+       "am": "3ኛ አካል ነጠላ (ገለልተኛ)",
+       "es_mx": "ello (n.)",
+       "ca": "això (n.)"
       },
       "cells": [
        "es",
@@ -1423,7 +1497,9 @@ const GRAMMAR = [
        "ar_eg": "المتكلم الجمع",
        "ar_lb": "متكلم جمع (نحنا)",
        "ar_sy": "متكلم جمع (نحنا)",
-       "am": "1ኛ አካል ብዙ"
+       "am": "1ኛ አካል ብዙ",
+       "es_mx": "nosotros",
+       "ca": "nosaltres"
       },
       "cells": [
        "wir",
@@ -1450,7 +1526,9 @@ const GRAMMAR = [
        "ar_eg": "المخاطب الجمع",
        "ar_lb": "مخاطب جمع (إنتو)",
        "ar_sy": "مخاطب جمع (إنتو)",
-       "am": "2ኛ አካል ብዙ"
+       "am": "2ኛ አካል ብዙ",
+       "es_mx": "ustedes (pl., informal)",
+       "ca": "vosaltres (pl., informal)"
       },
       "cells": [
        "ihr",
@@ -1477,7 +1555,9 @@ const GRAMMAR = [
        "ar_eg": "الغائب الجمع / صيغة الاحترام",
        "ar_lb": "غائب جمع / صيغة الاحترام (هنّي / حضرتك)",
        "ar_sy": "غائب جمع / صيغة الاحترام (هنّي / حضرتك)",
-       "am": "3ኛ አካል ብዙ / አክብሮት"
+       "am": "3ኛ አካል ብዙ / አክብሮት",
+       "es_mx": "ellos / usted (formal)",
+       "ca": "ells / vostè (formal)"
       },
       "cells": [
        "sie / Sie",
@@ -1507,7 +1587,9 @@ const GRAMMAR = [
     "ar_eg": "أنا شايفك، بس إنت مش شايفني.",
     "ar_lb": "أنا شايفك، بس إنت مش شايفني.",
     "ar_sy": "أنا شايفك، بس إنت مش شايفني.",
-    "am": "እኔ አንተን አያለሁ፣ አንተ ግን እኔን አታይም።"
+    "am": "እኔ አንተን አያለሁ፣ አንተ ግን እኔን አታይም።",
+    "es_mx": "Yo te veo, pero tú no me ves.",
+    "ca": "Jo et veig, però tu no em veus."
    },
    {
     "de": "Er hilft ihr, und sie dankt ihm.",
@@ -1527,7 +1609,9 @@ const GRAMMAR = [
     "ar_eg": "هو بيساعدها، وهي بتشكره.",
     "ar_lb": "هوي عم يساعدها، وهيي عم تشكرو.",
     "ar_sy": "هوي عم يساعدها، وهي عم تشكرو.",
-    "am": "እሱ እሷን ይረዳታል፣ እሷም እሱን ታመሰግነዋለች።"
+    "am": "እሱ እሷን ይረዳታል፣ እሷም እሱን ታመሰግነዋለች።",
+    "es_mx": "Él la ayuda a ella, y ella le da las gracias a él.",
+    "ca": "Ell l'ajuda a ella, i ella li dona les gràcies a ell."
    },
    {
     "de": "Können Sie mir bitte helfen?",
@@ -1547,7 +1631,9 @@ const GRAMMAR = [
     "ar_eg": "ممكن حضرتك تساعدني لو سمحت؟",
     "ar_lb": "فيك تساعدني لو سمحت؟",
     "ar_sy": "فيك تساعدني لو سمحت؟",
-    "am": "እባክዎን ሊረዱኝ ይችላሉ?"
+    "am": "እባክዎን ሊረዱኝ ይችላሉ?",
+    "es_mx": "¿Podría ayudarme, por favor?",
+    "ca": "Que em podria ajudar, si us plau?"
    }
   ],
   "hints": {
@@ -1568,7 +1654,9 @@ const GRAMMAR = [
    "ar_eg": "احفظ: الـ Akkusativ هو صيغة المفعول المباشر (mich, dich, ihn)، والـ Dativ هو صيغة «المُستقبِل» (mir, dir, ihm, ihr, uns, euch, ihnen). صيغة الاحترام Sie/Ihnen (= الغائب الجمع) لازم تتكتب دايمًا بحرف كبير، أما sie («هم») فبحرف صغير.",
    "ar_lb": "خدها بالك: الـ Akkusativ هيّي صيغة المفعول به المباشر (mich, dich, ihn)، والـ Dativ هيّي صيغة 'المستقبِل' (mir, dir, ihm, ihr, uns, euch, ihnen). صيغة الاحترام Sie/Ihnen (= غائب جمع) دايمًا بحرف كبير، بينما sie ('هنّي') بحرف صغير.",
    "ar_sy": "خد بالك: Akkusativ هي صيغة المفعول المباشر (mich, dich, ihn)، وDativ هي صيغة 'المستلم' (mir, dir, ihm, ihr, uns, euch, ihnen). صيغة الاحترام Sie/Ihnen (يعني غائب جمع) دايماً بحرف كبير، بس sie ('هنّي') بحرف صغير.",
-   "am": "ልብ በል፦ Akkusativ የቀጥተኛ ተሳቢ ቅርጽ ነው (mich, dich, ihn)፣ Dativ ደግሞ 'ተቀባይ' ቅርጽ ነው (mir, dir, ihm, ihr, uns, euch, ihnen)። የአክብሮት ቅርጽ Sie/Ihnen (= 3ኛ አካል ብዙ) ሁልጊዜ በካፒታል ፊደል ጻፍ፤ sie ('እነሱ') ግን በትንሽ ፊደል ይጻፋል።"
+   "am": "ልብ በል፦ Akkusativ የቀጥተኛ ተሳቢ ቅርጽ ነው (mich, dich, ihn)፣ Dativ ደግሞ 'ተቀባይ' ቅርጽ ነው (mir, dir, ihm, ihr, uns, euch, ihnen)። የአክብሮት ቅርጽ Sie/Ihnen (= 3ኛ አካል ብዙ) ሁልጊዜ በካፒታል ፊደል ጻፍ፤ sie ('እነሱ') ግን በትንሽ ፊደል ይጻፋል።",
+   "es_mx": "El inglés conserva un rastro de esto: I/me, he/him, she/her, we/us, they/them son justamente las formas de nominativo frente a las de objeto. El alemán simplemente divide la forma de objeto en acusativo (ihn) y dativo (ihm). Cuidado: el 'you' del inglés nunca cambia, pero el alemán necesita du/dich/dir y euch.",
+   "ca": "L'anglès en conserva un rastre: I/me, he/him, she/her, we/us, they/them són justament les formes de nominatiu enfront de les d'objecte. L'alemany simplement divideix la forma d'objecte en acusatiu (ihn) i datiu (ihm). Compte: el 'you' de l'anglès no canvia mai, però l'alemany necessita du/dich/dir i euch."
   }
  },
  {
@@ -1592,7 +1680,9 @@ const GRAMMAR = [
    "ar_eg": "أدوات/ضمائر الملكية",
    "ar_lb": "أدوات الملكية (Possessivartikel)",
    "ar_sy": "أدوات الملكية",
-   "am": "የባለቤትነት አርቲክል (Possessivartikel)"
+   "am": "የባለቤትነት አርቲክል (Possessivartikel)",
+   "es_mx": "Artículos posesivos",
+   "ca": "Articles possessius"
   },
   "intro": {
    "de": "Possessivartikel zeigen, wem etwas gehört. Sie werden wie der unbestimmte Artikel ein- dekliniert – die Endung richtet sich nach Genus, Kasus und Numerus des Nomens.",
@@ -1612,7 +1702,9 @@ const GRAMMAR = [
    "ar_eg": "أدوات الملكية بتوضح ملك مين الحاجة. بتتصرّف زي أداة التنكير ein- بالظبط – النهاية بتتغير حسب جنس الاسم وحالته الإعرابية وعدده.",
    "ar_lb": "أدوات الملكية بتبيّن الشي تبع مين. بتتصرّف متل الأداة النكرة ein- – النهاية بتتبع نوع وحالة وعدد الاسم.",
    "ar_sy": "أدوات الملكية بتبيّن الشي تبع مين. بتتصرّف متل أداة النكرة ein- – النهاية بتتبع جنس وحالة وعدد الاسم.",
-   "am": "የባለቤትነት አርቲክሎች የማን ንብረት እንደሆነ ያሳያሉ። እንደ ያልተወሰነው አርቲክል ein- ተመሳሳይ ሁኔታ ይለወጣሉ — ቅጥያው በስሙ ጾታ፣ ጉዳይ እና ቁጥር (ነጠላ/ብዙ) ይወሰናል።"
+   "am": "የባለቤትነት አርቲክሎች የማን ንብረት እንደሆነ ያሳያሉ። እንደ ያልተወሰነው አርቲክል ein- ተመሳሳይ ሁኔታ ይለወጣሉ — ቅጥያው በስሙ ጾታ፣ ጉዳይ እና ቁጥር (ነጠላ/ብዙ) ይወሰናል።",
+   "es_mx": "Los artículos posesivos indican a quién le pertenece algo. Se declinan igual que el artículo indefinido ein-: la terminación depende del género, el caso y el número del sustantivo.",
+   "ca": "Els articles possessius indiquen a qui pertany una cosa. Es declinen igual que l'article indefinit ein-: la terminació depèn del gènere, el cas i el nombre del substantiu."
   },
   "tables": [
    {
@@ -1634,7 +1726,9 @@ const GRAMMAR = [
      "ar_eg": "الصيغة الأساسية: الضمير ← أداة الملكية",
      "ar_lb": "الصيغ الأساسية: الضمير → أداة الملكية",
      "ar_sy": "الصيغ الأساسية: الضمير ← أداة الملكية",
-     "am": "መሠረታዊ ቅርጾች፦ ተውላጠ ስም → የባለቤትነት አርቲክል"
+     "am": "መሠረታዊ ቅርጾች፦ ተውላጠ ስም → የባለቤትነት አርቲክል",
+     "es_mx": "Formas básicas: pronombre → posesivo",
+     "ca": "Formes bàsiques: pronom → possessiu"
     },
     "labelHeader": {
      "de": "Person",
@@ -1654,7 +1748,9 @@ const GRAMMAR = [
      "ar_eg": "الضمير",
      "ar_lb": "الشخص (Person)",
      "ar_sy": "الشخص",
-     "am": "አካል"
+     "am": "አካል",
+     "es_mx": "Persona",
+     "ca": "Persona"
     },
     "columns": [
      {
@@ -1675,7 +1771,9 @@ const GRAMMAR = [
       "ar_eg": "الضمير",
       "ar_lb": "الضمير (Pronomen)",
       "ar_sy": "الضمير",
-      "am": "ተውላጠ ስም"
+      "am": "ተውላጠ ስም",
+      "es_mx": "Pronombre",
+      "ca": "Pronom"
      },
      {
       "de": "Possessivartikel",
@@ -1695,7 +1793,9 @@ const GRAMMAR = [
       "ar_eg": "أدوات/ضمائر الملكية",
       "ar_lb": "أداة الملكية (Possessivartikel)",
       "ar_sy": "أداة الملكية",
-      "am": "የባለቤትነት አርቲክል"
+      "am": "የባለቤትነት አርቲክል",
+      "es_mx": "Posesivo",
+      "ca": "Possessiu"
      }
     ],
     "rows": [
@@ -1718,7 +1818,9 @@ const GRAMMAR = [
        "ar_eg": "المتكلم المفرد",
        "ar_lb": "متكلم مفرد (أنا)",
        "ar_sy": "متكلم مفرد",
-       "am": "1ኛ አካል ነጠላ"
+       "am": "1ኛ አካል ነጠላ",
+       "es_mx": "1.ª persona del singular",
+       "ca": "1a persona del singular"
       },
       "cells": [
        "ich",
@@ -1744,7 +1846,9 @@ const GRAMMAR = [
        "ar_eg": "المخاطب المفرد (غير رسمي)",
        "ar_lb": "مخاطب مفرد (إنتَ/إنتِ)",
        "ar_sy": "مخاطب مفرد (غير رسمي)",
-       "am": "2ኛ አካል ነጠላ (ኢመደበኛ)"
+       "am": "2ኛ አካል ነጠላ (ኢመደበኛ)",
+       "es_mx": "2.ª persona del singular (informal)",
+       "ca": "2a persona del singular (informal)"
       },
       "cells": [
        "du",
@@ -1770,7 +1874,9 @@ const GRAMMAR = [
        "ar_eg": "الغائب المفرد (مذكر)",
        "ar_lb": "غائب مفرد مذكر (هو)",
        "ar_sy": "غائب مفرد مذكر",
-       "am": "3ኛ አካል ነጠላ (ተባዕታይ)"
+       "am": "3ኛ አካል ነጠላ (ተባዕታይ)",
+       "es_mx": "3.ª persona del sing. (masculino)",
+       "ca": "3a persona del sing. (masculí)"
       },
       "cells": [
        "er",
@@ -1796,7 +1902,9 @@ const GRAMMAR = [
        "ar_eg": "الغائب المفرد (مؤنث)",
        "ar_lb": "غائب مفرد مؤنث (هي)",
        "ar_sy": "غائب مفرد مؤنث",
-       "am": "3ኛ አካል ነጠላ (አንስታይ)"
+       "am": "3ኛ አካል ነጠላ (አንስታይ)",
+       "es_mx": "3.ª persona del sing. (femenino)",
+       "ca": "3a persona del sing. (femení)"
       },
       "cells": [
        "sie",
@@ -1822,7 +1930,9 @@ const GRAMMAR = [
        "ar_eg": "الغائب المفرد (محايد)",
        "ar_lb": "غائب مفرد محايد",
        "ar_sy": "غائب مفرد محايد",
-       "am": "3ኛ አካል ነጠላ (ገለልተኛ)"
+       "am": "3ኛ አካል ነጠላ (ገለልተኛ)",
+       "es_mx": "3.ª persona del sing. (neutro)",
+       "ca": "3a persona del sing. (neutre)"
       },
       "cells": [
        "es",
@@ -1848,7 +1958,9 @@ const GRAMMAR = [
        "ar_eg": "المتكلم الجمع",
        "ar_lb": "متكلم جمع (نحنا)",
        "ar_sy": "متكلم جمع",
-       "am": "1ኛ አካል ብዙ"
+       "am": "1ኛ አካል ብዙ",
+       "es_mx": "1.ª persona del plural",
+       "ca": "1a persona del plural"
       },
       "cells": [
        "wir",
@@ -1874,7 +1986,9 @@ const GRAMMAR = [
        "ar_eg": "المخاطب الجمع",
        "ar_lb": "مخاطب جمع (إنتو)",
        "ar_sy": "مخاطب جمع",
-       "am": "2ኛ አካል ብዙ"
+       "am": "2ኛ አካል ብዙ",
+       "es_mx": "2.ª persona del plural",
+       "ca": "2a persona del plural"
       },
       "cells": [
        "ihr",
@@ -1900,7 +2014,9 @@ const GRAMMAR = [
        "ar_eg": "الغائب الجمع",
        "ar_lb": "غائب جمع (هنّي)",
        "ar_sy": "غائب جمع",
-       "am": "3ኛ አካል ብዙ"
+       "am": "3ኛ አካል ብዙ",
+       "es_mx": "3.ª persona del plural",
+       "ca": "3a persona del plural"
       },
       "cells": [
        "sie",
@@ -1926,7 +2042,9 @@ const GRAMMAR = [
        "ar_eg": "صيغة الاحترام (مفرد/جمع)",
        "ar_lb": "صيغة الاحترام (مفرد/جمع)",
        "ar_sy": "صيغة الاحترام (مفرد/جمع)",
-       "am": "የአክብሮት ቅርጽ (ነጠላ/ብዙ)"
+       "am": "የአክብሮት ቅርጽ (ነጠላ/ብዙ)",
+       "es_mx": "Forma de cortesía (sing./pl.)",
+       "ca": "Forma de cortesia (sing./pl.)"
       },
       "cells": [
        "Sie",
@@ -1954,7 +2072,9 @@ const GRAMMAR = [
      "ar_eg": "mein- بتتصرّف زي ein- بالظبط",
      "ar_lb": "mein- بتتصرّف متل ein-",
      "ar_sy": "mein- بتتصرّف متل ein-",
-     "am": "mein- እንደ ein- ተመሳሳይ ሁኔታ ይለወጣል"
+     "am": "mein- እንደ ein- ተመሳሳይ ሁኔታ ይለወጣል",
+     "es_mx": "mein- se declina como ein-",
+     "ca": "mein- es declina com ein-"
     },
     "labelHeader": {
      "de": "Kasus",
@@ -1974,7 +2094,9 @@ const GRAMMAR = [
      "ar_eg": "الحالة الإعرابية",
      "ar_lb": "الحالة (Kasus)",
      "ar_sy": "الحالة الإعرابية",
-     "am": "ጉዳይ"
+     "am": "ጉዳይ",
+     "es_mx": "Caso",
+     "ca": "Cas"
     },
     "columns": [
      {
@@ -1995,7 +2117,9 @@ const GRAMMAR = [
       "ar_eg": "المذكر",
       "ar_lb": "المذكر",
       "ar_sy": "المذكر",
-      "am": "ተባዕታይ"
+      "am": "ተባዕታይ",
+      "es_mx": "Masculino",
+      "ca": "Masculí"
      },
      {
       "de": "Femininum",
@@ -2015,7 +2139,9 @@ const GRAMMAR = [
       "ar_eg": "المؤنث",
       "ar_lb": "المؤنث",
       "ar_sy": "المؤنث",
-      "am": "አንስታይ"
+      "am": "አንስታይ",
+      "es_mx": "Femenino",
+      "ca": "Femení"
      },
      {
       "de": "Neutrum",
@@ -2035,7 +2161,9 @@ const GRAMMAR = [
       "ar_eg": "المحايد",
       "ar_lb": "المحايد",
       "ar_sy": "المحايد",
-      "am": "ገለልተኛ"
+      "am": "ገለልተኛ",
+      "es_mx": "Neutro",
+      "ca": "Neutre"
      },
      {
       "de": "Plural",
@@ -2055,7 +2183,9 @@ const GRAMMAR = [
       "ar_eg": "جمع",
       "ar_lb": "الجمع",
       "ar_sy": "الجمع",
-      "am": "ብዙ ቁጥር"
+      "am": "ብዙ ቁጥር",
+      "es_mx": "Plural",
+      "ca": "Plural"
      }
     ],
     "rows": [
@@ -2078,7 +2208,9 @@ const GRAMMAR = [
        "ar_eg": "Nominativ",
        "ar_lb": "Nominativ",
        "ar_sy": "Nominativ",
-       "am": "Nominativ"
+       "am": "Nominativ",
+       "es_mx": "Nominativo",
+       "ca": "Nominatiu"
       },
       "cells": [
        "mein",
@@ -2106,7 +2238,9 @@ const GRAMMAR = [
        "ar_eg": "Akkusativ",
        "ar_lb": "Akkusativ",
        "ar_sy": "Akkusativ",
-       "am": "Akkusativ"
+       "am": "Akkusativ",
+       "es_mx": "Acusativo",
+       "ca": "Acusatiu"
       },
       "cells": [
        "meinen",
@@ -2134,7 +2268,9 @@ const GRAMMAR = [
        "ar_eg": "Dativ",
        "ar_lb": "Dativ",
        "ar_sy": "Dativ",
-       "am": "Dativ"
+       "am": "Dativ",
+       "es_mx": "Dativo",
+       "ca": "Datiu"
       },
       "cells": [
        "meinem",
@@ -2162,7 +2298,9 @@ const GRAMMAR = [
        "ar_eg": "Genitiv",
        "ar_lb": "Genitiv",
        "ar_sy": "Genitiv",
-       "am": "Genitiv"
+       "am": "Genitiv",
+       "es_mx": "Genitivo",
+       "ca": "Genitiu"
       },
       "cells": [
        "meines",
@@ -2193,7 +2331,9 @@ const GRAMMAR = [
     "ar_eg": "ده أخويا.",
     "ar_lb": "هيدا خيّي.",
     "ar_sy": "هاد أخي.",
-    "am": "ይህ ወንድሜ ነው።"
+    "am": "ይህ ወንድሜ ነው።",
+    "es_mx": "Este es mi hermano.",
+    "ca": "Aquest és el meu germà."
    },
    {
     "de": "Ich helfe meiner Schwester.",
@@ -2213,7 +2353,9 @@ const GRAMMAR = [
     "ar_eg": "أنا بساعد أختي.",
     "ar_lb": "أنا عم ساعد إختي.",
     "ar_sy": "أنا عم ساعد أختي.",
-    "am": "እህቴን እረዳታለሁ።"
+    "am": "እህቴን እረዳታለሁ።",
+    "es_mx": "Ayudo a mi hermana.",
+    "ca": "Ajudo la meva germana."
    },
    {
     "de": "Wo sind eure Schlüssel?",
@@ -2233,7 +2375,9 @@ const GRAMMAR = [
     "ar_eg": "فين مفاتيحكم؟",
     "ar_lb": "وين مفاتيحكن؟",
     "ar_sy": "وين مفاتيحكن؟",
-    "am": "ቁልፎቻችሁ የት ናቸው?"
+    "am": "ቁልፎቻችሁ የት ናቸው?",
+    "es_mx": "¿Dónde están sus llaves?",
+    "ca": "On són les vostres claus?"
    }
   ],
   "hints": {
@@ -2254,7 +2398,9 @@ const GRAMMAR = [
    "ar_eg": "احفظ: الأول اختار الصيغة الأساسية حسب صاحب الملكية (mein, dein, sein, ihr …)، بعد كده ضيف نهاية ein- حسب جنس وحالة وعدد الاسم اللي جاي بعده. خد بالك: euer بيفقد الـ -e- قبل أي نهاية (euer → eure, euren, eurem).",
    "ar_lb": "خدها بالك: أول شي اختار الصيغة الأساسية حسب صاحب الشي (mein, dein, sein, ihr …)، وبعدين زيد نهاية الـ ein- حسب نوع وحالة وعدد الاسم يلي جاي بعدها. انتبه: euer بيفقد الـ -e- قبل ما تنضاف نهاية (euer → eure, euren, eurem).",
    "ar_sy": "خد بالك: أول شي اختار الصيغة الأساسية حسب صاحب الشي (mein, dein, sein, ihr …)، بعدين زيد نهاية ein- حسب جنس وحالة وعدد الاسم يلي بعدها. انتبه: euer بتخسر الـ-e- قبل أي نهاية (euer → eure, euren, eurem).",
-   "am": "ልብ በል፦ በመጀመሪያ በባለቤቱ መሠረት መሠረታዊውን ቅርጽ ምረጥ (mein, dein, sein, ihr …)፣ ከዚያ ተከታዩ ስም በያዘው ጾታ፣ ጉዳይ እና ቁጥር መሠረት የ ein- ቅጥያውን ጨምር። ጥንቃቄ፦ euer ከቅጥያ በፊት -e-ውን ያጣል (euer → eure, euren, eurem)።"
+   "am": "ልብ በል፦ በመጀመሪያ በባለቤቱ መሠረት መሠረታዊውን ቅርጽ ምረጥ (mein, dein, sein, ihr …)፣ ከዚያ ተከታዩ ስም በያዘው ጾታ፣ ጉዳይ እና ቁጥር መሠረት የ ein- ቅጥያውን ጨምር። ጥንቃቄ፦ euer ከቅጥያ በፊት -e-ውን ያጣል (euer → eure, euren, eurem)።",
+   "es_mx": "Recuerda: primero elige la forma básica según el poseedor (mein, dein, sein, ihr…) y luego añade la terminación de ein- según el género, el caso y el número del sustantivo que sigue. Atención: euer pierde la -e- antes de una terminación (euer → eure, euren, eurem).",
+   "ca": "Recorda: primer tria la forma bàsica segons el posseïdor (mein, dein, sein, ihr…) i després afegeix la terminació d'ein- segons el gènere, el cas i el nombre del substantiu que segueix. Atenció: euer perd la -e- davant d'una terminació (euer → eure, euren, eurem)."
   }
  },
  {
@@ -2278,7 +2424,9 @@ const GRAMMAR = [
    "ar_eg": "نهايات الصفة",
    "ar_lb": "نهايات الصفة (Adjektivendungen)",
    "ar_sy": "نهايات الصفة",
-   "am": "የቅጽል ቅጥያዎች (Adjektivendungen)"
+   "am": "የቅጽል ቅጥያዎች (Adjektivendungen)",
+   "es_mx": "Terminaciones del adjetivo",
+   "ca": "Terminacions de l'adjectiu"
   },
   "intro": {
    "de": "Ein Adjektiv vor einem Nomen bekommt eine Endung. Welche, hängt vom Wort davor ab: nach bestimmtem Artikel (der/die/das) schwach, nach ein/kein/mein gemischt, ohne Artikel stark. Als Prädikat (Das Auto ist gut) bleibt es endungslos.",
@@ -2298,7 +2446,9 @@ const GRAMMAR = [
    "ar_eg": "الصفة اللي قبل الاسم بتاخد نهاية. أنهي نهاية؟ ده بيتوقف على الكلمة اللي قبلها: بعد أداة التعريف (der/die/das) بتبقى نهاية ضعيفة، بعد ein/kein/mein بتبقى مختلطة، من غير أداة خالص بتبقى قوية. لما الصفة تيجي بعد الفعل (Das Auto ist gut) بتفضل من غير نهاية خالص.",
    "ar_lb": "الصفة يلي جايي قبل الاسم بتاخد نهاية. أي نهاية بتعتمد ع الكلمة يلي قبلها: بعد الأداة المعرّفة (der/die/das) بتكون ضعيفة (schwach)، بعد ein/kein/mein بتكون مختلطة (gemischt)، وبلا أداة بتكون قوية (stark). كخبر (Das Auto ist gut) بتضل بلا نهاية.",
    "ar_sy": "الصفة قبل الاسم بتاخد نهاية. أي نهاية؟ هاد بيعتمد عالكلمة يلي قبلها: بعد الأداة المعرّفة (der/die/das) بتكون ضعيفة، بعد ein/kein/mein بتكون مختلطة، وبلا أداة بتكون قوية. لما تجي بعد فعل الكينونة (Das Auto ist gut) بتضل بلا نهاية.",
-   "am": "ከስም በፊት የሚመጣ ቅጽል ቅጥያ ይይዛል። የትኛው ቅጥያ እንደሚሆን የሚወሰነው ከፊት በሚመጣው ቃል ነው፦ ከተወሰነ አርቲክል (der/die/das) በኋላ ደካማ (schwach)፣ ከ ein/kein/mein በኋላ ድብልቅ (gemischt)፣ ያለ አርቲክል ደግሞ ጠንካራ (stark)። እንደ ተሳቢ ሆኖ ሲመጣ (Das Auto ist gut) ያለ ቅጥያ ይቀራል።"
+   "am": "ከስም በፊት የሚመጣ ቅጽል ቅጥያ ይይዛል። የትኛው ቅጥያ እንደሚሆን የሚወሰነው ከፊት በሚመጣው ቃል ነው፦ ከተወሰነ አርቲክል (der/die/das) በኋላ ደካማ (schwach)፣ ከ ein/kein/mein በኋላ ድብልቅ (gemischt)፣ ያለ አርቲክል ደግሞ ጠንካራ (stark)። እንደ ተሳቢ ሆኖ ሲመጣ (Das Auto ist gut) ያለ ቅጥያ ይቀራል።",
+   "es_mx": "Un adjetivo delante de un sustantivo lleva una terminación. Cuál depende de la palabra que va antes: tras un artículo determinado (der/die/das) es débil, tras ein/kein/mein es mixta, y sin artículo es fuerte. Usado como predicado (Das Auto ist gut) no lleva terminación.",
+   "ca": "Un adjectiu davant d'un substantiu porta una terminació. Quina depèn de la paraula que va al davant: després d'un article determinat (der/die/das) és feble, després d'ein/kein/mein és mixta, i sense article és forta. Usat com a predicat (Das Auto ist gut) no porta terminació."
   },
   "tables": [
    {
@@ -2320,7 +2470,9 @@ const GRAMMAR = [
      "ar_eg": "ضعيفة — بعد أداة التعريف (der/die/das)",
      "ar_lb": "ضعيفة (Schwach) — بعد الأداة المعرّفة (der/die/das)",
      "ar_sy": "ضعيفة — بعد الأداة المعرّفة (der/die/das)",
-     "am": "ደካማ (Schwach) — ከተወሰነ አርቲክል በኋላ (der/die/das)"
+     "am": "ደካማ (Schwach) — ከተወሰነ አርቲክል በኋላ (der/die/das)",
+     "es_mx": "Débil — tras el artículo determinado (der/die/das)",
+     "ca": "Feble — després de l'article determinat (der/die/das)"
     },
     "labelHeader": {
      "de": "Kasus",
@@ -2340,7 +2492,9 @@ const GRAMMAR = [
      "ar_eg": "الحالة الإعرابية",
      "ar_lb": "الحالة (Kasus)",
      "ar_sy": "الحالة الإعرابية",
-     "am": "ጉዳይ"
+     "am": "ጉዳይ",
+     "es_mx": "Caso",
+     "ca": "Cas"
     },
     "columns": [
      {
@@ -2361,7 +2515,9 @@ const GRAMMAR = [
       "ar_eg": "مذكر",
       "ar_lb": "مذكر",
       "ar_sy": "مذكر",
-      "am": "ተባዕታይ"
+      "am": "ተባዕታይ",
+      "es_mx": "masculino",
+      "ca": "masculí"
      },
      {
       "de": "feminin",
@@ -2381,7 +2537,9 @@ const GRAMMAR = [
       "ar_eg": "مؤنث",
       "ar_lb": "مؤنث",
       "ar_sy": "مؤنث",
-      "am": "አንስታይ"
+      "am": "አንስታይ",
+      "es_mx": "femenino",
+      "ca": "femení"
      },
      {
       "de": "neutral",
@@ -2401,7 +2559,9 @@ const GRAMMAR = [
       "ar_eg": "محايد",
       "ar_lb": "محايد",
       "ar_sy": "محايد",
-      "am": "ገለልተኛ"
+      "am": "ገለልተኛ",
+      "es_mx": "neutro",
+      "ca": "neutre"
      },
      {
       "de": "Plural",
@@ -2421,7 +2581,9 @@ const GRAMMAR = [
       "ar_eg": "جمع",
       "ar_lb": "جمع",
       "ar_sy": "جمع",
-      "am": "ብዙ ቁጥር"
+      "am": "ብዙ ቁጥር",
+      "es_mx": "plural",
+      "ca": "plural"
      }
     ],
     "rows": [
@@ -2444,7 +2606,9 @@ const GRAMMAR = [
        "ar_eg": "Nominativ",
        "ar_lb": "Nominativ",
        "ar_sy": "Nominativ",
-       "am": "Nominativ"
+       "am": "Nominativ",
+       "es_mx": "Nominativo",
+       "ca": "Nominatiu"
       },
       "cells": [
        "der gute Mann",
@@ -2472,7 +2636,9 @@ const GRAMMAR = [
        "ar_eg": "Akkusativ",
        "ar_lb": "Akkusativ",
        "ar_sy": "Akkusativ",
-       "am": "Akkusativ"
+       "am": "Akkusativ",
+       "es_mx": "Acusativo",
+       "ca": "Acusatiu"
       },
       "cells": [
        "den guten Mann",
@@ -2500,7 +2666,9 @@ const GRAMMAR = [
        "ar_eg": "Dativ",
        "ar_lb": "Dativ",
        "ar_sy": "Dativ",
-       "am": "Dativ"
+       "am": "Dativ",
+       "es_mx": "Dativo",
+       "ca": "Datiu"
       },
       "cells": [
        "dem guten Mann",
@@ -2528,7 +2696,9 @@ const GRAMMAR = [
        "ar_eg": "Genitiv",
        "ar_lb": "Genitiv",
        "ar_sy": "Genitiv",
-       "am": "Genitiv"
+       "am": "Genitiv",
+       "es_mx": "Genitivo",
+       "ca": "Genitiu"
       },
       "cells": [
        "des guten Mannes",
@@ -2558,7 +2728,9 @@ const GRAMMAR = [
      "ar_eg": "مختلطة — بعد ein/kein/mein (أداة التنكير وأدوات الملكية)",
      "ar_lb": "مختلطة (Gemischt) — بعد ein/kein/mein (الأداة النكرة وأدوات الملكية)",
      "ar_sy": "مختلطة — بعد ein/kein/mein (أداة النكرة وأدوات الملكية)",
-     "am": "ድብልቅ (Gemischt) — ከ ein/kein/mein በኋላ (ያልተወሰነ አርቲክል እና የባለቤትነት)"
+     "am": "ድብልቅ (Gemischt) — ከ ein/kein/mein በኋላ (ያልተወሰነ አርቲክል እና የባለቤትነት)",
+     "es_mx": "Mixta — tras ein/kein/mein (artículo indeterminado y posesivos)",
+     "ca": "Mixta — després d'ein/kein/mein (article indeterminat i possessius)"
     },
     "labelHeader": {
      "de": "Kasus",
@@ -2578,7 +2750,9 @@ const GRAMMAR = [
      "ar_eg": "الحالة الإعرابية",
      "ar_lb": "الحالة (Kasus)",
      "ar_sy": "الحالة الإعرابية",
-     "am": "ጉዳይ"
+     "am": "ጉዳይ",
+     "es_mx": "Caso",
+     "ca": "Cas"
     },
     "columns": [
      {
@@ -2599,7 +2773,9 @@ const GRAMMAR = [
       "ar_eg": "مذكر",
       "ar_lb": "مذكر",
       "ar_sy": "مذكر",
-      "am": "ተባዕታይ"
+      "am": "ተባዕታይ",
+      "es_mx": "masculino",
+      "ca": "masculí"
      },
      {
       "de": "feminin",
@@ -2619,7 +2795,9 @@ const GRAMMAR = [
       "ar_eg": "مؤنث",
       "ar_lb": "مؤنث",
       "ar_sy": "مؤنث",
-      "am": "አንስታይ"
+      "am": "አንስታይ",
+      "es_mx": "femenino",
+      "ca": "femení"
      },
      {
       "de": "neutral",
@@ -2639,7 +2817,9 @@ const GRAMMAR = [
       "ar_eg": "محايد",
       "ar_lb": "محايد",
       "ar_sy": "محايد",
-      "am": "ገለልተኛ"
+      "am": "ገለልተኛ",
+      "es_mx": "neutro",
+      "ca": "neutre"
      },
      {
       "de": "Plural",
@@ -2659,7 +2839,9 @@ const GRAMMAR = [
       "ar_eg": "جمع",
       "ar_lb": "جمع",
       "ar_sy": "جمع",
-      "am": "ብዙ ቁጥር"
+      "am": "ብዙ ቁጥር",
+      "es_mx": "plural",
+      "ca": "plural"
      }
     ],
     "rows": [
@@ -2682,7 +2864,9 @@ const GRAMMAR = [
        "ar_eg": "Nominativ",
        "ar_lb": "Nominativ",
        "ar_sy": "Nominativ",
-       "am": "Nominativ"
+       "am": "Nominativ",
+       "es_mx": "Nominativo",
+       "ca": "Nominatiu"
       },
       "cells": [
        "ein guter Mann",
@@ -2710,7 +2894,9 @@ const GRAMMAR = [
        "ar_eg": "Akkusativ",
        "ar_lb": "Akkusativ",
        "ar_sy": "Akkusativ",
-       "am": "Akkusativ"
+       "am": "Akkusativ",
+       "es_mx": "Acusativo",
+       "ca": "Acusatiu"
       },
       "cells": [
        "einen guten Mann",
@@ -2738,7 +2924,9 @@ const GRAMMAR = [
        "ar_eg": "Dativ",
        "ar_lb": "Dativ",
        "ar_sy": "Dativ",
-       "am": "Dativ"
+       "am": "Dativ",
+       "es_mx": "Dativo",
+       "ca": "Datiu"
       },
       "cells": [
        "einem guten Mann",
@@ -2766,7 +2954,9 @@ const GRAMMAR = [
        "ar_eg": "Genitiv",
        "ar_lb": "Genitiv",
        "ar_sy": "Genitiv",
-       "am": "Genitiv"
+       "am": "Genitiv",
+       "es_mx": "Genitivo",
+       "ca": "Genitiu"
       },
       "cells": [
        "eines guten Mannes",
@@ -2796,7 +2986,9 @@ const GRAMMAR = [
      "ar_eg": "قوية — من غير أداة خالص (أداة صفرية)",
      "ar_lb": "قوية (Stark) — بلا أداة (Nullartikel)",
      "ar_sy": "قوية — بلا أداة (أداة صفرية)",
-     "am": "ጠንካራ (Stark) — ያለ አርቲክል (ዜሮ አርቲክል)"
+     "am": "ጠንካራ (Stark) — ያለ አርቲክል (ዜሮ አርቲክል)",
+     "es_mx": "Fuerte — sin artículo (artículo cero)",
+     "ca": "Forta — sense article (article zero)"
     },
     "labelHeader": {
      "de": "Kasus",
@@ -2816,7 +3008,9 @@ const GRAMMAR = [
      "ar_eg": "الحالة الإعرابية",
      "ar_lb": "الحالة (Kasus)",
      "ar_sy": "الحالة الإعرابية",
-     "am": "ጉዳይ"
+     "am": "ጉዳይ",
+     "es_mx": "Caso",
+     "ca": "Cas"
     },
     "columns": [
      {
@@ -2837,7 +3031,9 @@ const GRAMMAR = [
       "ar_eg": "مذكر",
       "ar_lb": "مذكر",
       "ar_sy": "مذكر",
-      "am": "ተባዕታይ"
+      "am": "ተባዕታይ",
+      "es_mx": "masculino",
+      "ca": "masculí"
      },
      {
       "de": "feminin",
@@ -2857,7 +3053,9 @@ const GRAMMAR = [
       "ar_eg": "مؤنث",
       "ar_lb": "مؤنث",
       "ar_sy": "مؤنث",
-      "am": "አንስታይ"
+      "am": "አንስታይ",
+      "es_mx": "femenino",
+      "ca": "femení"
      },
      {
       "de": "neutral",
@@ -2877,7 +3075,9 @@ const GRAMMAR = [
       "ar_eg": "محايد",
       "ar_lb": "محايد",
       "ar_sy": "محايد",
-      "am": "ገለልተኛ"
+      "am": "ገለልተኛ",
+      "es_mx": "neutro",
+      "ca": "neutre"
      },
      {
       "de": "Plural",
@@ -2897,7 +3097,9 @@ const GRAMMAR = [
       "ar_eg": "جمع",
       "ar_lb": "جمع",
       "ar_sy": "جمع",
-      "am": "ብዙ ቁጥር"
+      "am": "ብዙ ቁጥር",
+      "es_mx": "plural",
+      "ca": "plural"
      }
     ],
     "rows": [
@@ -2920,7 +3122,9 @@ const GRAMMAR = [
        "ar_eg": "Nominativ",
        "ar_lb": "Nominativ",
        "ar_sy": "Nominativ",
-       "am": "Nominativ"
+       "am": "Nominativ",
+       "es_mx": "Nominativo",
+       "ca": "Nominatiu"
       },
       "cells": [
        "guter Wein",
@@ -2948,7 +3152,9 @@ const GRAMMAR = [
        "ar_eg": "Akkusativ",
        "ar_lb": "Akkusativ",
        "ar_sy": "Akkusativ",
-       "am": "Akkusativ"
+       "am": "Akkusativ",
+       "es_mx": "Acusativo",
+       "ca": "Acusatiu"
       },
       "cells": [
        "guten Wein",
@@ -2976,7 +3182,9 @@ const GRAMMAR = [
        "ar_eg": "Dativ",
        "ar_lb": "Dativ",
        "ar_sy": "Dativ",
-       "am": "Dativ"
+       "am": "Dativ",
+       "es_mx": "Dativo",
+       "ca": "Datiu"
       },
       "cells": [
        "gutem Wein",
@@ -3004,7 +3212,9 @@ const GRAMMAR = [
        "ar_eg": "Genitiv",
        "ar_lb": "Genitiv",
        "ar_sy": "Genitiv",
-       "am": "Genitiv"
+       "am": "Genitiv",
+       "es_mx": "Genitivo",
+       "ca": "Genitiu"
       },
       "cells": [
        "guten Weines",
@@ -3035,7 +3245,9 @@ const GRAMMAR = [
     "ar_eg": "الزميلة الجديدة قاعدة في المكتب الكبير.",
     "ar_lb": "الزميلة الجديدة قاعدة بالمكتب الكبير.",
     "ar_sy": "الزميلة الجديدة قاعدة بالمكتب الكبير.",
-    "am": "አዲሲቷ ባልደረባ በትልቁ ቢሮ ውስጥ ተቀምጣለች።"
+    "am": "አዲሲቷ ባልደረባ በትልቁ ቢሮ ውስጥ ተቀምጣለች።",
+    "es_mx": "La nueva colega está sentada en la oficina grande.",
+    "ca": "La nova col·lega seu al despatx gran."
    },
    {
     "de": "Er hat einen alten Freund und eine gute Idee.",
@@ -3055,7 +3267,9 @@ const GRAMMAR = [
     "ar_eg": "عنده صاحب قديم وعنده فكرة كويسة.",
     "ar_lb": "عندو رفيق قديم وفكرة منيحة.",
     "ar_sy": "عندو صديق قديم وفكرة منيحة.",
-    "am": "እሱ አንድ አሮጌ ጓደኛና አንድ ጥሩ ሐሳብ አለው።"
+    "am": "እሱ አንድ አሮጌ ጓደኛና አንድ ጥሩ ሐሳብ አለው።",
+    "es_mx": "Él tiene un viejo amigo y una buena idea.",
+    "ca": "Ell té un vell amic i una bona idea."
    },
    {
     "de": "Bei schönem Wetter trinken wir kaltes Bier.",
@@ -3075,7 +3289,9 @@ const GRAMMAR = [
     "ar_eg": "لما الجو يبقى حلو بنشرب بيرة ساقعة.",
     "ar_lb": "لما الطقس يكون حلو منشرب بيرة باردة.",
     "ar_sy": "بالطقس الحلو منشرب بيرة بردانة.",
-    "am": "ጥሩ የአየር ሁኔታ ሲኖር ቀዝቃዛ ቢራ እንጠጣለን።"
+    "am": "ጥሩ የአየር ሁኔታ ሲኖር ቀዝቃዛ ቢራ እንጠጣለን።",
+    "es_mx": "Cuando hace buen tiempo tomamos cerveza fría.",
+    "ca": "Quan fa bon temps bevem cervesa freda."
    }
   ],
   "hints": {
@@ -3096,7 +3312,9 @@ const GRAMMAR = [
    "ar_eg": "احفظ: لو الأداة نفسها بتوضح النهاية بشكل واضح (der, dem, den …)، الصفة بتبقى «كسلانة» — غالبًا -e أو -en. لو المعلومة دي ناقصة (مفيش أداة، أو ein/mein في Nom./Akk.)، الصفة نفسها لازم تحمل الإشارة القوية: guter, gutes, gutem. بعد الفعل sein بتفضل من غير نهاية: «Das Auto ist gut.»",
    "ar_lb": "خدها بالك: إذا الأداة أصلًا حاملة نهاية واضحة (der, dem, den …)، الصفة بتكون „كسلانة“ — بالغالب -e أو -en. إذا هالمعلومة ناقصة (بلا أداة، أو ein/mein بالـ Nom./Akk.)، لازم الصفة تحمل النهاية الدالّة بنفسها: guter, gutes, gutem. بعد sein بتضل بلا نهاية: „Das Auto ist gut.“",
    "ar_sy": "خد بالك: إذا الأداة أصلاً حاملة نهاية واضحة (der, dem, den …)، الصفة بتكون 'كسلانة' — بمعظم الحالات -e أو -en. إذا هالمعلومة ناقصة (بلا أداة، أو ein/mein بالـNominativ/Akkusativ)، لازم الصفة تحمل النهاية القوية بنفسها: guter, gutes, gutem. بعد فعل sein بتضل بلا نهاية: „Das Auto ist gut.“",
-   "am": "ልብ በል፦ አርቲክሉ ራሱ ግልጽ ቅጥያ ካለው (der, dem, den …)፣ ቅጽሉ 'ሰነፍ' ይሆናል — አብዛኛውን ጊዜ -e ወይም -en። ይህ መረጃ ከጠፋ (አርቲክል ከሌለ፣ ወይም ein/mein በ Nom./Akk. ውስጥ ከሆነ)፣ ቅጽሉ ራሱ ምልክት ሰጪውን ቅጥያ መያዝ አለበት፦ guter, gutes, gutem። ከ sein በኋላ ያለ ቅጥያ ይቀራል፦ 'Das Auto ist gut.' (መኪናው ጥሩ ነው።)"
+   "am": "ልብ በል፦ አርቲክሉ ራሱ ግልጽ ቅጥያ ካለው (der, dem, den …)፣ ቅጽሉ 'ሰነፍ' ይሆናል — አብዛኛውን ጊዜ -e ወይም -en። ይህ መረጃ ከጠፋ (አርቲክል ከሌለ፣ ወይም ein/mein በ Nom./Akk. ውስጥ ከሆነ)፣ ቅጽሉ ራሱ ምልክት ሰጪውን ቅጥያ መያዝ አለበት፦ guter, gutes, gutem። ከ sein በኋላ ያለ ቅጥያ ይቀራል፦ 'Das Auto ist gut.' (መኪናው ጥሩ ነው።)",
+   "es_mx": "Recuerda: si el artículo ya lleva una terminación clara (der, dem, den …), el adjetivo se vuelve «perezoso» — casi siempre -e o -en. Si falta esa información (sin artículo, o ein/mein en nom./acus.), el adjetivo debe llevar él mismo la terminación de señal: guter, gutes, gutem. Tras sein queda sin terminación: «Das Auto ist gut.»",
+   "ca": "Recorda: si l'article ja porta una terminació clara (der, dem, den …), l'adjectiu es torna «mandrós» — gairebé sempre -e o -en. Si falta aquesta informació (sense article, o ein/mein en nom./acus.), l'adjectiu ha de portar ell mateix la terminació de senyal: guter, gutes, gutem. Després de sein queda sense terminació: «Das Auto ist gut.»"
   }
  },
  {
@@ -3120,7 +3338,9 @@ const GRAMMAR = [
    "ar_eg": "زمن المضارع (Präsens)",
    "ar_lb": "المضارع (Präsens)",
    "ar_sy": "المضارع (Präsens)",
-   "am": "Präsens (የአሁን ጊዜ)"
+   "am": "Präsens (የአሁን ጊዜ)",
+   "es_mx": "Presente (Präsens)",
+   "ca": "Present (Präsens)"
   },
   "intro": {
    "de": "Das Präsens beschreibt Gegenwart und Gewohnheiten. Deutsch hat nur eine Präsensform – sie ersetzt die englische Verlaufsform (I am doing) und drückt oft die nahe Zukunft aus (Morgen fahre ich nach Berlin).",
@@ -3140,7 +3360,9 @@ const GRAMMAR = [
    "ar_eg": "زمن الـ Präsens بيوصف الحاضر والعادات. الألماني عنده صيغة مضارع واحدة بس – وهي بتحل محل صيغة الاستمرار في الإنجليزي (I am doing) وكمان غالبًا بتعبّر عن المستقبل القريب (Morgen fahre ich nach Berlin = بكرة هروح برلين).",
    "ar_lb": "المضارع (Präsens) بيوصف الحاضر والعادات. الألماني عندو صيغة وحدة بس للمضارع – وهيي بتعوّض عن صيغة الاستمرار بالإنكليزي (I am doing) وكتير مرات بتعبّر عن المستقبل القريب (Morgen fahre ich nach Berlin = بكرا رح روح عبرلين).",
    "ar_sy": "المضارع بيوصف الحاضر والعادات. الألماني عندو صيغة وحدة بس للمضارع – هاي الصيغة بتعوّض عن صيغة الاستمرار بالإنكليزي (I am doing) وبكتير أحيان بتعبّر عن المستقبل القريب (بكرا رايح عبرلين).",
-   "am": "Präsens የአሁን ጊዜንና ልማዳዊ ድርጊቶችን ይገልጻል። ጀርመንኛ አንድ የ Präsens ቅርጽ ብቻ አለው — ይህም እንደ እንግሊዝኛው ቀጣይ ጊዜ (I am doing) ሆኖ ያገለግላል፣ እንዲሁም ብዙ ጊዜ ቅርብ የወደፊት ጊዜን ይገልጻል (Morgen fahre ich nach Berlin — ነገ ወደ በርሊን እሄዳለሁ)።"
+   "am": "Präsens የአሁን ጊዜንና ልማዳዊ ድርጊቶችን ይገልጻል። ጀርመንኛ አንድ የ Präsens ቅርጽ ብቻ አለው — ይህም እንደ እንግሊዝኛው ቀጣይ ጊዜ (I am doing) ሆኖ ያገለግላል፣ እንዲሁም ብዙ ጊዜ ቅርብ የወደፊት ጊዜን ይገልጻል (Morgen fahre ich nach Berlin — ነገ ወደ በርሊን እሄዳለሁ)።",
+   "es_mx": "El presente describe lo que sucede ahora y las acciones habituales. El alemán tiene una sola forma de presente, así que también cubre el presente continuo del inglés ('I am doing') y con frecuencia el futuro cercano ('Mañana voy a Berlín').",
+   "ca": "El present descriu el que passa ara i les accions habituals. L'alemany té una sola forma de present, de manera que també cobreix el present continu de l'anglès ('I am doing') i sovint el futur proper ('Demà vaig a Berlín')."
   },
   "tables": [
    {
@@ -3162,7 +3384,9 @@ const GRAMMAR = [
      "ar_eg": "النهايات المنتظمة (مثال: machen)",
      "ar_lb": "النهايات المنتظمة (مثال: machen)",
      "ar_sy": "النهايات المنتظمة (مثال: machen)",
-     "am": "መደበኛ ቅጥያዎች (ምሳሌ፦ machen)"
+     "am": "መደበኛ ቅጥያዎች (ምሳሌ፦ machen)",
+     "es_mx": "Terminaciones regulares del presente (ejemplo: machen)",
+     "ca": "Terminacions regulars del present (exemple: machen)"
     },
     "labelHeader": {
      "de": "Person",
@@ -3182,7 +3406,9 @@ const GRAMMAR = [
      "ar_eg": "الضمير",
      "ar_lb": "الشخص (Person)",
      "ar_sy": "الشخص",
-     "am": "አካል"
+     "am": "አካል",
+     "es_mx": "Persona",
+     "ca": "Persona"
     },
     "columns": [
      {
@@ -3203,7 +3429,9 @@ const GRAMMAR = [
       "ar_eg": "النهاية",
       "ar_lb": "النهاية (Endung)",
       "ar_sy": "النهاية",
-      "am": "ቅጥያ"
+      "am": "ቅጥያ",
+      "es_mx": "Terminación",
+      "ca": "Terminació"
      },
      {
       "de": "machen",
@@ -3223,7 +3451,9 @@ const GRAMMAR = [
       "ar_eg": "machen (يعمل)",
       "ar_lb": "machen (يعمل)",
       "ar_sy": "machen (يعمل)",
-      "am": "machen (ማድረግ)"
+      "am": "machen (ማድረግ)",
+      "es_mx": "machen (hacer)",
+      "ca": "machen (fer)"
      }
     ],
     "rows": [
@@ -3246,7 +3476,9 @@ const GRAMMAR = [
        "ar_eg": "ich (أنا)",
        "ar_lb": "ich (أنا)",
        "ar_sy": "ich (أنا)",
-       "am": "ich (እኔ)"
+       "am": "ich (እኔ)",
+       "es_mx": "ich (yo)",
+       "ca": "ich (jo)"
       },
       "cells": [
        "-e",
@@ -3272,7 +3504,9 @@ const GRAMMAR = [
        "ar_eg": "du (إنت)",
        "ar_lb": "du (إنتَ/إنتِ)",
        "ar_sy": "du (إنت)",
-       "am": "du (አንተ/አንቺ)"
+       "am": "du (አንተ/አንቺ)",
+       "es_mx": "du (tú, sing.)",
+       "ca": "du (tu, sing.)"
       },
       "cells": [
        "-st",
@@ -3298,7 +3532,9 @@ const GRAMMAR = [
        "ar_eg": "er/sie/es (هو/هي/هو المحايد)",
        "ar_lb": "er/sie/es (هو/هي)",
        "ar_sy": "er/sie/es (هوي/هي)",
-       "am": "er/sie/es (እሱ/እሷ/እሱ-ገለልተኛ)"
+       "am": "er/sie/es (እሱ/እሷ/እሱ-ገለልተኛ)",
+       "es_mx": "er/sie/es (él/ella/ello)",
+       "ca": "er/sie/es (ell/ella/això)"
       },
       "cells": [
        "-t",
@@ -3324,7 +3560,9 @@ const GRAMMAR = [
        "ar_eg": "wir (إحنا)",
        "ar_lb": "wir (نحنا)",
        "ar_sy": "wir (نحنا)",
-       "am": "wir (እኛ)"
+       "am": "wir (እኛ)",
+       "es_mx": "wir (nosotros)",
+       "ca": "wir (nosaltres)"
       },
       "cells": [
        "-en",
@@ -3350,7 +3588,9 @@ const GRAMMAR = [
        "ar_eg": "ihr (إنتوا)",
        "ar_lb": "ihr (إنتو)",
        "ar_sy": "ihr (إنتو)",
-       "am": "ihr (እናንተ)"
+       "am": "ihr (እናንተ)",
+       "es_mx": "ihr (ustedes/vosotros, pl.)",
+       "ca": "ihr (vosaltres, pl.)"
       },
       "cells": [
        "-t",
@@ -3376,7 +3616,9 @@ const GRAMMAR = [
        "ar_eg": "sie/Sie (هم/حضرتك)",
        "ar_lb": "sie/Sie (هنّي/حضرتك)",
        "ar_sy": "sie/Sie (هنّي/حضرتك)",
-       "am": "sie/Sie (እነሱ/እርስዎ)"
+       "am": "sie/Sie (እነሱ/እርስዎ)",
+       "es_mx": "sie/Sie (ellos/usted formal)",
+       "ca": "sie/Sie (ells/vostè formal)"
       },
       "cells": [
        "-en",
@@ -3404,7 +3646,9 @@ const GRAMMAR = [
      "ar_eg": "الأفعال المساعدة التلاتة المهمة: sein و haben و werden",
      "ar_lb": "الأفعال المساعدة التلاتة المهمة: sein، haben، werden",
      "ar_sy": "الأفعال المساعدة التلاتة المهمة: sein وhaben وwerden",
-     "am": "ሦስቱ አስፈላጊ ረዳት ግሦች፦ sein, haben, werden"
+     "am": "ሦስቱ አስፈላጊ ረዳት ግሦች፦ sein, haben, werden",
+     "es_mx": "Los tres verbos auxiliares clave: sein, haben, werden",
+     "ca": "Els tres verbs auxiliars clau: sein, haben, werden"
     },
     "labelHeader": {
      "de": "Person",
@@ -3424,7 +3668,9 @@ const GRAMMAR = [
      "ar_eg": "الضمير",
      "ar_lb": "الشخص (Person)",
      "ar_sy": "الشخص",
-     "am": "አካል"
+     "am": "አካል",
+     "es_mx": "Persona",
+     "ca": "Persona"
     },
     "columns": [
      {
@@ -3445,7 +3691,9 @@ const GRAMMAR = [
       "ar_eg": "sein (يكون)",
       "ar_lb": "sein (يكون)",
       "ar_sy": "sein (يكون)",
-      "am": "sein (መሆን)"
+      "am": "sein (መሆን)",
+      "es_mx": "sein (ser/estar)",
+      "ca": "sein (ser/estar)"
      },
      {
       "de": "haben",
@@ -3465,7 +3713,9 @@ const GRAMMAR = [
       "ar_eg": "haben (عنده/يملك)",
       "ar_lb": "haben (يكون عندو)",
       "ar_sy": "haben (يكون عندو)",
-      "am": "haben (መያዝ)"
+      "am": "haben (መያዝ)",
+      "es_mx": "haben (tener)",
+      "ca": "haben (tenir)"
      },
      {
       "de": "werden",
@@ -3485,7 +3735,9 @@ const GRAMMAR = [
       "ar_eg": "werden (يبقى/يصبح)",
       "ar_lb": "werden (يصير)",
       "ar_sy": "werden (يصير)",
-      "am": "werden (መሆን/ወደፊት)"
+      "am": "werden (መሆን/ወደፊት)",
+      "es_mx": "werden (llegar a ser)",
+      "ca": "werden (esdevenir)"
      }
     ],
     "rows": [
@@ -3508,7 +3760,9 @@ const GRAMMAR = [
        "ar_eg": "ich (أنا)",
        "ar_lb": "ich (أنا)",
        "ar_sy": "ich (أنا)",
-       "am": "ich (እኔ)"
+       "am": "ich (እኔ)",
+       "es_mx": "ich (yo)",
+       "ca": "ich (jo)"
       },
       "cells": [
        "bin",
@@ -3535,7 +3789,9 @@ const GRAMMAR = [
        "ar_eg": "du (إنت)",
        "ar_lb": "du (إنتَ/إنتِ)",
        "ar_sy": "du (إنت)",
-       "am": "du (አንተ/አንቺ)"
+       "am": "du (አንተ/አንቺ)",
+       "es_mx": "du (tú, sing.)",
+       "ca": "du (tu, sing.)"
       },
       "cells": [
        "bist",
@@ -3562,7 +3818,9 @@ const GRAMMAR = [
        "ar_eg": "er/sie/es (هو/هي/هو المحايد)",
        "ar_lb": "er/sie/es (هو/هي)",
        "ar_sy": "er/sie/es (هوي/هي)",
-       "am": "er/sie/es (እሱ/እሷ/እሱ-ገለልተኛ)"
+       "am": "er/sie/es (እሱ/እሷ/እሱ-ገለልተኛ)",
+       "es_mx": "er/sie/es (él/ella/ello)",
+       "ca": "er/sie/es (ell/ella/això)"
       },
       "cells": [
        "ist",
@@ -3589,7 +3847,9 @@ const GRAMMAR = [
        "ar_eg": "wir (إحنا)",
        "ar_lb": "wir (نحنا)",
        "ar_sy": "wir (نحنا)",
-       "am": "wir (እኛ)"
+       "am": "wir (እኛ)",
+       "es_mx": "wir (nosotros)",
+       "ca": "wir (nosaltres)"
       },
       "cells": [
        "sind",
@@ -3616,7 +3876,9 @@ const GRAMMAR = [
        "ar_eg": "ihr (إنتوا)",
        "ar_lb": "ihr (إنتو)",
        "ar_sy": "ihr (إنتو)",
-       "am": "ihr (እናንተ)"
+       "am": "ihr (እናንተ)",
+       "es_mx": "ihr (ustedes/vosotros, pl.)",
+       "ca": "ihr (vosaltres, pl.)"
       },
       "cells": [
        "seid",
@@ -3643,7 +3905,9 @@ const GRAMMAR = [
        "ar_eg": "sie/Sie (هم/حضرتك)",
        "ar_lb": "sie/Sie (هنّي/حضرتك)",
        "ar_sy": "sie/Sie (هنّي/حضرتك)",
-       "am": "sie/Sie (እነሱ/እርስዎ)"
+       "am": "sie/Sie (እነሱ/እርስዎ)",
+       "es_mx": "sie/Sie (ellos/usted formal)",
+       "ca": "sie/Sie (ells/vostè formal)"
       },
       "cells": [
        "sind",
@@ -3672,7 +3936,9 @@ const GRAMMAR = [
      "ar_eg": "الأفعال القوية اللي بيتغير فيها الحرف الصوتي (بس مع du و er/sie/es)",
      "ar_lb": "أفعال قوية بيتغيّر فيها الصوتي (بس بـ du وer/sie/es)",
      "ar_sy": "أفعال قوية بتغيّر الحرف الصوتي (بس بـdu وer/sie/es)",
-     "am": "ጠንካራ ግሦች ከድምጸ አናባቢ ለውጥ ጋር (du እና er/sie/es ብቻ)"
+     "am": "ጠንካራ ግሦች ከድምጸ አናባቢ ለውጥ ጋር (du እና er/sie/es ብቻ)",
+     "es_mx": "Verbos fuertes con cambio de vocal en la raíz (solo du y er/sie/es)",
+     "ca": "Verbs forts amb canvi de vocal a l'arrel (només du i er/sie/es)"
     },
     "labelHeader": {
      "de": "Bedeutung",
@@ -3692,7 +3958,9 @@ const GRAMMAR = [
      "ar_eg": "المعنى",
      "ar_lb": "المعنى",
      "ar_sy": "المعنى",
-     "am": "ትርጉም"
+     "am": "ትርጉም",
+     "es_mx": "Significado",
+     "ca": "Significat"
     },
     "columns": [
      {
@@ -3713,7 +3981,9 @@ const GRAMMAR = [
       "ar_eg": "Infinitiv",
       "ar_lb": "المصدر (Infinitiv)",
       "ar_sy": "المصدر",
-      "am": "Infinitiv (መሠረታዊ ቅርጽ)"
+      "am": "Infinitiv (መሠረታዊ ቅርጽ)",
+      "es_mx": "Infinitivo",
+      "ca": "Infinitiu"
      },
      {
       "de": "Vokalwechsel",
@@ -3733,7 +4003,9 @@ const GRAMMAR = [
       "ar_eg": "تغيير الحرف الصوتي",
       "ar_lb": "تغيير الصوتي (Vokalwechsel)",
       "ar_sy": "تغيير الحرف الصوتي",
-      "am": "የድምጸ አናባቢ ለውጥ"
+      "am": "የድምጸ አናባቢ ለውጥ",
+      "es_mx": "Cambio de vocal",
+      "ca": "Canvi de vocal"
      },
      {
       "de": "du",
@@ -3753,7 +4025,9 @@ const GRAMMAR = [
       "ar_eg": "du (إنت)",
       "ar_lb": "du (إنتَ/إنتِ)",
       "ar_sy": "du (إنت)",
-      "am": "du (አንተ/አንቺ)"
+      "am": "du (አንተ/አንቺ)",
+      "es_mx": "du (tú, sing.)",
+      "ca": "du (tu, sing.)"
      },
      {
       "de": "er/sie/es",
@@ -3773,7 +4047,9 @@ const GRAMMAR = [
       "ar_eg": "er/sie/es (هو/هي/هو المحايد)",
       "ar_lb": "er/sie/es (هو/هي)",
       "ar_sy": "er/sie/es (هوي/هي)",
-      "am": "er/sie/es (እሱ/እሷ)"
+      "am": "er/sie/es (እሱ/እሷ)",
+      "es_mx": "er/sie/es (él/ella/ello)",
+      "ca": "er/sie/es (ell/ella/això)"
      }
     ],
     "rows": [
@@ -3796,7 +4072,9 @@ const GRAMMAR = [
        "ar_eg": "fahren (يسوق/يسافر)",
        "ar_lb": "fahren (يسوق/يروح بمركبة)",
        "ar_sy": "يسوق / يروح",
-       "am": "fahren (መንዳት/መሄድ)"
+       "am": "fahren (መንዳት/መሄድ)",
+       "es_mx": "conducir / ir",
+       "ca": "conduir / anar"
       },
       "cells": [
        "fahren",
@@ -3824,7 +4102,9 @@ const GRAMMAR = [
        "ar_eg": "geben (يدي)",
        "ar_lb": "geben (يعطي)",
        "ar_sy": "يعطي",
-       "am": "geben (መስጠት)"
+       "am": "geben (መስጠት)",
+       "es_mx": "dar",
+       "ca": "donar"
       },
       "cells": [
        "geben",
@@ -3852,7 +4132,9 @@ const GRAMMAR = [
        "ar_eg": "lesen (يقرا)",
        "ar_lb": "lesen (يقرا)",
        "ar_sy": "يقرا",
-       "am": "lesen (ማንበብ)"
+       "am": "lesen (ማንበብ)",
+       "es_mx": "leer",
+       "ca": "llegir"
       },
       "cells": [
        "lesen",
@@ -3880,7 +4162,9 @@ const GRAMMAR = [
        "ar_eg": "sprechen (يتكلم)",
        "ar_lb": "sprechen (يحكي)",
        "ar_sy": "يحكي",
-       "am": "sprechen (መናገር)"
+       "am": "sprechen (መናገር)",
+       "es_mx": "hablar",
+       "ca": "parlar"
       },
       "cells": [
        "sprechen",
@@ -3908,7 +4192,9 @@ const GRAMMAR = [
        "ar_eg": "nehmen (ياخد)",
        "ar_lb": "nehmen (ياخد)",
        "ar_sy": "ياخد",
-       "am": "nehmen (መውሰድ)"
+       "am": "nehmen (መውሰድ)",
+       "es_mx": "tomar",
+       "ca": "prendre"
       },
       "cells": [
        "nehmen",
@@ -3939,7 +4225,9 @@ const GRAMMAR = [
     "ar_eg": "أنا دلوقتي بعمل الواجب بتاعي.",
     "ar_lb": "هلق عم إعمل واجباتي.",
     "ar_sy": "هلق عم اعمل واجبي.",
-    "am": "አሁን የቤት ሥራዬን እየሠራሁ ነው።"
+    "am": "አሁን የቤት ሥራዬን እየሠራሁ ነው።",
+    "es_mx": "Estoy haciendo mi tarea en este momento.",
+    "ca": "Estic fent els deures ara mateix."
    },
    {
     "de": "Morgen fahre ich nach Berlin.",
@@ -3959,7 +4247,9 @@ const GRAMMAR = [
     "ar_eg": "بكرة هسافر برلين.",
     "ar_lb": "بكرا رح روح عبرلين.",
     "ar_sy": "بكرا رايح عبرلين.",
-    "am": "ነገ ወደ በርሊን እሄዳለሁ።"
+    "am": "ነገ ወደ በርሊን እሄዳለሁ።",
+    "es_mx": "Mañana voy a Berlín.",
+    "ca": "Demà vaig a Berlín."
    },
    {
     "de": "Er nimmt den Bus und liest die Zeitung.",
@@ -3979,7 +4269,9 @@ const GRAMMAR = [
     "ar_eg": "هو بياخد الأتوبيس وبيقرا الجورنال.",
     "ar_lb": "هوي ياخد الباص ويقرا الجريدة.",
     "ar_sy": "هوي عم ياخد الباص وعم يقرا الجريدة.",
-    "am": "እሱ አውቶቡስ ይይዛል እና ጋዜጣ ያነባል።"
+    "am": "እሱ አውቶቡስ ይይዛል እና ጋዜጣ ያነባል።",
+    "es_mx": "Él toma el autobús y lee el periódico.",
+    "ca": "Ell agafa l'autobús i llegeix el diari."
    }
   ],
   "hints": {
@@ -4000,7 +4292,9 @@ const GRAMMAR = [
    "ar_eg": "زمن مضارع واحد لكل حاجة: الحاضر، والاستمرار، والمستقبل القريب. النهايات -e/-st/-t/-en/-t/-en؛ في الأفعال القوية الحرف الصوتي بيتغير بس مع du و er/sie/es (a→ä, e→i/ie).",
    "ar_lb": "مضارع واحد لكل شي: الحاضر، الاستمرار، والمستقبل القريب. النهايات -e/-st/-t/-en/-t/-en؛ وبالأفعال القوية بيتغيّر الصوتي بالجذر بس بـ du وer/sie/es (a→ä, e→i/ie).",
    "ar_sy": "مضارع واحد لكل شي: حاضر، استمرار، ومستقبل قريب. النهايات -e/-st/-t/-en/-t/-en؛ بالأفعال القوية الحرف الصوتي بيتغيّر بس بـdu وer/sie/es (a→ä، e→i/ie).",
-   "am": "አንድ Präsens ለሁሉም ነገር፦ የአሁን ጊዜ፣ ቀጣይ ድርጊት እና ቅርብ የወደፊት ጊዜ። ቅጥያዎቹ -e/-st/-t/-en/-t/-en ናቸው፤ ጠንካራ ግሦች ውስጥ የግንዱ ድምጸ አናባቢ የሚለወጠው በ du እና er/sie/es ብቻ ነው (a→ä, e→i/ie)።"
+   "am": "አንድ Präsens ለሁሉም ነገር፦ የአሁን ጊዜ፣ ቀጣይ ድርጊት እና ቅርብ የወደፊት ጊዜ። ቅጥያዎቹ -e/-st/-t/-en/-t/-en ናቸው፤ ጠንካራ ግሦች ውስጥ የግንዱ ድምጸ አናባቢ የሚለወጠው በ du እና er/sie/es ብቻ ነው (a→ä, e→i/ie)።",
+   "es_mx": "El alemán tiene un solo presente que hace tres trabajos del inglés: 'ich mache' significa I make, I am making y (con una palabra de tiempo) I'll make. No existe el 'am/is + -ing' alemán, así que nunca agregues un auxiliar: simplemente conjuga el verbo principal.",
+   "ca": "L'alemany té un sol present que fa tres feines de l'anglès: 'ich mache' significa I make, I am making i (amb una paraula de temps) I'll make. No existeix el 'am/is + -ing' alemany, així que mai no afegeixis un auxiliar: només cal conjugar el verb principal."
   }
  },
  {
@@ -4024,7 +4318,9 @@ const GRAMMAR = [
    "ar_eg": "Perfekt",
    "ar_lb": "الـ Perfekt (الماضي المركّب)",
    "ar_sy": "الماضي التام (Perfekt)",
-   "am": "Perfekt (የአሁን ፍጹም ጊዜ)"
+   "am": "Perfekt (የአሁን ፍጹም ጊዜ)",
+   "es_mx": "Perfekt (pretérito perfecto)",
+   "ca": "Perfekt (pretèrit perfet)"
   },
   "intro": {
    "de": "Das Perfekt ist die wichtigste Vergangenheitsform der gesprochenen Sprache. Man bildet es mit dem konjugierten Hilfsverb haben oder sein plus dem Partizip II, das ans Satzende rückt.",
@@ -4044,7 +4340,9 @@ const GRAMMAR = [
    "ar_eg": "زمن الـ Perfekt هو أهم زمن ماضي في الكلام العادي. بيتكوّن من الفعل المساعد haben أو sein متصرّف + الـ Partizip II اللي بيروح آخر الجملة.",
    "ar_lb": "الـ Perfekt هوي أهم زمن ماضي بالحكي اليومي. بيتكوّن من الفعل المساعد المصرّف haben أو sein زائد الـ Partizip II (اسم المفعول)، يلي بيروح على آخر الجملة.",
    "ar_sy": "الـPerfekt هو أهم صيغة ماضي بالحكي اليومي. بتتشكّل من الفعل المساعد haben أو sein متصرّف زائد Partizip II (اسم المفعول) يلي بيروح لآخر الجملة.",
-   "am": "Perfekt በንግግር ጀርመንኛ ውስጥ ዋነኛው ያለፈ ጊዜ ቅርጽ ነው። የሚሠራው በተገለበጠ ረዳት ግስ haben ወይም sein እና ከዚያም Partizip II (ያለፈ ተካፋይ) ተጨምሮ ነው፣ Partizip IIም ወደ ዓረፍተ ነገሩ መጨረሻ ይንቀሳቀሳል።"
+   "am": "Perfekt በንግግር ጀርመንኛ ውስጥ ዋነኛው ያለፈ ጊዜ ቅርጽ ነው። የሚሠራው በተገለበጠ ረዳት ግስ haben ወይም sein እና ከዚያም Partizip II (ያለፈ ተካፋይ) ተጨምሮ ነው፣ Partizip IIም ወደ ዓረፍተ ነገሩ መጨረሻ ይንቀሳቀሳል።",
+   "es_mx": "El Perfekt es el tiempo pasado más importante de la lengua hablada. Se forma con el verbo auxiliar conjugado haben o sein más el Partizip II (participio), que se coloca al final de la oración.",
+   "ca": "El Perfekt és el temps passat més important de la llengua parlada. Es forma amb el verb auxiliar conjugat haben o sein més el Partizip II (participi), que es col·loca al final de la frase."
   },
   "tables": [
    {
@@ -4066,7 +4364,9 @@ const GRAMMAR = [
      "ar_eg": "طريقة تكوين الـ Partizip II",
      "ar_lb": "طريقة تكوين الـ Partizip II",
      "ar_sy": "تشكيل Partizip II",
-     "am": "Partizip II አፈጣጠር"
+     "am": "Partizip II አፈጣጠር",
+     "es_mx": "Formación del Partizip II (participio)",
+     "ca": "Formació del Partizip II (participi)"
     },
     "labelHeader": {
      "de": "Verbtyp",
@@ -4086,7 +4386,9 @@ const GRAMMAR = [
      "ar_eg": "نوع الفعل",
      "ar_lb": "نوع الفعل",
      "ar_sy": "نوع الفعل",
-     "am": "የግስ ዓይነት"
+     "am": "የግስ ዓይነት",
+     "es_mx": "Tipo de verbo",
+     "ca": "Tipus de verb"
     },
     "columns": [
      {
@@ -4107,7 +4409,9 @@ const GRAMMAR = [
       "ar_eg": "Infinitiv",
       "ar_lb": "المصدر (Infinitiv)",
       "ar_sy": "المصدر",
-      "am": "Infinitiv"
+      "am": "Infinitiv",
+      "es_mx": "Infinitivo",
+      "ca": "Infinitiu"
      },
      {
       "de": "Partizip II",
@@ -4127,7 +4431,9 @@ const GRAMMAR = [
       "ar_eg": "Partizip II",
       "ar_lb": "اسم المفعول (Partizip II)",
       "ar_sy": "Partizip II",
-      "am": "Partizip II"
+      "am": "Partizip II",
+      "es_mx": "Participio",
+      "ca": "Participi"
      },
      {
       "de": "Regel",
@@ -4147,7 +4453,9 @@ const GRAMMAR = [
       "ar_eg": "القاعدة",
       "ar_lb": "القاعدة",
       "ar_sy": "القاعدة",
-      "am": "ደንብ"
+      "am": "ደንብ",
+      "es_mx": "Regla",
+      "ca": "Regla"
      }
     ],
     "rows": [
@@ -4170,7 +4478,9 @@ const GRAMMAR = [
        "ar_eg": "منتظم",
        "ar_lb": "منتظم (ضعيف)",
        "ar_sy": "منتظم (ضعيف)",
-       "am": "መደበኛ (ደካማ)"
+       "am": "መደበኛ (ደካማ)",
+       "es_mx": "regular (débil)",
+       "ca": "regular (feble)"
       },
       "cells": [
        "machen",
@@ -4197,7 +4507,9 @@ const GRAMMAR = [
        "ar_eg": "قوي",
        "ar_lb": "قوي",
        "ar_sy": "قوي",
-       "am": "ጠንካራ"
+       "am": "ጠንካራ",
+       "es_mx": "fuerte",
+       "ca": "fort"
       },
       "cells": [
        "sehen · gehen · trinken",
@@ -4224,7 +4536,9 @@ const GRAMMAR = [
        "ar_eg": "أفعال -ieren",
        "ar_lb": "أفعال -ieren",
        "ar_sy": "أفعال -ieren",
-       "am": "-ieren የሚያበቁ ግሦች"
+       "am": "-ieren የሚያበቁ ግሦች",
+       "es_mx": "verbos en -ieren",
+       "ca": "verbs en -ieren"
       },
       "cells": [
        "studieren",
@@ -4251,7 +4565,9 @@ const GRAMMAR = [
        "ar_eg": "غير منفصل",
        "ar_lb": "سابقة غير منفصلة",
        "ar_sy": "بادئة غير منفصلة",
-       "am": "የማይነጣጠል ቅድመ ቅጥያ"
+       "am": "የማይነጣጠል ቅድመ ቅጥያ",
+       "es_mx": "prefijo inseparable",
+       "ca": "prefix inseparable"
       },
       "cells": [
        "verstehen · besuchen",
@@ -4278,7 +4594,9 @@ const GRAMMAR = [
        "ar_eg": "منفصل",
        "ar_lb": "سابقة منفصلة",
        "ar_sy": "بادئة منفصلة",
-       "am": "የሚነጣጠል ቅድመ ቅጥያ"
+       "am": "የሚነጣጠል ቅድመ ቅጥያ",
+       "es_mx": "prefijo separable",
+       "ca": "prefix separable"
       },
       "cells": [
        "aufstehen",
@@ -4307,7 +4625,9 @@ const GRAMMAR = [
      "ar_eg": "haben ولا sein؟",
      "ar_lb": "haben ولا sein؟",
      "ar_sy": "haben ولا sein؟",
-     "am": "haben ወይስ sein?"
+     "am": "haben ወይስ sein?",
+     "es_mx": "¿haben o sein?",
+     "ca": "haben o sein?"
     },
     "labelHeader": {
      "de": "Hilfsverb",
@@ -4327,7 +4647,9 @@ const GRAMMAR = [
      "ar_eg": "الفعل المساعد",
      "ar_lb": "الفعل المساعد",
      "ar_sy": "الفعل المساعد",
-     "am": "ረዳት ግስ"
+     "am": "ረዳት ግስ",
+     "es_mx": "Auxiliar",
+     "ca": "Auxiliar"
     },
     "columns": [
      {
@@ -4348,7 +4670,9 @@ const GRAMMAR = [
       "ar_eg": "إمتى؟",
       "ar_lb": "إيمتى؟",
       "ar_sy": "إيمتى؟",
-      "am": "መቼ?"
+      "am": "መቼ?",
+      "es_mx": "¿Cuándo?",
+      "ca": "Quan?"
      },
      {
       "de": "Beispiel",
@@ -4368,7 +4692,9 @@ const GRAMMAR = [
       "ar_eg": "مثال",
       "ar_lb": "مثال",
       "ar_sy": "مثال",
-      "am": "ምሳሌ"
+      "am": "ምሳሌ",
+      "es_mx": "Ejemplo",
+      "ca": "Exemple"
      }
     ],
     "rows": [
@@ -4391,7 +4717,9 @@ const GRAMMAR = [
        "ar_eg": "haben (عنده/يملك)",
        "ar_lb": "haben",
        "ar_sy": "haben",
-       "am": "haben"
+       "am": "haben",
+       "es_mx": "haben",
+       "ca": "haben"
       },
       "cells": [
        "die meisten Verben (auch mit Objekt)",
@@ -4417,7 +4745,9 @@ const GRAMMAR = [
        "ar_eg": "sein (يكون)",
        "ar_lb": "sein",
        "ar_sy": "sein",
-       "am": "sein"
+       "am": "sein",
+       "es_mx": "sein",
+       "ca": "sein"
       },
       "cells": [
        "Bewegung + Zustandsänderung: gehen, fahren, kommen, aufstehen, sterben, werden, sein, bleiben",
@@ -4446,7 +4776,9 @@ const GRAMMAR = [
     "ar_eg": "أنا امبارح شفت فيلم.",
     "ar_lb": "مبارح تفرّجت على فيلم.",
     "ar_sy": "أنا تفرّجت عفيلم مبارح.",
-    "am": "ትናንት አንድ ፊልም አይቻለሁ።"
+    "am": "ትናንት አንድ ፊልም አይቻለሁ።",
+    "es_mx": "Ayer vi una película.",
+    "ca": "Ahir vaig veure una pel·lícula."
    },
    {
     "de": "Wir sind mit dem Zug nach Berlin gefahren.",
@@ -4466,7 +4798,9 @@ const GRAMMAR = [
     "ar_eg": "إحنا رحنا برلين بالقطر.",
     "ar_lb": "رحنا عبرلين بالقطار.",
     "ar_sy": "رحنا عبرلين بالقطار.",
-    "am": "በባቡር ወደ በርሊን ሄድን።"
+    "am": "በባቡር ወደ በርሊን ሄድን።",
+    "es_mx": "Fuimos a Berlín en tren.",
+    "ca": "Vam anar a Berlín en tren."
    },
    {
     "de": "Sie hat drei Jahre in Wien studiert.",
@@ -4486,7 +4820,9 @@ const GRAMMAR = [
     "ar_eg": "هي درست في فيينا تلات سنين.",
     "ar_lb": "هيي درست تلات سنين بفيينا.",
     "ar_sy": "هي درست بفيينا تلات سنين.",
-    "am": "እሷ ለሦስት ዓመታት በቪየና ተምራለች።"
+    "am": "እሷ ለሦስት ዓመታት በቪየና ተምራለች።",
+    "es_mx": "Ella estudió tres años en Viena.",
+    "ca": "Ella va estudiar tres anys a Viena."
    }
   ],
   "hints": {
@@ -4507,7 +4843,9 @@ const GRAMMAR = [
    "ar_eg": "القاعدة: haben/sein (متصرّف) + Partizip II آخر الجملة. sein بتتستخدم مع أفعال الحركة وتغيير الحالة (gehen, fahren, aufstehen, werden, bleiben)، وغير كده haben. من غير ge- مع أفعال -ieren والبادئات الغير منفصلة.",
    "ar_lb": "القاعدة: haben/sein (مصرّف) + Partizip II على آخر الجملة. sein بتنستعمل مع أفعال الحركة وتغيير الحالة (gehen، fahren، aufstehen، werden، bleiben)، وباقي الحالات haben. بلا ge- بأفعال -ieren وبالسوابق غير المنفصلة.",
    "ar_sy": "القاعدة: haben/sein (متصرّف) + Partizip II بآخر الجملة. sein بتنستخدم مع أفعال الحركة وتغيير الحالة (gehen, fahren, aufstehen, werden, bleiben)، وباقي الأفعال haben. بلا ge- بأفعال -ieren والبادئات غير المنفصلة.",
-   "am": "ቀመር፦ haben/sein (የተገለበጠ) + Partizip II ወደ ዓረፍተ ነገሩ መጨረሻ። sein የሚመረጠው ለእንቅስቃሴና ለሁኔታ ለውጥ ግሦች ነው (gehen, fahren, aufstehen, werden, bleiben)፣ ለቀሪው ደግሞ haben። -ieren በሚያበቁ ግሦችና በማይነጣጠሉ ቅድመ ቅጥያዎች ge- አይመጣም።"
+   "am": "ቀመር፦ haben/sein (የተገለበጠ) + Partizip II ወደ ዓረፍተ ነገሩ መጨረሻ። sein የሚመረጠው ለእንቅስቃሴና ለሁኔታ ለውጥ ግሦች ነው (gehen, fahren, aufstehen, werden, bleiben)፣ ለቀሪው ደግሞ haben። -ieren በሚያበቁ ግሦችና በማይነጣጠሉ ቅድመ ቅጥያዎች ge- አይመጣም።",
+   "es_mx": "Fórmula: haben/sein (conjugado) + Partizip II al final de la oración. sein se usa con movimiento y cambio de estado (gehen, fahren, aufstehen, werden, bleiben), en los demás casos haben. Sin ge- en los verbos en -ieren ni en los prefijos inseparables.",
+   "ca": "Fórmula: haben/sein (conjugat) + Partizip II al final de la frase. sein s'usa amb moviment i canvi d'estat (gehen, fahren, aufstehen, werden, bleiben), en els altres casos haben. Sense ge- en els verbs en -ieren ni en els prefixos inseparables."
   }
  },
  {
@@ -5255,7 +5593,9 @@ const GRAMMAR = [
    "ar_eg": "الماضي التام (Plusquamperfekt) والمستقبل (Futur I)",
    "ar_lb": "الـ Plusquamperfekt (الماضي التام) والـ Futur I (المستقبل)",
    "ar_sy": "الماضي الأبعد (Plusquamperfekt) والمستقبل الأول (Futur I)",
-   "am": "Plusquamperfekt እና Futur I"
+   "am": "Plusquamperfekt እና Futur I",
+   "es_mx": "Pluscuamperfecto y Futuro I",
+   "ca": "Plusquamperfet i Futur I"
   },
   "intro": {
    "de": "Zwei Zeitformen für Vergangenheit und Zukunft. Das Plusquamperfekt (hatte/war + Partizip II) beschreibt die Vorvergangenheit — was vor einem anderen Ereignis in der Vergangenheit geschah, oft mit nachdem. Futur I (werden + Infinitiv) drückt Zukunft und Vermutungen aus (wird wohl …).",
@@ -5275,7 +5615,9 @@ const GRAMMAR = [
    "ar_eg": "زمنين للماضي والمستقبل. الـ Plusquamperfekt (hatte/war + Partizip II) بيوصف «الماضي اللي قبل الماضي» — يعني اللي حصل قبل حدث تاني في الماضي، وغالبًا بييجي مع nachdem. الـ Futur I (werden + المصدر) بيعبّر عن المستقبل والتخمين (wird wohl … يعني «يمكن يكون»).",
    "ar_lb": "زمنين، وحدة للماضي والتانية للمستقبل. الـ Plusquamperfekt (hatte/war + Partizip II) بيوصف 'الماضي قبل الماضي' — يعني شي صار قبل حدث تاني بالماضي، وغالبًا مع nachdem. الـ Futur I (werden + المصدر) بيعبّر عن المستقبل والتخمين (wird wohl …).",
    "ar_sy": "صيغتين للماضي والمستقبل. الـPlusquamperfekt (hatte/war + Partizip II) بيوصف 'الماضي قبل الماضي' — يلي صار قبل حدث تاني بالماضي، وبكتير أحيان مع nachdem. الـFutur I (werden + المصدر) بيعبّر عن المستقبل والتخمين (wird wohl …).",
-   "am": "ለያለፈና ለወደፊት ጊዜ ሁለት ቅርጾች። Plusquamperfekt (hatte/war + Partizip II) 'ያለፈ ከያለፈ በፊት'ን ይገልጻል — ከሌላ ያለፈ ክስተት በፊት የተከሰተውን፣ ብዙ ጊዜ በ nachdem የሚጀምር። Futur I (werden + Infinitiv) ወደፊትንና ግምቶችን ይገልጻል (wird wohl …)።"
+   "am": "ለያለፈና ለወደፊት ጊዜ ሁለት ቅርጾች። Plusquamperfekt (hatte/war + Partizip II) 'ያለፈ ከያለፈ በፊት'ን ይገልጻል — ከሌላ ያለፈ ክስተት በፊት የተከሰተውን፣ ብዙ ጊዜ በ nachdem የሚጀምር። Futur I (werden + Infinitiv) ወደፊትንና ግምቶችን ይገልጻል (wird wohl …)።",
+   "es_mx": "Dos tiempos verbales para el pasado y el futuro. El Plusquamperfekt (pluscuamperfecto: hatte/war + Partizip II) marca el 'pasado anterior al pasado': lo que ocurrió antes de otro hecho pasado, a menudo introducido por nachdem. El Futur I (werden + infinitivo) expresa el futuro y suposiciones (wird wohl …).",
+   "ca": "Dos temps verbals per al passat i el futur. El Plusquamperfekt (plusquamperfet: hatte/war + Partizip II) marca el 'passat anterior al passat': allò que va passar abans d'un altre fet passat, sovint introduït per nachdem. El Futur I (werden + infinitiu) expressa el futur i suposicions (wird wohl …)."
   },
   "tables": [
    {
@@ -5297,7 +5639,9 @@ const GRAMMAR = [
      "ar_eg": "Plusquamperfekt: hatte/war + Partizip II",
      "ar_lb": "الـ Plusquamperfekt: hatte/war + Partizip II",
      "ar_sy": "Plusquamperfekt: hatte/war + Partizip II",
-     "am": "Plusquamperfekt፦ hatte/war + Partizip II"
+     "am": "Plusquamperfekt፦ hatte/war + Partizip II",
+     "es_mx": "Pluscuamperfecto: hatte/war + participio (Partizip II)",
+     "ca": "Plusquamperfet: hatte/war + participi (Partizip II)"
     },
     "labelHeader": {
      "de": "Person",
@@ -5317,7 +5661,9 @@ const GRAMMAR = [
      "ar_eg": "الضمير",
      "ar_lb": "الشخص (Person)",
      "ar_sy": "الشخص",
-     "am": "አካል"
+     "am": "አካል",
+     "es_mx": "Persona",
+     "ca": "Persona"
     },
     "columns": [
      {
@@ -5338,7 +5684,9 @@ const GRAMMAR = [
       "ar_eg": "مع haben (مثال machen)",
       "ar_lb": "مع haben (machen)",
       "ar_sy": "مع haben (machen)",
-      "am": "ከ haben ጋር (machen)"
+      "am": "ከ haben ጋር (machen)",
+      "es_mx": "con haben (machen)",
+      "ca": "amb haben (machen)"
      },
      {
       "de": "mit sein (gehen)",
@@ -5358,7 +5706,9 @@ const GRAMMAR = [
       "ar_eg": "مع sein (مثال gehen)",
       "ar_lb": "مع sein (gehen)",
       "ar_sy": "مع sein (gehen)",
-      "am": "ከ sein ጋር (gehen)"
+      "am": "ከ sein ጋር (gehen)",
+      "es_mx": "con sein (gehen)",
+      "ca": "amb sein (gehen)"
      }
     ],
     "rows": [
@@ -5381,7 +5731,9 @@ const GRAMMAR = [
        "ar_eg": "المتكلم المفرد",
        "ar_lb": "متكلم مفرد",
        "ar_sy": "متكلم مفرد",
-       "am": "1ኛ አካል ነጠላ"
+       "am": "1ኛ አካል ነጠላ",
+       "es_mx": "1.ª persona sing.",
+       "ca": "1a persona sing."
       },
       "cells": [
        "ich hatte gemacht",
@@ -5407,7 +5759,9 @@ const GRAMMAR = [
        "ar_eg": "المخاطب المفرد",
        "ar_lb": "مخاطب مفرد",
        "ar_sy": "مخاطب مفرد",
-       "am": "2ኛ አካል ነጠላ"
+       "am": "2ኛ አካል ነጠላ",
+       "es_mx": "2.ª persona sing.",
+       "ca": "2a persona sing."
       },
       "cells": [
        "du hattest gemacht",
@@ -5433,7 +5787,9 @@ const GRAMMAR = [
        "ar_eg": "الغائب المفرد",
        "ar_lb": "غائب مفرد",
        "ar_sy": "غائب مفرد",
-       "am": "3ኛ አካል ነጠላ"
+       "am": "3ኛ አካል ነጠላ",
+       "es_mx": "3.ª persona sing.",
+       "ca": "3a persona sing."
       },
       "cells": [
        "er hatte gemacht",
@@ -5459,7 +5815,9 @@ const GRAMMAR = [
        "ar_eg": "المتكلم الجمع",
        "ar_lb": "متكلم جمع",
        "ar_sy": "متكلم جمع",
-       "am": "1ኛ አካል ብዙ"
+       "am": "1ኛ አካል ብዙ",
+       "es_mx": "1.ª persona pl.",
+       "ca": "1a persona pl."
       },
       "cells": [
        "wir hatten gemacht",
@@ -5487,7 +5845,9 @@ const GRAMMAR = [
      "ar_eg": "Futur I: werden (متصرّف) + المصدر آخر الجملة",
      "ar_lb": "الـ Futur I: werden (مصرّف) + المصدر بآخر الجملة",
      "ar_sy": "Futur I: werden (متصرّف) + المصدر بآخر الجملة",
-     "am": "Futur I፦ werden (የተገለበጠ) + Infinitiv በዓረፍተ ነገር መጨረሻ"
+     "am": "Futur I፦ werden (የተገለበጠ) + Infinitiv በዓረፍተ ነገር መጨረሻ",
+     "es_mx": "Futuro I: werden (conjugado) + infinitivo al final de la oración",
+     "ca": "Futur I: werden (conjugat) + infinitiu al final de la frase"
     },
     "labelHeader": {
      "de": "Person",
@@ -5507,7 +5867,9 @@ const GRAMMAR = [
      "ar_eg": "الضمير",
      "ar_lb": "الشخص (Person)",
      "ar_sy": "الشخص",
-     "am": "አካል"
+     "am": "አካል",
+     "es_mx": "Persona",
+     "ca": "Persona"
     },
     "columns": [
      {
@@ -5528,7 +5890,9 @@ const GRAMMAR = [
       "ar_eg": "werden + المصدر (مثال machen)",
       "ar_lb": "werden + المصدر (machen)",
       "ar_sy": "werden + المصدر (machen)",
-      "am": "werden + Infinitiv (machen)"
+      "am": "werden + Infinitiv (machen)",
+      "es_mx": "werden + infinitivo (machen)",
+      "ca": "werden + infinitiu (machen)"
      }
     ],
     "rows": [
@@ -5551,7 +5915,9 @@ const GRAMMAR = [
        "ar_eg": "المتكلم المفرد",
        "ar_lb": "متكلم مفرد",
        "ar_sy": "متكلم مفرد",
-       "am": "1ኛ አካል ነጠላ"
+       "am": "1ኛ አካል ነጠላ",
+       "es_mx": "1.ª persona sing.",
+       "ca": "1a persona sing."
       },
       "cells": [
        "ich werde machen"
@@ -5576,7 +5942,9 @@ const GRAMMAR = [
        "ar_eg": "المخاطب المفرد",
        "ar_lb": "مخاطب مفرد",
        "ar_sy": "مخاطب مفرد",
-       "am": "2ኛ አካል ነጠላ"
+       "am": "2ኛ አካል ነጠላ",
+       "es_mx": "2.ª persona sing.",
+       "ca": "2a persona sing."
       },
       "cells": [
        "du wirst machen"
@@ -5601,7 +5969,9 @@ const GRAMMAR = [
        "ar_eg": "الغائب المفرد",
        "ar_lb": "غائب مفرد",
        "ar_sy": "غائب مفرد",
-       "am": "3ኛ አካል ነጠላ"
+       "am": "3ኛ አካል ነጠላ",
+       "es_mx": "3.ª persona sing.",
+       "ca": "3a persona sing."
       },
       "cells": [
        "er wird machen"
@@ -5626,7 +5996,9 @@ const GRAMMAR = [
        "ar_eg": "المتكلم الجمع",
        "ar_lb": "متكلم جمع",
        "ar_sy": "متكلم جمع",
-       "am": "1ኛ አካል ብዙ"
+       "am": "1ኛ አካል ብዙ",
+       "es_mx": "1.ª persona pl.",
+       "ca": "1a persona pl."
       },
       "cells": [
        "wir werden machen"
@@ -5651,7 +6023,9 @@ const GRAMMAR = [
        "ar_eg": "المخاطب الجمع",
        "ar_lb": "مخاطب جمع",
        "ar_sy": "مخاطب جمع",
-       "am": "2ኛ አካል ብዙ"
+       "am": "2ኛ አካል ብዙ",
+       "es_mx": "2.ª persona pl.",
+       "ca": "2a persona pl."
       },
       "cells": [
        "ihr werdet machen"
@@ -5676,7 +6050,9 @@ const GRAMMAR = [
        "ar_eg": "الغائب الجمع",
        "ar_lb": "غائب جمع",
        "ar_sy": "غائب جمع",
-       "am": "3ኛ አካል ብዙ"
+       "am": "3ኛ አካል ብዙ",
+       "es_mx": "3.ª persona pl.",
+       "ca": "3a persona pl."
       },
       "cells": [
        "sie werden machen"
@@ -5704,7 +6080,9 @@ const GRAMMAR = [
     "ar_eg": "بعد ما كان خلص أكل، راح نام.",
     "ar_lb": "بعد ما كان أكل، راح نام.",
     "ar_sy": "بعدما كان أكل، راح عالسرير.",
-    "am": "ከበላ በኋላ ወደ አልጋው ሄደ።"
+    "am": "ከበላ በኋላ ወደ አልጋው ሄደ።",
+    "es_mx": "Después de que hubo comido, se fue a la cama.",
+    "ca": "Després d'haver menjat, se'n va anar al llit."
    },
    {
     "de": "Nächstes Jahr werde ich in Berlin studieren.",
@@ -5724,7 +6102,9 @@ const GRAMMAR = [
     "ar_eg": "السنة الجاية هدرس في برلين.",
     "ar_lb": "السنة الجايي رح إدرس ببرلين.",
     "ar_sy": "السنة الجاية رح ادرس ببرلين.",
-    "am": "በሚቀጥለው ዓመት በበርሊን እማራለሁ።"
+    "am": "በሚቀጥለው ዓመት በበርሊን እማራለሁ።",
+    "es_mx": "El próximo año voy a estudiar en Berlín.",
+    "ca": "L'any que ve estudiaré a Berlín."
    },
    {
     "de": "Sie wird wohl schon zu Hause sein.",
@@ -5744,7 +6124,9 @@ const GRAMMAR = [
     "ar_eg": "هي يمكن تكون في البيت خلاص.",
     "ar_lb": "أكيد هيي هلق بالبيت.",
     "ar_sy": "على الأغلب هي صارت بالبيت هلق.",
-    "am": "እሷ ምናልባት አሁን በቤት ትሆናለች።"
+    "am": "እሷ ምናልባት አሁን በቤት ትሆናለች።",
+    "es_mx": "Seguramente ya está en casa.",
+    "ca": "Segurament ja deu ser a casa."
    }
   ],
   "hints": {
@@ -5765,7 +6147,9 @@ const GRAMMAR = [
    "ar_eg": "احفظ: في جملة nachdem الفعل المساعد بيروح آخر الآخر (…gegessen hatte). اختار war مع أفعال الحركة أو تغيير الحالة (gehen, kommen)، وغير كده hatte. Futur I = werden (متصرّف) + المصدر آخر الجملة.",
    "ar_lb": "خدها بالك: بجملة nachdem الفعل المساعد بيروح تمام آخر الجملة (…gegessen hatte). استعمل war مع أفعال الحركة/تغيير الحالة (gehen، kommen)، وباقي الحالات hatte. الـ Futur I = werden (مصرّف) + المصدر بآخر الجملة.",
    "ar_sy": "خد بالك: بجملة nachdem الفعل المساعد بيجي بآخر الجملة (…gegessen hatte). اختار war مع أفعال الحركة/تغيير الحالة (gehen, kommen)، وغيرها hatte. Futur I = werden (متصرّف) + المصدر بآخر الجملة.",
-   "am": "ልብ በል፦ በ nachdem-ዓረፍተ ነገር ውስጥ ረዳት ግሱ ልክ በመጨረሻ ይመጣል (…gegessen hatte)። ለእንቅስቃሴ/ለሁኔታ ለውጥ ግሦች (gehen, kommen) war ምረጥ፣ ለቀሪው ደግሞ hatte። Futur I = werden (የተገለበጠ) + Infinitiv በዓረፍተ ነገር መጨረሻ።"
+   "am": "ልብ በል፦ በ nachdem-ዓረፍተ ነገር ውስጥ ረዳት ግሱ ልክ በመጨረሻ ይመጣል (…gegessen hatte)። ለእንቅስቃሴ/ለሁኔታ ለውጥ ግሦች (gehen, kommen) war ምረጥ፣ ለቀሪው ደግሞ hatte። Futur I = werden (የተገለበጠ) + Infinitiv በዓረፍተ ነገር መጨረሻ።",
+   "es_mx": "El Plusquamperfekt equivale exactamente al pluscuamperfecto: 'había ido' = war gegangen. Pero fíjate en dos cosas: el alemán elige war (no hatte) para los verbos de movimiento/cambio de estado (gehen, kommen), y en el Futur I el infinitivo salta hasta el final: ich werde morgen kommen.",
+   "ca": "El Plusquamperfekt equival exactament al plusquamperfet: 'havia anat' = war gegangen. Però fixa't en dues coses: l'alemany tria war (no hatte) per als verbs de moviment/canvi d'estat (gehen, kommen), i en el Futur I l'infinitiu salta fins al final: ich werde morgen kommen."
   }
  },
  {

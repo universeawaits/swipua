@@ -32,7 +32,7 @@ articles & genders · the four cases · pronouns · possessives · adjective end
 
 You are always learning **German**, but everything around it — translations, example sentences, grammar explanations, and the app's own buttons and labels — appears in a language you choose. Supported languages:
 
-English · Russian · Ukrainian · Vietnamese · Persian · Thai · Chinese · Malay · Turkish · Polish · Swahili · Amharic · Hindi · Urdu · and Egyptian, Lebanese & Syrian Arabic
+English · Russian · Ukrainian · Vietnamese · Persian · Thai · Chinese · Malay · Turkish · Polish · Swahili · Amharic · Hindi · Urdu · Mexican Spanish · Catalan · and Egyptian, Lebanese & Syrian Arabic
 
 Two simple selectors let you tune this:
 

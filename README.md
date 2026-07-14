@@ -24,7 +24,7 @@ beeins has two sides, switchable from the top-left tabs:
 
 ### 📖 Grammar — a plain-language reference
 
-A built-in cheat sheet covering **20 core German grammar topics**, explained in your language with tables, example sentences, and side-by-side comparisons to how your own language handles the same thing. Topics include:
+A built-in cheat sheet covering **20 core German grammar topics**, explained in your language with tables, example sentences, and side-by-side comparisons to how your own language handles the same thing. The same **A1 / A2 / B1** switcher applies here too, so you only see the topics for your level (cumulative — B1 shows everything). Topics include:
 
 articles & genders · the four cases · pronouns · possessives · adjective endings · present tense · Perfekt · Präteritum · Plusquamperfekt & future · modal verbs · separable verbs · reflexive verbs · Konjunktiv II · passive · prepositions · verbs with prepositions · comparatives · word order · subordinate clauses · relative clauses
 
@@ -38,6 +38,8 @@ Two simple selectors let you tune this:
 
 - **Ask** — which language(s) a word can be shown in *before* you flip the card (great for testing recognition in more than one direction).
 - **Show** — which language(s) the answer and translations appear in *after* you flip. The first language you turn on here also becomes the language of the whole interface.
+
+On your very first visit only German and your device's own language are turned on, so you start with a clean two-language view instead of every language at once — add more whenever you like.
 
 Right-to-left languages (Persian, Arabic, Urdu) display correctly.
 

@@ -247,6 +247,42 @@
 
   var GRAMMAR_DATA = (typeof GRAMMAR !== "undefined" && GRAMMAR) ? GRAMMAR : [];
 
+  // CEFR level per grammar topic. Like the cards, the level switch is
+  // cumulative: A1 shows A1 topics, A2 shows A1+A2, B1 shows everything.
+  // Anything not listed falls back to B1.
+  var GRAMMAR_LEVEL = {
+    "genders-articles": "A1",
+    "cases-overview": "A2",
+    "pronouns": "A1",
+    "possessives": "A1",
+    "adjective-endings": "A2",
+    "present-tense": "A1",
+    "perfekt": "A1",
+    "praeteritum": "A2",
+    "plusquam-futur": "B1",
+    "modal-verbs": "A1",
+    "separable-verbs": "A1",
+    "reflexive-verbs": "A2",
+    "konjunktiv2": "B1",
+    "passive": "B1",
+    "prepositions": "A2",
+    "verbs-prepositions": "B1",
+    "comparative": "A2",
+    "word-order": "A1",
+    "subordinate-clauses": "A2",
+    "relative-clauses": "B1"
+  };
+  function grammarTopicLevel(t) {
+    return LEVEL_ORDER[GRAMMAR_LEVEL[t.id]] ? GRAMMAR_LEVEL[t.id] : "B1";
+  }
+  // Topics at (and below) the current level, preserving source order.
+  function grammarAtLevel() {
+    var max = LEVEL_ORDER[currentLevel] || 3;
+    return GRAMMAR_DATA.filter(function (t) {
+      return LEVEL_ORDER[grammarTopicLevel(t)] <= max;
+    });
+  }
+
   // View state: "cards" flashcards vs "grammar" cheat sheet. The grammar view
   // reuses the two flag rows: the "ask"/title row picks the language grammar is
   // EXPLAINED in; the "show" row picks the languages examples & analogues appear in.
@@ -995,9 +1031,27 @@
     return a.length ? a : AVAIL.slice();
   }
 
+  // Best-effort map from the browser / OS locale to one of our language keys.
+  // Returns null when nothing usable matches. Used only to seed the FIRST-run
+  // default so a brand-new user starts with German + their own language.
+  function osLangKey() {
+    var locales = [];
+    try {
+      if (navigator.languages && navigator.languages.length) locales = navigator.languages.slice();
+      else if (navigator.language) locales = [navigator.language];
+    } catch (e) {}
+    // A few locales don't map 1:1 onto the keys we ship.
+    var alias = { es: "es_mx", ar: "ar_eg" };
+    for (var i = 0; i < locales.length; i++) {
+      var primary = String(locales[i] || "").toLowerCase().split(/[-_]/)[0];
+      if (!primary) continue;
+      var key = alias.hasOwnProperty(primary) ? alias[primary] : primary;
+      if (key && key !== "de" && LANG_PRESENT[key]) return key;
+    }
+    return null;
+  }
+
   function loadLangSet(storageKey) {
-    var def = {};
-    AVAIL.forEach(function (l) { def[l.key] = true; });
     try {
       var raw = window.localStorage.getItem(storageKey);
       if (raw) {
@@ -1012,6 +1066,13 @@
         if (any) return out;
       }
     } catch (e) {}
+    // First run (nothing saved): start with just German + the OS language
+    // selected, not every language at once.
+    var def = {};
+    AVAIL.forEach(function (l) { def[l.key] = false; });
+    def.de = true;
+    var os = osLangKey();
+    if (os) def[os] = true;
     return def;
   }
 
@@ -1417,8 +1478,9 @@
 
   function renderGrammar() {
     var pk = primaryExplainKey();
+    var topics = grammarAtLevel();
     elGrammarIndex.innerHTML = "";
-    GRAMMAR_DATA.forEach(function (t) {
+    topics.forEach(function (t) {
       var b = document.createElement("button");
       b.className = "gIndexBtn";
       b.type = "button";
@@ -1432,7 +1494,7 @@
     });
 
     elGrammarBody.innerHTML = "";
-    if (!GRAMMAR_DATA.length) {
+    if (!topics.length) {
       var p = document.createElement("p");
       p.style.cssText = "text-align:center;color:var(--muted);margin-top:40px";
       p.setAttribute("dir", "auto");
@@ -1440,7 +1502,7 @@
       elGrammarBody.appendChild(p);
       return;
     }
-    GRAMMAR_DATA.forEach(function (t) { elGrammarBody.appendChild(renderTopic(t, pk)); });
+    topics.forEach(function (t) { elGrammarBody.appendChild(renderTopic(t, pk)); });
   }
 
   function renderTopic(t, pk) {
@@ -1605,7 +1667,9 @@
     var grammar = view === "grammar";
     elGrammar.classList.toggle("hidden", !grammar);
     elGrammarIndex.classList.toggle("hidden", !grammar);
-    elLevelNav.classList.toggle("hidden", grammar); // levels only apply to cards
+    // The level switch applies to both views: cards filter the deck, grammar
+    // filters which topics are shown.
+    elLevelNav.classList.remove("hidden");
     // In grammar there is a single language selector — the "show" set drives
     // the rules and the examples. The "ask" (prompt) selector only makes sense
     // for cards, so hide it here.
@@ -1635,11 +1699,14 @@
     });
   }
 
-  // Switching level starts a fresh session over the words at (and below) it.
+  // Switching level starts a fresh session over the words at (and below) it —
+  // or, in the grammar view, just re-filters which topics are shown.
   function setLevel(lvl) {
     if (!LEVEL_ORDER[lvl] || lvl === currentLevel) { updateLevelNav(); return; }
     currentLevel = lvl;
     try { window.localStorage.setItem("beeins_level", lvl); } catch (e) {}
+    updateLevelNav();
+    if (currentView === "grammar") { renderGrammar(); return; }
     deck = buildDeck();
     totalWords = deck.length;
     knownCount = 0;
@@ -1647,7 +1714,6 @@
     seen = [];
     peekPos = null;
     sessionDone = false;
-    updateLevelNav();
     elStats.classList.add("hidden");
     elGrammar.classList.add("hidden");
     elGrammarIndex.classList.add("hidden");

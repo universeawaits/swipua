@@ -565,15 +565,20 @@ kbd {
 
 #grammar.hidden { display: none; }
 
-/* Topic navigation lives in the top bar, wrapping to fill the width. */
+/* Topic navigation lives in the top bar on a single horizontally-scrolling
+   line, so it never eats vertical space (critical on mobile). */
 #grammarIndex {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 5px;
   justify-content: flex-start;
   margin-top: 8px;
   padding-top: 8px;
   border-top: 1px solid var(--border);
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
 }
 
 #grammarIndex.hidden { display: none; }
@@ -586,6 +591,8 @@ kbd {
   background: var(--card-bg);
   color: var(--text);
   cursor: pointer;
+  flex: 0 0 auto;
+  white-space: nowrap;
 }
 
 .gIndexBtn:hover { border-color: var(--accent); }
@@ -731,8 +738,7 @@ table.gTable td.gRowLabel {
 #grammar.hidden,
 #deck.hidden { display: none; }
 
-/* Keep the top-bar topic badges tidy and overflow-free on small screens. */
-.gIndexBtn { max-width: 100%; }
+/* Badges sit on a single scrolling line, so each keeps its natural width. */
 
 /* ---- mobile / small screens ------------------------------------------- */
 html { overflow-x: hidden; }

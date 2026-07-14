@@ -775,6 +775,87 @@
 
   function langByKey(key) { return LANG_BY_KEY[key] || LANGS[0]; }
 
+  // ---- pronunciation (text-to-speech) ------------------------------------
+  // German pronunciation is spoken with the browser's built-in Web Speech API
+  // (speechSynthesis). It is free, needs no audio files, works offline, and
+  // uses whatever German (de-DE) voice the operating system provides — on
+  // modern macOS / Windows / Android these are natural neural voices.
+  var TTS_OK = typeof window !== "undefined" && "speechSynthesis" in window;
+
+  // Inline speaker icon (inherits currentColor so it can be shown in a muted
+  // tone next to the text and brighten on hover).
+  var SPEAKER_SVG =
+    '<svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" ' +
+    'stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+    '<path d="M11 5 6 9H2v6h4l5 4z"></path>' +
+    '<path d="M15.5 8.5a5 5 0 0 1 0 7"></path>' +
+    '<path d="M19 5a9 9 0 0 1 0 14"></path></svg>';
+
+  // Pick the best-sounding German voice available, preferring de-DE and voices
+  // that look enhanced/neural, and known-good named voices.
+  var germanVoice = null;
+  function voiceScore(v) {
+    var s = 0, n = (v.name || "").toLowerCase();
+    if (/de[-_]de/i.test(v.lang)) s += 4;
+    else if (/^de([-_]|$)/i.test(v.lang)) s += 2;
+    if (/(neural|premium|enhanced|natural|siri)/.test(n)) s += 3;
+    if (/(anna|petra|markus|viktor|helena|eddy|reed|sandy|grandpa|grandma|yannick)/.test(n)) s += 2;
+    if (v.localService) s += 1;
+    return s;
+  }
+  function refreshVoice() {
+    if (!TTS_OK) return;
+    var voices = window.speechSynthesis.getVoices() || [];
+    var de = voices.filter(function (v) { return /^de([-_]|$)/i.test(v.lang || ""); });
+    de.sort(function (a, b) { return voiceScore(b) - voiceScore(a); });
+    germanVoice = de[0] || null;
+  }
+  if (TTS_OK) {
+    refreshVoice();
+    // Voices often load asynchronously; re-pick when they arrive.
+    window.speechSynthesis.addEventListener("voiceschanged", refreshVoice);
+  }
+
+  // Speak a German string, highlighting the button that triggered it.
+  function speak(text, btn) {
+    if (!TTS_OK || !text) return;
+    var synth = window.speechSynthesis;
+    try {
+      synth.cancel(); // stop anything already playing
+      var prev = document.querySelector(".speakBtn.speaking");
+      if (prev) prev.classList.remove("speaking");
+      var u = new SpeechSynthesisUtterance(String(text));
+      u.lang = "de-DE";
+      if (germanVoice) u.voice = germanVoice;
+      u.rate = 0.95;
+      if (btn) {
+        btn.classList.add("speaking");
+        u.onend = u.onerror = function () { btn.classList.remove("speaking"); };
+      }
+      synth.speak(u);
+    } catch (e) {}
+  }
+
+  // Build a muted speaker button that plays `text` when clicked. Its pointer
+  // events are stopped so a tap never starts a card swipe or reveals the card.
+  function makeSpeakBtn(text) {
+    var b = document.createElement("button");
+    b.type = "button";
+    b.className = "speakBtn";
+    b.title = "Play pronunciation";
+    b.setAttribute("aria-label", "Play German pronunciation");
+    b.innerHTML = SPEAKER_SVG;
+    var stop = function (e) { e.stopPropagation(); };
+    b.addEventListener("mousedown", stop);
+    b.addEventListener("touchstart", stop, { passive: true });
+    b.addEventListener("click", function (e) {
+      e.stopPropagation();
+      e.preventDefault();
+      speak(text, b);
+    });
+    return b;
+  }
+
   function allowedTitleLangs() {
     var a = AVAIL.filter(function (l) { return titleLangs[l.key]; });
     return a.length ? a : AVAIL.slice();
@@ -905,6 +986,8 @@
   function paintCard(w, frontKey, isRevealed) {
     elWord.textContent = wordVal(w, frontKey);
     elWord.setAttribute("dir", "auto"); // render RTL (Persian/Arabic/Urdu) correctly
+    // Speak the title when it is the German word (the language being learned).
+    if (TTS_OK && frontKey === "de") elWord.appendChild(makeSpeakBtn(w.word));
 
     elTranslations.innerHTML = "";
     AVAIL.forEach(function (l) {
@@ -914,6 +997,8 @@
       // <bdi> isolates the value's direction so mixing LTR labels with
       // RTL (Persian/Arabic) values stays readable
       span.innerHTML = l.label + ": <bdi>" + escapeHtml(wordVal(w, l.key)) + "</bdi>";
+      // German is the word being learned — let it be heard from here too.
+      if (TTS_OK && l.key === "de") span.appendChild(makeSpeakBtn(w.word));
       elTranslations.appendChild(span);
     });
 
@@ -942,6 +1027,9 @@
       div.innerHTML = AVAIL.filter(function (l) { return showLangs[l.key]; }).map(function (l) {
         return '<div class="' + l.key + '" dir="auto">' + escapeHtml(exVal(ex, l.key)) + "</div>";
       }).join("");
+      // Speak the German example sentence.
+      var deLine = div.querySelector(".de");
+      if (TTS_OK && deLine && ex.de) deLine.appendChild(makeSpeakBtn(ex.de));
       elExamples.appendChild(div);
     });
 

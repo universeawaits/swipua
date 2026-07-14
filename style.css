@@ -385,6 +385,28 @@ body {
   margin-bottom: 4px;
 }
 
+/* Muted speaker button that plays the German pronunciation. Sits inline next
+   to the German word / example line and inherits currentColor for its icon. */
+.speakBtn {
+  appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  background: none;
+  padding: 0;
+  margin-inline-start: 0.4em;
+  color: var(--muted);
+  cursor: pointer;
+  opacity: 0.55;
+  vertical-align: middle;
+  line-height: 0;
+  font-size: 0.8em;
+  transition: opacity 0.15s ease, color 0.15s ease, transform 0.1s ease;
+}
+.speakBtn:hover { opacity: 1; color: var(--accent); }
+.speakBtn:active { transform: scale(0.88); }
+.speakBtn.speaking { opacity: 1; color: var(--accent); }
+.speakBtn svg { display: block; }
+
 .example > div:not(.de) {
   color: var(--muted);
   font-size: 0.92rem;

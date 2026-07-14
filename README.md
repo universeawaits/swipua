@@ -37,7 +37,7 @@ English · Russian · Ukrainian · Vietnamese · Persian · Thai · Chinese · M
 Two simple selectors let you tune this:
 
 - **Ask** — which language(s) a word can be shown in *before* you flip the card (great for testing recognition in more than one direction).
-- **Show** — which language(s) the answer and translations appear in *after* you flip. Whichever you pick here also becomes the language of the whole interface.
+- **Show** — which language(s) the answer and translations appear in *after* you flip. The first language you turn on here also becomes the language of the whole interface.
 
 Right-to-left languages (Persian, Arabic, Urdu) display correctly.
 

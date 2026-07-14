@@ -197,6 +197,10 @@
   var showLangs = loadLangSet("beeins_showLangs");
   // German is the language being learned, so it is always shown as the answer.
   showLangs.de = true;
+  // The order in which "show" languages were turned on. The interface language
+  // is the first still-enabled language in this order — the first one you
+  // clicked — rather than whichever comes first in the master list.
+  var showOrder = loadShowOrder();
 
   // ---- elements ----------------------------------------------------------
   var elDeck = document.getElementById("deck");
@@ -888,6 +892,42 @@
     try { window.localStorage.setItem(storageKeyFor(name), JSON.stringify(setForName(name))); } catch (e) {}
   }
 
+  // Selection order of the "show" languages (the order you clicked them on),
+  // persisted so the chosen interface language survives a reload. German is
+  // never tracked here — it is always shown but never drives the interface.
+  function loadShowOrder() {
+    var order = [];
+    try {
+      var raw = window.localStorage.getItem("beeins_showOrder");
+      var parsed = raw ? JSON.parse(raw) : null;
+      if (Array.isArray(parsed)) {
+        parsed.forEach(function (k) {
+          if (LANG_BY_KEY[k] && k !== "de" && order.indexOf(k) === -1) order.push(k);
+        });
+      }
+    } catch (e) {}
+    return order;
+  }
+
+  function saveShowOrder() {
+    try { window.localStorage.setItem("beeins_showOrder", JSON.stringify(showOrder)); } catch (e) {}
+  }
+
+  // Enabled non-German "show" languages ordered by when they were turned on.
+  // Any enabled language without a recorded position (defaults, or sets saved
+  // before order tracking existed) falls back to master-list order after the
+  // tracked ones.
+  function orderedShowLangs() {
+    var byOrder = [];
+    showOrder.forEach(function (k) {
+      if (showLangs[k] && LANG_BY_KEY[k]) byOrder.push(LANG_BY_KEY[k]);
+    });
+    AVAIL.forEach(function (l) {
+      if (l.key !== "de" && showLangs[l.key] && byOrder.indexOf(l) === -1) byOrder.push(l);
+    });
+    return byOrder;
+  }
+
   // ---- session persistence (ephemeral) -----------------------------------
   // The live session (which cards are still queued, the history, and the live
   // card + its reveal state) is mirrored to sessionStorage. That survives a
@@ -1204,11 +1244,11 @@
     return map.en || map.de || "";
   }
 
-  // The interface language: the first enabled "show" language that is NOT
+  // The interface language: the first "show" language you turned on that is NOT
   // German (German is always shown but you're learning it, so it never drives
   // the UI). Falls back to English if only German is selected.
   function uiLangKey() {
-    var langs = shownLangs().filter(function (l) { return l.key !== "de"; });
+    var langs = orderedShowLangs();
     return langs.length ? langs[0].key : "en";
   }
 
@@ -1558,6 +1598,14 @@
     // Keep at least one language enabled in each set.
     if (set[key] && enabled === 1) { shake(opt); return; }
     set[key] = !set[key];
+    // Record when a "show" language is turned on so the interface language can
+    // follow the first one you clicked rather than master-list order.
+    if (name === "show" && key !== "de") {
+      var oi = showOrder.indexOf(key);
+      if (set[key]) { if (oi === -1) showOrder.push(key); }
+      else if (oi !== -1) showOrder.splice(oi, 1);
+      saveShowOrder();
+    }
     saveLangSet(name);
     renderPanel(name);
     updateDropFace(name);

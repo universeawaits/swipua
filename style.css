@@ -97,6 +97,21 @@ body {
 #themeToggle:active,
 #resetBtn:active { transform: scale(0.92); }
 
+/* Learning-target selector: the app's primary control, pinned top-left. Given
+   a little more weight than the other chips so it reads as an identity switch. */
+#learnLang {
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 6px 10px;
+  border-radius: 12px;
+  border: 1px solid var(--accent);
+  background: var(--card-bg);
+  color: var(--text);
+  cursor: pointer;
+}
+
+#learnLang:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
 /* Cards-per-session selector: matched to the level-switch chip aesthetic. */
 #sessionSize {
   font-size: 0.8rem;

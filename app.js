@@ -17,9 +17,51 @@
     // learning curve persists separately in localStorage. Drop the stale copy.
     window.localStorage.removeItem("beeins_progress");
     window.localStorage.removeItem("swipua_progress");
+    // Per-target namespacing: the app now supports learning more than one
+    // language, and each target keeps its own preferences + learning curve.
+    // The original (German-only) keys become the German target's keys.
+    var _perTarget = ["titleLangs", "showLangs", "showOrder", "learning"];
+    for (var _j = 0; _j < _perTarget.length; _j++) {
+      var _legacy = "beeins_" + _perTarget[_j], _deKey = "beeins_" + _perTarget[_j] + "_de";
+      var _lv = window.localStorage.getItem(_legacy);
+      if (_lv != null && window.localStorage.getItem(_deKey) == null) {
+        window.localStorage.setItem(_deKey, _lv);
+      }
+    }
   } catch (e) {}
 
   var source = (typeof WORDS !== "undefined") ? WORDS : [];
+
+  // ---- learning target (the language you are studying) -------------------
+  // beeins started as a German-only trainer; it now teaches one of several
+  // target languages. The corpus is shared — every card carries a translation
+  // in each target — so switching target just changes which field is "the word
+  // being learned" and which languages you may study it from. `allow` (when
+  // present) restricts the learn-from languages for that target; the target
+  // itself is always included. `tts` is the speech-synthesis locale, `level`
+  // the per-word field holding that target's CEFR level. Grammar sheets exist
+  // for German only (`grammar: true`).
+  var TARGETS = [
+    { key: "de", flag: "🇩🇪", endo: "Deutsch", tts: "de-DE", level: "level",    grammar: true },
+    { key: "tr", flag: "🇹🇷", endo: "Türkçe",  tts: "tr-TR", level: "tr_level", allow: ["ru", "en", "de", "ar_sy"] }
+  ];
+  var TARGET_BY_KEY = {};
+  TARGETS.forEach(function (t) { TARGET_BY_KEY[t.key] = t; });
+
+  function loadLearn() {
+    try { var v = window.localStorage.getItem("beeins_learn"); if (TARGET_BY_KEY[v]) return v; } catch (e) {}
+    return "de";
+  }
+  var LEARN = loadLearn();               // active target language key
+  var TARGET = TARGET_BY_KEY[LEARN];
+  var GRAMMAR_ON = !!TARGET.grammar;     // grammar cheat sheet available?
+  var LEVEL_FIELD = TARGET.level;        // which per-word field holds the level
+
+  // Per-target storage keys — each target keeps independent preferences and a
+  // separate learning curve, so studying Turkish never disturbs German.
+  var TL_KEY = "beeins_titleLangs_" + LEARN;
+  var SL_KEY = "beeins_showLangs_" + LEARN;
+  var SO_KEY = "beeins_showOrder_" + LEARN;
 
   // ---- level (CEFR) ------------------------------------------------------
   // Each word carries a level A1/A2/B1. The switch is cumulative: picking a
@@ -57,7 +99,7 @@
   // becomes "mastered" after MASTERY_STREAK correct "Know" answers in a row; a
   // single "Don't know" resets the streak. Keyed by the German word, which is
   // unique across the corpus, so it survives data updates that reorder arrays.
-  var LEARN_KEY = "beeins_learning";
+  var LEARN_KEY = "beeins_learning_" + LEARN;
   var MASTERY_STREAK = 3;
   var learning = loadLearning(); // { <germanWord>: { s:streak, k:knowTaps, u:dontTaps } }
   function loadLearning() {
@@ -85,7 +127,9 @@
   function isSeen(word) { return Object.prototype.hasOwnProperty.call(learning, word); }
   function isMastered(word) { var r = learning[word]; return !!(r && r.s >= MASTERY_STREAK); }
 
-  function wordLevel(w) { return LEVEL_ORDER[w.level] ? w.level : "B1"; }
+  // A word's CEFR level for the active target. German uses `level`; other
+  // targets carry their own field (e.g. Turkish `tr_level`). Missing → B1.
+  function wordLevel(w) { var lv = w[LEVEL_FIELD]; return LEVEL_ORDER[lv] ? lv : "B1"; }
   function inCurrentLevel(w) { return LEVEL_ORDER[wordLevel(w)] <= LEVEL_ORDER[currentLevel]; }
 
   // Build one session's deck from the words at the current level. Unless the
@@ -175,9 +219,11 @@
   function wordVal(w, key) { return key === "de" ? w.word : w[key]; }
   function exVal(ex, key) { return key === "de" ? ex.de : ex[key]; }
 
-  // Which languages have real data in the corpus. German is always available;
-  // any other language needs at least one non-empty translation to show up.
+  // Which languages have real data in the corpus. German lives under `word`
+  // (so it never trips the field check) and the active target is always
+  // available; any other language needs at least one non-empty translation.
   var LANG_PRESENT = { de: true };
+  LANG_PRESENT[LEARN] = true;
   source.forEach(function (w) {
     LANGS.forEach(function (l) {
       if (LANG_PRESENT[l.key]) return;
@@ -185,10 +231,24 @@
       if (v != null && v !== "") LANG_PRESENT[l.key] = true;
     });
   });
+  // Some targets restrict which languages you may study them FROM (TARGET.allow).
+  // The target itself is always allowed. German (no `allow`) offers every
+  // language with data.
+  var ALLOW_SET = null;
+  if (TARGET.allow) {
+    ALLOW_SET = {};
+    TARGET.allow.forEach(function (k) { ALLOW_SET[k] = true; });
+    ALLOW_SET[LEARN] = true;
+  }
   // AVAIL is the display list — the master config filtered to languages with
-  // data. Everything the UI enumerates (dropdowns, translations, examples,
-  // grammar) walks AVAIL, so unfinished languages simply don't appear yet.
-  var AVAIL = LANGS.filter(function (l) { return LANG_PRESENT[l.key]; });
+  // data and permitted for this target. Everything the UI enumerates
+  // (dropdowns, translations, examples, grammar) walks AVAIL, so restricted or
+  // unfinished languages simply don't appear.
+  var AVAIL = LANGS.filter(function (l) {
+    return LANG_PRESENT[l.key] && (!ALLOW_SET || ALLOW_SET[l.key]);
+  });
+  var AVAIL_SET = {};
+  AVAIL.forEach(function (l) { AVAIL_SET[l.key] = true; });
 
   // Name of a language rendered in the current interface language, with an
   // English then endonym fallback.
@@ -200,10 +260,10 @@
   // Two independent language sets:
   //  titleLangs — which languages may appear as the big prompt (title) word.
   //  showLangs  — which languages appear as translations / example lines after reveal.
-  var titleLangs = loadLangSet("beeins_titleLangs");
-  var showLangs = loadLangSet("beeins_showLangs");
-  // German is the language being learned, so it is always shown as the answer.
-  showLangs.de = true;
+  var titleLangs = loadLangSet(TL_KEY);
+  var showLangs = loadLangSet(SL_KEY);
+  // The target is the language being learned, so it is always shown as the answer.
+  showLangs[LEARN] = true;
   // The order in which "show" languages were turned on. The interface language
   // is the first still-enabled language in this order — the first one you
   // clicked — rather than whichever comes first in the master list.
@@ -246,6 +306,7 @@
   var elAskFlags = document.getElementById("askFlags");
   var elShowFlags = document.getElementById("showFlags");
   var elAskDrop = document.querySelector('.langDrop[data-set="title"]');
+  var elLearnLang = document.getElementById("learnLang");
 
   var GRAMMAR_DATA = (typeof GRAMMAR !== "undefined" && GRAMMAR) ? GRAMMAR : [];
 
@@ -896,58 +957,58 @@
       "sq": "Në cilat gjuhë mund të shfaqet pyetja — fjala udhëzuese që sheh para se ta zbulosh."
     },
     showTip: {
-      "de": "In welchen Sprachen die Antwort nach dem Aufdecken erscheint. Deutsch wird immer gezeigt — das lernst du.",
-      "en": "Which languages the answer appears in after you reveal. German is always shown — it's what you're learning.",
-      "ru": "На каких языках показывается ответ после раскрытия. Немецкий показывается всегда — его вы учите.",
-      "vi": "Những ngôn ngữ nào xuất hiện làm đáp án sau khi lật thẻ. Tiếng Đức luôn hiển thị — đó là thứ bạn đang học.",
-      "fa": "پاسخ پس از آشکارسازی به کدام زبان‌ها نمایش داده می‌شود. آلمانی همیشه نمایش داده می‌شود — همان چیزی که می‌آموزید.",
-      "uk": "Якими мовами з'являється відповідь після розкриття. Німецька показується завжди — саме її ви вивчаєте.",
-      "th": "ภาษาใดบ้างที่คำตอบจะปรากฏหลังจากที่คุณเฉลย ภาษาเยอรมันจะแสดงเสมอ — เป็นภาษาที่คุณกำลังเรียนอยู่",
-      "zh": "翻开后答案可以用哪些语言显示。德语始终显示——那正是你要学的语言。",
-      "ms": "Bahasa yang dipaparkan untuk jawapan selepas anda mendedahkannya. Bahasa Jerman sentiasa dipaparkan — itulah yang anda pelajari.",
-      "tr": "Açtıktan sonra cevabın hangi dillerde göründüğü. Almanca her zaman gösterilir — öğrendiğin dil o.",
-      "pl": "W jakich językach pojawia się odpowiedź po odsłonięciu. Niemiecki jest zawsze pokazywany — to właśnie go się uczysz.",
-      "sw": "Lugha ambazo jibu linaonekana baada ya kufunua. Kijerumani huonyeshwa kila wakati — ndicho unachojifunza.",
-      "am": "መልሱ ከገለጡ በኋላ የሚታይባቸው ቋንቋዎች። ጀርመንኛ ሁልጊዜ ይታያል — የሚማሩት ስለሆነ።",
-      "hi": "उत्तर प्रकट करने के बाद किन भाषाओं में दिखाई देता है। जर्मन हमेशा दिखाया जाता है — यही तो आप सीख रहे हैं।",
-      "ur": "جواب ظاہر کرنے کے بعد کن زبانوں میں دکھایا جاتا ہے۔ جرمن ہمیشہ دکھائی جاتی ہے — یہی آپ سیکھ رہے ہیں۔",
-      "ar_eg": "اللغات اللي بتظهر بيها الإجابة بعد ما تكشف. الألماني بيظهر دايمًا — لأنه اللي بتتعلمه.",
-      "ar_lb": "بأي لغات بيطلع الجواب بعد ما تكشف. الألماني دايمًا بيبيّن — هوّي اللي عم تتعلّمه.",
-      "ar_sy": "بأي لغات بيطلع الجواب بعد ما تكشف الكرت. الألماني دايماً بيظهر — هو يلي عم تتعلمو.",
-      "es_mx": "En qué idiomas aparece la respuesta después de revelar. El alemán siempre se muestra — es lo que estás aprendiendo.",
-      "ca": "En quines llengües apareix la resposta després de revelar. L'alemany sempre es mostra — és el que estàs aprenent.",
-      "hr": "Na kojim se jezicima pojavljuje odgovor nakon otkrivanja. Njemački se uvijek prikazuje — to je ono što učiš.",
-      "sr": "На којим језицима се појављује одговор након откривања. Немачки се увек приказује — то је оно што учиш.",
-      "el": "Σε ποιες γλώσσες εμφανίζεται η απάντηση μετά την αποκάλυψη. Τα γερμανικά εμφανίζονται πάντα — αυτό μαθαίνεις.",
-      "ro": "În ce limbi apare răspunsul după ce dezvălui. Germana se afișează mereu — este limba pe care o înveți.",
-      "sq": "Në cilat gjuhë shfaqet përgjigjja pasi e zbulon. Gjermanishtja shfaqet gjithmonë — është ajo që po mëson."
+      "de": "In welchen Sprachen die Antwort nach dem Aufdecken erscheint. {lang} wird immer gezeigt — das lernst du.",
+      "en": "Which languages the answer appears in after you reveal. {lang} is always shown — it's what you're learning.",
+      "ru": "На каких языках показывается ответ после раскрытия. {lang} показывается всегда — его вы учите.",
+      "vi": "Những ngôn ngữ nào xuất hiện làm đáp án sau khi lật thẻ. {lang} luôn hiển thị — đó là thứ bạn đang học.",
+      "fa": "پاسخ پس از آشکارسازی به کدام زبان‌ها نمایش داده می‌شود. {lang} همیشه نمایش داده می‌شود — همان چیزی که می‌آموزید.",
+      "uk": "Якими мовами з'являється відповідь після розкриття. {lang} показується завжди — саме її ви вивчаєте.",
+      "th": "ภาษาใดบ้างที่คำตอบจะปรากฏหลังจากที่คุณเฉลย {lang} จะแสดงเสมอ — เป็นภาษาที่คุณกำลังเรียนอยู่",
+      "zh": "翻开后答案可以用哪些语言显示。{lang}始终显示——那正是你要学的语言。",
+      "ms": "Bahasa yang dipaparkan untuk jawapan selepas anda mendedahkannya. {lang} sentiasa dipaparkan — itulah yang anda pelajari.",
+      "tr": "Açtıktan sonra cevabın hangi dillerde göründüğü. {lang} her zaman gösterilir — öğrendiğin dil o.",
+      "pl": "W jakich językach pojawia się odpowiedź po odsłonięciu. {lang} jest zawsze pokazywany — to właśnie go się uczysz.",
+      "sw": "Lugha ambazo jibu linaonekana baada ya kufunua. {lang} huonyeshwa kila wakati — ndicho unachojifunza.",
+      "am": "መልሱ ከገለጡ በኋላ የሚታይባቸው ቋንቋዎች። {lang} ሁልጊዜ ይታያል — የሚማሩት ስለሆነ።",
+      "hi": "उत्तर प्रकट करने के बाद किन भाषाओं में दिखाई देता है। {lang} हमेशा दिखाया जाता है — यही तो आप सीख रहे हैं।",
+      "ur": "جواب ظاہر کرنے کے بعد کن زبانوں میں دکھایا جاتا ہے۔ {lang} ہمیشہ دکھائی جاتی ہے — یہی آپ سیکھ رہے ہیں۔",
+      "ar_eg": "اللغات اللي بتظهر بيها الإجابة بعد ما تكشف. {lang} بيظهر دايمًا — لأنه اللي بتتعلمه.",
+      "ar_lb": "بأي لغات بيطلع الجواب بعد ما تكشف. {lang} دايمًا بيبيّن — هوّي اللي عم تتعلّمه.",
+      "ar_sy": "بأي لغات بيطلع الجواب بعد ما تكشف الكرت. {lang} دايماً بيظهر — هو يلي عم تتعلمو.",
+      "es_mx": "En qué idiomas aparece la respuesta después de revelar. {lang} siempre se muestra — es lo que estás aprendiendo.",
+      "ca": "En quines llengües apareix la resposta després de revelar. {lang} sempre es mostra — és el que estàs aprenent.",
+      "hr": "Na kojim se jezicima pojavljuje odgovor nakon otkrivanja. {lang} se uvijek prikazuje — to je ono što učiš.",
+      "sr": "На којим језицима се појављује одговор након откривања. {lang} се увек приказује — то је оно што учиш.",
+      "el": "Σε ποιες γλώσσες εμφανίζεται η απάντηση μετά την αποκάλυψη. {lang} εμφανίζεται πάντα — αυτό μαθαίνεις.",
+      "ro": "În ce limbi apare răspunsul după ce dezvălui. {lang} se afișează mereu — este limba pe care o înveți.",
+      "sq": "Në cilat gjuhë shfaqet përgjigjja pasi e zbulon. {lang} shfaqet gjithmonë — është ajo që po mëson."
     },
     deLocked: {
-      "de": "Deutsch wird immer angezeigt — das ist die Sprache, die du lernst.",
-      "en": "German is always shown — it's the language you're learning.",
-      "ru": "Немецкий показывается всегда — это язык, который вы учите.",
-      "vi": "Tiếng Đức luôn được hiển thị — đó là ngôn ngữ bạn đang học.",
-      "fa": "آلمانی همیشه نمایش داده می‌شود — زبانی که در حال یادگیری آن هستید.",
-      "uk": "Німецька показується завжди — це мова, яку ви вивчаєте.",
-      "th": "ภาษาเยอรมันจะแสดงเสมอ — เป็นภาษาที่คุณกำลังเรียนอยู่",
-      "zh": "德语始终显示——它正是你正在学习的语言。",
-      "ms": "Bahasa Jerman sentiasa dipaparkan — itulah bahasa yang anda pelajari.",
-      "tr": "Almanca her zaman gösterilir — öğrenmekte olduğun dil o.",
-      "pl": "Niemiecki jest zawsze pokazywany — to język, którego się uczysz.",
-      "sw": "Kijerumani huonyeshwa kila wakati — ndiyo lugha unayojifunza.",
-      "am": "ጀርመንኛ ሁልጊዜ ይታያል — የሚማሩት ቋንቋ ስለሆነ።",
-      "hi": "जर्मन हमेशा दिखाया जाता है — यही वह भाषा है जो आप सीख रहे हैं।",
-      "ur": "جرمن ہمیشہ دکھائی جاتی ہے — یہی وہ زبان ہے جو آپ سیکھ رہے ہیں۔",
-      "ar_eg": "الألماني بيظهر دايمًا — دي اللغة اللي بتتعلمها.",
-      "ar_lb": "الألماني دايمًا بيبيّن — هوّي اللغة اللي عم تتعلّمها.",
-      "ar_sy": "الألماني دايماً بيظهر — هو اللغة يلي عم تتعلمها.",
-      "es_mx": "El alemán siempre se muestra — es el idioma que estás aprendiendo.",
-      "ca": "L'alemany sempre es mostra — és la llengua que estàs aprenent.",
-      "hr": "Njemački se uvijek prikazuje — to je jezik koji učiš.",
-      "sr": "Немачки се увек приказује — то је језик који учиш.",
-      "el": "Τα γερμανικά εμφανίζονται πάντα — είναι η γλώσσα που μαθαίνεις.",
-      "ro": "Germana se afișează mereu — este limba pe care o înveți.",
-      "sq": "Gjermanishtja shfaqet gjithmonë — është gjuha që po mëson."
+      "de": "{lang} wird immer angezeigt — das ist die Sprache, die du lernst.",
+      "en": "{lang} is always shown — it's the language you're learning.",
+      "ru": "{lang} показывается всегда — это язык, который вы учите.",
+      "vi": "{lang} luôn được hiển thị — đó là ngôn ngữ bạn đang học.",
+      "fa": "{lang} همیشه نمایش داده می‌شود — زبانی که در حال یادگیری آن هستید.",
+      "uk": "{lang} показується завжди — це мова, яку ви вивчаєте.",
+      "th": "{lang} จะแสดงเสมอ — เป็นภาษาที่คุณกำลังเรียนอยู่",
+      "zh": "{lang}始终显示——它正是你正在学习的语言。",
+      "ms": "{lang} sentiasa dipaparkan — itulah bahasa yang anda pelajari.",
+      "tr": "{lang} her zaman gösterilir — öğrenmekte olduğun dil o.",
+      "pl": "{lang} jest zawsze pokazywany — to język, którego się uczysz.",
+      "sw": "{lang} huonyeshwa kila wakati — ndiyo lugha unayojifunza.",
+      "am": "{lang} ሁልጊዜ ይታያል — የሚማሩት ቋንቋ ስለሆነ።",
+      "hi": "{lang} हमेशा दिखाया जाता है — यही वह भाषा है जो आप सीख रहे हैं।",
+      "ur": "{lang} ہمیشہ دکھائی جاتی ہے — یہی وہ زبان ہے جو آپ سیکھ رہے ہیں۔",
+      "ar_eg": "{lang} بيظهر دايمًا — دي اللغة اللي بتتعلمها.",
+      "ar_lb": "{lang} دايمًا بيبيّن — هوّي اللغة اللي عم تتعلّمها.",
+      "ar_sy": "{lang} دايماً بيظهر — هو اللغة يلي عم تتعلمها.",
+      "es_mx": "{lang} siempre se muestra — es el idioma que estás aprendiendo.",
+      "ca": "{lang} sempre es mostra — és la llengua que estàs aprenent.",
+      "hr": "{lang} se uvijek prikazuje — to je jezik koji učiš.",
+      "sr": "{lang} се увек приказује — то је језик који учиш.",
+      "el": "{lang}: εμφανίζεται πάντα — είναι η γλώσσα που μαθαίνεις.",
+      "ro": "{lang} se afișează mereu — este limba pe care o înveți.",
+      "sq": "{lang} shfaqet gjithmonë — është gjuha që po mëson."
     },
     levelTip: {
       "de": "Lernstufe: zeigt Wörter bis A1, A2 oder B1 (kumulativ).",
@@ -998,11 +1059,14 @@
   function langByKey(key) { return LANG_BY_KEY[key] || LANGS[0]; }
 
   // ---- pronunciation (text-to-speech) ------------------------------------
-  // German pronunciation is spoken with the browser's built-in Web Speech API
+  // The target word is spoken with the browser's built-in Web Speech API
   // (speechSynthesis). It is free, needs no audio files, works offline, and
-  // uses whatever German (de-DE) voice the operating system provides — on
-  // modern macOS / Windows / Android these are natural neural voices.
+  // uses whatever voice the operating system provides for the target locale
+  // (e.g. de-DE, tr-TR) — on modern macOS / Windows / Android these are
+  // natural neural voices.
   var TTS_OK = typeof window !== "undefined" && "speechSynthesis" in window;
+  var TTS_LANG = TARGET.tts || "de-DE";                  // BCP-47 locale to speak
+  var TTS_PREFIX = TTS_LANG.split(/[-_]/)[0].toLowerCase(); // "de", "tr", …
 
   // Inline speaker icon (inherits currentColor so it can be shown in a muted
   // tone next to the text and brighten on hover).
@@ -1013,24 +1077,25 @@
     '<path d="M15.5 8.5a5 5 0 0 1 0 7"></path>' +
     '<path d="M19 5a9 9 0 0 1 0 14"></path></svg>';
 
-  // Pick the best-sounding German voice available, preferring de-DE and voices
-  // that look enhanced/neural, and known-good named voices.
-  var germanVoice = null;
+  // Pick the best-sounding voice for the target locale, preferring an exact
+  // locale match and voices that look enhanced/neural.
+  var learnVoice = null;
+  var EXACT_LANG_RE = new RegExp(TTS_LANG.replace(/[-_]/g, "[-_]"), "i");
+  var PREFIX_LANG_RE = new RegExp("^" + TTS_PREFIX + "([-_]|$)", "i");
   function voiceScore(v) {
     var s = 0, n = (v.name || "").toLowerCase();
-    if (/de[-_]de/i.test(v.lang)) s += 4;
-    else if (/^de([-_]|$)/i.test(v.lang)) s += 2;
+    if (EXACT_LANG_RE.test(v.lang || "")) s += 4;
+    else if (PREFIX_LANG_RE.test(v.lang || "")) s += 2;
     if (/(neural|premium|enhanced|natural|siri)/.test(n)) s += 3;
-    if (/(anna|petra|markus|viktor|helena|eddy|reed|sandy|grandpa|grandma|yannick)/.test(n)) s += 2;
     if (v.localService) s += 1;
     return s;
   }
   function refreshVoice() {
     if (!TTS_OK) return;
     var voices = window.speechSynthesis.getVoices() || [];
-    var de = voices.filter(function (v) { return /^de([-_]|$)/i.test(v.lang || ""); });
-    de.sort(function (a, b) { return voiceScore(b) - voiceScore(a); });
-    germanVoice = de[0] || null;
+    var match = voices.filter(function (v) { return PREFIX_LANG_RE.test(v.lang || ""); });
+    match.sort(function (a, b) { return voiceScore(b) - voiceScore(a); });
+    learnVoice = match[0] || null;
   }
   if (TTS_OK) {
     refreshVoice();
@@ -1038,7 +1103,7 @@
     window.speechSynthesis.addEventListener("voiceschanged", refreshVoice);
   }
 
-  // Speak a German string, highlighting the button that triggered it.
+  // Speak a target-language string, highlighting the button that triggered it.
   function speak(text, btn) {
     if (!TTS_OK || !text) return;
     var synth = window.speechSynthesis;
@@ -1047,8 +1112,8 @@
       var prev = document.querySelector(".speakBtn.speaking");
       if (prev) prev.classList.remove("speaking");
       var u = new SpeechSynthesisUtterance(String(text));
-      u.lang = "de-DE";
-      if (germanVoice) u.voice = germanVoice;
+      u.lang = TTS_LANG;
+      if (learnVoice) u.voice = learnVoice;
       u.rate = 0.95;
       if (btn) {
         btn.classList.add("speaking");
@@ -1065,7 +1130,7 @@
     b.type = "button";
     b.className = "speakBtn";
     b.title = "Play pronunciation";
-    b.setAttribute("aria-label", "Play German pronunciation");
+    b.setAttribute("aria-label", "Play pronunciation");
     b.innerHTML = SPEAKER_SVG;
     var stop = function (e) { e.stopPropagation(); };
     b.addEventListener("mousedown", stop);
@@ -1085,7 +1150,8 @@
 
   // Best-effort map from the browser / OS locale to one of our language keys.
   // Returns null when nothing usable matches. Used only to seed the FIRST-run
-  // default so a brand-new user starts with German + their own language.
+  // default so a brand-new user starts with the target + their own language.
+  // Only languages permitted for the active target (AVAIL) qualify.
   function osLangKey() {
     var locales = [];
     try {
@@ -1098,7 +1164,7 @@
       var primary = String(locales[i] || "").toLowerCase().split(/[-_]/)[0];
       if (!primary) continue;
       var key = alias.hasOwnProperty(primary) ? alias[primary] : primary;
-      if (key && key !== "de" && LANG_PRESENT[key]) return key;
+      if (key && key !== LEARN && AVAIL_SET[key]) return key;
     }
     return null;
   }
@@ -1118,34 +1184,34 @@
         if (any) return out;
       }
     } catch (e) {}
-    // First run (nothing saved): start with just German + the OS language
+    // First run (nothing saved): start with just the target + the OS language
     // selected, not every language at once.
     var def = {};
     AVAIL.forEach(function (l) { def[l.key] = false; });
-    def.de = true;
+    def[LEARN] = true;
     var os = osLangKey();
     if (os) def[os] = true;
     return def;
   }
 
   function setForName(name) { return name === "show" ? showLangs : titleLangs; }
-  function storageKeyFor(name) { return name === "show" ? "beeins_showLangs" : "beeins_titleLangs"; }
+  function storageKeyFor(name) { return name === "show" ? SL_KEY : TL_KEY; }
 
   function saveLangSet(name) {
     try { window.localStorage.setItem(storageKeyFor(name), JSON.stringify(setForName(name))); } catch (e) {}
   }
 
   // Selection order of the "show" languages (the order you clicked them on),
-  // persisted so the chosen interface language survives a reload. German is
+  // persisted so the chosen interface language survives a reload. The target is
   // never tracked here — it is always shown but never drives the interface.
   function loadShowOrder() {
     var order = [];
     try {
-      var raw = window.localStorage.getItem("beeins_showOrder");
+      var raw = window.localStorage.getItem(SO_KEY);
       var parsed = raw ? JSON.parse(raw) : null;
       if (Array.isArray(parsed)) {
         parsed.forEach(function (k) {
-          if (LANG_BY_KEY[k] && k !== "de" && order.indexOf(k) === -1) order.push(k);
+          if (LANG_BY_KEY[k] && k !== LEARN && order.indexOf(k) === -1) order.push(k);
         });
       }
     } catch (e) {}
@@ -1153,7 +1219,7 @@
   }
 
   function saveShowOrder() {
-    try { window.localStorage.setItem("beeins_showOrder", JSON.stringify(showOrder)); } catch (e) {}
+    try { window.localStorage.setItem(SO_KEY, JSON.stringify(showOrder)); } catch (e) {}
   }
 
   // Enabled non-German "show" languages ordered by when they were turned on.
@@ -1166,7 +1232,7 @@
       if (showLangs[k] && LANG_BY_KEY[k]) byOrder.push(LANG_BY_KEY[k]);
     });
     AVAIL.forEach(function (l) {
-      if (l.key !== "de" && showLangs[l.key] && byOrder.indexOf(l) === -1) byOrder.push(l);
+      if (l.key !== LEARN && showLangs[l.key] && byOrder.indexOf(l) === -1) byOrder.push(l);
     });
     return byOrder;
   }
@@ -1179,7 +1245,7 @@
   // in localStorage (see above) and is NOT touched here. Cards are stored by
   // their German word, which is unique across the corpus, so the save survives
   // data updates that shuffle array positions.
-  var SESSION_KEY = "beeins_session";
+  var SESSION_KEY = "beeins_session_" + LEARN;
   var byWord = {};
   source.forEach(function (w) { byWord[w.word] = w; });
 
@@ -1269,11 +1335,11 @@
   function paintCard(w, frontKey, isRevealed) {
     elWord.textContent = wordVal(w, frontKey);
     elWord.setAttribute("dir", "auto"); // render RTL (Persian/Arabic/Urdu) correctly
-    // Speak the title when it is the German word (the language being learned).
-    if (TTS_OK && frontKey === "de") elWord.appendChild(makeSpeakBtn(w.word));
+    // Speak the title when it is the target word (the language being learned).
+    if (TTS_OK && frontKey === LEARN) elWord.appendChild(makeSpeakBtn(wordVal(w, LEARN)));
 
-    // German (the word being learned) goes first on its own highlighted row;
-    // every other translation wraps onto the row below it.
+    // The target (the word being learned) goes first on its own highlighted
+    // row; every other translation wraps onto the row below it.
     elTranslations.innerHTML = "";
     var deRow = document.createElement("div");
     deRow.className = "trRow trRowDe";
@@ -1286,10 +1352,10 @@
       // <bdi> isolates the value's direction so mixing LTR labels with
       // RTL (Persian/Arabic) values stays readable
       span.innerHTML = l.label + ": <bdi>" + escapeHtml(wordVal(w, l.key)) + "</bdi>";
-      if (l.key === "de") {
+      if (l.key === LEARN) {
         span.className = "deBadge";
-        // German is the word being learned — let it be heard from here too.
-        if (TTS_OK) span.appendChild(makeSpeakBtn(w.word));
+        // The target is the word being learned — let it be heard from here too.
+        if (TTS_OK) span.appendChild(makeSpeakBtn(wordVal(w, LEARN)));
         deRow.appendChild(span);
       } else {
         otherRow.appendChild(span);
@@ -1298,10 +1364,11 @@
     if (deRow.childNodes.length) elTranslations.appendChild(deRow);
     if (otherRow.childNodes.length) elTranslations.appendChild(otherRow);
 
-    // German synonyms — alternatives you can sometimes swap the word for.
+    // Synonyms — alternatives you can sometimes swap the word for. These exist
+    // for German only in the corpus, so they show only when learning German.
     // Built regardless of reveal state (CSS hides them until revealed).
     elSynonyms.innerHTML = "";
-    var syn = w.syn || [];
+    var syn = (LEARN === "de" && w.syn) ? w.syn : [];
     if (syn.length) {
       var lab = document.createElement("span");
       lab.className = "synLabel";
@@ -1323,9 +1390,10 @@
       div.innerHTML = AVAIL.filter(function (l) { return showLangs[l.key]; }).map(function (l) {
         return '<div class="' + l.key + '" dir="auto">' + escapeHtml(exVal(ex, l.key)) + "</div>";
       }).join("");
-      // Speak the German example sentence.
-      var deLine = div.querySelector(".de");
-      if (TTS_OK && deLine && ex.de) deLine.appendChild(makeSpeakBtn(ex.de));
+      // Speak the target-language example sentence.
+      var deLine = div.querySelector("." + LEARN);
+      var exWord = exVal(ex, LEARN);
+      if (TTS_OK && deLine && exWord) deLine.appendChild(makeSpeakBtn(exWord));
       elExamples.appendChild(div);
     });
 
@@ -1486,6 +1554,11 @@
     if (map[key] != null && map[key] !== "") return map[key];
     return map.en || map.de || "";
   }
+  // Like tr(), but substitutes {lang} with the target language's name in the
+  // current interface language (e.g. "German" / "Turkish" / "Türkçe").
+  function trTarget(map, key) {
+    return tr(map, key).replace(/\{lang\}/g, localName(LANG_BY_KEY[LEARN] || TARGET, key));
+  }
 
   // The interface language: the first "show" language you turned on that is NOT
   // German (German is always shown but you're learning it, so it never drives
@@ -1501,7 +1574,7 @@
     elNavCards.textContent = tr(UISTR.cards, k);
     elNavGrammar.textContent = tr(UISTR.grammar, k);
     if (elLblAsk) { elLblAsk.textContent = tr(UISTR.ask, k); elLblAsk.setAttribute("title", tr(UISTR.askTip, k)); }
-    if (elLblShow) { elLblShow.textContent = tr(UISTR.show, k); elLblShow.setAttribute("title", tr(UISTR.showTip, k)); }
+    if (elLblShow) { elLblShow.textContent = tr(UISTR.show, k); elLblShow.setAttribute("title", trTarget(UISTR.showTip, k)); }
     if (elLevelNav) elLevelNav.setAttribute("title", tr(UISTR.levelTip, k));
     if (elRevealHint) {
       elRevealHint.textContent = tr(UISTR.reveal, k);
@@ -1814,14 +1887,14 @@
     panel.innerHTML = "";
     AVAIL.forEach(function (l) {
       var on = !!set[l.key];
-      var locked = name === "show" && l.key === "de";
+      var locked = name === "show" && l.key === LEARN;
       var opt = document.createElement("button");
       opt.type = "button";
       opt.className = "ldOpt" + (on ? "" : " off") + (locked ? " locked" : "");
       opt.setAttribute("role", "option");
       opt.setAttribute("data-lang", l.key);
       opt.setAttribute("aria-checked", on ? "true" : "false");
-      if (locked) opt.setAttribute("title", tr(UISTR.deLocked, uiK));
+      if (locked) opt.setAttribute("title", trTarget(UISTR.deLocked, uiK));
       var local = localName(l, uiK);
       var showLocal = local && local !== l.endo;
       opt.innerHTML =
@@ -1840,15 +1913,15 @@
 
   function toggleLang(name, key, opt) {
     var set = setForName(name);
-    // German is always shown as the answer — it can't be turned off.
-    if (name === "show" && key === "de") { shake(opt); return; }
+    // The target is always shown as the answer — it can't be turned off.
+    if (name === "show" && key === LEARN) { shake(opt); return; }
     var enabled = AVAIL.filter(function (l) { return set[l.key]; }).length;
     // Keep at least one language enabled in each set.
     if (set[key] && enabled === 1) { shake(opt); return; }
     set[key] = !set[key];
     // Record when a "show" language is turned on so the interface language can
     // follow the first one you clicked rather than master-list order.
-    if (name === "show" && key !== "de") {
+    if (name === "show" && key !== LEARN) {
       var oi = showOrder.indexOf(key);
       if (set[key]) { if (oi === -1) showOrder.push(key); }
       else if (oi !== -1) showOrder.splice(oi, 1);
@@ -2079,7 +2152,35 @@
     document.addEventListener("mouseup", function (e) { onEnd(e.clientX); });
   })();
 
+  // ---- learning-target selector -----------------------------------------
+  // A single dropdown, top-left, picks which language you're studying. It
+  // reshapes the whole app (available languages, learning curve, grammar), so
+  // switching persists the choice and reloads — every downstream default is
+  // then recomputed cleanly from the stored target at boot.
+  function initLearnLang() {
+    if (!elLearnLang) return;
+    elLearnLang.value = LEARN;
+    elLearnLang.addEventListener("change", function () {
+      var v = elLearnLang.value;
+      if (!TARGET_BY_KEY[v] || v === LEARN) { elLearnLang.value = LEARN; return; }
+      try { window.localStorage.setItem("beeins_learn", v); } catch (e) {}
+      window.location.reload();
+    });
+  }
+
+  // Grammar cheat sheets exist for German only. For other targets there is just
+  // one view, so hide the whole Cards/Grammar switcher and pin to cards.
+  function applyGrammarAvailability() {
+    if (GRAMMAR_ON) return;
+    var nav = document.getElementById("viewNav");
+    if (nav) nav.classList.add("hidden");
+    if (elNavGrammar) elNavGrammar.classList.add("hidden");
+    currentView = "cards";
+  }
+
   // ---- boot --------------------------------------------------------------
+  initLearnLang();
+  applyGrammarAvailability();
   initLangDrops();
   initTheme();
   initSessionSize();
@@ -2116,5 +2217,5 @@
   } else {
     renderCard();
   }
-  if ((location.hash || "").toLowerCase() === "#grammar") showView("grammar");
+  if (GRAMMAR_ON && (location.hash || "").toLowerCase() === "#grammar") showView("grammar");
 })();

@@ -11,7 +11,7 @@ Or run it locally: open `index.html`, or serve the folder and visit it in a brow
 A dropdown in the very top-left picks the language you're studying:
 
 - **🇩🇪 German** — 4,600+ words, a 20-topic grammar reference, and translations into any of 25+ languages.
-- **🇹🇷 Turkish** — 1,700+ words and a 21-topic Turkish grammar reference, studied from Russian, English, German, or Syrian Arabic.
+- **🇹🇷 Turkish** — 1,700+ words and a 23-topic Turkish grammar reference, studied from Russian, English, German, or Syrian Arabic.
 
 Each language is built from its own materials — vocabulary, CEFR levels, and grammar all drawn from that language's official curricula, not translated across — and keeps its own progress, level, and preferences, so switching between them never disturbs the other.
 
@@ -33,7 +33,7 @@ Each language has a vocabulary trainer and a grammar reference, switchable from 
 
 ### 📖 Grammar — a plain-language reference
 
-A built-in cheat sheet — **20 core topics for German**, **21 for Turkish** — explained in your language with tables, example sentences, and side-by-side comparisons to how your own language handles the same thing. The same **A1 / A2 / B1** switcher applies here too, so you only see the topics for your level (cumulative — B1 shows everything). Turkish topics cover vowel harmony, consonant softening, the noun cases, possessive and personal suffixes, the tense system (-yor, aorist, -dı, -mış, -ecek), postpositions, participles, and more. German topics include:
+A built-in cheat sheet — **20 core topics for German**, **23 for Turkish** — explained in your language with tables, example sentences, and side-by-side comparisons to how your own language handles the same thing. The same **A1 / A2 / B1** switcher applies here too, so you only see the topics for your level (cumulative — B1 shows everything). Turkish topics cover vowel harmony, consonant softening, the noun cases, izafet (noun compounds), possessive and personal suffixes, the tense system (-yor, aorist, -dı, -mış, -ecek), postpositions, participles, the verb voices, and more; the Russian explanations are enriched from a Russian-language Turkish workbook and flag the mistakes Russian speakers typically make. German topics include:
 
 articles & genders · the four cases · pronouns · possessives · adjective endings · present tense · Perfekt · Präteritum · Plusquamperfekt & future · modal verbs · separable verbs · reflexive verbs · Konjunktiv II · passive · prepositions · verbs with prepositions · comparatives · word order · subordinate clauses · relative clauses
 

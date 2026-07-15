@@ -10,19 +10,19 @@ Or run it locally: open `index.html`, or serve the folder and visit it in a brow
 
 A dropdown in the very top-left picks the language you're studying:
 
-- **🇩🇪 German** — the full experience: 4,600+ words, a grammar reference, and translations into any of 25+ languages.
-- **🇹🇷 Turkish** — the same flashcard trainer for Turkish vocabulary, studied from Russian, English, German, or Syrian Arabic.
+- **🇩🇪 German** — 4,600+ words, a 20-topic grammar reference, and translations into any of 25+ languages.
+- **🇹🇷 Turkish** — 1,700+ words and a 21-topic Turkish grammar reference, studied from Russian, English, German, or Syrian Arabic.
 
-Each language keeps its own progress, level, and preferences, so switching between them never disturbs the other. (More study-from languages and a Turkish grammar reference may follow.)
+Each language is built from its own materials — vocabulary, CEFR levels, and grammar all drawn from that language's official curricula, not translated across — and keeps its own progress, level, and preferences, so switching between them never disturbs the other.
 
 ## What it does
 
-beeins' vocabulary trainer (and, for German, a grammar reference) is switchable from the top-left tabs:
+Each language has a vocabulary trainer and a grammar reference, switchable from the top-left tabs:
 
 ### 📇 Cards — vocabulary flashcards
 
-- **4,600+ words**, each with a real example sentence.
-- **Study by level** — A1, A2, or B1. Levels are cumulative, so B1 includes everything below it. German words are graded on the standard German CEFR levels; Turkish words carry their own levels, banded against official Turkish-for-foreigners frameworks (Yedi İklim Türkçe, İstanbul Yabancılar İçin Türkçe, TÖMER) rather than copied from German.
+- **Real vocabulary with example sentences** — 4,600+ words for German, 1,700+ for Turkish.
+- **Study by level** — A1, A2, or B1. Levels are cumulative, so B1 includes everything below it. Each word is graded on its own language's framework: German on the standard German CEFR levels, Turkish against the official Turkish-for-foreigners curricula (Yedi İklim Türkçe, İstanbul Yabancılar İçin Türkçe, TÖMER) — Turkish vocabulary and levels are drawn from those materials, not from a translated German list.
 - **Flip and grade**: tap a card (or press any key) to reveal the answer, then mark **✓ Know** or **✗ Don't know**.
 - **Swipe or keyboard** — swipe right / left on a phone, or use Enter (know), Space (don't know), and the arrow keys on a desktop.
 - **Words stick until you know them** — anything you mark "don't know" comes back later in the same session; words you know leave the deck.
@@ -31,9 +31,9 @@ beeins' vocabulary trainer (and, for German, a grammar reference) is switchable 
 - **See synonyms** (for German) and the word's example sentence translated into every language you've turned on.
 - **Hear it spoken** — a small speaker button next to the word you're learning and each example plays its pronunciation in the target language, using your device's built-in text-to-speech (no downloads, works offline).
 
-### 📖 Grammar — a plain-language reference (German)
+### 📖 Grammar — a plain-language reference
 
-A built-in cheat sheet covering **20 core German grammar topics**, explained in your language with tables, example sentences, and side-by-side comparisons to how your own language handles the same thing. The same **A1 / A2 / B1** switcher applies here too, so you only see the topics for your level (cumulative — B1 shows everything). Topics include:
+A built-in cheat sheet — **20 core topics for German**, **21 for Turkish** — explained in your language with tables, example sentences, and side-by-side comparisons to how your own language handles the same thing. The same **A1 / A2 / B1** switcher applies here too, so you only see the topics for your level (cumulative — B1 shows everything). Turkish topics cover vowel harmony, consonant softening, the noun cases, possessive and personal suffixes, the tense system (-yor, aorist, -dı, -mış, -ecek), postpositions, participles, and more. German topics include:
 
 articles & genders · the four cases · pronouns · possessives · adjective endings · present tense · Perfekt · Präteritum · Plusquamperfekt & future · modal verbs · separable verbs · reflexive verbs · Konjunktiv II · passive · prepositions · verbs with prepositions · comparatives · word order · subordinate clauses · relative clauses
 

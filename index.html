@@ -88,8 +88,16 @@
   <div id="grammarBody"></div>
 </section>
 
-<script src="data.js"></script>
-<script src="grammar.js"></script>
+<script>
+// Load the corpus + grammar for the language being learned. Each target ships
+// its own vocabulary and grammar file; only the selected one is fetched.
+(function () {
+  var t = "de";
+  try { var v = localStorage.getItem("beeins_learn"); if (v === "de" || v === "tr") t = v; } catch (e) {}
+  var files = t === "tr" ? ["data-tr.js", "grammar-tr.js"] : ["data.js", "grammar.js"];
+  for (var i = 0; i < files.length; i++) document.write('<script src="' + files[i] + '"><\/script>');
+})();
+</script>
 <script src="app.js"></script>
 </body>
 </html>

@@ -42,8 +42,8 @@
   // the per-word field holding that target's CEFR level. Grammar sheets exist
   // for German only (`grammar: true`).
   var TARGETS = [
-    { key: "de", flag: "🇩🇪", endo: "Deutsch", tts: "de-DE", level: "level",    grammar: true },
-    { key: "tr", flag: "🇹🇷", endo: "Türkçe",  tts: "tr-TR", level: "tr_level", allow: ["ru", "en", "de", "ar_sy"] }
+    { key: "de", flag: "🇩🇪", endo: "Deutsch", tts: "de-DE", level: "level", grammar: true },
+    { key: "tr", flag: "🇹🇷", endo: "Türkçe",  tts: "tr-TR", level: "level", grammar: true, allow: ["ru", "en", "de", "ar_sy"] }
   ];
   var TARGET_BY_KEY = {};
   TARGETS.forEach(function (t) { TARGET_BY_KEY[t.key] = t; });
@@ -214,10 +214,12 @@
   var LANG_BY_KEY = {};
   LANGS.forEach(function (l) { LANG_BY_KEY[l.key] = l; });
 
-  // Read a language's value off a word / example object. German is stored under
-  // `word` on the card and `de` on examples; every other language uses its key.
-  function wordVal(w, key) { return key === "de" ? w.word : w[key]; }
-  function exVal(ex, key) { return key === "de" ? ex.de : ex[key]; }
+  // Read a language's value off a word / example object. Each corpus stores its
+  // headword (the language being learned) under `word`; every other language is
+  // a translation under its own key. So the target key resolves to `word`, and
+  // example sentences always live under their language key.
+  function wordVal(w, key) { return key === LEARN ? w.word : w[key]; }
+  function exVal(ex, key) { return ex[key]; }
 
   // Which languages have real data in the corpus. German lives under `word`
   // (so it never trips the field check) and the active target is always
@@ -336,6 +338,9 @@
     "relative-clauses": "B1"
   };
   function grammarTopicLevel(t) {
+    // A topic may carry its own level (Turkish grammar does); otherwise fall
+    // back to the German id→level map, then B1.
+    if (LEVEL_ORDER[t.level]) return t.level;
     return LEVEL_ORDER[GRAMMAR_LEVEL[t.id]] ? GRAMMAR_LEVEL[t.id] : "B1";
   }
   // Topics at (and below) the current level, preserving source order.
@@ -1636,12 +1641,12 @@
     sec.id = "gTopic-" + t.id;
 
     var h = document.createElement("h2");
-    var deName = tr(t.title, "de");
+    var learnName = tr(t.title, LEARN);
     var primName = tr(t.title, pk);
     var html = '<span class="gIcon">' + escapeHtml(t.icon || "") + "</span>" +
       '<span dir="auto">' + escapeHtml(primName) + "</span>";
-    if (pk !== "de" && deName && deName !== primName) {
-      html += '<span class="gDe" dir="auto">' + escapeHtml(deName) + "</span>";
+    if (pk !== LEARN && learnName && learnName !== primName) {
+      html += '<span class="gDe" dir="auto">' + escapeHtml(learnName) + "</span>";
     }
     h.innerHTML = html;
     sec.appendChild(h);
@@ -1678,10 +1683,10 @@
         var de = document.createElement("div");
         de.className = "gExDe";
         de.setAttribute("dir", "auto");
-        de.textContent = ex.de || "";
+        de.textContent = ex[LEARN] || "";
         d.appendChild(de);
         shownLangs().forEach(function (l) {
-          if (l.key === "de" || !ex[l.key]) return;
+          if (l.key === LEARN || !ex[l.key]) return;
           var line = document.createElement("div");
           line.className = "gExTr";
           line.setAttribute("dir", "auto");

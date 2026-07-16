@@ -12,7 +12,7 @@ A dropdown in the very top-left picks the language you're studying:
 
 - **🇩🇪 German** — 4,600+ words, a 20-topic grammar reference, and translations into any of 25+ languages.
 - **🇹🇷 Turkish** — 1,700+ words and a 23-topic Turkish grammar reference, studied from Russian, English, German, or Syrian Arabic.
-- **🇦🇷 Argentinian Spanish** — 1,500+ words and a 24-topic **Rioplatense** grammar reference, studied from Russian, English, German, or Turkish. It teaches the Argentine variety throughout: **voseo** (vos tenés, vos sos), **ustedes** (never vosotros), the **sheísmo** pronunciation of *ll/y*, the preterite over the present perfect, and Argentine word choices (*auto, colectivo, celular, computadora, frutilla, palta, heladera, laburo, plata, birome, remera, valija, che, dale*).
+- **🇦🇷 Argentinian Spanish** — 4,000+ words and a 24-topic **Rioplatense** grammar reference, studied from Russian, English, German, or Turkish. It teaches the Argentine variety throughout: **voseo** (vos tenés, vos sos), **ustedes** (never vosotros), the **sheísmo** pronunciation of *ll/y*, the preterite over the present perfect, and Argentine word choices (*auto, colectivo, celular, computadora, frutilla, palta, heladera, laburo, plata, birome, remera, valija, che, dale*).
 
 Each language is built from its own materials — vocabulary, CEFR levels, and grammar all drawn from that language's official curricula, not translated across — and keeps its own progress, level, and preferences, so switching between them never disturbs the other.
 

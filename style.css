@@ -774,10 +774,14 @@ body { -webkit-tap-highlight-color: transparent; }
   #synonyms { margin-bottom: 14px; }
 
   /* Full-width dropdown panels anchored to the whole Ask/Show group so they
-     never run off the edge of a phone screen. */
+     never run off the edge of a phone screen. Scoped to #langDrops only — the
+     learn dropdown lives outside this group, so making its .langDrop static
+     would anchor its absolute panel to the viewport (top: 100% ≈ one screen
+     down) and it would appear not to open. Leaving #learnDrop positioned keeps
+     its panel anchored to the button. */
   #langDrops { position: relative; }
-  .langDrop { position: static; }
-  .langDropPanel { left: 0; right: 0; min-width: 0; max-width: none; }
+  #langDrops .langDrop { position: static; }
+  #langDrops .langDropPanel { left: 0; right: 0; min-width: 0; max-width: none; }
 
   #controls { gap: 8px; padding: 14px 10px; flex-wrap: wrap; }
   #controls button { padding: 12px 14px; font-size: 0.95rem; }

@@ -756,6 +756,13 @@ html { overflow-x: hidden; }
 body { -webkit-tap-highlight-color: transparent; }
 
 @media (max-width: 640px) {
+  /* Pin the header and the Know/Don't-know controls to the viewport; only the
+     middle panel (card, or grammar/stats — all flex:1 with their own inner
+     scroll) scrolls when its content overflows. `dvh` keeps the footer at the
+     real visible bottom despite the mobile browser's collapsing toolbars, so
+     the buttons are reachable without scrolling the whole page. */
+  body { min-height: 0; height: 100vh; height: 100dvh; overflow: hidden; }
+
   #topbar { padding: 10px 12px; }
   #topbarMain { gap: 8px 10px; }
   #topleft { gap: 6px 8px; max-width: 100%; }

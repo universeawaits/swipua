@@ -11,7 +11,7 @@ Or run it locally: open `index.html`, or serve the folder and visit it in a brow
 A dropdown in the very top-left picks the language you're studying:
 
 - **🇩🇪 German** — 4,600+ words, a 20-topic grammar reference, and translations into any of 25+ languages.
-- **🇹🇷 Turkish** — 1,700+ words and a 23-topic Turkish grammar reference, studied from Russian, English, German, or Syrian Arabic.
+- **🇹🇷 Turkish** — 3,700+ words and a 23-topic Turkish grammar reference, studied from Russian, English, German, or Syrian Arabic.
 - **🇦🇷 Argentinian Spanish** — 4,000+ words and a 24-topic **Rioplatense** grammar reference, studied from Russian, English, German, or Turkish. It teaches the Argentine variety throughout: **voseo** (vos tenés, vos sos), **ustedes** (never vosotros), the **sheísmo** pronunciation of *ll/y*, the preterite over the present perfect, and Argentine word choices (*auto, colectivo, celular, computadora, frutilla, palta, heladera, laburo, plata, birome, remera, valija, che, dale*).
 
 Each language is built from its own materials — vocabulary, CEFR levels, and grammar all drawn from that language's official curricula, not translated across — and keeps its own progress, level, and preferences, so switching between them never disturbs the other.
@@ -22,7 +22,7 @@ Each language has a vocabulary trainer and a grammar reference, switchable from 
 
 ### 📇 Cards — vocabulary flashcards
 
-- **Real vocabulary with example sentences** — 4,600+ words for German, 1,700+ for Turkish.
+- **Real vocabulary with example sentences** — 4,600+ words for German, 4,000+ for Spanish, 3,700+ for Turkish.
 - **Study by level** — A1, A2, or B1. Levels are cumulative, so B1 includes everything below it. Each word is graded on its own language's framework: German on the standard German CEFR levels, Turkish against the official Turkish-for-foreigners curricula (Yedi İklim Türkçe, İstanbul Yabancılar İçin Türkçe, TÖMER) — Turkish vocabulary and levels are drawn from those materials, not from a translated German list.
 - **Flip and grade**: tap a card (or press any key) to reveal the answer, then mark **✓ Know** or **✗ Don't know**.
 - **Swipe or keyboard** — swipe right / left on a phone, or use Enter (know), Space (don't know), and the arrow keys on a desktop.

@@ -47,7 +47,7 @@
     // Argentinian (Rioplatense) Spanish — voseo, sheísmo, ustedes. Studied from
     // Russian, English, German or Turkish. The es-AR speech locale and Piper's
     // Argentine voice give the accent; the corpus uses Argentine word choices.
-    { key: "es_ar", flag: "🇦🇷", endo: "Español rioplatense",  tts: "es-AR", piper: "es_AR-daniela-high",    level: "level", grammar: true, allow: ["ru", "en", "de", "tr"] },
+    { key: "es_ar", flag: "🇦🇷", endo: "Español rioplatense",  tts: "es-AR", piper: "es_AR-daniela-high",    level: "level", grammar: true, allow: ["ru", "en", "de", "tr", "uk", "fa", "fr"] },
     // French (France) — studied from Russian, English, German, Turkish, Spanish,
     // Italian or Syrian Arabic.
     { key: "fr",    flag: "🇫🇷", endo: "Français",             tts: "fr-FR", piper: "fr_FR-siwis-medium",    level: "level", grammar: true, allow: ["ru", "en", "de", "tr", "es_ar", "it", "ar_sy"] },

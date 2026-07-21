@@ -16,7 +16,7 @@ A dropdown in the very top-left picks the language you're studying:
 - **🇫🇷 French** — 4,000+ words and a 24-topic grammar reference, studied from Russian, English, German, Turkish, Spanish, Italian, or Syrian Arabic. Levels and grammar follow the CEFR / DELF A1–B1 and the *Niveau A1/A2/B1 pour le français* référentiels.
 - **🇷🇺 Russian** — 3,300+ words and a 24-topic grammar reference (the six cases, verbal aspect, verbs of motion…), studied from German, English, French, Persian, Ukrainian, or Syrian Arabic.
 - **🇮🇹 Italian** — 3,300+ words and a 24-topic grammar reference (articles, the passato prossimo/imperfetto contrast, the subjunctive, object and relative pronouns…), studied from Russian, German, English, Ukrainian, or Persian.
-- **🇺🇦 Ukrainian** — 2,300+ words and a 24-topic grammar reference (the alphabet, noun gender, the full seven-case system including the distinctly Ukrainian **vocative**, verb aspect, verbs of motion, the conditional, and more), studied from Russian, English, German, Italian, Argentine Spanish, or French. *(Newest addition — vocabulary still being expanded toward the size of the other languages.)*
+- **🇺🇦 Ukrainian** — 4,000+ words and a 24-topic grammar reference (the alphabet, noun gender, the full seven-case system including the distinctly Ukrainian **vocative**, verb aspect, verbs of motion, the conditional, and more), studied from Russian, English, German, Italian, Argentine Spanish, or French.
 
 Each language is built from its own materials — vocabulary, CEFR levels, and grammar all drawn from that language's official curricula, not translated across — and keeps its own progress, level, and preferences, so switching between them never disturbs the other.
 
@@ -26,7 +26,7 @@ Each language has a vocabulary trainer and a grammar reference, switchable from 
 
 ### 📇 Cards — vocabulary flashcards
 
-- **Real vocabulary with example sentences** — 4,600+ words for German, 4,000+ for Spanish, 4,000+ for French, 3,700+ for Turkish, 3,300+ each for Russian and Italian.
+- **Real vocabulary with example sentences** — 4,600+ words for German, 4,000+ each for Spanish, French and Ukrainian, 3,700+ for Turkish, 3,300+ each for Russian and Italian.
 - **Filter by topic** — a topics dropdown next to the level switch lets you narrow the deck to any of 48 themes (food, travel, work, health, law, politics, physics, biology, astronomy, programming, dance, music, sustainability, architecture…). Pick one or several, or leave it on **all topics**. Every word is tagged, and each card shows its topics as emojis in the top-left corner — hover one to see the topic name in your own language.
 - **Study by level** — A1, A2, or B1. Levels are cumulative, so B1 includes everything below it. Each word is graded on its own language's framework: German on the standard German CEFR levels, Turkish against the official Turkish-for-foreigners curricula (Yedi İklim Türkçe, İstanbul Yabancılar İçin Türkçe, TÖMER) — Turkish vocabulary and levels are drawn from those materials, not from a translated German list.
 - **Flip and grade**: tap a card (or press any key) to reveal the answer, then mark **✓ Know** or **✗ Don't know**.

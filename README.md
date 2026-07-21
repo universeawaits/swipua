@@ -16,7 +16,7 @@ A dropdown in the very top-left picks the language you're studying:
 - **🇫🇷 French** — 4,000+ words and a 24-topic grammar reference, studied from Russian, English, German, Turkish, Spanish, Italian, or Syrian Arabic. Levels and grammar follow the CEFR / DELF A1–B1 and the *Niveau A1/A2/B1 pour le français* référentiels.
 - **🇷🇺 Russian** — 3,300+ words and a 24-topic grammar reference (the six cases, verbal aspect, verbs of motion…), studied from German, English, French, Persian, Ukrainian, or Syrian Arabic.
 - **🇮🇹 Italian** — 3,300+ words and a 24-topic grammar reference (articles, the passato prossimo/imperfetto contrast, the subjunctive, object and relative pronouns…), studied from Russian, German, English, Ukrainian, or Persian.
-- **🇺🇦 Ukrainian** — 2,000+ words and a growing grammar reference (the alphabet, noun gender, the case system including the distinctly Ukrainian **vocative**, verb aspect, and more), studied from Russian, English, German, Italian, Argentine Spanish, or French. *(Newest addition — the vocabulary and grammar are still being expanded.)*
+- **🇺🇦 Ukrainian** — 2,300+ words and a 24-topic grammar reference (the alphabet, noun gender, the full seven-case system including the distinctly Ukrainian **vocative**, verb aspect, verbs of motion, the conditional, and more), studied from Russian, English, German, Italian, Argentine Spanish, or French. *(Newest addition — vocabulary still being expanded toward the size of the other languages.)*
 
 Each language is built from its own materials — vocabulary, CEFR levels, and grammar all drawn from that language's official curricula, not translated across — and keeps its own progress, level, and preferences, so switching between them never disturbs the other.
 

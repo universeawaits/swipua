@@ -4,13 +4,13 @@
    explicit [data-theme="dark"] set by the toggle. */
 :root {
   color-scheme: light;
-  --bg: #e6e6e4;
-  --card-bg: #f5f5f3;
-  --text: #333333;
-  --muted: #8a8a86;
+  --bg: #ece8e1;
+  --card-bg: #f8f6f1;
+  --text: #333230;
+  --muted: #8c887f;
   --accent: #448c27;
   --bad: #aa3731;
-  --border: #d6d6d2;
+  --border: #ddd8cf;
 
   /* Skin knobs — the defaults below reproduce the plain "leaf" look exactly.
      Each skin (data-skin) overrides some of these to restyle shape, surface,
@@ -32,25 +32,25 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme]) {
     color-scheme: dark;
-    --bg: #17181a;
-    --card-bg: #232427;
+    --bg: #141517;
+    --card-bg: #282a2f;
     --text: #ececec;
     --muted: #9a9a9a;
     --accent: #5fbf8e;
     --bad: #e07070;
-    --border: #333436;
+    --border: #40434a;
   }
 }
 
 :root[data-theme="dark"] {
   color-scheme: dark;
-  --bg: #17181a;
-  --card-bg: #232427;
+  --bg: #141517;
+  --card-bg: #282a2f;
   --text: #ececec;
   --muted: #9a9a9a;
   --accent: #5fbf8e;
   --bad: #e07070;
-  --border: #333436;
+  --border: #40434a;
 }
 
 /* ------------------------------------------------------------------ skins --

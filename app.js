@@ -57,7 +57,8 @@
     // Italian — studied from Russian, German, English, Ukrainian or Persian.
     { key: "it",    flag: "🇮🇹", endo: "Italiano",             tts: "it-IT", piper: "it_IT-riccardo-x_low",  level: "level", grammar: true, allow: ["ru", "de", "en", "uk", "fa"] },
     { key: "uk",    flag: "🇺🇦", endo: "Українська",           tts: "uk-UA", piper: "uk_UA-ukrainian_tts-medium", level: "level", grammar: true, allow: ["ru", "en", "de", "it", "es_ar", "fr"] },
-    { key: "hr",    flag: "🇭🇷", endo: "Hrvatski",              tts: "hr-HR", piper: "hr_HR-mihael-medium",       level: "level", grammar: true, allow: ["de", "en", "ru", "fr", "tr", "es_ar"] }
+    { key: "hr",    flag: "🇭🇷", endo: "Hrvatski",              tts: "hr-HR", piper: "hr_HR-mihael-medium",       level: "level", grammar: true, allow: ["de", "en", "ru", "fr", "tr", "es_ar"] },
+    { key: "be",    flag: "🇧🇾", endo: "Беларуская",            tts: "be-BY", piper: "be_BY-nastya-medium",       level: "level", grammar: true, allow: ["de", "en", "ru", "fr", "tr", "es_ar"] }
   ];
   var TARGET_BY_KEY = {};
   TARGETS.forEach(function (t) { TARGET_BY_KEY[t.key] = t; });
@@ -280,6 +281,7 @@
     { key: "it",    flag: "🇮🇹", label: "IT",    endo: "Italiano",      names: { de: "Italienisch", en: "Italian", ru: "Итальянский", tr: "İtalyanca", es_ar: "Italiano", fr: "Italien", uk: "Італійська", fa: "ایتالیایی", ar_sy: "إيطالي" } },
     { key: "ca",    flag: "🇦🇩", label: "CA",    endo: "Català",        names: { de: "Katalanisch", en: "Catalan", ru: "Каталанский", vi: "Tiếng Catalan", fa: "کاتالان" } },
     { key: "hr",    flag: "🇭🇷", label: "HR",    endo: "Hrvatski",      names: { de: "Kroatisch", en: "Croatian", ru: "Хорватский", vi: "Tiếng Croatia", fa: "کرواتی" } },
+    { key: "be",    flag: "🇧🇾", label: "BE",    endo: "Беларуская",    names: { de: "Belarussisch", en: "Belarusian", ru: "Белорусский", vi: "Tiếng Belarus", fa: "بلاروسی" } },
     { key: "sr",    flag: "🇷🇸", label: "SR",    endo: "Српски",        names: { de: "Serbisch", en: "Serbian", ru: "Сербский", vi: "Tiếng Serbia", fa: "صربی" } },
     { key: "el",    flag: "🇬🇷", label: "EL",    endo: "Ελληνικά",      names: { de: "Griechisch", en: "Greek", ru: "Греческий", vi: "Tiếng Hy Lạp", fa: "یونانی" } },
     { key: "ro",    flag: "🇷🇴", label: "RO",    endo: "Română",        names: { de: "Rumänisch", en: "Romanian", ru: "Румынский", vi: "Tiếng Rumani", fa: "رومانیایی" } },
@@ -327,6 +329,43 @@
   var AVAIL_SET = {};
   AVAIL.forEach(function (l) { AVAIL_SET[l.key] = true; });
 
+  // Languages are grouped by language family, and alphabetically within each
+  // family, everywhere they're listed (the learn selector, the languages
+  // dropdown, the translation lines). Family order runs Germanic → Romance →
+  // Slavic → Hellenic → Albanian → Indo-Iranian → Semitic → Turkic → the rest.
+  var FAMILY_ORDER = ["germanic", "romance", "slavic", "hellenic", "albanian", "indo_iranian", "semitic", "turkic", "other"];
+  var LANG_FAMILY = {
+    de: "germanic", en: "germanic",
+    fr: "romance", it: "romance", es_ar: "romance", es_mx: "romance", ca: "romance", ro: "romance",
+    be: "slavic", ru: "slavic", uk: "slavic", hr: "slavic", sr: "slavic", pl: "slavic",
+    el: "hellenic",
+    sq: "albanian",
+    fa: "indo_iranian", hi: "indo_iranian", ur: "indo_iranian",
+    ar_eg: "semitic", ar_lb: "semitic", ar_sy: "semitic", am: "semitic", he: "semitic",
+    tr: "turkic",
+    vi: "other", zh: "other", th: "other", ms: "other", sw: "other"
+  };
+  function familyRank(key) {
+    var i = FAMILY_ORDER.indexOf(LANG_FAMILY[key] || "other");
+    return i < 0 ? FAMILY_ORDER.length : i;
+  }
+  // Sort a copy of a language list by family, then alphabetically by the name as
+  // it reads in the current interface language (so the order matches what the
+  // user sees). `nameOf` extracts the localized name for one entry.
+  function sortByFamily(list, nameOf) {
+    return list.slice().sort(function (a, b) {
+      var d = familyRank(a.key) - familyRank(b.key);
+      if (d) return d;
+      return String(nameOf(a)).localeCompare(String(nameOf(b)));
+    });
+  }
+  // Keep AVAIL itself in family order (by English name, a stable ordering
+  // independent of the interface language) so every enumeration that walks it —
+  // including the translation lines under a card — is grouped consistently.
+  AVAIL = sortByFamily(AVAIL, function (l) { return (l.names && l.names.en) || l.endo; });
+  AVAIL_SET = {};
+  AVAIL.forEach(function (l) { AVAIL_SET[l.key] = true; });
+
   // Name of a language rendered in the current interface language, with an
   // English then endonym fallback.
   function localName(l, uiKey) {
@@ -334,11 +373,13 @@
     return n || l.endo;
   }
 
-  // Two independent language sets:
-  //  titleLangs — which languages may appear as the big prompt (title) word.
-  //  showLangs  — which languages appear as translations / example lines after reveal.
-  var titleLangs = loadLangSet(TL_KEY);
+  // One unified language set. The languages you turn on are BOTH the ones that
+  // can appear as the big prompt word (front of the card) AND the ones whose
+  // translations + example lines appear after you reveal. `titleLangs` and
+  // `showLangs` are kept as aliases of the same object so the rest of the code
+  // (front-key picking vs. answer rendering) reads naturally.
   var showLangs = loadLangSet(SL_KEY);
+  var titleLangs = showLangs;
   // The target is the language being learned, so it is always shown as the answer.
   showLangs[LEARN] = true;
   // The order in which "show" languages were turned on. The interface language
@@ -608,6 +649,37 @@
       "el": "Απάντηση",
       "ro": "Răspuns",
       "sq": "Përgjigje"
+    },
+    langs: {
+      "de": "Sprachen",
+      "en": "Languages",
+      "ru": "Языки",
+      "vi": "Ngôn ngữ",
+      "fa": "زبان‌ها",
+      "uk": "Мови",
+      "th": "ภาษา",
+      "zh": "语言",
+      "ms": "Bahasa",
+      "tr": "Diller",
+      "pl": "Języki",
+      "sw": "Lugha",
+      "am": "ቋንቋዎች",
+      "hi": "भाषाएँ",
+      "ur": "زبانیں",
+      "ar_eg": "اللغات",
+      "ar_lb": "اللغات",
+      "ar_sy": "اللغات",
+      "es_mx": "Idiomas",
+      "es_ar": "Idiomas",
+      "ca": "Llengües",
+      "it": "Lingue",
+      "fr": "Langues",
+      "hr": "Jezici",
+      "be": "Мовы",
+      "sr": "Језици",
+      "el": "Γλώσσες",
+      "ro": "Limbi",
+      "sq": "Gjuhët"
     },
     reveal: {
       "de": "Tippe die Karte oder drücke eine beliebige Taste zum Aufdecken",
@@ -1798,7 +1870,7 @@
     elNavCards.textContent = tr(UISTR.cards, k);
     elNavGrammar.textContent = tr(UISTR.grammar, k);
     if (elLblAsk) { elLblAsk.textContent = tr(UISTR.ask, k); elLblAsk.setAttribute("title", tr(UISTR.askTip, k)); }
-    if (elLblShow) { elLblShow.textContent = tr(UISTR.show, k); elLblShow.setAttribute("title", trTarget(UISTR.showTip, k)); }
+    if (elLblShow) { elLblShow.textContent = tr(UISTR.langs, k); elLblShow.setAttribute("title", trTarget(UISTR.showTip, k)); }
     if (elLevelNav) elLevelNav.setAttribute("title", tr(UISTR.levelTip, k));
     if (elRevealHint) {
       elRevealHint.textContent = tr(UISTR.reveal, k);
@@ -1818,9 +1890,8 @@
       var allOpt = elSessionSize.querySelector('option[value="all"]');
       if (allOpt) allOpt.textContent = tr(UISTR.sessionAll, k);
     }
-    // The dropdown option lists carry names in the interface language, so
-    // rebuild them whenever that language changes.
-    renderPanel("title");
+    // The dropdown option list carries names in the interface language, so
+    // rebuild it whenever that language changes.
     renderPanel("show");
     renderTopicPanel();
     updateTopicFace();
@@ -2106,7 +2177,7 @@
   }
 
   function anyDropOpen() {
-    return !elAskPanel.hidden || !elShowPanel.hidden;
+    return !elShowPanel.hidden;
   }
 
   // (Re)build a dropdown's option list in the current interface language.
@@ -2115,7 +2186,7 @@
     var set = setForName(name);
     var uiK = uiLangKey();
     panel.innerHTML = "";
-    AVAIL.forEach(function (l) {
+    sortByFamily(AVAIL, function (l) { return localName(l, uiK); }).forEach(function (l) {
       var on = !!set[l.key];
       var locked = name === "show" && l.key === LEARN;
       var opt = document.createElement("button");
@@ -2178,7 +2249,7 @@
   }
 
   function closeAllPanels() {
-    openPanel("title", false); openPanel("show", false);
+    openPanel("show", false);
     var lp = document.getElementById("learnPanel"), lb = document.getElementById("learnDropBtn");
     if (lp) lp.hidden = true;
     if (lb) { lb.setAttribute("aria-expanded", "false"); lb.classList.remove("open"); }
@@ -2252,7 +2323,7 @@
   }
 
   function initLangDrops() {
-    ["title", "show"].forEach(function (name) {
+    ["show"].forEach(function (name) {
       renderPanel(name);
       updateDropFace(name);
       btnFor(name).addEventListener("click", function (e) {
@@ -2286,12 +2357,14 @@
   // re-pick the title if the current one was just switched off; the "show" row
   // just needs a repaint so translations/example lines update.
   function applyFlagChange(name) {
-    // The interface language follows the first "show" language.
+    // The interface language follows the first enabled language.
     if (name === "show") applyUiLang();
     // In grammar view the flags choose explanation / example languages.
     if (currentView === "grammar") { renderGrammar(); return; }
     if (peekPos !== null || deck.length === 0) return;
-    if (name === "title" && !titleLangs[currentFrontKey]) {
+    // If the language currently on the front of the card was just turned off,
+    // re-pick a front from those still enabled.
+    if (!titleLangs[currentFrontKey]) {
       var allowed = allowedTitleLangs();
       currentFrontKey = allowed[Math.floor(Math.random() * allowed.length)].key;
     }
@@ -2482,20 +2555,22 @@
     if (!btn || !panel) return;
     if (flag) flag.textContent = TARGET.flag;
     if (face) face.textContent = TARGET.endo;
-    // One option per learnable target (single-select). Picking a different one
-    // persists the choice and reloads, so all defaults recompute cleanly.
+    // One option per learnable target (single-select, so no checkboxes — the
+    // active target is marked with a trailing check). Ordered by language
+    // family, then alphabetically. Picking a different one persists the choice
+    // and reloads, so all defaults recompute cleanly.
     panel.innerHTML = "";
-    TARGETS.forEach(function (t) {
+    sortByFamily(TARGETS, function (t) { return t.endo; }).forEach(function (t) {
       var on = t.key === LEARN;
       var opt = document.createElement("button");
       opt.type = "button";
-      opt.className = "ldOpt" + (on ? "" : " off");
+      opt.className = "ldOpt ldSingle" + (on ? " current" : " off");
       opt.setAttribute("role", "option");
       opt.setAttribute("aria-checked", on ? "true" : "false");
       opt.innerHTML =
-        '<span class="ldChk" aria-hidden="true">' + (on ? "✓" : "") + "</span>" +
         '<span class="ldFlag" aria-hidden="true">' + t.flag + "</span>" +
-        '<span class="ldNames"><span class="ldEndo" dir="auto">' + escapeHtml(t.endo) + "</span></span>";
+        '<span class="ldNames"><span class="ldEndo" dir="auto">' + escapeHtml(t.endo) + "</span></span>" +
+        (on ? '<span class="ldSel" aria-hidden="true">✓</span>' : "");
       opt.addEventListener("click", function (e) {
         e.stopPropagation();
         if (t.key === LEARN) { closeAllPanels(); return; }

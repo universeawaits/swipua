@@ -60,21 +60,13 @@
       <div class="langDropPanel" id="topicPanel" role="listbox" aria-multiselectable="true" aria-label="Topics" hidden></div>
     </div>
     <div id="langDrops">
-      <div class="langDrop" data-set="title">
-        <button type="button" class="langDropBtn" id="askDropBtn" aria-haspopup="listbox" aria-expanded="false">
-          <span class="ldLabel" id="lblAsk" title="Which languages can appear as the prompt word (before you reveal)">ask</span>
-          <span class="ldFlags" id="askFlags" aria-hidden="true"></span>
-          <span class="ldCaret" aria-hidden="true">▾</span>
-        </button>
-        <div class="langDropPanel" id="askPanel" role="listbox" aria-multiselectable="true" aria-label="Prompt languages" hidden></div>
-      </div>
       <div class="langDrop" data-set="show">
         <button type="button" class="langDropBtn" id="showDropBtn" aria-haspopup="listbox" aria-expanded="false">
-          <span class="ldLabel" id="lblShow" title="Which translations appear after you reveal the card">show</span>
+          <span class="ldLabel" id="lblShow" title="Languages shown as prompts and as translations">languages</span>
           <span class="ldFlags" id="showFlags" aria-hidden="true"></span>
           <span class="ldCaret" aria-hidden="true">▾</span>
         </button>
-        <div class="langDropPanel" id="showPanel" role="listbox" aria-multiselectable="true" aria-label="Answer languages" hidden></div>
+        <div class="langDropPanel" id="showPanel" role="listbox" aria-multiselectable="true" aria-label="Languages" hidden></div>
       </div>
     </div>
   </div>
@@ -128,7 +120,7 @@
 // its own vocabulary and grammar file; only the selected one is fetched.
 (function () {
   var t = "de";
-  try { var v = localStorage.getItem("beeins_learn"); if (v === "de" || v === "tr" || v === "es_ar" || v === "fr" || v === "ru" || v === "it" || v === "uk" || v === "hr") t = v; } catch (e) {}
+  try { var v = localStorage.getItem("beeins_learn"); if (v === "de" || v === "tr" || v === "es_ar" || v === "fr" || v === "ru" || v === "it" || v === "uk" || v === "hr" || v === "be") t = v; } catch (e) {}
   var byTarget = {
     tr:    ["data-tr.js", "grammar-tr.js"],
     es_ar: ["data-es.js", "grammar-es.js"],
@@ -136,7 +128,8 @@
     ru:    ["data-ru.js", "grammar-ru.js"],
     it:    ["data-it.js", "grammar-it.js"],
     uk:    ["data-uk.js", "grammar-uk.js"],
-    hr:    ["data-hr.js", "grammar-hr.js"]
+    hr:    ["data-hr.js", "grammar-hr.js"],
+    be:    ["data-be.js", "grammar-be.js"]
   };
   // Load corpus → grammar → topics → app sequentially but WITHOUT blocking the
   // first paint (document.write would stall rendering until the big corpus file

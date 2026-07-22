@@ -54,10 +54,7 @@ When learning **Turkish**, the study-from languages are currently English, Russi
 
 When learning **Argentinian Spanish**, the study-from languages are currently Russian, English, German, Turkish, Ukrainian, Persian, and French. Every grammar explanation flags the mistakes speakers of those languages typically make, and the Rioplatense features (voseo, ustedes, sheísmo, the preterite preference) are called out in each relevant topic. The certification landscape is Argentina's own **CELU** (a usage-based, oral-plus-written proficiency exam) alongside the pan-Hispanic **DELE** and **SIELE**; the vocabulary and per-level grammar follow the Instituto Cervantes' Plan Curricular (PCIC) A1–B1 inventories, systematically overridden with Argentine usage.
 
-Two simple selectors let you tune this:
-
-- **Ask** — which language(s) a word can be shown in *before* you flip the card (great for testing recognition in more than one direction).
-- **Show** — which language(s) the answer and translations appear in *after* you flip. The first language you turn on here also becomes the language of the whole interface.
+One **languages** selector tunes this: pick the languages you care about and each one serves both roles — it can appear as the prompt word *before* you flip the card (testing recognition in more than one direction) and its translation and example line appear *after* you flip. The first language you turn on also becomes the language of the whole interface. The list is grouped by language family and ordered alphabetically within each family.
 
 On your very first visit only the language you're learning and your device's own language are turned on, so you start with a clean two-language view instead of every language at once — add more whenever you like.
 

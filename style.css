@@ -224,6 +224,17 @@ body {
   border-color: var(--accent);
 }
 
+/* Single-select rows (the learn-language selector) carry no checkbox — the
+   active target is shown with a trailing check and a subtle highlight. */
+.ldSingle { padding-left: 11px; }
+.ldSingle.current { background: var(--bg); }
+.ldSel {
+  flex-shrink: 0;
+  margin-left: auto;
+  color: var(--accent);
+  font-weight: 700;
+}
+
 .ldFlag { flex-shrink: 0; font-size: 1.2rem; line-height: 1; }
 
 .ldNames {

@@ -663,7 +663,7 @@
     },
     langs: {
       "de": "Sprachen",
-      "en": "Languages",
+      "en": "From",
       "ru": "Языки",
       "vi": "Ngôn ngữ",
       "fa": "زبان‌ها",

@@ -38,6 +38,42 @@
   --border: #333436;
 }
 
+/* Flower colour themes. Each sets the accent for the light base and, via the
+   two dark selectors (explicit toggle + system-dark), for the dark base. */
+:root[data-flower="rose"]      { --accent: #d6336c; }
+:root[data-flower="sunflower"] { --accent: #d9a406; }
+:root[data-flower="tulip"]     { --accent: #c2255c; }
+:root[data-flower="daisy"]     { --accent: #74b816; }
+:root[data-flower="blossom"]   { --accent: #e64980; }
+:root[data-flower="hibiscus"]  { --accent: #e8590c; }
+:root[data-flower="lotus"]     { --accent: #0ca678; }
+:root[data-flower="bouquet"]   { --accent: #7048e8; }
+:root[data-flower="marigold"]  { --accent: #f08c00; }
+:root[data-flower="iris"]      { --accent: #4263eb; }
+
+:root[data-theme="dark"][data-flower="rose"]      { --accent: #ff8787; }
+:root[data-theme="dark"][data-flower="sunflower"] { --accent: #ffd43b; }
+:root[data-theme="dark"][data-flower="tulip"]     { --accent: #f783ac; }
+:root[data-theme="dark"][data-flower="daisy"]     { --accent: #a9e34b; }
+:root[data-theme="dark"][data-flower="blossom"]   { --accent: #fcc2d7; }
+:root[data-theme="dark"][data-flower="hibiscus"]  { --accent: #ffa94d; }
+:root[data-theme="dark"][data-flower="lotus"]     { --accent: #63e6be; }
+:root[data-theme="dark"][data-flower="bouquet"]   { --accent: #b197fc; }
+:root[data-theme="dark"][data-flower="marigold"]  { --accent: #ffc078; }
+:root[data-theme="dark"][data-flower="iris"]      { --accent: #91a7ff; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme])[data-flower="rose"]      { --accent: #ff8787; }
+  :root:not([data-theme])[data-flower="sunflower"] { --accent: #ffd43b; }
+  :root:not([data-theme])[data-flower="tulip"]     { --accent: #f783ac; }
+  :root:not([data-theme])[data-flower="daisy"]     { --accent: #a9e34b; }
+  :root:not([data-theme])[data-flower="blossom"]   { --accent: #fcc2d7; }
+  :root:not([data-theme])[data-flower="hibiscus"]  { --accent: #ffa94d; }
+  :root:not([data-theme])[data-flower="lotus"]     { --accent: #63e6be; }
+  :root:not([data-theme])[data-flower="bouquet"]   { --accent: #b197fc; }
+  :root:not([data-theme])[data-flower="marigold"]  { --accent: #ffc078; }
+  :root:not([data-theme])[data-flower="iris"]      { --accent: #91a7ff; }
+}
+
 * { box-sizing: border-box; }
 
 html, body {
@@ -236,6 +272,11 @@ body {
 }
 
 .ldFlag { flex-shrink: 0; font-size: 1.2rem; line-height: 1; }
+
+/* Emoji-only single-select rows (the colour-theme picker). */
+.ldEmoji .ldFlag { font-size: 1.35rem; }
+#sessionPanel, #themePanel { min-width: 92px; }
+#sessionFace { font-variant-numeric: tabular-nums; }
 
 .ldNames {
   display: flex;

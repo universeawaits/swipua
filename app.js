@@ -420,7 +420,14 @@
   var elBtnReload = document.getElementById("btnReload");
   var elThemeToggle = document.getElementById("themeToggle");
   var elResetBtn = document.getElementById("resetBtn");
-  var elSessionSize = document.getElementById("sessionSize");
+  var elSessionDrop = document.getElementById("sessionDrop");
+  var elSessionBtn = document.getElementById("sessionDropBtn");
+  var elSessionPanel = document.getElementById("sessionPanel");
+  var elSessionFace = document.getElementById("sessionFace");
+  var elThemeDrop = document.getElementById("themeDrop");
+  var elThemeBtn = document.getElementById("themeDropBtn");
+  var elThemePanel = document.getElementById("themePanel");
+  var elThemeFace = document.getElementById("themeFace");
   var elAskPanel = document.getElementById("askPanel");
   var elShowPanel = document.getElementById("showPanel");
   var elAskBtn = document.getElementById("askDropBtn");
@@ -1887,12 +1894,11 @@
     if (elStatsTitle) elStatsTitle.textContent = tr(UISTR.done, k);
     if (elBtnReload) elBtnReload.textContent = tr(UISTR.reload, k);
     if (elResetBtn) elResetBtn.setAttribute("title", tr(UISTR.resetTip, k));
-    if (elSessionSize) {
+    if (elSessionBtn) {
       var sTip = tr(UISTR.sessionTip, k);
-      elSessionSize.setAttribute("title", sTip);
-      elSessionSize.setAttribute("aria-label", sTip);
-      var allOpt = elSessionSize.querySelector('option[value="all"]');
-      if (allOpt) allOpt.textContent = tr(UISTR.sessionAll, k);
+      elSessionBtn.setAttribute("title", sTip);
+      elSessionBtn.setAttribute("aria-label", sTip);
+      renderSessionPanel();
     }
     // The dropdown option list carries names in the interface language, so
     // rebuild it whenever that language changes.
@@ -2116,7 +2122,7 @@
     // right, pinning it to the far edge.
     elProgress.classList.toggle("hidden", grammar);
     elResetBtn.classList.toggle("hidden", grammar);
-    if (elSessionSize) elSessionSize.classList.toggle("hidden", grammar);
+    if (elSessionDrop) elSessionDrop.classList.toggle("hidden", grammar);
     if (grammar) renderGrammar();
   }
 
@@ -2190,7 +2196,11 @@
     var set = setForName(name);
     var uiK = uiLangKey();
     panel.innerHTML = "";
-    sortByFamily(AVAIL, function (l) { return localName(l, uiK); }).forEach(function (l) {
+    var list = sortByFamily(AVAIL, function (l) { return localName(l, uiK); });
+    // The target is always shown as the answer, so there's no point listing it
+    // as a toggleable option — drop it from the "languages" dropdown.
+    if (name === "show") list = list.filter(function (l) { return l.key !== LEARN; });
+    list.forEach(function (l) {
       var on = !!set[l.key];
       var locked = name === "show" && l.key === LEARN;
       var opt = document.createElement("button");
@@ -2241,7 +2251,7 @@
   // Refresh the flags shown on a dropdown's button face.
   function updateDropFace(name) {
     var set = setForName(name);
-    var flags = AVAIL.filter(function (l) { return set[l.key]; }).map(function (l) { return l.flag; });
+    var flags = AVAIL.filter(function (l) { return set[l.key] && !(name === "show" && l.key === LEARN); }).map(function (l) { return l.flag; });
     flagsFor(name).textContent = flags.join(" ");
   }
 
@@ -2259,6 +2269,10 @@
     if (lb) { lb.setAttribute("aria-expanded", "false"); lb.classList.remove("open"); }
     if (elTopicPanel) elTopicPanel.hidden = true;
     if (elTopicBtn) { elTopicBtn.setAttribute("aria-expanded", "false"); elTopicBtn.classList.remove("open"); }
+    if (elSessionPanel) elSessionPanel.hidden = true;
+    if (elSessionBtn) { elSessionBtn.setAttribute("aria-expanded", "false"); elSessionBtn.classList.remove("open"); }
+    if (elThemePanel) elThemePanel.hidden = true;
+    if (elThemeBtn) { elThemeBtn.setAttribute("aria-expanded", "false"); elThemeBtn.classList.remove("open"); }
   }
 
   // (Re)build the topics filter panel in the current interface language: an
@@ -2390,11 +2404,8 @@
     b.addEventListener("click", function () { setLevel(b.getAttribute("data-level")); });
   });
 
-  // Reset: clear saved progress and reshuffle. Guarded by a confirm so a stray
-  // tap can't wipe a long session. The stats-screen button does the same.
-  function confirmReset() {
-    if (window.confirm(tr(UISTR.resetConfirm, uiLangKey()))) resetSession();
-  }
+  // Reset: clear saved progress and reshuffle immediately (no confirm prompt).
+  function confirmReset() { resetSession(); }
   elResetBtn.addEventListener("click", confirmReset);
   elBtnReload.addEventListener("click", confirmReset);
 
@@ -2406,12 +2417,88 @@
     if (nv === sessionSize) return;
     sessionSize = nv;
     saveSessionSize();
+    renderSessionPanel();
     resetSession();
   }
+  // Cards-per-session is a custom single-select dropdown (styled like the other
+  // dropdowns) offering 10/25/50/100/All.
+  function renderSessionPanel() {
+    if (!elSessionPanel) return;
+    var k = uiLangKey();
+    var opts = [{ v: "10", t: "10" }, { v: "25", t: "25" }, { v: "50", t: "50" }, { v: "100", t: "100" }, { v: "all", t: tr(UISTR.sessionAll, k) }];
+    elSessionPanel.innerHTML = "";
+    opts.forEach(function (o) {
+      var on = String(sessionSize) === o.v;
+      var b = document.createElement("button");
+      b.type = "button";
+      b.className = "ldOpt ldSingle" + (on ? " current" : " off");
+      b.setAttribute("role", "option");
+      b.setAttribute("aria-checked", on ? "true" : "false");
+      b.innerHTML = '<span class="ldEndo">' + escapeHtml(o.t) + "</span>" + (on ? '<span class="ldSel" aria-hidden="true">✓</span>' : "");
+      b.addEventListener("click", function (e) { e.stopPropagation(); closeAllPanels(); setSessionSize(o.v); });
+      elSessionPanel.appendChild(b);
+    });
+    if (elSessionFace) elSessionFace.textContent = sessionSize === "all" ? tr(UISTR.sessionAll, k) : String(sessionSize);
+  }
   function initSessionSize() {
-    if (!elSessionSize) return;
-    elSessionSize.value = String(sessionSize);
-    elSessionSize.addEventListener("change", function () { setSessionSize(elSessionSize.value); });
+    if (!elSessionBtn || !elSessionPanel) return;
+    renderSessionPanel();
+    elSessionBtn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      var willOpen = elSessionPanel.hidden;
+      closeAllPanels();
+      elSessionPanel.hidden = !willOpen;
+      elSessionBtn.setAttribute("aria-expanded", willOpen ? "true" : "false");
+      elSessionBtn.classList.toggle("open", willOpen);
+    });
+    elSessionPanel.addEventListener("click", function (e) { e.stopPropagation(); });
+  }
+
+  // Colour themes: ten flower palettes (plus the default leaf), each with a
+  // light and dark version. The flower sets `data-flower` on <html>; the
+  // separate light/dark toggle sets `data-theme`. Both persist.
+  var THEMES = [
+    { key: "", emoji: "🌿" }, { key: "rose", emoji: "🌹" }, { key: "sunflower", emoji: "🌻" },
+    { key: "tulip", emoji: "🌷" }, { key: "daisy", emoji: "🌼" }, { key: "blossom", emoji: "🌸" },
+    { key: "hibiscus", emoji: "🌺" }, { key: "lotus", emoji: "🪷" }, { key: "bouquet", emoji: "💐" },
+    { key: "marigold", emoji: "🏵️" }, { key: "iris", emoji: "💮" }
+  ];
+  function currentFlower() { try { return window.localStorage.getItem("beeins_flower") || ""; } catch (e) { return ""; } }
+  function applyFlower(key) {
+    if (key) document.documentElement.setAttribute("data-flower", key);
+    else document.documentElement.removeAttribute("data-flower");
+    try { if (key) window.localStorage.setItem("beeins_flower", key); else window.localStorage.removeItem("beeins_flower"); } catch (e) {}
+  }
+  function renderThemePanel() {
+    if (!elThemePanel) return;
+    var cur = currentFlower();
+    elThemePanel.innerHTML = "";
+    THEMES.forEach(function (t) {
+      var on = t.key === cur;
+      var b = document.createElement("button");
+      b.type = "button";
+      b.className = "ldOpt ldSingle ldEmoji" + (on ? " current" : " off");
+      b.setAttribute("role", "option");
+      b.setAttribute("aria-checked", on ? "true" : "false");
+      b.innerHTML = '<span class="ldFlag" aria-hidden="true">' + t.emoji + "</span>" + (on ? '<span class="ldSel" aria-hidden="true">✓</span>' : "");
+      b.addEventListener("click", function (e) { e.stopPropagation(); closeAllPanels(); applyFlower(t.key); renderThemePanel(); });
+      elThemePanel.appendChild(b);
+    });
+    var f = null; THEMES.forEach(function (x) { if (x.key === cur) f = x; });
+    if (elThemeFace) elThemeFace.textContent = f ? f.emoji : "🌿";
+  }
+  function initThemePicker() {
+    if (!elThemeBtn || !elThemePanel) return;
+    renderThemePanel();
+    elThemeBtn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      var willOpen = elThemePanel.hidden;
+      closeAllPanels();
+      elThemePanel.hidden = !willOpen;
+      elThemeBtn.setAttribute("aria-expanded", willOpen ? "true" : "false");
+      elThemeBtn.classList.toggle("open", willOpen);
+    });
+    elThemePanel.addEventListener("click", function (e) { e.stopPropagation(); });
   }
 
   // Backstop saves for when a render endpoint didn't fire (tab hidden/closed).
@@ -2609,6 +2696,7 @@
   applyGrammarAvailability();
   initLangDrops();
   initTheme();
+  initThemePicker();
   initSessionSize();
 
   // Restore a saved session if there is one; otherwise the fresh deck built at

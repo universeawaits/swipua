@@ -10,7 +10,7 @@
 <script type="importmap">
 { "imports": { "onnxruntime-web": "https://esm.sh/onnxruntime-web@1.18.0" } }
 </script>
-<script>try{var t=localStorage.getItem('beeins_theme')||localStorage.getItem('swipua_theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+<script>try{var t=localStorage.getItem('beeins_theme')||localStorage.getItem('swipua_theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t);var fl=localStorage.getItem('beeins_flower');if(fl)document.documentElement.setAttribute('data-flower',fl);}catch(e){}</script>
 </head>
 <body>
 
@@ -51,14 +51,6 @@
       <button type="button" class="levelBtn" data-level="A2">A2</button>
       <button type="button" class="levelBtn" data-level="B1">B1</button>
     </nav>
-    <div class="langDrop" id="topicDrop" data-set="topics">
-      <button type="button" class="langDropBtn" id="topicDropBtn" aria-haspopup="listbox" aria-expanded="false" title="Filter the deck by topic">
-        <span class="ldLabel" id="lblTopics">topics</span>
-        <span class="ldFlags" id="topicFace" aria-hidden="true"></span>
-        <span class="ldCaret" aria-hidden="true">▾</span>
-      </button>
-      <div class="langDropPanel" id="topicPanel" role="listbox" aria-multiselectable="true" aria-label="Topics" hidden></div>
-    </div>
     <div id="langDrops">
       <div class="langDrop" data-set="show">
         <button type="button" class="langDropBtn" id="showDropBtn" aria-haspopup="listbox" aria-expanded="false">
@@ -69,15 +61,30 @@
         <div class="langDropPanel" id="showPanel" role="listbox" aria-multiselectable="true" aria-label="Languages" hidden></div>
       </div>
     </div>
+    <div class="langDrop" id="topicDrop" data-set="topics">
+      <button type="button" class="langDropBtn" id="topicDropBtn" aria-haspopup="listbox" aria-expanded="false" title="Filter the deck by topic">
+        <span class="ldLabel" id="lblTopics">topics</span>
+        <span class="ldFlags" id="topicFace" aria-hidden="true"></span>
+        <span class="ldCaret" aria-hidden="true">▾</span>
+      </button>
+      <div class="langDropPanel" id="topicPanel" role="listbox" aria-multiselectable="true" aria-label="Topics" hidden></div>
+    </div>
   </div>
   <div id="topright">
-    <select id="sessionSize" title="Cards per session" aria-label="Cards per session">
-      <option value="10">10</option>
-      <option value="25">25</option>
-      <option value="50">50</option>
-      <option value="100">100</option>
-      <option value="all">All</option>
-    </select>
+    <div class="langDrop" id="sessionDrop">
+      <button type="button" class="langDropBtn" id="sessionDropBtn" aria-haspopup="listbox" aria-expanded="false" title="Cards per session" aria-label="Cards per session">
+        <span class="ldFlags" id="sessionFace">25</span>
+        <span class="ldCaret" aria-hidden="true">▾</span>
+      </button>
+      <div class="langDropPanel" id="sessionPanel" role="listbox" aria-label="Cards per session" hidden></div>
+    </div>
+    <div class="langDrop" id="themeDrop">
+      <button type="button" class="langDropBtn" id="themeDropBtn" aria-haspopup="listbox" aria-expanded="false" title="Colour theme" aria-label="Colour theme">
+        <span class="ldFlags" id="themeFace">🌿</span>
+        <span class="ldCaret" aria-hidden="true">▾</span>
+      </button>
+      <div class="langDropPanel" id="themePanel" role="listbox" aria-label="Colour theme" hidden></div>
+    </div>
     <button type="button" id="themeToggle" title="Switch light / dark theme" aria-label="Switch light or dark theme">🌙</button>
     <button type="button" id="resetBtn" title="Reset progress" aria-label="Reset progress">↺</button>
     <div id="progress">0 / 0</div>

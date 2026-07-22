@@ -71,3 +71,10 @@ Right-to-left languages (Persian, Arabic, Urdu) display correctly.
 
 - **Light and dark themes**, with a one-tap toggle.
 - **Nothing to sign up for** — your progress lives on your own device.
+
+## Support & follow
+
+If beeins is useful to you, you can follow along or chip in — it helps keep the project going:
+
+- **Instagram** — [@universeawaits](https://instagram.com/universeawaits)
+- **Buy me a coffee** — [buymeacoffee.com/universeawaits](https://buymeacoffee.com/universeawaits)

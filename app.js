@@ -268,7 +268,9 @@
     { key: "fa",    flag: "🇮🇷", label: "FA",    endo: "فارسی",         names: { de: "Persisch", en: "Persian", ru: "Персидский", vi: "Tiếng Ba Tư", fa: "فارسی" } },
     { key: "uk",    flag: "🇺🇦", label: "UK",    endo: "Українська",    names: { de: "Ukrainisch", en: "Ukrainian", ru: "Украинский", vi: "Tiếng Ukraina", fa: "اوکراینی" } },
     { key: "th",    flag: "🇹🇭", label: "TH",    endo: "ไทย",           names: { de: "Thailändisch", en: "Thai", ru: "Тайский", vi: "Tiếng Thái", fa: "تایلندی" } },
-    { key: "zh",    flag: "🇨🇳", label: "ZH",    endo: "中文",           names: { de: "Chinesisch", en: "Chinese", ru: "Китайский", vi: "Tiếng Trung", fa: "چینی" } },
+    { key: "zh",    flag: "🇨🇳", label: "ZH",    endo: "中文",           names: { de: "Chinesisch", en: "Chinese", ru: "Китайский", tr: "Çince", it: "Cinese", es_ar: "Chino", vi: "Tiếng Trung", fa: "چینی" } },
+    { key: "ja",    flag: "🇯🇵", label: "JA",    endo: "日本語",         names: { de: "Japanisch", en: "Japanese", ru: "Японский", tr: "Japonca", it: "Giapponese", es_ar: "Japonés", vi: "Tiếng Nhật", fa: "ژاپنی" } },
+    { key: "ko",    flag: "🇰🇷", label: "KO",    endo: "한국어",         names: { de: "Koreanisch", en: "Korean", ru: "Корейский", tr: "Korece", it: "Coreano", es_ar: "Coreano", vi: "Tiếng Hàn", fa: "کره‌ای" } },
     { key: "ms",    flag: "🇲🇾", label: "MS",    endo: "Bahasa Melayu", names: { de: "Malaiisch", en: "Malay", ru: "Малайский", vi: "Tiếng Mã Lai", fa: "مالایی" } },
     { key: "tr",    flag: "🇹🇷", label: "TR",    endo: "Türkçe",        names: { de: "Türkisch", en: "Turkish", ru: "Турецкий", vi: "Tiếng Thổ Nhĩ Kỳ", fa: "ترکی" } },
     { key: "pl",    flag: "🇵🇱", label: "PL",    endo: "Polski",        names: { de: "Polnisch", en: "Polish", ru: "Польский", vi: "Tiếng Ba Lan", fa: "لهستانی" } },
@@ -397,6 +399,7 @@
   var elStats = document.getElementById("stats");
   var elCard = document.getElementById("card");
   var elWord = document.getElementById("word");
+  var elWordReading = document.getElementById("wordReading");
   var elTranslations = document.getElementById("translations");
   var elExamples = document.getElementById("examples");
   var elProgress = document.getElementById("progress");
@@ -1767,6 +1770,20 @@
     // Speak the title when it is the target word (the language being learned).
     if (SPEAK_OK && frontKey === LEARN) elWord.appendChild(makeSpeakBtn(wordVal(w, LEARN)));
 
+    // Pronunciation aid (pinyin / romaji / romanization). Corpora for logographic
+    // or non-Latin targets carry a `reading`; scripts a beginner can already read
+    // (Latin, Cyrillic) omit it. Show it under the headword only while the title
+    // is the target script — a translation prompt needs no reading.
+    if (elWordReading) {
+      if (w.reading && frontKey === LEARN) {
+        elWordReading.textContent = w.reading;
+        elWordReading.style.display = "";
+      } else {
+        elWordReading.textContent = "";
+        elWordReading.style.display = "none";
+      }
+    }
+
     // The target (the word being learned) goes first on its own highlighted
     // row; every other translation wraps onto the row below it.
     elTranslations.innerHTML = "";
@@ -1785,6 +1802,9 @@
       span.innerHTML = prefix + "<bdi>" + escapeHtml(wordVal(w, l.key)) + "</bdi>";
       if (l.key === LEARN) {
         span.className = "deBadge";
+        // Attach the reading (pinyin/romaji/…) after the target word so it's
+        // there when the prompt was a translation and the script is revealed.
+        if (w.reading) span.innerHTML += ' <span class="deReading">' + escapeHtml(w.reading) + "</span>";
         // The target is the word being learned — let it be heard from here too.
         if (SPEAK_OK) span.appendChild(makeSpeakBtn(wordVal(w, LEARN)));
         deRow.appendChild(span);
@@ -1826,7 +1846,13 @@
       div.className = "example";
       div.innerHTML = exLangs.map(function (l) {
         var cls = l.key + (l.key === LEARN ? " exLearn" : "");
-        return '<div class="' + cls + '" dir="auto">' + escapeHtml(exVal(ex, l.key)) + "</div>";
+        var val = escapeHtml(exVal(ex, l.key));
+        // The target example line carries its own reading when the corpus supplies
+        // one (per-sentence pinyin/romaji), shown muted beneath the sentence.
+        if (l.key === LEARN && ex.reading) {
+          val += '<div class="exReading">' + escapeHtml(ex.reading) + "</div>";
+        }
+        return '<div class="' + cls + '" dir="auto">' + val + "</div>";
       }).join("");
       // Speak the target-language example sentence.
       var learnLine = div.querySelector(".exLearn");
@@ -2536,6 +2562,14 @@
   elNavGrammar.addEventListener("click", function () { showView("grammar"); setHash("grammar"); });
   Array.prototype.forEach.call(elLevelNav.querySelectorAll(".levelBtn"), function (b) {
     b.addEventListener("click", function () { setLevel(b.getAttribute("data-level")); });
+    // Some targets label the three CEFR bands with their own proficiency ladder
+    // (JLPT N5-N3, HSK, TOPIK) — the internal ids stay A1/A2/B1, only captions
+    // change. Keep the CEFR band as a tooltip so the equivalence is still there.
+    if (TARGET.levelLabels) {
+      var id = b.getAttribute("data-level");
+      var lbl = TARGET.levelLabels[id];
+      if (lbl) { b.textContent = lbl; b.title = id; }
+    }
   });
 
   // Reset: clear saved progress and reshuffle immediately (no confirm prompt).

@@ -557,6 +557,33 @@ body {
   word-break: break-word;
 }
 
+/* Pronunciation aid under a logographic / non-Latin headword (pinyin, romaji,
+   romanization). Sits tight below the word and pushes the 18px gap down to it. */
+#wordReading {
+  text-align: center;
+  margin-top: -12px;
+  margin-bottom: 18px;
+  color: var(--muted);
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+}
+#wordReading:empty { display: none; }
+
+/* The reading tucked after the target word on its translation row, and under a
+   target example sentence — both muted, smaller than the script they gloss. */
+.deReading {
+  color: var(--muted);
+  font-size: 0.85em;
+  font-weight: 400;
+  margin-inline-start: 0.35em;
+}
+.example .exReading {
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 400;
+  margin-top: 2px;
+}
+
 #translations {
   display: flex;
   flex-direction: column;

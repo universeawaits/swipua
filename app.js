@@ -2230,7 +2230,9 @@
     var set = setForName(name);
     // The target is always shown as the answer — it can't be turned off.
     if (name === "show" && key === LEARN) { shake(opt); return; }
-    var enabled = AVAIL.filter(function (l) { return set[l.key]; }).length;
+    // Count only selectable languages — the target (LEARN) is force-on and
+    // hidden from the "show" list, so it must not prop up the minimum.
+    var enabled = AVAIL.filter(function (l) { return set[l.key] && !(name === "show" && l.key === LEARN); }).length;
     // Keep at least one language enabled in each set.
     if (set[key] && enabled === 1) { shake(opt); return; }
     set[key] = !set[key];

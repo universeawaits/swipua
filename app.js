@@ -75,7 +75,12 @@
     // read the kanji-kana mix.
     { key: "ja",    flag: "🇯🇵", endo: "日本語",                tts: "ja-JP", level: "level", grammar: true,
       allow: ["ru", "de", "en", "tr", "it", "es_ar"],
-      levelLabels: { A1: "N5", A2: "N4", B1: "N3" } }
+      levelLabels: { A1: "N5", A2: "N4", B1: "N3" } },
+    // Korean — TOPIK levels 1-3, the authentic A1-B1 span. Every headword and
+    // example carries Revised Romanisation in `reading`.
+    { key: "ko",    flag: "🇰🇷", endo: "한국어",                tts: "ko-KR", level: "level", grammar: true,
+      allow: ["ru", "de", "en", "tr", "it", "es_ar"],
+      levelLabels: { A1: "TOPIK 1", A2: "TOPIK 2", B1: "TOPIK 3" } }
   ];
   var TARGET_BY_KEY = {};
   TARGETS.forEach(function (t) { TARGET_BY_KEY[t.key] = t; });

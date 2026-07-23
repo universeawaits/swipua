@@ -134,7 +134,7 @@
 // its own vocabulary and grammar file; only the selected one is fetched.
 (function () {
   var t = "de";
-  try { var v = localStorage.getItem("beeins_learn"); if (v === "de" || v === "tr" || v === "es_ar" || v === "fr" || v === "ru" || v === "it" || v === "uk" || v === "hr" || v === "be" || v === "en" || v === "zh" || v === "ja") t = v; } catch (e) {}
+  try { var v = localStorage.getItem("beeins_learn"); if (v === "de" || v === "tr" || v === "es_ar" || v === "fr" || v === "ru" || v === "it" || v === "uk" || v === "hr" || v === "be" || v === "en" || v === "zh" || v === "ja" || v === "ko") t = v; } catch (e) {}
   var byTarget = {
     tr:    ["data-tr.js", "grammar-tr.js"],
     es_ar: ["data-es.js", "grammar-es.js"],
@@ -146,7 +146,8 @@
     be:    ["data-be.js", "grammar-be.js"],
     en:    ["data-en.js", "grammar-en.js"],
     zh:    ["data-zh.js", "grammar-zh.js"],
-    ja:    ["data-ja.js", "grammar-ja.js"]
+    ja:    ["data-ja.js", "grammar-ja.js"],
+    ko:    ["data-ko.js", "grammar-ko.js"]
   };
   // Load corpus → grammar → topics → app sequentially but WITHOUT blocking the
   // first paint (document.write would stall rendering until the big corpus file

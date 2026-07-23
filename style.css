@@ -147,17 +147,28 @@
   --page-bg: radial-gradient(900px 500px at 82% -10%, color-mix(in srgb, var(--accent) 12%, var(--bg)), var(--bg));
 }
 
-/* 🍷 wine — elegant serif, deep burgundy (lightened weight) */
+/* 🍷 wine — elegant serif, deep burgundy (lightened weight).
+   Georgia was the obvious pick but it is wide with heavy strokes, so the
+   topbar controls wrapped onto a second row. Hoefler Text / Baskerville /
+   Cambria keep the same bookish feel with narrower, finer letterforms. */
 :root[data-skin="wine"] {
   --accent: #c2255c;
   --radius: 10px; --radius-sm: 8px;
-  --font-body: Georgia, "Iowan Old Style", "Times New Roman", serif;
-  --font-head: Georgia, "Iowan Old Style", "Times New Roman", serif;
-  --head-weight: 600;
+  --font-body: "Hoefler Text", Baskerville, Charter, Cambria, Georgia, "Times New Roman", serif;
+  --font-head: "Hoefler Text", Baskerville, Charter, Cambria, Georgia, "Times New Roman", serif;
+  --head-weight: 500;
   --card-tint: color-mix(in srgb, var(--accent) 6%, var(--card-bg));
   --card-shadow: 0 14px 44px rgba(0, 0, 0, 0.18);
   --page-bg: linear-gradient(160deg, color-mix(in srgb, var(--accent) 10%, var(--bg)), var(--bg) 70%);
 }
+/* A serif at 700 is much wider than a sans at 700, which is what pushed the
+   controls onto a second row. Step the topbar chips down one weight for this
+   skin only — colours and sizes untouched. */
+:root[data-skin="wine"] #learnDrop .ldLearnName,
+:root[data-skin="wine"] .langDropBtn,
+:root[data-skin="wine"] .viewBtn,
+:root[data-skin="wine"] .modeBtn,
+:root[data-skin="wine"] .levelBtn { font-weight: 600; }
 
 /* 🩸 blooddrop — dark, sharp, heavy sans (dialled back) */
 :root[data-skin="blooddrop"] {

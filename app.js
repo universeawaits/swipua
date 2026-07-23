@@ -43,7 +43,7 @@
   // for German only (`grammar: true`).
   var TARGETS = [
     { key: "de",    flag: "🇩🇪", endo: "Deutsch",              tts: "de-DE", piper: "de_DE-thorsten-medium", level: "level", grammar: true },
-    { key: "tr",    flag: "🇹🇷", endo: "Türkçe",               tts: "tr-TR", piper: "tr_TR-dfki-medium",     level: "level", grammar: true, allow: ["ru", "en", "de", "ar_sy", "uk", "fa", "fr"] },
+    { key: "tr",    flag: "🇹🇷", endo: "Türkçe",               tts: "tr-TR", piper: "tr_TR-dfki-medium",     level: "level", grammar: true, allow: ["ru", "en", "de", "ar_sy", "uk", "fa", "fr", "zh", "ja"] },
     // Argentinian (Rioplatense) Spanish — voseo, sheísmo, ustedes. Studied from
     // Russian, English, German or Turkish. The es-AR speech locale and Piper's
     // Argentine voice give the accent; the corpus uses Argentine word choices.

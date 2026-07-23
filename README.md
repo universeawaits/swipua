@@ -12,7 +12,7 @@ A dropdown in the very top-left picks the language you're studying:
 
 - **🇩🇪 German** — 4,600+ words, a 20-topic grammar reference, and translations into any of 25+ languages.
 - **🇬🇧 English (British)** — the Oxford 3000/5000 A1–B1 wordlist extended with thematic B1 vocabulary (2,700+ words) with British example sentences, and a 24-topic grammar reference (articles, the tense system, modal verbs, the passive, conditionals, relative clauses, reported speech, gerunds & infinitives, phrasal verbs…), studied from any of 25 languages: German, Russian, Ukrainian, Polish, Turkish, French, Vietnamese, Persian, Thai, Chinese, Malay, Hindi, Urdu, Greek, Romanian, Catalan, Serbian, Croatian, Albanian, Amharic, Swahili, Mexican Spanish, and Egyptian, Lebanese & Syrian Arabic. Words, CEFR levels and examples are drawn from the Oxford 3000/5000 and the Cambridge / English Vocabulary Profile inventories.
-- **🇹🇷 Turkish** — 3,700+ words and a 23-topic Turkish grammar reference, studied from Russian, English, German, Syrian Arabic, Ukrainian, Persian, or French.
+- **🇹🇷 Turkish** — 3,700+ words and a 23-topic Turkish grammar reference, studied from Russian, English, German, Syrian Arabic, Ukrainian, Persian, French, Chinese, or Japanese.
 - **🇦🇷 Argentinian Spanish** — 4,000+ words and a 24-topic **Rioplatense** grammar reference, studied from Russian, English, German, Turkish, Ukrainian, Persian, or French.
 - **🇫🇷 French** — 4,000+ words and a 24-topic grammar reference, studied from Russian, English, German, Turkish, Spanish, Italian, or Syrian Arabic. Levels and grammar follow the CEFR / DELF A1–B1 and the *Niveau A1/A2/B1 pour le français* référentiels.
 - **🇷🇺 Russian** — 3,300+ words and a 24-topic grammar reference (the six cases, verbal aspect, verbs of motion…), studied from German, English, French, Persian, Ukrainian, or Syrian Arabic.
@@ -55,7 +55,7 @@ Everything around the word you're learning — translations, example sentences, 
 
 English · Russian · Ukrainian · Vietnamese · Persian · Thai · Chinese · Malay · Turkish · Polish · Swahili · Amharic · Hindi · Urdu · Mexican Spanish · Catalan · Croatian · Serbian · Greek · Romanian · Albanian · and Egyptian, Lebanese & Syrian Arabic
 
-When learning **Turkish**, the study-from languages are currently English, Russian, German, Syrian Arabic, Ukrainian, Persian, and French.
+When learning **Turkish**, the study-from languages are currently English, Russian, German, Syrian Arabic, Ukrainian, Persian, French, Chinese, and Japanese.
 
 When learning **Argentinian Spanish**, the study-from languages are currently Russian, English, German, Turkish, Ukrainian, Persian, and French. Every grammar explanation flags the mistakes speakers of those languages typically make, and the Rioplatense features (voseo, ustedes, sheísmo, the preterite preference) are called out in each relevant topic. The certification landscape is Argentina's own **CELU** (a usage-based, oral-plus-written proficiency exam) alongside the pan-Hispanic **DELE** and **SIELE**; the vocabulary and per-level grammar follow the Instituto Cervantes' Plan Curricular (PCIC) A1–B1 inventories, systematically overridden with Argentine usage.
 

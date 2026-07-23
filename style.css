@@ -684,6 +684,17 @@ body {
   margin-top: 2px;
 }
 
+/* When the target sentence has a reading under it, the two stack as one block
+   and the speaker sits to their right, centred against the pair — otherwise the
+   block-level reading would push the button down onto a line of its own. */
+.example .exLearn.exStacked {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.1em;
+}
+.example .exLearn.exStacked .exText { min-width: 0; }
+
 #translations {
   display: flex;
   flex-direction: column;

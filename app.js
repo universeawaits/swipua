@@ -2150,9 +2150,13 @@
         var cls = l.key + (l.key === LEARN ? " exLearn" : "");
         var val = escapeHtml(exVal(ex, l.key));
         // The target example line carries its own reading when the corpus supplies
-        // one (per-sentence pinyin/romaji), shown muted beneath the sentence.
+        // one (per-sentence pinyin/romaji/Thai phonetics), shown muted beneath the
+        // sentence. Sentence and reading are wrapped together so the speaker button
+        // sits beside the pair instead of being pushed onto a third line.
         if (l.key === LEARN && ex.reading) {
-          val += '<div class="exReading">' + escapeHtml(ex.reading) + "</div>";
+          cls += " exStacked";
+          val = '<div class="exText">' + val +
+            '<div class="exReading">' + escapeHtml(ex.reading) + "</div></div>";
         }
         return '<div class="' + cls + '" dir="auto">' + val + "</div>";
       }).join("");

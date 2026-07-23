@@ -80,7 +80,13 @@
     // example carries Revised Romanisation in `reading`.
     { key: "ko",    flag: "🇰🇷", endo: "한국어",                tts: "ko-KR", level: "level", grammar: true,
       allow: ["ru", "de", "en", "tr", "it", "es_ar"],
-      levelLabels: { A1: "TOPIK 1", A2: "TOPIK 2", B1: "TOPIK 3" } }
+      levelLabels: { A1: "TOPIK 1", A2: "TOPIK 2", B1: "TOPIK 3" } },
+    // Thai — plain CEFR A1-B1 (CU-TFL / CEFR-aligned). Thai script is unspaced
+    // and tonal, so every headword and example carries a learner-phonetic
+    // (Paiboon-style) `reading` with tone marks. Studied from English, German,
+    // Russian, French and Persian.
+    { key: "th",    flag: "🇹🇭", endo: "ไทย",                   tts: "th-TH", level: "level", grammar: true,
+      allow: ["en", "de", "ru", "fr", "fa"] }
   ];
   var TARGET_BY_KEY = {};
   TARGETS.forEach(function (t) { TARGET_BY_KEY[t.key] = t; });

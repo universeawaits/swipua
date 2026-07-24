@@ -68,7 +68,7 @@
     // padding. Every headword and example carries pinyin in `reading`. The
     // level buttons show the HSK ladder instead of CEFR (see levelLabels).
     { key: "zh",    flag: "🇨🇳", endo: "中文",                  tts: "zh-CN", level: "level", grammar: true,
-      allow: ["ru", "de", "en", "tr", "it", "es_ar"],
+      allow: ["ru", "de", "en", "tr", "it", "es_ar", "uk", "ar_lb", "fa", "prs", "ps", "uz"],
       levelLabels: { A1: "HSK 1-2", A2: "HSK 3", B1: "HSK 4" } },
     // Japanese — JLPT N5-N3, the authentic A1-B1 span. Every headword and
     // example carries Hepburn romaji in `reading`, since a beginner cannot yet
